@@ -6,9 +6,9 @@ import styles from "./styles.module.css";
 
 const Services = () => {
   return (
-    <Section>
-      <Subtitle>spend your time with the best masters</Subtitle>
-      <Heading level={2} title="services and prices" />
+    <Section variant="dark">
+      <Subtitle variant="light">spend your time with the best masters</Subtitle>
+      <Heading level={2} variant="light" title="services and prices" />
       <p className={styles.date}>Price list</p>
     </Section>
   );
