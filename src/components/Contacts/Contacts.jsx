@@ -1,17 +1,17 @@
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
+import Subtitle from "../Subtitle/Subtitle";
 
 import styles from "./styles.module.css";
-import Subtitle from "../Subtitle/Subtitle";
 
 const Contacts = () => {
   return (
-    <Section>
-      <Heading level={2} title="contacts" />
+    <Section variant="dark">
+      <Heading variant="light" level={2} title="contacts" />
       <div className={styles.wrap}>
         <p className={styles.date}>Contact list.</p>
       </div>
-      <Subtitle>working hours</Subtitle>
+      <Subtitle variant="light">working hours</Subtitle>
       <p>Monday-Saturday from 9:00 to 18:00</p>
     </Section>
   );

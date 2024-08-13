@@ -4,6 +4,7 @@ import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
 import Automechanics from "../../components/Automechanics/Automechanics";
 import Gallery from "../../components/Gallery/Gallery";
+import Feedback from "../../components/Feedback/Feedback";
 import Contacts from "../../components/Contacts/Contacts";
 import Clients from "../../components/Clients/Clients";
 
@@ -18,6 +19,7 @@ const Main = () => {
       <Features />
       <Automechanics />
       <Gallery />
+      <Feedback />
       <Contacts />
       <Clients />
     </main>

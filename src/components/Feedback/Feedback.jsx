@@ -5,8 +5,8 @@ import styles from "./styles.module.css";
 
 const Feedback = () => {
   return (
-    <Section>
-      <Heading level={2} title="feedback" />
+    <Section variant="dark">
+      <Heading level={2} variant="light" title="feedback" />
       <p className={styles.date}>Form feedback.</p>
     </Section>
   );

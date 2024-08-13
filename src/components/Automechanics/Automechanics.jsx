@@ -9,7 +9,7 @@ const Automechanics = () => {
     <Section variant="highlight">
       <Subtitle>true blacksmith of their craft</Subtitle>
       <Heading level={2} title="our mechanics" />
-      <p className={styles.date}>List of workers.</p>
+      <p className={styles.date}>List of auto-mechanics.</p>
     </Section>
   );
 };
