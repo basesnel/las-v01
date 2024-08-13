@@ -1,12 +1,13 @@
-import Image from "../Image/Image";
 import Section from "../Section/Section";
+import Heading from "../Heading/Heading";
+import Image from "../Image/Image";
 
 import styles from "./styles.module.css";
 
 const Header = () => {
   return (
     <Section>
-      <h2 className={styles.title}>banner</h2>
+      <Heading level={2} title="banner" />
       <p className={styles.date}>Some content</p>
       <Image />
     </Section>

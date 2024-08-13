@@ -1,11 +1,12 @@
 import Section from "../Section/Section";
+import Heading from "../Heading/Heading";
 
 import styles from "./styles.module.css";
 
 const Feedback = () => {
   return (
     <Section>
-      <h2 className={styles.title}>Feed</h2>
+      <Heading level={2} title="feedback" />
       <p className={styles.date}>Form feedback.</p>
     </Section>
   );

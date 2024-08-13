@@ -1,9 +1,11 @@
+import Container from "../Container/Container";
+
 import styles from "./styles.module.css";
 
 const Section = ({ children }) => {
   return (
     <section className={styles.section}>
-      <div className={styles.container}>{children}</div>
+      <Container>{children}</Container>
     </section>
   );
 };

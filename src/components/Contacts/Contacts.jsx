@@ -1,11 +1,12 @@
 import Section from "../Section/Section";
+import Heading from "../Heading/Heading";
 
 import styles from "./styles.module.css";
 
 const Contacts = () => {
   return (
     <Section>
-      <h2 className={styles.title}>contacts</h2>
+      <Heading level={2} title="contacts" />
       <p className={styles.date}>Contact list.</p>
     </Section>
   );

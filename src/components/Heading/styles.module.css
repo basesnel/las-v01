@@ -1,0 +1,22 @@
+.heading01 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  word-break: break-all;
+  color: #303030;
+}
+
+@media screen and (min-width: 480px) {
+  .heading01 {
+    font-size: 48px;
+    word-break: normal;
+  }
+
+  .heading02 {
+    font-size: 42px;
+    word-break: normal;
+  }
+}
