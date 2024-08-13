@@ -1,0 +1,23 @@
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 11px;
+  line-height: 1.36;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #303030;
+}
+
+@media screen and (min-width: 480px) {
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .subtitle::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+}

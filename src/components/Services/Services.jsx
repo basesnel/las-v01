@@ -4,14 +4,14 @@ import Heading from "../Heading/Heading";
 
 import styles from "./styles.module.css";
 
-const Clients = () => {
+const Services = () => {
   return (
     <Section>
-      <Subtitle>repair of any complexity</Subtitle>
-      <Heading level={2} title="our clients" />
-      <p className={styles.date}>List of car brands.</p>
+      <Subtitle>spend your time with the best masters</Subtitle>
+      <Heading level={2} title="services and prices" />
+      <p className={styles.date}>Price list</p>
     </Section>
   );
 };
 
-export default Clients;
+export default Services;

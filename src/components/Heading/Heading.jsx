@@ -3,11 +3,11 @@ import styles from "./styles.module.css";
 const Heading = ({ level, title }) => {
   switch (level) {
     case 1:
-      return <h1 className={styles.heading01}>{title}</h1>;
+      return <h1 className={`${styles.heading} ${styles.heading01}`}>{title}</h1>;
 
     case 2:
       return (
-        <h2 className={`${styles.heading01} ${styles.heading02}`}>{title}</h2>
+        <h2 className={`${styles.heading} ${styles.heading02}`}>{title}</h2>
       );
 
     case 3:

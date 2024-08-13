@@ -1,4 +1,4 @@
-.heading01 {
+.heading {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
@@ -7,6 +7,10 @@
   text-transform: capitalize;
   word-break: break-all;
   color: #303030;
+}
+
+.heading01 {
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 480px) {

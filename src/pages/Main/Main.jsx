@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner/Banner";
 import Introduction from "../../components/Introduction/Introduction";
+import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
 import Automechanics from "../../components/Automechanics/Automechanics";
 import Gallery from "../../components/Gallery/Gallery";
@@ -13,6 +14,7 @@ const Main = () => {
     <main className={styles.main}>
       <Banner />
       <Introduction />
+      <Services />
       <Features />
       <Automechanics />
       <Gallery />
