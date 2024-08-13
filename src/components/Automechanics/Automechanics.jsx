@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Automechanics = () => {
   return (
-    <Section>
+    <Section variant="highlight">
       <Subtitle>true blacksmith of their craft</Subtitle>
       <Heading level={2} title="our mechanics" />
       <p className={styles.date}>List of workers.</p>
