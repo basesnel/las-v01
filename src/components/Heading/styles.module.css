@@ -9,6 +9,10 @@
   color: #303030;
 }
 
+.light {
+  color: #fff;
+}
+
 .heading01 {
   text-transform: uppercase;
 }

@@ -7,9 +7,9 @@ import styles from "./styles.module.css";
 
 const Header = () => {
   return (
-    <Section>
-      <Subtitle>a top our services</Subtitle>
-      <Heading level={2} title="banner" />
+    <Section variant="dark">
+      <Subtitle variant="light">a top our services</Subtitle>
+      <Heading level={2} variant="light" title="banner" />
       <p className={styles.date}>Some content</p>
       <Image />
     </Section>

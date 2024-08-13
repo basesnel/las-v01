@@ -7,6 +7,10 @@
   color: #303030;
 }
 
+.light {
+  color: #fff;
+}
+
 @media screen and (min-width: 480px) {
   .subtitle {
     display: flex;
