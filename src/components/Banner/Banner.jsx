@@ -6,7 +6,7 @@ import Image from "../Image/Image";
 
 import styles from "./styles.module.css";
 
-const Header = () => {
+const Banner = () => {
   return (
     <Section variant="dark">
       <Subtitle variant="light">a quality car service in poltava</Subtitle>
@@ -18,4 +18,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Banner;

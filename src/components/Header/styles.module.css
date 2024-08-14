@@ -1,4 +1,36 @@
-.date {
-  font-size: 16px;
-  color: #6c7072;
+.header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  width: 100%;
+}
+
+.openMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
+}
+
+.openMenu:hover,
+.openMenu.focus {
+  color: orange;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+
+  fill: currentColor;
 }
