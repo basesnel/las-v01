@@ -4,11 +4,6 @@
   line-height: 1.36;
   font-weight: 600;
   text-transform: uppercase;
-  color: #303030;
-}
-
-.light {
-  color: #fff;
 }
 
 @media screen and (min-width: 480px) {

@@ -9,8 +9,8 @@ import styles from "./styles.module.css";
 const Banner = () => {
   return (
     <Section variant="dark">
-      <Subtitle variant="light">a quality car service in poltava</Subtitle>
-      <Heading level={1} variant="light" title="liashenko auto service" />
+      <Subtitle>a quality car service in poltava</Subtitle>
+      <Heading level={1} title="liashenko auto service" />
       <p className={styles.date}>Some content</p>
       <p className={styles.date}>Auto-tool | {formatDate(new Date())}</p>
       <Image />

@@ -1,28 +1,20 @@
 import styles from "./styles.module.css";
 
-const Heading = ({ level, variant, title }) => {
-  const variation = variant ? `${styles[variant]}` : "";
-
+const Heading = ({ level, title }) => {
   switch (level) {
     case 1:
       return (
-        <h1 className={`${styles.heading}  ${variation} ${styles.heading01}`}>
-          {title}
-        </h1>
+        <h1 className={`${styles.heading} ${styles.heading01}`}>{title}</h1>
       );
 
     case 2:
       return (
-        <h2 className={`${styles.heading}  ${variation} ${styles.heading02}`}>
-          {title}
-        </h2>
+        <h2 className={`${styles.heading} ${styles.heading02}`}>{title}</h2>
       );
 
     case 3:
       return (
-        <h3 className={`${styles.heading}  ${variation} ${styles.heading03}`}>
-          {title}
-        </h3>
+        <h3 className={`${styles.heading} ${styles.heading03}`}>{title}</h3>
       );
 
     default:
