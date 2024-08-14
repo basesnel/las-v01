@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
+import Icon from "../Icon/Icon";
 
-import icons from "../../assets/icons.svg";
+// import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
@@ -31,15 +32,12 @@ const Menu = ({ onClose, onHide }) => {
           type="button"
           aria-label="Close the mobile menu"
         >
-          <svg
+          <Icon
+            icon="menu-close"
+            width={40}
+            height={40}
             className={styles.icon}
-            width="40"
-            height="40"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <use href={`${icons}#menu-close`}></use>
-          </svg>
+          />
         </button>
       </div>
     </div>

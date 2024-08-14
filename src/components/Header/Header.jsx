@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Container from "../Container/Container";
+import Icon from "../Icon/Icon";
 import Menu from "../Menu/Menu";
-import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
@@ -45,16 +45,12 @@ const Header = () => {
           type="button"
           aria-label="Open the mobile menu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+          <Icon
+            icon="icon-menu"
+            width={28}
+            height={28}
             className={styles.icon}
-            width="28"
-            height="28"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <use href={`${icons}#icon-menu`}></use>
-          </svg>
+          />
         </button>
         {isMenuOpen &&
           createPortal(
