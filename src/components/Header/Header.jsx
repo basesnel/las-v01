@@ -6,7 +6,10 @@ import styles from "./styles.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Container>
+      <Container variant="header">
+        <a href="#" className={styles.logo}>
+          las-logo
+        </a>
         <button
           className={styles.openMenu}
           type="button"
