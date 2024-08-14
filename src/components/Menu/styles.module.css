@@ -33,7 +33,7 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* menu.is-open {
+/* .menu.isOpen {
   width: 71vw;
   transform: translateX(29vw);
 } */
@@ -63,8 +63,8 @@
 }
 
 .icon {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
 
   fill: currentColor;
 }

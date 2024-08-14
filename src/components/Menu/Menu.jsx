@@ -1,11 +1,30 @@
+import { useEffect } from "react";
+
 import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
 const Menu = ({ onClose, onHide }) => {
+  // useEffect(() => {
+  //   const menuToggle = () => {
+  //     const menu = document.querySelector("div[data-menu]");
+  //     setTimeout(() => {
+  //       menu.classList.toggle(styles.isOpen);
+  //       console.log(menu.classList);
+  //     }, 100);
+  //   };
+
+  //   menuToggle();
+
+  // return () => {
+  //   menuToggle();
+  //   setTimeout(() => {}, 250);
+  // };
+  // }, []);
+
   return (
     <div className={styles.backdrop} onClick={onHide}>
-      <div className={styles.menu}>
+      <div className={styles.menu} data-menu>
         <button
           className={styles.closeMenu}
           onClick={onClose}
