@@ -1,0 +1,30 @@
+import icons from "../../assets/icons.svg";
+
+import styles from "./styles.module.css";
+
+const Menu = ({ onClose, onHide }) => {
+  return (
+    <div className={styles.backdrop} onClick={onHide}>
+      <div className={styles.menu}>
+        <button
+          className={styles.closeMenu}
+          onClick={onClose}
+          type="button"
+          aria-label="Close the mobile menu"
+        >
+          <svg
+            className={styles.icon}
+            width="40"
+            height="40"
+            focusable="false"
+            aria-hidden="true"
+          >
+            <use href={`${icons}#menu-close`}></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Menu;
