@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Container from "../Container/Container";
+import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Menu from "../Menu/Menu";
 
@@ -39,19 +40,14 @@ const Header = () => {
         <a href="#" className={styles.logo}>
           las-logo
         </a>
-        <button
-          className={styles.openMenu}
-          onClick={openMenu}
-          type="button"
-          aria-label="Open the mobile menu"
-        >
+        <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
             icon="icon-menu"
             width={28}
             height={28}
             className={styles.icon}
           />
-        </button>
+        </Togglemenu>
         {isMenuOpen &&
           createPortal(
             <Menu

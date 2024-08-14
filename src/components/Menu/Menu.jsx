@@ -1,4 +1,5 @@
 // import { useEffect } from "react";
+import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 
 // import icons from "../../assets/icons.svg";
@@ -26,8 +27,8 @@ const Menu = ({ onClose, onHide }) => {
   return (
     <div className={styles.backdrop} onClick={onHide}>
       <div className={styles.menu} data-menu>
-        <button
-          className={styles.closeMenu}
+        <Togglemenu
+          variant="closeMenu"
           onClick={onClose}
           type="button"
           aria-label="Close the mobile menu"
@@ -38,7 +39,7 @@ const Menu = ({ onClose, onHide }) => {
             height={40}
             className={styles.icon}
           />
-        </button>
+        </Togglemenu>
       </div>
     </div>
   );
