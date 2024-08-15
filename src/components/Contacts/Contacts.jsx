@@ -11,15 +11,15 @@ const Contacts = () => {
 
   return (
     <Section part="contacts" variant="dark">
-      <Heading level={2} title="contacts" />
+      <Heading level={2} title="contacts" variant="bottomMargin" />
       <address className={styles.address}>
         <ul>
           {contacts.map(({ id, text, src, icon }) => {
             return (
               <li key={id} className={styles.item}>
                 <a
-                  href={src}
                   className={styles.link}
+                  href={src}
                   {...(isLinkExternal(src) && {
                     target: "_blank",
                     rel: "noopener noreferrer nofollow",
@@ -31,7 +31,7 @@ const Contacts = () => {
                     height={24}
                     className={styles.icon}
                   />
-                  <span>{text}</span>
+                  <span className={styles.text}>{text}</span>
                 </a>
               </li>
             );
