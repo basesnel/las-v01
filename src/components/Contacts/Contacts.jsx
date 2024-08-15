@@ -7,16 +7,30 @@ import styles from "./styles.module.css";
 import contacts from "../../constants/contacts";
 
 const Contacts = () => {
+  const isLinkExternal = (par) => par.toLowerCase().match(/^https/);
+
   return (
     <Section part="contacts" variant="dark">
       <Heading level={2} title="contacts" />
       <address className={styles.address}>
         <ul>
-          {contacts.map(({ id, text, link, icon }) => {
+          {contacts.map(({ id, text, src, icon }) => {
             return (
-              <li key={id}>
-                <a href={link}>
-                  <Icon icon={icon} width={24} height={24} className={styles.icon} />
+              <li key={id} className={styles.item}>
+                <a
+                  href={src}
+                  className={styles.link}
+                  {...(isLinkExternal(src) && {
+                    target: "_blank",
+                    rel: "noopener noreferrer nofollow",
+                  })}
+                >
+                  <Icon
+                    icon={icon}
+                    width={24}
+                    height={24}
+                    className={styles.icon}
+                  />
                   <span>{text}</span>
                 </a>
               </li>
