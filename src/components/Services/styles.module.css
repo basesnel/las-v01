@@ -1,9 +1,43 @@
-.title {
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
+.list {
+  margin-bottom: 44px;
+  padding: 20px;
+  font-weight: 400;
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
 }
 
-.date {
-  font-size: 16px;
+@media screen and (min-width: 480px) {
+  .list {
+    padding: 20px 20px 20px 40px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 1.43;
+  word-break: break-all;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.item::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: currentColor;
+}
+
+.service {
+  max-width: 300px;
+  word-break: normal;
+}
+
+.price {
+  order: 1;
 }

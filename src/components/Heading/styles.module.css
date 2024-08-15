@@ -12,6 +12,10 @@
   text-transform: uppercase;
 }
 
+.bottomMargin {
+  margin-bottom: 44px;
+}
+
 @media screen and (min-width: 480px) {
   .heading01 {
     font-size: 48px;
