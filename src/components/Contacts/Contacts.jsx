@@ -11,7 +11,7 @@ const Contacts = () => {
 
   return (
     <Section part="contacts" variant="dark">
-      <Heading level={2} title="contacts" variant="bottomMargin" />
+      <Heading level={2} title="contacts" />
       <address className={styles.address}>
         <ul>
           {contacts.map(({ id, text, src, icon }) => {

@@ -1,5 +1,5 @@
 .heading {
-  margin-bottom: 20px;
+  margin-bottom: 44px;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.17;
@@ -10,10 +10,6 @@
 
 .heading01 {
   text-transform: uppercase;
-}
-
-.bottomMargin {
-  margin-bottom: 44px;
 }
 
 @media screen and (min-width: 480px) {

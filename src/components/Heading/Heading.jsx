@@ -1,8 +1,6 @@
 import styles from "./styles.module.css";
 
 const Heading = ({ level, title, variant }) => {
-  const variation = variant ? `${styles[variant]}` : "";
-
   switch (level) {
     case 1:
       return (
@@ -11,9 +9,7 @@ const Heading = ({ level, title, variant }) => {
 
     case 2:
       return (
-        <h2 className={`${styles.heading} ${styles.heading02} ${variation}`}>
-          {title}
-        </h2>
+        <h2 className={`${styles.heading} ${styles.heading02}`}>{title}</h2>
       );
 
     case 3:

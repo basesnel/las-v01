@@ -7,7 +7,37 @@ const Feedback = () => {
   return (
     <Section part="feedback" variant="dark">
       <Heading level={2} title="feedback" />
-      <p className={styles.date}>Form feedback.</p>
+      <form className={styles.form} autoComplete="off">
+        <label className={styles.field}>
+          <input
+            type="text"
+            name="name"
+            className={styles.input}
+            placeholder=" "
+          />
+          <span className={`${styles.label} ${styles.req}`}>name</span>
+        </label>
+        <label className={styles.field}>
+          <input
+            type="tel"
+            name="tel"
+            className={styles.input}
+            placeholder=" "
+          />
+          <span className={`${styles.label} ${styles.req}`}>phone</span>
+        </label>
+        <label className={styles.field}>
+          <textarea
+            name="message"
+            className={styles.textarea}
+            placeholder=" "
+          />
+          <span className={`${styles.label}`}>message</span>
+        </label>
+        <button className={styles.button} type="submit">
+          send
+        </button>
+      </form>
     </Section>
   );
 };
