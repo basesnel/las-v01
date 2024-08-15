@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Contacts = () => {
   return (
-    <Section variant="dark">
+    <Section part="contacts" variant="dark">
       <Heading level={2} title="contacts" />
       <div className={styles.wrap}>
         <p className={styles.date}>Contact list.</p>

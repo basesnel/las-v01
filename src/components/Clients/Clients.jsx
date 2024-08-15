@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Clients = () => {
   return (
-    <Section>
+    <Section part="clients">
       <Subtitle>repair of any complexity</Subtitle>
       <Heading level={2} title="our clients" />
       <p className={styles.date}>List of car brands.</p>

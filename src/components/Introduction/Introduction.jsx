@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Gallery = () => {
   return (
-    <Section>
+    <Section part="introduction">
       <Subtitle>about</Subtitle>
       <Heading level={2} title="introductions" />
       <p className={styles.date}>Welcome and introductions.</p>
