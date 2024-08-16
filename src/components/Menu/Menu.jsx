@@ -3,11 +3,14 @@ import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Socnets from "../Socnets/Socnets";
 
-// import icons from "../../assets/icons.svg";
-
 import styles from "./styles.module.css";
 
 const Menu = ({ onClose, onHide }) => {
+  const sections = document.querySelectorAll("section");
+  const parts = [];
+  sections.forEach((section) => {
+    parts.push(section.id);
+  });
   // useEffect(() => {
   //   const menuToggle = () => {
   //     const menu = document.querySelector("div[data-menu]");
@@ -41,6 +44,19 @@ const Menu = ({ onClose, onHide }) => {
             className={styles.icon}
           />
         </Togglemenu>
+        <nav>
+          <ul className={styles.list}>
+            {parts.map((part) => {
+              return (
+                <li key={part} className={styles.item}>
+                  <a href={`#${part}`} className={styles.link}>
+                    {part}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
         <Socnets variant="menu" />
       </div>
     </div>
