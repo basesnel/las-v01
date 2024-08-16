@@ -50,7 +50,11 @@ const Menu = ({ onClose, onHide }) => {
             {parts.map(({ id, name, label }) => {
               return (
                 <li key={id} className={styles.item}>
-                  <a href={`#${name}`} className={styles.link}>
+                  <a
+                    href={`#${name}`}
+                    onClick={onClose}
+                    className={styles.link}
+                  >
                     {label}
                   </a>
                 </li>
