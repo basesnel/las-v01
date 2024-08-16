@@ -41,7 +41,7 @@ const Menu = ({ onClose, onHide }) => {
             className={styles.icon}
           />
         </Togglemenu>
-        <Socnets />
+        <Socnets variant="menu" />
       </div>
     </div>
   );

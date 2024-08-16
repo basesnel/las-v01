@@ -3,15 +3,19 @@ import socNets from "../../constants/socials";
 
 import styles from "./styles.module.css";
 
-const Socnets = () => {
+const Socnets = ({ variant }) => {
+  const variation = variant ? `${styles[variant]}` : "";
+
   return (
-    <ul className={styles.list}>
+    <ul className={`${styles.list} ${variation}`}>
       {socNets.map(({ id, text, src }) => {
         return (
           <li
             key={id}
             className={
-              id === 0 ? `${styles.item} ${styles.itemDecor}` : `${styles.item}`
+              id === 0
+                ? `${styles.item} ${styles.itemDecor} ${variation}`
+                : `${styles.item} ${variation}`
             }
           >
             <Link
