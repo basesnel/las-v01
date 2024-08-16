@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Features = () => {
   return (
-    <Section part="features">
+    <Section part="features" label="our benefits and features">
       <Subtitle>why people come to us?</Subtitle>
       <Heading level={2} title="our benefits" />
       <p className={styles.date}>List of benefits.</p>

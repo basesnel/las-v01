@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 
 const Services = () => {
   return (
-    <Section part="services" variant="dark">
+    <Section part="services" variant="dark" label="services and prices">
       <Subtitle>spend your time with the best masters</Subtitle>
       <Heading level={2} title="services and prices" />
       <ul className={styles.list}>

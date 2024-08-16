@@ -8,8 +8,9 @@ import styles from "./styles.module.css";
 const Menu = ({ onClose, onHide }) => {
   const sections = document.querySelectorAll("section");
   const parts = [];
-  sections.forEach((section) => {
-    parts.push(section.id);
+  sections.forEach((section, i) => {
+    const part = { id: i, name: section.id, label: section.ariaLabel };
+    parts.push(part);
   });
   // useEffect(() => {
   //   const menuToggle = () => {
@@ -46,11 +47,11 @@ const Menu = ({ onClose, onHide }) => {
         </Togglemenu>
         <nav>
           <ul className={styles.list}>
-            {parts.map((part) => {
+            {parts.map(({ id, name, label }) => {
               return (
-                <li key={part} className={styles.item}>
-                  <a href={`#${part}`} className={styles.link}>
-                    {part}
+                <li key={id} className={styles.item}>
+                  <a href={`#${name}`} className={styles.link}>
+                    {label}
                   </a>
                 </li>
               );

@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Gallery = () => {
   return (
-    <Section part="gallery">
+    <Section part="gallery" label="our work">
       <Subtitle>complex car repair</Subtitle>
       <Heading level={2} title="gallery" />
       <p className={styles.date}>List of pictures.</p>
