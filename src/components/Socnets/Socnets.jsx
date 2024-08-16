@@ -18,12 +18,7 @@ const Socnets = ({ variant }) => {
                 : `${styles.item} ${variation}`
             }
           >
-            <Link
-              src={src}
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-              className={styles.link}
-            >
+            <Link src={src} className={styles.link}>
               {text}
             </Link>
           </li>
