@@ -1,7 +1,6 @@
 import Container from "../Container/Container";
-import Link from "../Link/Link";
+import Socnets from "../Socnets/Socnets";
 import formatTimeAgo from "../../helpers/formatTimeAgo";
-import socNets from "../../constants/socials";
 
 import styles from "./styles.module.css";
 
@@ -9,29 +8,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container>
-        <ul className={styles.list}>
-          {socNets.map(({ id, text, src }) => {
-            return (
-              <li
-                key={id}
-                className={
-                  id === 0
-                    ? `${styles.item} ${styles.itemDecor}`
-                    : `${styles.item}`
-                }
-              >
-                <Link
-                  src={src}
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                  className={styles.link}
-                >
-                  {text}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <Socnets />
         <p className={styles.copyright}>Copyright 2024</p>
         <p className={styles.date}>
           {`created ${formatTimeAgo(

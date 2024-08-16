@@ -1,6 +1,7 @@
 // import { useEffect } from "react";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
+import Socnets from "../Socnets/Socnets";
 
 // import icons from "../../assets/icons.svg";
 
@@ -40,6 +41,7 @@ const Menu = ({ onClose, onHide }) => {
             className={styles.icon}
           />
         </Togglemenu>
+        <Socnets />
       </div>
     </div>
   );
