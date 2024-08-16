@@ -1,14 +1,13 @@
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
+import Link from "../Link/Link";
 import Icon from "../Icon/Icon";
-
-import styles from "./styles.module.css";
 import contacts from "../../constants/contacts";
 
-const Contacts = () => {
-  const isLinkExternal = (par) => par.toLowerCase().match(/^https/);
+import styles from "./styles.module.css";
 
+const Contacts = () => {
   return (
     <Section part="contacts" variant="dark">
       <Heading level={2} title="contacts" />
@@ -17,14 +16,7 @@ const Contacts = () => {
           {contacts.map(({ id, text, src, icon }) => {
             return (
               <li key={id} className={styles.item}>
-                <a
-                  className={styles.link}
-                  href={src}
-                  {...(isLinkExternal(src) && {
-                    target: "_blank",
-                    rel: "noopener noreferrer nofollow",
-                  })}
-                >
+                <Link src={src} className={styles.link}>
                   <Icon
                     icon={icon}
                     width={24}
@@ -32,7 +24,7 @@ const Contacts = () => {
                     className={styles.icon}
                   />
                   <span className={styles.text}>{text}</span>
-                </a>
+                </Link>
               </li>
             );
           })}

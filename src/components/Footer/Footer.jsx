@@ -1,4 +1,5 @@
 import Container from "../Container/Container";
+import Link from "../Link/Link";
 import formatTimeAgo from "../../helpers/formatTimeAgo";
 import socNets from "../../constants/socials";
 
@@ -14,19 +15,19 @@ const Footer = () => {
               <li
                 key={id}
                 className={
-                  id === 1
+                  id === 0
                     ? `${styles.item} ${styles.itemDecor}`
                     : `${styles.item}`
                 }
               >
-                <a
-                  href={src}
-                  className={styles.link}
+                <Link
+                  src={src}
                   target="_blank"
                   rel="noreferrer noopener nofollow"
+                  className={styles.link}
                 >
                   {text}
-                </a>
+                </Link>
               </li>
             );
           })}
