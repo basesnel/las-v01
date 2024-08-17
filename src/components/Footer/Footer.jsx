@@ -3,11 +3,15 @@ import Socnets from "../Socnets/Socnets";
 import formatTimeAgo from "../../helpers/formatTimeAgo";
 
 import styles from "./styles.module.css";
+import Logo from "../Logo/Logo";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container>
+        <div className={styles.thumb}>
+          <Logo isDark={true} />
+        </div>
         <Socnets />
         <p className={styles.copyright}>Copyright 2024</p>
         <p className={styles.date}>

@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Container variant="header">
-        <Logo />
+        <Logo isDark={false} />
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
             icon="icon-menu"
