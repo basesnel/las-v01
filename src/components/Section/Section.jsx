@@ -2,12 +2,13 @@ import Container from "../Container/Container";
 
 import styles from "./styles.module.css";
 
-const Section = ({ part, variant, label, children }) => {
+const Section = ({ part, variant, mode, label, children }) => {
   const variation = variant ? `${styles[variant]}` : "";
+  const modification = mode ? `${styles[mode]}` : "";
 
   return (
     <section
-      className={`${styles.section} ${variation}`}
+      className={`${styles.section} ${variation} ${modification}`}
       id={part}
       aria-label={label}
     >

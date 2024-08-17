@@ -8,6 +8,7 @@
 }
 
 .logo {
+  padding: 10px 0;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -18,6 +19,12 @@
 .logo:hover,
 .logo:focus {
   color: orange;
+}
+
+.image {
+  display: block;
+  width: 100px;
+  height: 100px;
 }
 
 .icon {

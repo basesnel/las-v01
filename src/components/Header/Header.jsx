@@ -4,6 +4,8 @@ import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Menu from "../Menu/Menu";
+import Logopng from "../../assets/logo/logo-light-130.png";
+import Logowebp from "../../assets/logo/logo-light-130.webp";
 
 import styles from "./styles.module.css";
 
@@ -37,8 +39,19 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Container variant="header">
-        <a href="#" className={styles.logo}>
-          las-logo
+        <a href="#" className={styles.logo} aria-label="logo">
+          <picture>
+            <source srcSet={Logowebp} sizes="100vw" type="image/webp" />
+            <img
+              srcSet={Logopng}
+              src={Logopng}
+              alt="logo"
+              width={100}
+              height={100}
+              sizes="100vw"
+              className={styles.image}
+            />
+          </picture>
         </a>
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
