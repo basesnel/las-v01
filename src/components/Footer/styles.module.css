@@ -16,7 +16,7 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.2px;
-  color: #808080;
+  color: var(--neutral);
 }
 
 .copyright::before {
@@ -26,5 +26,5 @@
 
 .date {
   font-size: 11px;
-  color: #6c7072;
+  color: var(--accent-light);
 }

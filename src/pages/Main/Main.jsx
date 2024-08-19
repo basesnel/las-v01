@@ -8,11 +8,11 @@ import Feedback from "../../components/Feedback/Feedback";
 import Contacts from "../../components/Contacts/Contacts";
 import Clients from "../../components/Clients/Clients";
 
-import styles from "./styles.module.css";
+// import styles from "./styles.module.css";
 
 const Main = () => {
   return (
-    <main className={styles.main}>
+    <main>
       <Banner />
       <Introduction />
       <Services />

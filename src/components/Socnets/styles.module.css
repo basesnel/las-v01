@@ -21,22 +21,22 @@
   line-height: normal;
   font-weight: 600;
   letter-spacing: 2.2px;
-  color: #303030;
+  color: var(--neutral);
 }
 
 .link {
   text-decoration: none;
-  color: #303030;
+  color: var(--neutral);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:visited {
-  color: rgba(85, 85, 85, 0.32);
+  color: var(--accent-light);
 }
 
 .link:hover,
 .link:focus {
-  color: orange;
+  color: var(--accent-highdark);
 }
 
 .itemDecor {

@@ -3,7 +3,7 @@
   height: auto;
   position: relative;
   padding-top: 80%;
-  background-color: #f2f4f5;
+  background-color: var(--highlight);
 }
 
 .image {
