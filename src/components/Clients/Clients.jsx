@@ -9,7 +9,7 @@ const Clients = () => {
     <Section part="clients" label="we works on">
       <Subtitle>repair of any complexity</Subtitle>
       <Heading level={2} title="our clients" />
-      <p className={styles.date}>List of car brands.</p>
+      <p>List of car brands.</p>
     </Section>
   );
 };

@@ -16,7 +16,7 @@ const Banner = () => {
     >
       <Subtitle>a quality car service in poltava</Subtitle>
       <Heading level={1} title="liashenko auto service" />
-      <p className={styles.date}>Some content</p>
+      <p>Some content</p>
       <p className={styles.date}>Auto-tool | {formatDate(new Date())}</p>
       <Image />
     </Section>

@@ -1,4 +1,4 @@
 .date {
   font-size: 16px;
-  color: #6c7072;
+  color: var(--accent-light);
 }

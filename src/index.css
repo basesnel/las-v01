@@ -1,3 +1,14 @@
+:root {
+  --light: #f0f0f0;
+  --dark: #202020;
+  --highlight: #dfdfdf;
+  --neutral: #808080;
+  --accent-dark: #2e073f;
+  --accent-highdark: #7a1cac;
+  --accent-highlight: #ad49e1;
+  --accent-light: #ebd3f8;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -4,6 +4,7 @@
   line-height: 1.36;
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--neutral);
 }
 
 @media screen and (min-width: 480px) {

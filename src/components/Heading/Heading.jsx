@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-const Heading = ({ level, title, variant }) => {
+const Heading = ({ level, title }) => {
   switch (level) {
     case 1:
       return (
