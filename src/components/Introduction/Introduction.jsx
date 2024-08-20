@@ -12,13 +12,17 @@ const Gallery = () => {
       <Heading level={2} title="introductions" />
       <Text>Welcome and introductions.</Text>
       <Text mode="intro">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Our company provides a full range of services for the maintenance and
+        repair of cars of well-known brands and models.
+      </Text>
+      <Text mode="intro">
+        A team of professionals is ready to help you not only with the
+        maintenance and repair of your car, but also provide painting and
+        detailing services.
+      </Text>
+      <Text mode="intro">
+        We pay special attention to the quality and speed of our services, so
+        you can be sure that your car will be in good hands.
       </Text>
     </Section>
   );
