@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <Section part="services" variant="dark" label="services and prices">
       <Subtitle>spend your time with the best masters</Subtitle>
-      <Heading level={2} title="services and prices" />
+      <Heading level={2} mode="services" title="services and prices" />
       <ul className={styles.list}>
         {services.map(({ id, service, price }) => {
           return (

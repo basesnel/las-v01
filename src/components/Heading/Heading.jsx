@@ -1,6 +1,8 @@
 import styles from "./styles.module.css";
 
-const Heading = ({ level, title }) => {
+const Heading = ({ level, mode, title }) => {
+  const modification = mode ? `${styles[mode]}` : "";
+
   switch (level) {
     case 1:
       return (
@@ -9,7 +11,11 @@ const Heading = ({ level, title }) => {
 
     case 2:
       return (
-        <h2 className={`${styles.heading} ${styles.heading02}`}>{title}</h2>
+        <h2
+          className={`${styles.heading} ${styles.heading02} ${modification}`}
+        >
+          {title}
+        </h2>
       );
 
     case 3:

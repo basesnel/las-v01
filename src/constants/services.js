@@ -6,16 +6,16 @@ const services = [
   { id: 4, service: "Straightning, painting", price: "200" },
   {
     id: 5,
-    service: "Refueling and maintenance of air coditioners",
+    service: "Conditioner's maintain",
     price: "100",
   },
   { id: 6, service: "Sale and pasting of glass", price: "300" },
   {
     id: 7,
-    service: "Comprehinsive car inspection before buying",
+    service: "Comprehinsive car inspection",
     price: "150",
   },
-  { id: 8, service: "Armor film wrapping and glass tining", price: "70" },
+  { id: 8, service: "Glass wrapping and pasting", price: "70" },
   { id: 9, service: "Servicing of electric cars", price: "100" },
   { id: 10, service: "Roll-of camber", price: "100" },
 ];
