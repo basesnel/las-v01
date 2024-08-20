@@ -2,9 +2,10 @@ import formatDate from "../../helpers/formatDate";
 import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
-import Image from "../Image/Image";
+import Text from "../Text/Text";
+import Data from "../Data/Data";
 
-import styles from "./styles.module.css";
+// import styles from "./styles.module.css";
 
 const Banner = () => {
   return (
@@ -16,9 +17,11 @@ const Banner = () => {
     >
       <Subtitle>a quality car service in poltava</Subtitle>
       <Heading level={1} title="liashenko auto service" />
-      <p>Some content</p>
-      <p className={styles.date}>Auto-tool | {formatDate(new Date())}</p>
-      <Image />
+      <Text>
+        Services for cars. We invite you to visit LAS, where you can get a full
+        range of quality services, namely:
+      </Text>
+      <Data>Auto-tool | {formatDate(new Date())}</Data>
     </Section>
   );
 };

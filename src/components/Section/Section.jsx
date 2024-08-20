@@ -12,7 +12,7 @@ const Section = ({ part, variant, mode, label, children }) => {
       id={part}
       aria-label={label}
     >
-      <Container>{children}</Container>
+      <Container variant={mode}>{children}</Container>
     </section>
   );
 };
