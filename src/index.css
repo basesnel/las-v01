@@ -9,20 +9,39 @@
   --accent-light: #ebd3f8;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Montserrat", system-ui;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Montserrat", system-ui;
+  letter-spacing: 0.02em;
   background-color: var(--light);
   color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+figure {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+button,
+label {
+  cursor: pointer;
 }
