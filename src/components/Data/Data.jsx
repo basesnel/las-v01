@@ -1,10 +1,10 @@
 import styles from "./styles.module.css";
 
-const Data = ({ children }) => {
+const Data = ({ mode, children }) => {
   // const variation = variant ? `${styles[variant]}` : "";
-  // const modification = mode ? `${styles[mode]}` : "";
+  const modification = mode ? `${styles[mode]}` : "";
 
-  return <p className={`${styles.date}`}>{children}</p>;
+  return <p className={`${styles.data} ${modification}`}>{children}</p>;
 };
 
 export default Data;

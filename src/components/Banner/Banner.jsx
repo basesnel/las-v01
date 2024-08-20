@@ -21,7 +21,7 @@ const Banner = () => {
         Services for cars. We invite you to visit LAS, where you can get a full
         range of quality services, namely:
       </Text>
-      <Data>Auto-tool | {formatDate(new Date())}</Data>
+      <Data mode="banner">Auto-tool | {formatDate(new Date())}</Data>
     </Section>
   );
 };
