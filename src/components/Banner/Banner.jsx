@@ -17,7 +17,7 @@ const Banner = () => {
     >
       <Subtitle>a quality car service in poltava</Subtitle>
       <Heading level={1} title="liashenko auto service" />
-      <Text>
+      <Text mode="banner">
         Services for cars. We invite you to visit LAS, where you can get a full
         range of quality services, namely:
       </Text>

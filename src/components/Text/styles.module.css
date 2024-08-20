@@ -1,4 +1,13 @@
 .text {
+  margin-bottom: 20px;
   font-size: 16px;
-  line-height: 1.618;
+  line-height: 1.86;
+}
+
+.banner {
+  margin-bottom: 0;
+}
+
+.intro {
+  font-size: 14px;
 }
