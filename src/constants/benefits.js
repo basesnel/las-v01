@@ -7,7 +7,7 @@ const benefits = [
   {
     id: 1,
     amount: 40,
-    text: "Number of services",
+    text: "Number of quality services",
   },
   {
     id: 2,

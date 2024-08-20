@@ -6,6 +6,10 @@
   padding-top: 80px;
 }
 
+.item {
+  width: 100%;
+}
+
 .benefit {
   height: auto;
   padding: 20px;
@@ -15,8 +19,51 @@
   background-color: var(--highlight);
 }
 
-@media screen and (min-width: 320px) {
+.amount {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.amount::after {
+  content: "+";
+  position: absolute;
+  top: 8px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight: 600;
+  color: var(--accent-highlight);
+}
+
+.feature {
+  font-size: 11px;
+  color: var(--neutral);
+}
+
+@media screen and (min-width: 220px) {
   .item {
-    max-width: 158px;
+    width: 158px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .item {
+    width: inherit;
+  }
+
+  .item:nth-child(odd) {
+    transform: translateY(-36px);
+  }
+
+  .benefit {
+    width: 194px;
+    height: 133px;
+    padding: 20px 35px;
   }
 }

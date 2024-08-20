@@ -15,8 +15,8 @@ const Features = () => {
           return (
             <li key={id} className={styles.item}>
               <div className={styles.benefit}>
-                <p>{amount}</p>
-                <p>{text}</p>
+                <p className={styles.amount}>{amount}</p>
+                <p className={styles.feature}>{text}</p>
               </div>
             </li>
           );
