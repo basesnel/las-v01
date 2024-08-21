@@ -8,12 +8,12 @@ const Socnets = ({ variant }) => {
 
   return (
     <ul className={`${styles.list} ${variation}`}>
-      {socNets.map(({ id, text, src }) => {
+      {socNets.map(({ text, src }, i) => {
         return (
           <li
-            key={id}
+            key={i}
             className={
-              id === 0
+              i === 0
                 ? `${styles.item} ${styles.itemDecor} ${variation}`
                 : `${styles.item} ${variation}`
             }

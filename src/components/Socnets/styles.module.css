@@ -31,7 +31,7 @@
 }
 
 .link:visited {
-  color: var(--accent-light);
+  color: var(--accent-dark);
 }
 
 .link:hover,

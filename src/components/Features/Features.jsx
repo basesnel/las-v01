@@ -11,9 +11,9 @@ const Features = () => {
       <Subtitle>why people come to us?</Subtitle>
       <Heading level={2} title="our benefits" />
       <ul className={styles.list}>
-        {benefits.map(({ id, amount, text }) => {
+        {benefits.map(({ amount, text }, i) => {
           return (
-            <li key={id} className={styles.item}>
+            <li key={i} className={styles.item}>
               <div className={styles.benefit}>
                 <p className={styles.amount}>{amount}</p>
                 <p className={styles.feature}>{text}</p>
