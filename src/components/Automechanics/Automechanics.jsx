@@ -13,55 +13,27 @@ const Automechanics = () => {
       <Subtitle>true blacksmith of their craft</Subtitle>
       <Heading level={2} title="our mechanics" />
       <ul>
-        {mechanics.map(({ id, name, position, socnet }) => {
+        {mechanics.map(({ name, position, socnets }, i) => {
           return (
-            <li key={id} className={styles.item}>
+            <li key={i} className={styles.item}>
               <div className={styles.card}>
                 <div className={styles.thumb}></div>
                 <div className={styles.content}>
                   <h3 className={styles.name}>{name}</h3>
                   <p className={styles.text}>{position}</p>
                   <ul className={styles.socials}>
-                    <li>
-                      <Link src={socnet.instagram} className={styles.link}>
-                        <Icon
-                          icon="icon-instagram"
-                          width={20}
-                          height={20}
-                          className={styles.icon}
-                        />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link src={socnet.instagram} className={styles.link}>
-                        <Icon
-                          icon="icon-twitter"
-                          width={20}
-                          height={20}
-                          className={styles.icon}
-                        />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link src={socnet.instagram} className={styles.link}>
-                        <Icon
-                          icon="icon-facebook"
-                          width={20}
-                          height={20}
-                          className={styles.icon}
-                        />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link src={socnet.instagram} className={styles.link}>
-                        <Icon
-                          icon="icon-linkedin"
-                          width={20}
-                          height={20}
-                          className={styles.icon}
-                        />
-                      </Link>
-                    </li>
+                    {socnets.map(({ icon, socnet }, j) => (
+                      <li key={j}>
+                        <Link src={socnet} className={styles.link}>
+                          <Icon
+                            icon={icon}
+                            width={20}
+                            height={20}
+                            className={styles.icon}
+                          />
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
