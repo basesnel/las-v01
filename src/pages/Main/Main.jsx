@@ -4,8 +4,7 @@ import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
 import Automechanics from "../../components/Automechanics/Automechanics";
 import Gallery from "../../components/Gallery/Gallery";
-import Feedback from "../../components/Feedback/Feedback";
-import Contacts from "../../components/Contacts/Contacts";
+import ContactUs from "../../components/ContactUs/ContactUs";
 import Clients from "../../components/Clients/Clients";
 
 // import styles from "./styles.module.css";
@@ -19,8 +18,9 @@ const Main = () => {
       <Features />
       <Automechanics />
       <Gallery />
-      <Feedback />
-      <Contacts />
+      <ContactUs />
+      {/* <Feedback />
+      <Contacts /> */}
       <Clients />
     </main>
   );

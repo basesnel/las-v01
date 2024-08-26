@@ -10,7 +10,7 @@ import styles from "./styles.module.css";
 const Contacts = () => {
   return (
     <Section part="contacts" variant="dark" label="contact us">
-      <Heading level={2} title="contacts" />
+      <Heading level={3} title="contacts" />
       <address className={styles.address}>
         <ul>
           {contacts.map(({ id, text, src, icon }) => {

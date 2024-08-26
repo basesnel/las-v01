@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 const Feedback = () => {
   return (
     <Section part="feedback" variant="dark" label="write us">
-      <Heading level={2} title="feedback" />
+      <Heading level={3} title="feedback" />
       <form className={styles.form} autoComplete="off">
         <label className={styles.field}>
           <input

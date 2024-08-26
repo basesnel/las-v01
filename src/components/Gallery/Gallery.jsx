@@ -10,7 +10,7 @@ const Gallery = () => {
   return (
     <Section part="gallery" label="our work">
       <Subtitle>complex car repair</Subtitle>
-      <Heading level={2} mode="gallery" title="gallery" />
+      <Heading level={2} mode="hidden" title="gallery" />
       <ul>
         {images.map((image, i) => (
           <li key={i} className={styles.item}>
