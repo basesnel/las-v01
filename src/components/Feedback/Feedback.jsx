@@ -4,10 +4,22 @@ import Heading from "../Heading/Heading";
 import styles from "./styles.module.css";
 
 const Feedback = () => {
+  const onSubmitFeedback = (e) => {
+    e.preventDefault();
+    new FormData(e.currentTarget).forEach((value, name) =>
+      console.log(`${name}: ${value}`)
+    );
+    e.currentTarget.reset();
+  };
+
   return (
     <Section part="feedback" variant="dark" label="write us">
       <Heading level={3} title="feedback" />
-      <form className={styles.form} autoComplete="off">
+      <form
+        className={styles.form}
+        autoComplete="off"
+        onSubmit={onSubmitFeedback}
+      >
         <label className={styles.field}>
           <input
             type="text"
@@ -35,7 +47,7 @@ const Feedback = () => {
           <span className={`${styles.label}`}>message</span>
         </label>
         <button className={styles.button} type="submit">
-          send
+          <span className={styles.span}>send</span>
         </button>
       </form>
     </Section>
