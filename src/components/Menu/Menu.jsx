@@ -6,7 +6,7 @@ import Socnets from "../Socnets/Socnets";
 import styles from "./styles.module.css";
 
 const Menu = ({ onClose, onHide }) => {
-  const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll("section[id]");
   const parts = [];
   sections.forEach((section, i) => {
     const part = { id: i, name: section.id, label: section.ariaLabel };
