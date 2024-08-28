@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  word-break: normal;
+  word-break: break-all;
 }
 
 .service::before {
