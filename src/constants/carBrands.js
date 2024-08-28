@@ -23,6 +23,12 @@ const carBrands = [
   {
     icon: "hyundai",
   },
+  {
+    icon: "mazda",
+  },
+  {
+    icon: "mercedes",
+  },
 ];
 
 export default carBrands;
