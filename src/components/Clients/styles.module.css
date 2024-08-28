@@ -1,5 +1,32 @@
-.title {
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  border: 1px solid var(--neutral);
+  /* border-radius: 4px; */
+  color: var(--neutral);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover,
+.link:focus {
+  border: 1px solid var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+.icon {
+  width: 120px;
+  height: 90px;
+  fill: currentColor;
 }

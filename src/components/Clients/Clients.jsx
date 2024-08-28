@@ -12,9 +12,9 @@ const Clients = () => {
     <Section part="clients" label="we works on">
       <Subtitle>repair of any complexity</Subtitle>
       <Heading level={2} title="our clients" />
-      <ul>
+      <ul className={styles.list}>
         {carBrands.map(({ icon }, i) => (
-          <li key={i}>
+          <li key={i} className={styles.item}>
             <Link src="#" className={styles.link}>
               <Icon
                 icon={icon}
