@@ -5,7 +5,13 @@
 }
 
 .item {
-  flex-basis: calc((100% - 30px) / 2);
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 336px) {
+  .item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 
 .link {
