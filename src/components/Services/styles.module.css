@@ -17,6 +17,7 @@
 
 .item {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 4px;
   padding: 10px 0;
