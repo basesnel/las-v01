@@ -47,6 +47,12 @@
   color: var(--accent-highlight);
 }
 
+.feature {
+  font-size: 11px;
+  color: var(--neutral);
+  word-break: break-all;
+}
+
 @media screen and (min-width: 180px) {
   .amount {
     font-size: 42px;
@@ -55,12 +61,10 @@
   .amount::after {
     top: 8px;
   }
-}
 
-.feature {
-  font-size: 11px;
-  color: var(--neutral);
-  word-break: break-all;
+  .feature {
+    word-break: normal;
+  }
 }
 
 @media screen and (min-width: 480px) {
