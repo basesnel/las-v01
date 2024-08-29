@@ -47,6 +47,12 @@ const carBrands = [
   {
     icon: "suzuki",
   },
+  {
+    icon: "toyota",
+  },
+  {
+    icon: "volkswagen",
+  },
 ];
 
 export default carBrands;
