@@ -31,14 +31,14 @@
 }
 
 .icon {
-  width: 100%;
-  height: auto;
+  width: 75%;
+  height: 90px;
   fill: currentColor;
 }
 
 @media screen and (min-width: 171px) {
   .icon {
-    width: 120px;
+    width: 90px;
     height: 90px;
   }
 }
