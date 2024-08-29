@@ -33,9 +33,11 @@ const carBrands = [
   },
   {
     icon: "mazda",
+    iconInv: "mazda-inv",
   },
   {
     icon: "mercedes",
+    iconInv: "mercedes-inv",
   },
   {
     icon: "mitsubishi",
