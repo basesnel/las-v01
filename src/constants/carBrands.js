@@ -17,9 +17,11 @@ const carBrands = [
   },
   {
     icon: "daewoo",
+    iconInv: "daewoo-inv",
   },
   {
     icon: "ford",
+    iconInv: "ford-inv",
   },
   {
     icon: "honda",
