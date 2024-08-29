@@ -1,9 +1,11 @@
 const carBrands = [
   {
     icon: "audi",
+    iconInv: "audi-inv",
   },
   {
     icon: "bmw",
+    iconInv: "bmw-inv",
   },
   {
     icon: "chevrolet",

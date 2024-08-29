@@ -30,6 +30,12 @@
   color: var(--accent-dark);
 }
 
+.link.inv {
+  /* background-color: currentColor; */
+  box-shadow: inset 40px 0 0 12px currentColor,
+    inset -40px 0 0 12px currentColor;
+}
+
 .icon {
   width: 75%;
   height: 90px;
