@@ -22,6 +22,7 @@
   color: var(--neutral);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 .link:hover,
@@ -38,8 +39,8 @@
 .link.inv::before {
   content: "";
   position: absolute;
-  width: 86px;
-  height: 65px;
+  width: 77%;
+  height: 96%;
   top: 50%;
   left: 50%;
   background-color: var(--light);
@@ -48,8 +49,8 @@
 }
 
 .icon {
-  width: 75%;
-  height: 90px;
+  width: 80%;
+  height: 60%;
   fill: currentColor;
   z-index: 1;
 }
@@ -58,5 +59,10 @@
   .icon {
     width: 90px;
     height: 90px;
+  }
+
+  .link.inv::before {
+    width: 86px;
+    height: 65px;
   }
 }
