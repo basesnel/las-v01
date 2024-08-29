@@ -31,15 +31,27 @@
 }
 
 .link.inv {
-  /* background-color: currentColor; */
-  box-shadow: inset 40px 0 0 12px currentColor,
-    inset -40px 0 0 12px currentColor;
+  position: relative;
+  background-color: currentColor;
+}
+
+.link.inv::before {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 65px;
+  top: 50%;
+  left: 50%;
+  background-color: var(--light);
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .icon {
   width: 75%;
   height: 90px;
   fill: currentColor;
+  z-index: 1;
 }
 
 @media screen and (min-width: 171px) {
