@@ -9,9 +9,11 @@ const carBrands = [
   },
   {
     icon: "chevrolet",
+    iconInv: "chevrolet-inv",
   },
   {
     icon: "citroen",
+    iconInv: "citroen-inv",
   },
   {
     icon: "daewoo",
