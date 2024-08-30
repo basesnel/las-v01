@@ -65,9 +65,10 @@ const carBrands = [
   },
   {
     icon: "toyota",
+    iconInv: "toyota-inv",
   },
   {
-    icon: "volkswagen",
+    iconInv: "volkswagen-inv",
   },
 ];
 
