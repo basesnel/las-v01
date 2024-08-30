@@ -13,11 +13,16 @@ const Clients = () => {
       <Subtitle>repair of any complexity</Subtitle>
       <Heading level={2} title="our clients" />
       <ul className={styles.list}>
-        {carBrands.map(({ icon }, i) => (
+        {carBrands.map(({ icon, iconInv }, i) => (
           <li key={i} className={styles.item}>
-            <Link src="#" className={styles.link}>
+            <Link
+              src="#"
+              className={
+                iconInv ? `${styles.link} ${styles.inv}` : `${styles.link}`
+              }
+            >
               <Icon
-                icon={icon}
+                icon={iconInv || icon}
                 width={120}
                 height={90}
                 className={styles.icon}
