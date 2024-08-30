@@ -80,10 +80,11 @@
 
 .button {
   display: inline-block;
-  max-width: 160px;
+  width: 90%;
   border: 1px solid var(--light);
-  border-radius: 16px;
-  padding: 16px 24px;
+  margin: 0 auto 24px;
+  border-radius: 12px;
+  padding: 16px 20px;
   font-size: 12px;
   line-height: 1.33;
   font-weight: 600;
@@ -101,6 +102,27 @@
 .button:focus {
   color: var(--dark);
   background-color: var(--light);
+}
+
+.button:last-child {
+  margin: 0;
+}
+
+@media screen and (min-width: 200px) {
+  .button {
+    width: 60%;
+    max-width: 160px;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .button {
+    width: auto;
+    margin: 0 24px 0 0;
+    margin-right: 24px;
+    border-radius: 16px;
+    padding: 16px 24px;
+  }
 }
 
 .span {

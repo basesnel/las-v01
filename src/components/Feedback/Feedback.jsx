@@ -49,6 +49,9 @@ const Feedback = () => {
         <button className={styles.button} type="submit">
           <span className={styles.span}>send</span>
         </button>
+        <button className={styles.button} type="reset">
+          <span className={styles.span}>reset</span>
+        </button>
       </form>
     </Section>
   );
