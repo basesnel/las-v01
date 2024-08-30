@@ -57,9 +57,11 @@ const carBrands = [
   },
   {
     icon: "subaru",
+    iconInv: "subaru-inv",
   },
   {
     icon: "suzuki",
+    iconInv: "suzuki-inv",
   },
   {
     icon: "toyota",
