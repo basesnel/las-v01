@@ -102,22 +102,32 @@
   background-size: 300% 300%;
   background-position: 160% 160%;
   background-repeat: no-repeat;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  transform: skewX(-30deg);
+  transform: skewX(-30deg) scale(1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   animation: gradientAnimation 16000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms
     infinite;
 }
 
-.button:hover,
-.button:focus {
-  color: var(--dark);
-  background-color: var(--light);
-}
-
 .button:last-child {
   margin: 0;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 0px 1px var(--light), 0 0 2px var(--light),
+    0 0.5px 5px var(--highlight), 0 0 10px var(--light);
+  transform: skewX(-30deg) scale(1.2) rotate(180deg);
+}
+
+.span {
+  display: block;
+  transform: skew(30deg);
+}
+
+.button:hover .span {
+  transform: skewX(30deg) rotate(-180deg);
 }
 
 @media screen and (min-width: 200px) {
@@ -135,11 +145,6 @@
     border-radius: 16px;
     padding: 16px 24px;
   }
-}
-
-.span {
-  display: block;
-  transform: skew(30deg);
 }
 
 @keyframes gradientAnimation {
