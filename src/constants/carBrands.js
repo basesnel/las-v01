@@ -49,9 +49,11 @@ const carBrands = [
   },
   {
     icon: "seat",
+    iconInv: "seat-inv",
   },
   {
     icon: "skoda",
+    iconInv: "skoda-inv",
   },
   {
     icon: "subaru",
