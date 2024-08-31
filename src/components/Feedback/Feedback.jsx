@@ -26,6 +26,7 @@ const Feedback = () => {
             name="name"
             className={styles.input}
             placeholder=" "
+            autoComplete="off"
           />
           <span className={`${styles.label} ${styles.req}`}>name</span>
         </label>
@@ -35,6 +36,7 @@ const Feedback = () => {
             name="tel"
             className={styles.input}
             placeholder=" "
+            autoComplete="off"
           />
           <span className={`${styles.label} ${styles.req}`}>phone</span>
         </label>
