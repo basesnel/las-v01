@@ -125,11 +125,6 @@
   transform: skew(30deg);
 }
 
-/* .button:hover .span,
-.button:focus .span {
-  transform: skewX(30deg) rotate(-180deg);
-} */
-
 @media screen and (min-width: 200px) {
   .button {
     width: 60%;
