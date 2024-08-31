@@ -125,7 +125,8 @@
   transform: skew(30deg);
 }
 
-.button:hover .span {
+.button:hover .span,
+.button:focus .span {
   transform: skewX(30deg) rotate(-180deg);
 }
 
