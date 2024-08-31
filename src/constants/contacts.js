@@ -35,6 +35,18 @@ const contacts = [
     src: "tel:+380668838238",
     icon: "phone",
   },
+  {
+    id: 6,
+    text: "liashenko_auto_service",
+    src: "https://www.instagram.com/liashenko_auto_service",
+    icon: "icon-instagram",
+  },
+  {
+    id: 7,
+    text: "liashenko_auto_service",
+    src: "https://www.facebook.com/profile.php?id=61554802258333",
+    icon: "icon-facebook",
+  },
 ];
 
 export default contacts;
