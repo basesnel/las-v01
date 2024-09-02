@@ -39,6 +39,19 @@ const Header = () => {
     <header className={styles.header}>
       <Container variant="header">
         <Logo />
+        <nav className={styles.nav}>
+          <ul className={styles.list}>
+            <li>
+              <a href="#introduction">Invitation</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#features">Our benefits</a>
+            </li>
+          </ul>
+        </nav>
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
             icon="icon-menu"
