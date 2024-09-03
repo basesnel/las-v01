@@ -7,6 +7,7 @@ import Menu from "../Menu/Menu";
 
 import styles from "./styles.module.css";
 import Logo from "../Logo/Logo";
+import Button from "../Button/Button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,6 +58,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
+          <Button type="button" caption="More" />
         </nav>
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
