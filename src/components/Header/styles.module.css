@@ -31,6 +31,16 @@
   gap: 16px;
 }
 
+.link {
+  display: block;
+  padding: 52px 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--light);
+}
+
 .icon {
   width: 28px;
   height: 28px;

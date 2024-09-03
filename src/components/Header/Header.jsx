@@ -41,14 +41,20 @@ const Header = () => {
         <Logo />
         <nav className={styles.nav}>
           <ul className={styles.list}>
-            <li>
-              <a href="#introduction">Invitation</a>
+            <li className={styles.item}>
+              <a href="#introduction" className={styles.link}>
+                Invitation
+              </a>
             </li>
-            <li>
-              <a href="#services">Services</a>
+            <li className={styles.item}>
+              <a href="#services" className={styles.link}>
+                Services
+              </a>
             </li>
-            <li>
-              <a href="#features">Our benefits</a>
+            <li className={styles.item}>
+              <a href="#features" className={styles.link}>
+                Our benefits
+              </a>
             </li>
           </ul>
         </nav>
