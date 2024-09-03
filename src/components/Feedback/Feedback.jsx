@@ -1,5 +1,6 @@
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
+import Button from "../Button/Button";
 
 import styles from "./styles.module.css";
 
@@ -48,12 +49,8 @@ const Feedback = () => {
           />
           <span className={`${styles.label}`}>message</span>
         </label>
-        <button className={styles.button} type="submit">
-          <span className={styles.span}>send</span>
-        </button>
-        <button className={styles.button} type="reset">
-          <span className={styles.span}>reset</span>
-        </button>
+        <Button type="submit" caption="send" />
+        <Button type="reset" caption="reset" />
       </form>
     </Section>
   );

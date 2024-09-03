@@ -4,10 +4,10 @@ import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Menu from "../Menu/Menu";
-
-import styles from "./styles.module.css";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
+
+import styles from "./styles.module.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
