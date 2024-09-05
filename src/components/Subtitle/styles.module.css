@@ -3,6 +3,7 @@
   font-size: 11px;
   font-style: italic;
   line-height: 1.36;
+  letter-spacing: 0.1em;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--neutral);
@@ -22,5 +23,11 @@
     border-radius: 1px;
     background-color: currentColor;
     transform: skewX(-30deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    letter-spacing: 0;
   }
 }

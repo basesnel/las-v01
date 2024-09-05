@@ -57,6 +57,11 @@ const Header = () => {
                 Our benefits
               </a>
             </li>
+            <li className={styles.item}>
+              <a href="#shop" className={styles.link}>
+                Go to buy a car
+              </a>
+            </li>
           </ul>
           <Button type="button" caption="More" />
         </nav>
