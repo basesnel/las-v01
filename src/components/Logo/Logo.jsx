@@ -9,7 +9,20 @@ const Logo = ({ isDark }) => {
   return (
     <a href="#" className={styles.logo} aria-label="logo">
       <picture focusable="false" aria-hidden="true">
+        <source
+          srcSet={Logodkwebp}
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+
+        <source
+          srcSet={Logoltpng}
+          media="(min-width: 768px)"
+          type="image/png"
+        />
+
         <source srcSet={isDark ? Logodkwebp : Logoltwebp} type="image/webp" />
+
         <img
           srcSet={isDark ? Logodkpng : Logoltpng}
           src={isDark ? Logodkpng : Logoltpng}
