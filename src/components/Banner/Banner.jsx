@@ -21,7 +21,7 @@ const Banner = () => {
         <Data mode="banner">Auto-tool | {formatDate(new Date())}</Data>
       </div>
       <aside className={styles.aside}>
-        <Socnets variant="menu" />
+        <Socnets variant="aside" />
       </aside>
     </Section>
   );
