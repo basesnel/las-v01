@@ -4,6 +4,7 @@ import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Data from "../Data/Data";
+import Socnets from "../Socnets/Socnets";
 
 import styles from "./styles.module.css";
 
@@ -19,6 +20,9 @@ const Banner = () => {
         </Text>
         <Data mode="banner">Auto-tool | {formatDate(new Date())}</Data>
       </div>
+      <aside className={styles.aside}>
+        <Socnets variant="menu" />
+      </aside>
     </Section>
   );
 };
