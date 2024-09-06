@@ -54,14 +54,34 @@ const Header = () => {
             </li>
             <li className={styles.item}>
               <a href="#features" className={styles.link}>
-                Our benefits
+                Our benefits And Features
               </a>
             </li>
-            {/* <li className={styles.item}>
+            <li className={styles.item}>
               <a href="#shop" className={styles.link}>
                 Go to buy a car
               </a>
-            </li> */}
+            </li>
+            <li className={styles.item}>
+              <a href="#automechanics" className={styles.link}>
+                Our Mechanics
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a href="#gallery" className={styles.link}>
+                Our Work
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a href="#contacts-us" className={styles.link}>
+                Contact Us
+              </a>
+            </li>
+            <li className={styles.item}>
+              <a href="#clients" className={styles.link}>
+                We Works On
+              </a>
+            </li>
           </ul>
           <Button type="button" caption="More" />
         </nav>
