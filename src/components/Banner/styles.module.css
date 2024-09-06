@@ -105,6 +105,12 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .content {
+    padding: 189px 31px 166px 100px;
+  }
+}
+
 .aside {
   display: none;
 }

@@ -44,3 +44,10 @@
     word-break: normal;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .heading01 {
+    font-size: 72px;
+    line-height: 1.462;
+  }
+}

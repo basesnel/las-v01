@@ -16,6 +16,12 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .banner {
+    max-width: 490px;
+  }
+}
+
 .intro {
   font-size: 14px;
 }
