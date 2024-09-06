@@ -45,7 +45,7 @@
   }
 
   .header {
-    padding: 0 60px 0 34px;
+    padding: 0 80px 0 34px;
   }
 }
 
@@ -53,5 +53,9 @@
   .container {
     max-width: 1200px;
     padding: 0 15px;
+  }
+
+  .header {
+    padding: 0 60px 0 15px;
   }
 }

@@ -49,7 +49,7 @@ const Header = () => {
             </li>
             <li className={styles.item}>
               <a href="#services" className={styles.link}>
-                Services
+                Services And Prices
               </a>
             </li>
             <li className={styles.item}>
@@ -57,11 +57,11 @@ const Header = () => {
                 Our benefits
               </a>
             </li>
-            <li className={styles.item}>
+            {/* <li className={styles.item}>
               <a href="#shop" className={styles.link}>
                 Go to buy a car
               </a>
-            </li>
+            </li> */}
           </ul>
           <Button type="button" caption="More" />
         </nav>
