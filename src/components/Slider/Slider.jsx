@@ -7,34 +7,61 @@ const Slider = ({ variant }) => {
       <div className={styles.wrapper}>
         <div className={styles.line}>
           <div className={styles.slide}>
-            <img
-              loading="lazy"
-              src={SLIDES.mobile1}
-              alt="First slide: car repair"
-              width={480}
-              height={580}
-              className={styles.image}
-            />
+            <picture>
+              <source
+                srcSet={SLIDES.mobWEBP1}
+                type="image/webp"
+                width={480}
+                height={580}
+              />
+
+              <img
+                loading="lazy"
+                src={SLIDES.mobJPG1}
+                alt="First slide: car repair"
+                width={480}
+                height={580}
+                className={styles.image}
+              />
+            </picture>
           </div>
           <div className={styles.slide}>
-            <img
-              loading="lazy"
-              src={SLIDES.mobile2}
-              alt="Second slide: car repair"
-              width={480}
-              height={580}
-              className={styles.image}
-            />
+            <picture>
+              <source
+                srcSet={SLIDES.mobWEBP2}
+                type="image/webp"
+                width={480}
+                height={580}
+              />
+
+              <img
+                loading="lazy"
+                src={SLIDES.mobJPG2}
+                alt="Second slide: car repair"
+                width={480}
+                height={580}
+                className={styles.image}
+              />
+            </picture>
           </div>
           <div className={styles.slide}>
-            <img
-              loading="lazy"
-              src={SLIDES.mobile3}
-              alt="Third slide: car repair"
-              width={480}
-              height={580}
-              className={styles.image}
-            />
+            <picture>
+              <source
+                srcSet={SLIDES.mobWEBP3}
+                type="image/webp"
+                width={480}
+                height={580}
+              />
+
+              <img
+                loading="lazy"
+                src={SLIDES.mobJPG3}
+                alt="Third slide: car repair"
+                width={480}
+                height={580}
+                className={styles.image}
+              />
+            </picture>
           </div>
         </div>
       </div>
