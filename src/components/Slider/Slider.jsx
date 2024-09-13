@@ -9,7 +9,7 @@ const Slider = ({ variant }) => {
           <div className={styles.slide}>
             <picture>
               <source
-                srcSet={SLIDES.mobWEBP1}
+                srcSet={SLIDES[0].mobWEBP1}
                 type="image/webp"
                 width={480}
                 height={580}
@@ -17,8 +17,8 @@ const Slider = ({ variant }) => {
 
               <img
                 loading="lazy"
-                src={SLIDES.mobJPG1}
-                alt="First slide: car repair"
+                src={SLIDES[0].mobJPG1}
+                alt={SLIDES[0].alt}
                 width={480}
                 height={580}
                 className={styles.image}
@@ -28,7 +28,7 @@ const Slider = ({ variant }) => {
           <div className={styles.slide}>
             <picture>
               <source
-                srcSet={SLIDES.mobWEBP2}
+                srcSet={SLIDES[1].mobWEBP2}
                 type="image/webp"
                 width={480}
                 height={580}
@@ -36,8 +36,8 @@ const Slider = ({ variant }) => {
 
               <img
                 loading="lazy"
-                src={SLIDES.mobJPG2}
-                alt="Second slide: car repair"
+                src={SLIDES[1].mobJPG2}
+                alt={SLIDES[1].alt}
                 width={480}
                 height={580}
                 className={styles.image}
@@ -47,7 +47,7 @@ const Slider = ({ variant }) => {
           <div className={styles.slide}>
             <picture>
               <source
-                srcSet={SLIDES.mobWEBP3}
+                srcSet={SLIDES[2].mobWEBP3}
                 type="image/webp"
                 width={480}
                 height={580}
@@ -55,8 +55,8 @@ const Slider = ({ variant }) => {
 
               <img
                 loading="lazy"
-                src={SLIDES.mobJPG3}
-                alt="Third slide: car repair"
+                src={SLIDES[2].mobJPG3}
+                alt={SLIDES[2].alt}
                 width={480}
                 height={580}
                 className={styles.image}
