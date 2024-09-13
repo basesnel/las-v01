@@ -5,6 +5,7 @@ import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Data from "../Data/Data";
 import Socnets from "../Socnets/Socnets";
+import Slider from "../Slider/Slider";
 
 import styles from "./styles.module.css";
 
@@ -19,6 +20,7 @@ const Banner = () => {
           full range of quality services, namely:
         </Text>
         <Data mode="banner">Auto-tool | {formatDate(new Date())}</Data>
+        <Slider />
       </div>
       <aside className={styles.aside}>
         <Socnets variant="aside" />
