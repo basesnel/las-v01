@@ -25,6 +25,7 @@ const Slider = ({ variant }) => {
               />
             </picture>
           </div>
+
           <div className={styles.slide}>
             <picture>
               <source
@@ -44,6 +45,7 @@ const Slider = ({ variant }) => {
               />
             </picture>
           </div>
+
           <div className={styles.slide}>
             <picture>
               <source
@@ -70,7 +72,7 @@ const Slider = ({ variant }) => {
         <button className={styles.next}>next</button>
       </div>
       <div className={styles.dots}>
-        <div className={styles.dot}></div>
+        <div className={`${styles.dot} ${styles.active}`}></div>
         <div className={styles.dot}></div>
         <div className={styles.dot}></div>
       </div>

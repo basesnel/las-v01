@@ -2,7 +2,6 @@
   position: relative;
   padding: 155px 24px 156px;
   color: var(--light);
-  background-color: var(--dark);
 }
 
 .content::after {
@@ -95,7 +94,7 @@
   background-position: 30% top, 30% bottom;
   background-size: 1200px 50px, 1200px 50px;
   background-repeat: no-repeat;
-  opacity: 0.86;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 768px) {

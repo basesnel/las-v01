@@ -1,86 +1,90 @@
-.list {
-  display: flex;
-  column-gap: 40px;
-  row-gap: 10px;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.list.menu {
-  gap: 10px;
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 28, 38, 0.2);
+  overflow: hidden;
+}
+
+.line {
+  position: relative;
+  left: 0;
+  z-index: -50;
+  display: flex;
+  height: 100%;
+  background-color: var(--dark);
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+}
+
+@media screen and (min-width: 461px) {
+  .image {
+    height: auto;
+  }
+}
+
+.buttons {
+  display: none;
+}
+
+.dots {
+  position: absolute;
+  right: 31px;
+  top: 50%;
+  display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
-  align-items: flex-end;
-  margin-bottom: 0;
+  transform: translateY(-50%);
 }
 
-.list.aside {
-  flex-wrap: nowrap;
-  margin-bottom: 0;
-  transform: rotate(-90deg) translateX(148px);
-}
-
-.item {
-  font-size: 11px;
-  line-height: normal;
-  font-weight: 600;
-  letter-spacing: 2.2px;
-  color: var(--neutral);
-}
-
-.link {
-  text-decoration: none;
-  color: var(--neutral);
+.dot {
+  position: relative;
+  width: 18px;
+  height: 14px;
+  color: #9da4bd;
+  background-color: rgba(0, 0, 0, 0);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
-.link:visited {
-  color: var(--accent-dark);
+.dot:hover {
+  color: var(--light);
 }
 
-.link:hover,
-.link:focus {
-  color: var(--accent-highdark);
+.dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 8px;
+  height: 4px;
+  background-color: currentColor;
+  transform: translateY(-50%) skewX(-30deg);
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.itemDecor {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+.dot:hover::after {
+  width: 100%;
 }
 
-@media screen and (min-width: 480px) {
-  .list.menu {
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .item.menu {
-    font-size: 14px;
-    letter-spacing: 2.8px;
-    padding-left: 100px;
-  }
-
-  .item.menu:first-child {
-    padding-left: 0;
-  }
-
-  .itemDecor {
-    padding-left: 100px;
-  }
-
-  .itemDecor:first-child {
-    padding-left: 0;
-  }
-
-  .itemDecor:first-child:before {
-    content: "";
-
-    display: inline-block;
-    width: 60px;
-    height: 1px;
-    background-color: currentColor;
-  }
+.dot.active::after {
+  width: 100%;
+  background-color: var(--light);
 }
