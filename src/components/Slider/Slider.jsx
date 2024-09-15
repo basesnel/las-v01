@@ -61,8 +61,8 @@ const Slider = () => {
         </div>
       </div>
       <div className={styles.buttons}>
-        <button className={styles.prev}>prev</button>
-        <button className={styles.next}>next</button>
+        <button className={`${styles.button} ${styles.prev}`}>prev</button>
+        <button className={`${styles.button} ${styles.next}`}>next</button>
       </div>
       <div className={styles.dots}>{dots}</div>
     </div>
