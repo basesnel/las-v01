@@ -25,7 +25,22 @@ const Slider = () => {
               <div key={i} className={styles.slide}>
                 <picture>
                   <source
-                    srcSet={SLIDE.mobWEBP1}
+                    srcSet={SLIDE.tabWEBP}
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/webp"
+                    width={570}
+                    height={680}
+                  />
+
+                  <source
+                    srcSet={SLIDE.tabJPG}
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/jpeg"
+                    width={570}
+                    height={680}
+                  />
+                  <source
+                    srcSet={SLIDE.mobWEBP}
                     type="image/webp"
                     width={480}
                     height={580}
@@ -33,7 +48,7 @@ const Slider = () => {
 
                   <img
                     loading="lazy"
-                    src={SLIDE.mobJPG1}
+                    src={SLIDE.mobJPG}
                     alt={SLIDE.alt}
                     width={480}
                     height={580}
