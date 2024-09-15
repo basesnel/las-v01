@@ -82,6 +82,11 @@
   background-color: currentColor;
 }
 
+.button:hover,
+.button:focus {
+  color: var(--light);
+}
+
 .prev {
   text-align: left;
 }
