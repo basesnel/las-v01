@@ -25,6 +25,22 @@ const Slider = () => {
               <div key={i} className={styles.slide}>
                 <picture>
                   <source
+                    srcSet={SLIDE.deskWEBP}
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                    width={1070}
+                    height={680}
+                  />
+
+                  <source
+                    srcSet={SLIDE.deskPNG}
+                    media="(min-width: 1200px)"
+                    type="image/png"
+                    width={1070}
+                    height={680}
+                  />
+
+                  <source
                     srcSet={SLIDE.tabWEBP}
                     media="(min-width: 768px) and (max-width: 1199px)"
                     type="image/webp"
@@ -39,6 +55,7 @@ const Slider = () => {
                     width={570}
                     height={680}
                   />
+
                   <source
                     srcSet={SLIDE.mobWEBP}
                     type="image/webp"

@@ -10,6 +10,12 @@ import tabJpg3 from "../assets/images/banner/tablet/img-slide-3.jpg";
 import tabWebp1 from "../assets/images/banner/tablet/img-slide-1.webp";
 import tabWebp2 from "../assets/images/banner/tablet/img-slide-2.webp";
 import tabWebp3 from "../assets/images/banner/tablet/img-slide-3.webp";
+import deskPng1 from "../assets/images/banner/desktop/img-slide-1.png";
+import deskPng2 from "../assets/images/banner/desktop/img-slide-2.png";
+import deskPng3 from "../assets/images/banner/desktop/img-slide-3.png";
+import deskWebp1 from "../assets/images/banner/desktop/img-slide-1.webp";
+import deskWebp2 from "../assets/images/banner/desktop/img-slide-2.webp";
+import deskWebp3 from "../assets/images/banner/desktop/img-slide-3.webp";
 
 const SLIDES = [
   {
@@ -17,6 +23,8 @@ const SLIDES = [
     mobJPG: `${mobJpg1}`,
     tabWEBP: `${tabWebp1}`,
     tabJPG: `${tabJpg1}`,
+    deskWEBP: `${deskWebp1}`,
+    deskPNG: `${deskPng1}`,
     alt: "Repair of the machine chassis",
   },
   {
@@ -24,6 +32,8 @@ const SLIDES = [
     mobJPG: `${mobJpg2}`,
     tabWEBP: `${tabWebp2}`,
     tabJPG: `${tabJpg2}`,
+    deskWEBP: `${deskWebp2}`,
+    deskPNG: `${deskPng2}`,
     alt: "Machine diagnostics",
   },
   {
@@ -31,6 +41,8 @@ const SLIDES = [
     mobJPG: `${mobJpg3}`,
     tabWEBP: `${tabWebp3}`,
     tabJPG: `${tabJpg3}`,
+    deskWEBP: `${deskWebp3}`,
+    deskPNG: `${deskPng3}`,
     alt: "Engine repair",
   },
 ];
