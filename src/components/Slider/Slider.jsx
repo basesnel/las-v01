@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SLIDES from "../../constants/slides";
+
 import styles from "./styles.module.css";
 
 const Slider = () => {
