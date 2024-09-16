@@ -16,7 +16,7 @@ const Logo = ({ isDark }) => {
         />
 
         <source
-          srcSet={Logoltpng}
+          srcSet={Logodkpng}
           media="(min-width: 768px)"
           type="image/png"
         />
