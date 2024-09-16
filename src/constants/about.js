@@ -8,7 +8,7 @@ import tabWebp2 from "../assets/images/about/tablet/img-about-2.webp";
 import deskJpg2 from "../assets/images/about/desktop/img-about-2.jpg";
 import deskWebp2 from "../assets/images/about/desktop/img-about-2.webp";
 
-const ABOUT = [
+const ABOUTS = [
   {
     tabWEBP: `${tabWebp1}`,
     tabJPG: `${tabJpg1}`,
@@ -25,4 +25,4 @@ const ABOUT = [
   },
 ];
 
-export default ABOUT;
+export default ABOUTS;

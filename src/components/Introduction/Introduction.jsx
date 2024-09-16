@@ -2,7 +2,7 @@ import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
-import ABOUT from "../../constants/about";
+import ABOUTS from "../../constants/about";
 
 import styles from "./styles.module.css";
 
@@ -29,34 +29,24 @@ const Gallery = () => {
       </div>
       <aside className={styles.aside}>
         <ul className={styles.list}>
-          <li className={styles.item}>
-            <div className={styles.thumb}>
-              <picture>
-                <img
-                  loading="lazy"
-                  src={ABOUT[0].tabJPG}
-                  alt={ABOUT[0].alt}
-                  width={330}
-                  height={235}
-                  className={styles.image}
-                />
-              </picture>
-            </div>
-          </li>
-          <li className={styles.item}>
-            <div className={styles.thumb}>
-              <picture>
-                <img
-                  loading="lazy"
-                  src={ABOUT[1].tabJPG}
-                  alt={ABOUT[1].alt}
-                  width={330}
-                  height={235}
-                  className={styles.image}
-                />
-              </picture>
-            </div>
-          </li>
+          {ABOUTS.map((ABOUT, i) => {
+            return (
+              <li key={i} className={styles.item}>
+                <div className={styles.thumb}>
+                  <picture>
+                    <img
+                      loading="lazy"
+                      src={ABOUT.tabJPG}
+                      alt={ABOUT.alt}
+                      width={330}
+                      height={235}
+                      className={styles.image}
+                    />
+                  </picture>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </aside>
     </Section>
