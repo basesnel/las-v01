@@ -9,6 +9,8 @@
 }
 
 .heading01 {
+  position: relative;
+  z-index: 50;
   /* font-family: "Tinos", system-ui; */
   font-family: "Gelasio", serif;
   line-height: 1.618;

@@ -6,6 +6,8 @@
 }
 
 .banner {
+  position: relative;
+  z-index: 50;
   margin-bottom: 0;
 }
 

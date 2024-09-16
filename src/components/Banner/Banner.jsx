@@ -13,7 +13,7 @@ const Banner = () => {
   return (
     <Section part="banner" mode="banner" label="banner with news">
       <div className={styles.content}>
-        <Subtitle>a quality car service in poltava</Subtitle>
+        <Subtitle mode="banner">a quality car service in poltava</Subtitle>
         <Heading level={1} title="liashenko auto service" />
         <Text mode="banner">
           Services for cars. We invite you to visit LAS, where you can get a
