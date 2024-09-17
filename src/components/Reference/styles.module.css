@@ -1,0 +1,140 @@
+.reference {
+  display: inline-flex;
+  width: 90%;
+  border: 1px solid var(--light);
+  margin: 0 auto 24px;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  color: var(--light);
+  background: linear-gradient(
+    110deg,
+    var(--dark) 20%,
+    var(--light) 48%,
+    var(--light) 52%,
+    var(--dark) 80%
+  );
+  background-size: 300% 300%;
+  background-position: 160% 160%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: skewX(-30deg);
+  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* animation: gradientAnimation 16000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms
+    infinite; */
+}
+
+.reference.light {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  background: linear-gradient(
+    110deg,
+    var(--light) 20%,
+    var(--dark) 48%,
+    var(--dark) 52%,
+    var(--light) 80%
+  );
+  background-size: 300% 300%;
+  background-position: 160% 160%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  /* animation: gradientAnimationLight 16000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms
+    infinite; */
+}
+
+.reference:last-child {
+  margin: 0;
+}
+
+.reference:hover,
+.reference:focus {
+  box-shadow: 0 0px 1px var(--light), 0 0 2px var(--light),
+    0 0.5px 5px var(--highlight), 0 0 10px var(--light);
+  transform: skewX(30deg);
+}
+
+.span {
+  display: block;
+  transform: skew(30deg);
+}
+
+.reference:hover .span,
+.reference:focus .span {
+  transform: skew(-30deg);
+}
+
+@media screen and (min-width: 200px) {
+  .reference {
+    width: 60%;
+    max-width: 160px;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .reference {
+    width: auto;
+    margin: 0 24px 0 0;
+    margin-right: 24px;
+    border-radius: 16px;
+    padding: 16px 24px;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 160% 160%;
+    color: var(--light);
+  }
+
+  40% {
+    background-position: 160% 160%;
+    color: var(--light);
+  }
+
+  50% {
+    background-position: 50% 50%;
+    color: var(--dark);
+  }
+
+  60% {
+    background-position: -60% -60%;
+    color: var(--light);
+  }
+
+  100% {
+    background-position: -60% -60%;
+    color: var(--light);
+  }
+}
+
+@keyframes gradientAnimationLight {
+  0% {
+    background-position: 160% 160%;
+    color: var(--dark);
+  }
+
+  40% {
+    background-position: 160% 160%;
+    color: var(--dark);
+  }
+
+  50% {
+    background-position: 50% 50%;
+    color: var(--light);
+  }
+
+  60% {
+    background-position: -60% -60%;
+    color: var(--dark);
+  }
+
+  100% {
+    background-position: -60% -60%;
+    color: var(--dark);
+  }
+}
