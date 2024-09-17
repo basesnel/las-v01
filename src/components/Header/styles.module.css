@@ -42,9 +42,16 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .nav {
+    gap: 87px;
+  }
+
+  .list {
+    gap: 30px;
+  }
+
   .item:first-child,
-  .item:nth-child(3),
-  .item:nth-child(5) {
+  .item:nth-child(3) {
     display: initial;
   }
 }
