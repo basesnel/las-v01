@@ -1,5 +1,7 @@
 .reference {
   display: inline-flex;
+  align-items: center;
+  gap: 12px;
   width: 90%;
   border: 1px solid var(--light);
   margin: 0 auto 24px;
@@ -23,10 +25,21 @@
   background-repeat: no-repeat;
   cursor: pointer;
   transform: skewX(-30deg);
-  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* animation: gradientAnimation 16000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms
     infinite; */
+}
+
+.reference::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 24px solid currentColor;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 0;
+  transform: skewX(30deg);
 }
 
 .reference.light {
@@ -58,9 +71,19 @@
   transform: skewX(30deg);
 }
 
+.reference:hover::after,
+.reference:focus::after {
+  /* border-top: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 24px solid currentColor; */
+  transform: skewX(-30deg) rotate(180deg);
+}
+
 .span {
   display: block;
   transform: skew(30deg);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reference:hover .span,
@@ -71,7 +94,7 @@
 @media screen and (min-width: 200px) {
   .reference {
     width: 60%;
-    max-width: 160px;
+    max-width: 320px;
   }
 }
 
