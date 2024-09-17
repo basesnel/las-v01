@@ -11,6 +11,12 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .content {
+    flex-basis: 570px;
+  }
+}
+
 .list {
   display: flex;
   gap: 30px;

@@ -64,3 +64,10 @@
   margin-bottom: 20px;
   font-size: 28px;
 }
+
+@media screen and (min-width: 1200px) {
+  .intro {
+    font-size: 42px;
+    line-height: 1.166;
+  }
+}
