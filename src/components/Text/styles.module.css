@@ -27,7 +27,11 @@
 .intro {
   font-size: 14px;
   line-height: 1.857;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+
+.intro:nth-child(6) {
+  margin-bottom: 27px;
 }
 
 .introWelcome {

@@ -2,6 +2,7 @@ import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
+import Button from "../Button/Button";
 import ABOUTS from "../../constants/about";
 
 import styles from "./styles.module.css";
@@ -26,6 +27,7 @@ const Gallery = () => {
           We pay special attention to the quality and speed of our services, so
           you can be sure that your car will be in good hands.
         </Text>
+        <Button type="button" caption="Contact us" mode="light" />
       </div>
       <aside className={styles.aside}>
         <ul className={styles.list}>

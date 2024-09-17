@@ -29,6 +29,24 @@
     infinite;
 }
 
+.button.light {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  background: linear-gradient(
+    110deg,
+    var(--light) 20%,
+    var(--dark) 48%,
+    var(--dark) 52%,
+    var(--light) 80%
+  );
+  background-size: 300% 300%;
+  background-position: 160% 160%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  animation: gradientAnimationLight 16000ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms
+    infinite;
+}
+
 .button:last-child {
   margin: 0;
 }
@@ -91,5 +109,32 @@
   100% {
     background-position: -60% -60%;
     color: var(--light);
+  }
+}
+
+@keyframes gradientAnimationLight {
+  0% {
+    background-position: 160% 160%;
+    color: var(--dark);
+  }
+
+  40% {
+    background-position: 160% 160%;
+    color: var(--dark);
+  }
+
+  50% {
+    background-position: 50% 50%;
+    color: var(--light);
+  }
+
+  60% {
+    background-position: -60% -60%;
+    color: var(--dark);
+  }
+
+  100% {
+    background-position: -60% -60%;
+    color: var(--dark);
   }
 }
