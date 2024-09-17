@@ -8,11 +8,11 @@ import styles from "./styles.module.css";
 
 const Gallery = () => {
   return (
-    <Section part="introduction" mode="introduction" label="invitation">
+    <Section part="introduction" mode="intro" label="invitation">
       <div className={styles.content}>
         <Subtitle>about</Subtitle>
-        <Heading level={2} title="introductions" />
-        <Text>Welcome and introductions.</Text>
+        <Heading level={2} mode="intro" title="introductions" />
+        <Text mode="introWelcome">Welcome and introductions.</Text>
         <Text mode="intro">
           Our company provides a full range of services for the maintenance and
           repair of cars of well-known brands and models.

@@ -1,3 +1,7 @@
+.content {
+  flex-basis: 330px;
+}
+
 .aside {
   display: none;
 }

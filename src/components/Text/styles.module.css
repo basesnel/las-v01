@@ -26,4 +26,11 @@
 
 .intro {
   font-size: 14px;
+  line-height: 1.857;
+  margin-bottom: 16px;
+}
+
+.introWelcome {
+  font-size: 18px;
+  line-height: 1.666;
 }

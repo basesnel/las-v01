@@ -44,7 +44,7 @@
     flex-direction: row-reverse;
   }
 
-  .introduction {
+  .intro {
     display: flex;
     gap: 30px;
     flex-direction: row-reverse;
