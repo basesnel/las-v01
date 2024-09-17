@@ -8,7 +8,7 @@ import styles from "./styles.module.css";
 
 const Gallery = () => {
   return (
-    <Section part="introduction" label="invitation">
+    <Section part="introduction" mode="introduction" label="invitation">
       <div className={styles.content}>
         <Subtitle>about</Subtitle>
         <Heading level={2} title="introductions" />
@@ -34,6 +34,13 @@ const Gallery = () => {
               <li key={i} className={styles.item}>
                 <div className={styles.thumb}>
                   <picture>
+                    <source
+                      srcSet={ABOUT.tabWEBP}
+                      type="image/webp"
+                      width={330}
+                      height={235}
+                    />
+
                     <img
                       loading="lazy"
                       src={ABOUT.tabJPG}

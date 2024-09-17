@@ -44,6 +44,12 @@
     flex-direction: row-reverse;
   }
 
+  .introduction {
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+  }
+
   .header {
     padding: 0 80px 0 34px;
   }
