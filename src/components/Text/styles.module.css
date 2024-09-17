@@ -37,3 +37,9 @@
   font-size: 18px;
   line-height: 1.666;
 }
+
+@media screen and (min-width: 1200px) {
+  .intro:nth-child(6) {
+    margin-bottom: 42px;
+  }
+}

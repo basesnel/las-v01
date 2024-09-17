@@ -37,6 +37,22 @@ const Gallery = () => {
                 <div className={styles.thumb}>
                   <picture>
                     <source
+                      srcSet={ABOUT.deskWEBP}
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                      width={270}
+                      height={445}
+                    />
+
+                    <source
+                      srcSet={ABOUT.deskJPG}
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                      width={270}
+                      height={445}
+                    />
+
+                    <source
                       srcSet={ABOUT.tabWEBP}
                       type="image/webp"
                       width={330}

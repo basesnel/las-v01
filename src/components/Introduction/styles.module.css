@@ -11,16 +11,21 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .content {
-    flex-basis: 570px;
-  }
-}
-
 .list {
   display: flex;
   gap: 30px;
   flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    flex-basis: 570px;
+    padding-right: 100px;
+  }
+
+  .list {
+    flex-direction: row;
+  }
 }
 
 .thumb {
