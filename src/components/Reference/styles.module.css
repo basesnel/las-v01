@@ -1,7 +1,7 @@
 .reference {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   width: 90%;
   border: 1px solid var(--light);
   margin: 0 auto 24px;
@@ -35,11 +35,12 @@
   content: "";
   width: 0;
   height: 0;
-  border-top: 24px solid currentColor;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-top: 19px solid currentColor;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
   border-bottom: 0;
-  transform: skewX(30deg);
+  transform: skewX(30deg) scale(1.6);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reference.light {
@@ -77,18 +78,18 @@
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 24px solid currentColor; */
-  transform: skewX(-30deg) rotate(180deg);
+  transform: skewX(-30deg) scale(1.6) rotate(-60deg) translate(-3px, 4px);
 }
 
 .span {
   display: block;
-  transform: skew(30deg);
+  transform: skew(30deg) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reference:hover .span,
 .reference:focus .span {
-  transform: skew(-30deg);
+  transform: skew(-30deg) scale(1);
 }
 
 @media screen and (min-width: 200px) {
