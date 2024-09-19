@@ -2,12 +2,13 @@ import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import services from "../../constants/services";
+import sections from "../../constants/sections";
 
 import styles from "./styles.module.css";
 
 const Services = () => {
   return (
-    <Section part="services" variant="dark" label="services and prices">
+    <Section part={sections[2].id} variant="dark" label={sections[2].uk}>
       <Subtitle>spend your time with the best masters</Subtitle>
       <Heading level={2} title="services and prices" />
       <ul className={styles.list}>
