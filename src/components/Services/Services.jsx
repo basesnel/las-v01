@@ -7,8 +7,10 @@ import sections from "../../constants/sections";
 import styles from "./styles.module.css";
 
 const Services = () => {
+  const { id, section } = sections[2];
+
   return (
-    <Section part={sections[2].id} variant="dark" label={sections[2].uk}>
+    <Section part={id} variant="dark" label={section.uk}>
       <Subtitle>spend your time with the best masters</Subtitle>
       <Heading level={2} title="services and prices" />
       <ul className={styles.list}>

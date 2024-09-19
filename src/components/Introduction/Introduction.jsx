@@ -9,8 +9,10 @@ import sections from "../../constants/sections";
 import styles from "./styles.module.css";
 
 const Gallery = () => {
+  const { id, section } = sections[1];
+
   return (
-    <Section part={sections[1].id} mode="intro" label={sections[1].uk}>
+    <Section part={id} mode="intro" label={section.uk}>
       <div className={styles.content}>
         <Subtitle>about</Subtitle>
         <Heading level={2} mode="intro" title="introductions" />

@@ -7,8 +7,10 @@ import sections from "../../constants/sections";
 import styles from "./styles.module.css";
 
 const Features = () => {
+  const { id, section } = sections[3];
+
   return (
-    <Section part={sections[3].id} label={sections[3].uk}>
+    <Section part={id} label={section.uk}>
       <Subtitle>why people come to us?</Subtitle>
       <Heading level={2} title="our benefits" />
       <ul className={styles.list}>

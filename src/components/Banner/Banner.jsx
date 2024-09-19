@@ -11,8 +11,10 @@ import sections from "../../constants/sections";
 import styles from "./styles.module.css";
 
 const Banner = () => {
+  const { id, section } = sections[0];
+
   return (
-    <Section part={sections[0].id} mode="banner" label={sections[0].uk}>
+    <Section part={id} mode="banner" label={section.uk}>
       <div className={styles.content}>
         <Subtitle mode="banner">a quality car service in poltava</Subtitle>
         <Heading level={1} title="liashenko auto service" />
