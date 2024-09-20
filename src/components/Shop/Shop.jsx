@@ -8,7 +8,7 @@ const Shop = () => {
   const images = ["image", "image", "image", "image"];
 
   return (
-    <Section indexSection={4} variant="dark">
+    <Section indexSection={4} colorMode="dark">
       <Subtitle>let's shoose your car</Subtitle>
       <Heading level={2} title="our shop of car" />
       <ul>

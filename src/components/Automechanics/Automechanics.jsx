@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 
 const Automechanics = () => {
   return (
-    <Section indexSection={5} variant="highlight">
+    <Section indexSection={5} colorMode="highlight">
       <Subtitle>true blacksmith of their craft</Subtitle>
       <Heading level={2} title="our mechanics" />
       <ul>

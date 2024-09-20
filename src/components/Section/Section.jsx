@@ -3,19 +3,26 @@ import Container from "../Container/Container";
 
 import styles from "./styles.module.css";
 
-const Section = ({ indexSection, variant, mode, children }) => {
+const Section = (props) => {
+  const {
+    indexSection,
+    colorMode,
+    sectionVariant,
+    containerVariant,
+    children,
+  } = props;
   const { id, section } = sections[indexSection] ? sections[indexSection] : {};
 
-  const variation = variant ? `${styles[variant]}` : "";
-  const modification = mode ? `${styles[mode]}` : "";
+  const colorModification = colorMode ? `${styles[colorMode]}` : "";
+  const sectionVariation = sectionVariant ? `${styles[sectionVariant]}` : "";
 
   return (
     <section
-      className={`${styles.section} ${variation} ${modification}`}
+      className={`${styles.section} ${colorModification} ${sectionVariation}`}
       id={id || null}
       aria-label={section?.uk}
     >
-      <Container variant={mode}>{children}</Container>
+      <Container variant={containerVariant}>{children}</Container>
     </section>
   );
 };

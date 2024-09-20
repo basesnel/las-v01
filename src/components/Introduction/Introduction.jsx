@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 
 const Gallery = () => {
   return (
-    <Section indexSection={1} mode="intro">
+    <Section indexSection={1} containerVariant="intro">
       <div className={styles.content}>
         <Subtitle>about</Subtitle>
         <Heading level={2} mode="intro" title="introductions" />

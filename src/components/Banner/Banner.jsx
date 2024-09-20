@@ -11,7 +11,7 @@ import styles from "./styles.module.css";
 
 const Banner = () => {
   return (
-    <Section indexSection={0} mode="banner">
+    <Section indexSection={0} sectionVariant="banner" containerVariant="banner">
       <div className={styles.content}>
         <Subtitle mode="banner">a quality car service in poltava</Subtitle>
         <Heading level={1} title="liashenko auto service" />
