@@ -6,15 +6,12 @@ import Text from "../Text/Text";
 import Data from "../Data/Data";
 import Socnets from "../Socnets/Socnets";
 import Slider from "../Slider/Slider";
-import sections from "../../constants/sections";
 
 import styles from "./styles.module.css";
 
 const Banner = () => {
-  const { id, section } = sections[0];
-
   return (
-    <Section part={id} mode="banner" label={section.uk}>
+    <Section indexSection={0} mode="banner">
       <div className={styles.content}>
         <Subtitle mode="banner">a quality car service in poltava</Subtitle>
         <Heading level={1} title="liashenko auto service" />

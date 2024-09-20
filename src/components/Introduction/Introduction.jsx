@@ -4,15 +4,12 @@ import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Reference from "../Reference/Reference";
 import ABOUTS from "../../constants/about";
-import sections from "../../constants/sections";
 
 import styles from "./styles.module.css";
 
 const Gallery = () => {
-  const { id, section } = sections[1];
-
   return (
-    <Section part={id} mode="intro" label={section.uk}>
+    <Section indexSection={1} mode="intro">
       <div className={styles.content}>
         <Subtitle>about</Subtitle>
         <Heading level={2} mode="intro" title="introductions" />

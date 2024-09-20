@@ -49,10 +49,24 @@ const sections = [
     },
   },
   {
-    id: "contacts-us",
+    id: "contact-us",
     section: {
       en: "contact us",
       uk: "зв'яжіться з нами",
+    },
+  },
+  {
+    id: "feedback",
+    section: {
+      en: "write us",
+      uk: "напишіть нам",
+    },
+  },
+  {
+    id: "contacts",
+    section: {
+      en: "our contacts",
+      uk: "наші контакти",
     },
   },
   {

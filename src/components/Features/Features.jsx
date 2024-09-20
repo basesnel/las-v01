@@ -2,15 +2,12 @@ import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
 import benefits from "../../constants/benefits";
-import sections from "../../constants/sections";
 
 import styles from "./styles.module.css";
 
 const Features = () => {
-  const { id, section } = sections[3];
-
   return (
-    <Section part={id} label={section.uk}>
+    <Section indexSection={3}>
       <Subtitle>why people come to us?</Subtitle>
       <Heading level={2} title="our benefits" />
       <ul className={styles.list}>

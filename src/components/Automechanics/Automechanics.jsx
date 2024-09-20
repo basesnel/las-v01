@@ -4,15 +4,12 @@ import Subtitle from "../Subtitle/Subtitle";
 import Link from "../Link/Link";
 import Icon from "../Icon/Icon";
 import mechanics from "../../constants/mechanics";
-import sections from "../../constants/sections";
 
 import styles from "./styles.module.css";
 
 const Automechanics = () => {
-  const { id, section } = sections[5];
-
   return (
-    <Section part={id} variant="highlight" label={section.uk}>
+    <Section indexSection={5} variant="highlight">
       <Subtitle>true blacksmith of their craft</Subtitle>
       <Heading level={2} title="our mechanics" />
       <ul>

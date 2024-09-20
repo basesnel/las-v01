@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 
 const Contacts = () => {
   return (
-    <Section variant="dark" label="contact us">
+    <Section indexSection={9} variant="dark">
       <Heading level={3} title="contacts" />
       <address className={styles.address}>
         <ul>

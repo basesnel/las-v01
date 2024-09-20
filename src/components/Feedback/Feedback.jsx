@@ -14,7 +14,7 @@ const Feedback = () => {
   };
 
   return (
-    <Section variant="dark" label="write us">
+    <Section indexSection={8} variant="dark">
       <Heading level={3} title="feedback" />
       <form
         className={styles.form}

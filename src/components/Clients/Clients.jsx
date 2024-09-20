@@ -4,15 +4,12 @@ import Heading from "../Heading/Heading";
 import Link from "../Link/Link";
 import Icon from "../Icon/Icon";
 import carBrands from "../../constants/carBrands";
-import sections from "../../constants/sections";
 
 import styles from "./styles.module.css";
 
 const Clients = () => {
-  const { id, section } = sections[8];
-
   return (
-    <Section part={id} label={section.uk}>
+    <Section indexSection={10}>
       <Subtitle>repair of any complexity</Subtitle>
       <Heading level={2} title="our clients" />
       <ul className={styles.list}>
