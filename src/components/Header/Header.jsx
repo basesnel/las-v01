@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import sections from "../../constants/sections";
+import header from "../../constants/header";
 import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
@@ -10,6 +12,8 @@ import Button from "../Button/Button";
 import styles from "./styles.module.css";
 
 const Header = () => {
+  const { button } = header;
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
@@ -42,48 +46,15 @@ const Header = () => {
         <Logo />
         <nav className={styles.nav}>
           <ul className={styles.list}>
-            <li className={styles.item}>
-              <a href="#introduction" className={styles.link}>
-                Invitation
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#services" className={styles.link}>
-                Services And Prices
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#features" className={styles.link}>
-                Our benefits And Features
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#shop" className={styles.link}>
-                Go to buy a car
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#automechanics" className={styles.link}>
-                Our Mechanics
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#gallery" className={styles.link}>
-                Our Work
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#contacts-us" className={styles.link}>
-                Contact Us
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a href="#clients" className={styles.link}>
-                We Works On
-              </a>
-            </li>
+            {sections.map(({ id, section }) => (
+              <li key={id} className={styles.item}>
+                <a href={`#${id}`} className={styles.link}>
+                  {section.uk}
+                </a>
+              </li>
+            ))}
           </ul>
-          <Button type="button" caption="More" />
+          <Button type="button" caption={button.uk} />
         </nav>
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon

@@ -56,20 +56,6 @@ const sections = [
     },
   },
   {
-    id: "feedback",
-    section: {
-      en: "write us",
-      uk: "напишіть нам",
-    },
-  },
-  {
-    id: "contacts",
-    section: {
-      en: "our contacts",
-      uk: "наші контакти",
-    },
-  },
-  {
     id: "clients",
     section: {
       en: "we work with",
