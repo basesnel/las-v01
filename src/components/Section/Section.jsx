@@ -4,8 +4,7 @@ import Container from "../Container/Container";
 import styles from "./styles.module.css";
 
 const Section = ({ indexSection, variant, mode, children }) => {
-  const { id, section } = sections[indexSection];
-  // console.log(id, indexSection);
+  const { id, section } = sections[indexSection] ? sections[indexSection] : {};
 
   const variation = variant ? `${styles[variant]}` : "";
   const modification = mode ? `${styles[mode]}` : "";
@@ -13,8 +12,8 @@ const Section = ({ indexSection, variant, mode, children }) => {
   return (
     <section
       className={`${styles.section} ${variation} ${modification}`}
-      id={id}
-      aria-label={section.uk}
+      id={id || null}
+      aria-label={section?.uk}
     >
       <Container variant={mode}>{children}</Container>
     </section>
