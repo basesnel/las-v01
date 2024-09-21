@@ -17,34 +17,50 @@ import deskWebp1 from "../assets/images/banner/desktop/img-slide-1.webp";
 import deskWebp2 from "../assets/images/banner/desktop/img-slide-2.webp";
 import deskWebp3 from "../assets/images/banner/desktop/img-slide-3.webp";
 
-const SLIDES = [
-  {
-    mobWEBP: `${mobWebp1}`,
-    mobJPG: `${mobJpg1}`,
-    tabWEBP: `${tabWebp1}`,
-    tabJPG: `${tabJpg1}`,
-    deskWEBP: `${deskWebp1}`,
-    deskPNG: `${deskPng1}`,
-    alt: "Repair of the machine chassis",
+const slider = {
+  slides: [
+    {
+      mobWEBP: `${mobWebp1}`,
+      mobJPG: `${mobJpg1}`,
+      tabWEBP: `${tabWebp1}`,
+      tabJPG: `${tabJpg1}`,
+      deskWEBP: `${deskWebp1}`,
+      deskPNG: `${deskPng1}`,
+      alt: {
+        en: "Repair of the machine chassis",
+        uk: "Ремонт ходової частини машини",
+      },
+    },
+    {
+      mobWEBP: `${mobWebp2}`,
+      mobJPG: `${mobJpg2}`,
+      tabWEBP: `${tabWebp2}`,
+      tabJPG: `${tabJpg2}`,
+      deskWEBP: `${deskWebp2}`,
+      deskPNG: `${deskPng2}`,
+      alt: {
+        en: "Machine diagnostics",
+        uk: "Діагностика машин",
+      },
+    },
+    {
+      mobWEBP: `${mobWebp3}`,
+      mobJPG: `${mobJpg3}`,
+      tabWEBP: `${tabWebp3}`,
+      tabJPG: `${tabJpg3}`,
+      deskWEBP: `${deskWebp3}`,
+      deskPNG: `${deskPng3}`,
+      alt: { en: "Engine overhaul", uk: "Капитальний ремонт двигуна" },
+    },
+  ],
+  prev: {
+    en: "prev",
+    uk: "назад",
   },
-  {
-    mobWEBP: `${mobWebp2}`,
-    mobJPG: `${mobJpg2}`,
-    tabWEBP: `${tabWebp2}`,
-    tabJPG: `${tabJpg2}`,
-    deskWEBP: `${deskWebp2}`,
-    deskPNG: `${deskPng2}`,
-    alt: "Machine diagnostics",
+  next: {
+    en: "next",
+    uk: "вперед",
   },
-  {
-    mobWEBP: `${mobWebp3}`,
-    mobJPG: `${mobJpg3}`,
-    tabWEBP: `${tabWebp3}`,
-    tabJPG: `${tabJpg3}`,
-    deskWEBP: `${deskWebp3}`,
-    deskPNG: `${deskPng3}`,
-    alt: "Engine repair",
-  },
-];
+};
 
-export default SLIDES;
+export default slider;

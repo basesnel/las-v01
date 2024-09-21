@@ -1,14 +1,16 @@
 import { useState } from "react";
-import SLIDES from "../../constants/slides";
+import slider from "../../constants/slider";
 
 import styles from "./styles.module.css";
 
 const Slider = () => {
   const [index] = useState(0);
 
+  const { slides, prev, next } = slider;
+
   const dots = [];
 
-  for (let i = 0; i < SLIDES.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     dots.push(
       <div
         key={i}
@@ -21,12 +23,12 @@ const Slider = () => {
     <div className={styles.slider}>
       <div className={styles.wrapper}>
         <div className={styles.line}>
-          {SLIDES.map((SLIDE, i) => {
+          {slides.map((slide, i) => {
             return (
               <div key={i} className={styles.slide}>
                 <picture>
                   <source
-                    srcSet={SLIDE.deskWEBP}
+                    srcSet={slide.deskWEBP}
                     media="(min-width: 1200px)"
                     type="image/webp"
                     width={1070}
@@ -34,7 +36,7 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={SLIDE.deskPNG}
+                    srcSet={slide.deskPNG}
                     media="(min-width: 1200px)"
                     type="image/png"
                     width={1070}
@@ -42,7 +44,7 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={SLIDE.tabWEBP}
+                    srcSet={slide.tabWEBP}
                     media="(min-width: 768px) and (max-width: 1199px)"
                     type="image/webp"
                     width={570}
@@ -50,7 +52,7 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={SLIDE.tabJPG}
+                    srcSet={slide.tabJPG}
                     media="(min-width: 768px) and (max-width: 1199px)"
                     type="image/jpeg"
                     width={570}
@@ -58,7 +60,7 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={SLIDE.mobWEBP}
+                    srcSet={slide.mobWEBP}
                     type="image/webp"
                     width={480}
                     height={580}
@@ -66,8 +68,8 @@ const Slider = () => {
 
                   <img
                     loading="lazy"
-                    src={SLIDE.mobJPG}
-                    alt={SLIDE.alt}
+                    src={slide.mobJPG}
+                    alt={slide.alt.uk}
                     width={480}
                     height={580}
                     className={styles.image}
@@ -79,8 +81,8 @@ const Slider = () => {
         </div>
       </div>
       <div className={styles.buttons}>
-        <button className={`${styles.button} ${styles.prev}`}>prev</button>
-        <button className={`${styles.button} ${styles.next}`}>next</button>
+        <button className={`${styles.button} ${styles.prev}`}>{prev.uk}</button>
+        <button className={`${styles.button} ${styles.next}`}>{next.uk}</button>
       </div>
       <div className={styles.dots}>{dots}</div>
     </div>
