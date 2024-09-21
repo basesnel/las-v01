@@ -3,41 +3,41 @@ import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Reference from "../Reference/Reference";
-import ABOUTS from "../../constants/about";
+import intro from "../../constants/intro";
 
 import styles from "./styles.module.css";
 
-const Gallery = () => {
+const Intro = () => {
+  const {
+    subTitle,
+    title,
+    preText,
+    firstText,
+    secondText,
+    thirdText,
+    reference,
+    abouts,
+  } = intro;
   return (
     <Section indexSection={1} containerVariant="intro">
       <div className={styles.content}>
-        <Subtitle>about</Subtitle>
-        <Heading level={2} mode="intro" title="introductions" />
-        <Text mode="introWelcome">Welcome and introductions.</Text>
-        <Text mode="intro">
-          Our company provides a full range of services for the maintenance and
-          repair of cars of well-known brands and models.
-        </Text>
-        <Text mode="intro">
-          A team of professionals is ready to help you not only with the
-          maintenance and repair of your car, but also provide painting and
-          detailing services.
-        </Text>
-        <Text mode="intro">
-          We pay special attention to the quality and speed of our services, so
-          you can be sure that your car will be in good hands.
-        </Text>
-        <Reference type="button" caption="Contact us" mode="light" />
+        <Subtitle>{subTitle.uk}</Subtitle>
+        <Heading level={2} mode="intro" title={title.uk} />
+        <Text mode="introWelcome">{preText.uk}</Text>
+        <Text mode="intro">{firstText.uk}</Text>
+        <Text mode="intro">{secondText.uk}</Text>
+        <Text mode="intro">{thirdText.uk}</Text>
+        <Reference type="button" caption={reference.uk} mode="light" />
       </div>
       <aside className={styles.aside}>
         <ul className={styles.list}>
-          {ABOUTS.map((ABOUT, i) => {
+          {abouts.map((about, i) => {
             return (
               <li key={i} className={styles.item}>
                 <div className={styles.thumb}>
                   <picture>
                     <source
-                      srcSet={ABOUT.deskWEBP}
+                      srcSet={about.deskWEBP}
                       media="(min-width: 1200px)"
                       type="image/webp"
                       width={270}
@@ -45,7 +45,7 @@ const Gallery = () => {
                     />
 
                     <source
-                      srcSet={ABOUT.deskJPG}
+                      srcSet={about.deskJPG}
                       media="(min-width: 1200px)"
                       type="image/jpeg"
                       width={270}
@@ -53,7 +53,7 @@ const Gallery = () => {
                     />
 
                     <source
-                      srcSet={ABOUT.tabWEBP}
+                      srcSet={about.tabWEBP}
                       type="image/webp"
                       width={330}
                       height={235}
@@ -61,8 +61,8 @@ const Gallery = () => {
 
                     <img
                       loading="lazy"
-                      src={ABOUT.tabJPG}
-                      alt={ABOUT.alt}
+                      src={about.tabJPG}
+                      alt={about.alt.uk}
                       width={330}
                       height={235}
                       className={styles.image}
@@ -78,4 +78,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Intro;

@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner/Banner";
-import Introduction from "../../components/Introduction/Introduction";
+import Intro from "../../components/Intro/Intro";
 import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
 import Automechanics from "../../components/Automechanics/Automechanics";
@@ -14,7 +14,7 @@ const Main = () => {
   return (
     <main>
       <Banner />
-      <Introduction />
+      <Intro />
       <Services />
       <Features />
       <Shop />
