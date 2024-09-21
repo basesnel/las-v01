@@ -1,6 +1,6 @@
 .content {
   position: relative;
-  padding: 155px 24px 156px;
+  padding: 155px 48px 156px 24px;
   color: var(--light);
 }
 
@@ -100,13 +100,13 @@
 @media screen and (min-width: 768px) {
   .content {
     flex-grow: 1;
-    padding: 214px 31px 185px 100px;
+    padding: 214px 62px 185px 69px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .content {
-    padding: 189px 31px 166px 100px;
+    padding: 189px 62px 166px 100px;
   }
 }
 
