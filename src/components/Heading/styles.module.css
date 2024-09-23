@@ -75,3 +75,10 @@
 .service {
   font-size: 40px;
 }
+
+@media screen and (min-width: 768px) {
+  .service {
+    font-size: 42px;
+    line-height: 1.166;
+  }
+}
