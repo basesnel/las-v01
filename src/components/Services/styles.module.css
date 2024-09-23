@@ -16,6 +16,10 @@
 }
 
 .item {
+  padding: 10px 0;
+}
+
+.innerItem {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -29,11 +33,21 @@
   color: var(--neutral);
 }
 
-.item::after {
+.innerItem::after {
   content: "";
   height: 1px;
   flex-grow: 1;
   background-color: currentColor;
+}
+
+.item:first-child,
+.innerItem:first-child {
+  padding-top: 0;
+}
+
+.item:last-child,
+.innerItem:last-child {
+  padding-bottom: 0;
 }
 
 .service {

@@ -85,6 +85,12 @@
   }
 }
 
+@media screen and (min-width: 320px) {
+  .button {
+    max-width: 180px;
+  }
+}
+
 @keyframes gradientAnimation {
   0% {
     background-position: 160% 160%;

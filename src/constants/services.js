@@ -17,7 +17,6 @@ const services = [
   },
   { id: 8, service: "Glass wrapping and pasting", price: "70" },
   { id: 9, service: "Servicing of electric cars", price: "100" },
-  { id: 10, service: "Roll-of camber", price: "100" },
 ];
 
 export default services;
