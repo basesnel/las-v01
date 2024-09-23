@@ -13,7 +13,7 @@ const Services = () => {
       <Heading level={2} mode="service" title="services and prices" />
       <ul className={styles.list}>
         <li className={styles.item}>
-          <ul>
+          <ul className={styles.innerList}>
             {services.map(({ id, service, price }) => {
               if (id < 5)
                 return (
@@ -26,7 +26,7 @@ const Services = () => {
           </ul>
         </li>
         <li className={styles.item}>
-          <ul>
+          <ul className={styles.innerList}>
             {services.map(({ id, service, price }) => {
               if (id >= 5)
                 return (
