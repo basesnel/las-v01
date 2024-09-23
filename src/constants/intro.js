@@ -46,15 +46,15 @@ const intro = {
   },
   firstText: {
     en: "Our company provides a full range of services for the maintenance and repair of cars of well-known brands and models.",
-    uk: "Наша компанія надає повний спектр послуг з технічного обслуговування та ремонту автомобілів відомих марок і моделей.",
+    uk: "Наша компанія надає повний спектр послуг з тех-обслуговування та ремонту автомобілів відомих марок і моделей.",
   },
   secondText: {
     en: "A team of professionals is ready to help you not only with the maintenance and repair of your car, but also provide painting and detailing services.",
-    uk: "Команда професіоналів готова допомогти вам не тільки з технічним обслуговуванням та ремонтом вашого автомобіля, але й надати послуги з фарбування та деталiзацiї.",
+    uk: "Команда професіоналів готова допомогти з технічним обслуговуванням та ремонтом автомобіля, а й також надасть послуги з фарбування та деталiзацiї.",
   },
   thirdText: {
     en: "We pay special attention to the quality and speed of our services, so you can be sure that your car will be in good hands.",
-    uk: "Ми приділяємо особливу увагу якості та швидкості наших послуг, тому ви можете бути впевнені, що ваш автомобіль буде в надійних руках.",
+    uk: "Ми приділяємо особливу увагу якості та швидкості послуг, й ви можете бути впевнені, що автомобіль в добрих руках.",
   },
   reference: {
     en: "contact us",
