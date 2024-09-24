@@ -1,12 +1,10 @@
 const course = 42;
 function enCountPrice() {
-  // console.log(this);
   return `from $${Math.ceil(this.count / course)}`;
 }
 
 function ukCountPrice() {
-  // console.log(this);
-  return `від ${this.count} грн`;
+  return `від ${this.count} ₴`;
 }
 
 const services = [
@@ -32,7 +30,7 @@ const services = [
     id: 2,
     service: {
       en: "Sale of rubber for any type",
-      uk: "Продаж гуми будь-якого типу",
+      uk: "Продаж будь-якої гуми",
     },
     price: {
       count: 3500,
@@ -56,7 +54,7 @@ const services = [
     id: 4,
     service: { en: "Straightning, painting", uk: "Випрямлення, фарбування" },
     price: {
-      count: 16000,
+      count: 1600,
       en: enCountPrice,
       uk: ukCountPrice,
     },
@@ -65,7 +63,7 @@ const services = [
     id: 5,
     service: {
       en: "Conditioner's maintain",
-      uk: "Обслуговування кондиціонера",
+      uk: "Сервіс кондиціонера",
     },
     price: {
       count: 4200,
@@ -80,7 +78,7 @@ const services = [
       uk: "Продаж та вклейка скла",
     },
     price: {
-      count: 12000,
+      count: 1200,
       en: enCountPrice,
       uk: ukCountPrice,
     },
@@ -101,7 +99,7 @@ const services = [
     id: 8,
     service: {
       en: "Glass wrapping and pasting",
-      uk: "Обгортання та обклеювання скла",
+      uk: "Обгортка та поклейка скла",
     },
     price: {
       count: 2900,
@@ -113,7 +111,7 @@ const services = [
     id: 9,
     service: {
       en: "Servicing of electric cars",
-      uk: "Обслуговування електромобілів",
+      uk: "Сервіс для електромобілів",
     },
     price: {
       count: 4000,
