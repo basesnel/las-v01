@@ -24,12 +24,14 @@ const Features = () => {
       <Heading level={2} title={title.uk} />
       <Text mode="introWelcome">{preText.uk}</Text>
       <Text mode="intro">{firstText.uk}</Text>
-      <Text mode="intro">{secondText.uk}</Text>
-      <ul className="">
+      <ul className={styles.featuresList}>
         {list.map(({ uk }, i) => (
-          <li key={i}>{uk}</li>
+          <li key={i} className={styles.featuresItem}>
+            {uk}
+          </li>
         ))}
       </ul>
+      <Text mode="intro">{secondText.uk}</Text>
       <Text mode="intro">{thirdText.uk}</Text>
       <ul className={styles.list}>
         {stats.map(({ amount, text }, i) => {
