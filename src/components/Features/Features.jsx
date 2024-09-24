@@ -39,7 +39,7 @@ const Features = () => {
             <li key={i} className={styles.item}>
               <div className={styles.benefit}>
                 <p className={styles.amount}>{amount}</p>
-                <p className={styles.feature}>{text}</p>
+                <p className={styles.feature}>{text.uk}</p>
               </div>
             </li>
           );

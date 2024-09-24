@@ -51,20 +51,29 @@ const features = {
   ],
   stats: [
     {
-      amount: 200,
-      text: "Satisfied customers per day.",
+      amount: 50,
+      text: {
+        en: "Satisfied customers per day.",
+        uk: "Задоволених клієнтів у день.",
+      },
     },
     {
       amount: 40,
-      text: "Number of quality services",
+      text: {
+        en: "Number of quality services",
+        uk: "Кількість якісних послуг",
+      },
     },
     {
       amount: 30,
-      text: "Poltava's best masters",
+      text: {
+        en: "Poltava's best masters",
+        uk: "Найкращих майстрів Полтави",
+      },
     },
     {
       amount: 100,
-      text: "Promotional discounts.",
+      text: { en: "Promotional discounts.", uk: "Акційних знижок" },
     },
   ],
 };
