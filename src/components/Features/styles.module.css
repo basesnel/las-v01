@@ -21,7 +21,7 @@
   padding: 20px;
   text-align: center;
   font-weight: 600;
-  line-height: 1.36;
+  line-height: 1.357;
   background-color: var(--highlight);
 }
 
@@ -42,13 +42,15 @@
   width: 20px;
   text-align: center;
   font-size: 16px;
-  line-height: 1.38;
+  line-height: 1.375;
   font-weight: 600;
   color: var(--accent-highlight);
 }
 
 .feature {
   font-size: 11px;
+  line-height: 1.363;
+  letter-spacing: 0;
   color: var(--neutral);
   word-break: break-all;
 }
@@ -67,13 +69,15 @@
   }
 }
 
+@media screen and (min-width: 408px) {
+  .item:nth-child(odd) {
+    transform: translateY(-36px);
+  }
+}
+
 @media screen and (min-width: 480px) {
   .item {
     width: inherit;
-  }
-
-  .item:nth-child(odd) {
-    transform: translateY(-36px);
   }
 
   .benefit {

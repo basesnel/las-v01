@@ -2,8 +2,8 @@
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 2px;
+  line-height: 1.166;
+  letter-spacing: 0.05em;
   text-transform: capitalize;
   word-break: break-all;
 }
@@ -81,4 +81,8 @@
     font-size: 42px;
     line-height: 1.166;
   }
+}
+
+.features {
+  margin-bottom: 20px;
 }

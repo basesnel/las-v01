@@ -20,19 +20,21 @@ const Features = () => {
 
   return (
     <Section indexSection={3}>
-      <Subtitle>{subTitle.uk}</Subtitle>
-      <Heading level={2} title={title.uk} />
-      <Text mode="introWelcome">{preText.uk}</Text>
-      <Text mode="intro">{firstText.uk}</Text>
-      <ul className={styles.featuresList}>
-        {list.map(({ uk }, i) => (
-          <li key={i} className={styles.featuresItem}>
-            {uk}
-          </li>
-        ))}
-      </ul>
-      <Text mode="intro">{secondText.uk}</Text>
-      <Text mode="intro">{thirdText.uk}</Text>
+      <div className={styles.content}>
+        <Subtitle>{subTitle.uk}</Subtitle>
+        <Heading level={2} mode="features" title={title.uk} />
+        <Text mode="introWelcome">{preText.uk}</Text>
+        <Text mode="intro">{firstText.uk}</Text>
+        <ul className={styles.featuresList}>
+          {list.map(({ uk }, i) => (
+            <li key={i} className={styles.featuresItem}>
+              {uk}
+            </li>
+          ))}
+        </ul>
+        <Text mode="intro">{secondText.uk}</Text>
+        <Text mode="intro">{thirdText.uk}</Text>
+      </div>
       <ul className={styles.list}>
         {stats.map(({ amount, text }, i) => {
           return (
