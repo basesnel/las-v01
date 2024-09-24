@@ -42,7 +42,7 @@ const services = [
     id: 3,
     service: {
       en: "Repair of any complexity",
-      uk: "Ремонт будь-якої складності",
+      uk: "Будь-який ремонт",
     },
     price: {
       count: 2000,
@@ -52,7 +52,7 @@ const services = [
   },
   {
     id: 4,
-    service: { en: "Straightning, painting", uk: "Випрямлення, фарбування" },
+    service: { en: "Straightning, painting", uk: "Рихтовка, фарбування" },
     price: {
       count: 1600,
       en: enCountPrice,
@@ -87,7 +87,7 @@ const services = [
     id: 7,
     service: {
       en: "Comprehinsive car inspection",
-      uk: "Комплексна перевірка авто",
+      uk: "Комплекс перевірок авто",
     },
     price: {
       count: 6000,
@@ -99,7 +99,7 @@ const services = [
     id: 8,
     service: {
       en: "Glass wrapping and pasting",
-      uk: "Обгортка та поклейка скла",
+      uk: "Обгортка, поклейка скла",
     },
     price: {
       count: 2900,
@@ -111,7 +111,7 @@ const services = [
     id: 9,
     service: {
       en: "Servicing of electric cars",
-      uk: "Сервіс для електромобілів",
+      uk: "Сервіс електромобілів",
     },
     price: {
       count: 4000,
