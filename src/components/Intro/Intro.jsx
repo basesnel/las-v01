@@ -18,6 +18,7 @@ const Intro = () => {
     reference,
     abouts,
   } = intro;
+
   return (
     <Section indexSection={1} containerVariant="intro">
       <div className={styles.content}>

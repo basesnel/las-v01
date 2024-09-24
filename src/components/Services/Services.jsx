@@ -7,14 +7,16 @@ import styles from "./styles.module.css";
 import Button from "../Button/Button";
 
 const Services = () => {
+  const { subTitle, title, reference, list } = services;
+
   return (
     <Section indexSection={2} colorMode="dark" sectionVariant="service">
-      <Subtitle>spend your time with the best masters</Subtitle>
-      <Heading level={2} mode="service" title="services and prices" />
+      <Subtitle>{subTitle.uk}</Subtitle>
+      <Heading level={2} mode="service" title={title.uk} />
       <ul className={styles.list}>
         <li className={styles.item}>
           <ul className={styles.innerList}>
-            {services.map(({ id, service, price }) => {
+            {list.map(({ id, service, price }) => {
               if (id < 5)
                 return (
                   <li key={id} className={styles.innerItem}>
@@ -27,7 +29,7 @@ const Services = () => {
         </li>
         <li className={styles.item}>
           <ul className={styles.innerList}>
-            {services.map(({ id, service, price }) => {
+            {list.map(({ id, service, price }) => {
               if (id >= 5)
                 return (
                   <li key={id} className={styles.innerItem}>
@@ -39,7 +41,7 @@ const Services = () => {
           </ul>
         </li>
       </ul>
-      <Button type="button" caption="online-booking" />
+      <Button type="button" caption={reference.uk} />
     </Section>
   );
 };

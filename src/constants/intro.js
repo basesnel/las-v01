@@ -8,29 +8,6 @@ import tabWebp2 from "../assets/images/about/tablet/img-about-2.webp";
 import deskJpg2 from "../assets/images/about/desktop/img-about-2.jpg";
 import deskWebp2 from "../assets/images/about/desktop/img-about-2.webp";
 
-const abouts = [
-  {
-    tabWEBP: `${tabWebp1}`,
-    tabJPG: `${tabJpg1}`,
-    deskWEBP: `${deskWebp1}`,
-    deskJPG: `${deskJpg1}`,
-    alt: {
-      en: "Repair of the machine chassis",
-      uk: "Ремонт ходової частини машини",
-    },
-  },
-  {
-    tabWEBP: `${tabWebp2}`,
-    tabJPG: `${tabJpg2}`,
-    deskWEBP: `${deskWebp2}`,
-    deskJPG: `${deskJpg2}`,
-    alt: {
-      en: "Machine diagnostics",
-      uk: "Діагностика машин",
-    },
-  },
-];
-
 const intro = {
   subTitle: {
     en: "about",
