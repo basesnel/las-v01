@@ -18,8 +18,8 @@ const Services = () => {
               if (id < 5)
                 return (
                   <li key={id} className={styles.innerItem}>
-                    <span className={styles.service}>{service}</span>
-                    <span className={styles.price}>from ${price}</span>
+                    <span className={styles.service}>{service.uk}</span>
+                    <span className={styles.price}>{price.uk()}</span>
                   </li>
                 );
             })}
@@ -31,8 +31,8 @@ const Services = () => {
               if (id >= 5)
                 return (
                   <li key={id} className={styles.innerItem}>
-                    <span className={styles.service}>{service}</span>
-                    <span className={styles.price}>from ${price}</span>
+                    <span className={styles.service}>{service.uk}</span>
+                    <span className={styles.price}>{price.uk()}</span>
                   </li>
                 );
             })}
