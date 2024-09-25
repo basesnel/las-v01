@@ -2,7 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import Intro from "../../components/Intro/Intro";
 import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
-import Automechanics from "../../components/Automechanics/Automechanics";
+// import Automechanics from "../../components/Automechanics/Automechanics";
 import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Clients from "../../components/Clients/Clients";
@@ -18,7 +18,7 @@ const Main = () => {
       <Services />
       <Features />
       <Shop />
-      <Automechanics />
+      {/* <Automechanics /> */}
       <Gallery />
       <ContactUs />
       <Clients />
