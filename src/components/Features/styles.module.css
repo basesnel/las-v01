@@ -138,3 +138,15 @@
     width: 170px;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .list {
+    align-self: initial;
+    max-width: 370px;
+    padding-top: 0;
+  }
+
+  .benefit {
+    width: 170px;
+  }
+}
