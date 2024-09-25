@@ -19,7 +19,7 @@ const Features = () => {
   } = features;
 
   return (
-    <Section indexSection={3}>
+    <Section indexSection={3} containerVariant="features">
       <div className={styles.content}>
         <Subtitle>{subTitle.uk}</Subtitle>
         <Heading level={2} mode="features" title={title.uk} />

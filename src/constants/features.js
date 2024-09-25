@@ -1,11 +1,11 @@
 const features = {
   subTitle: {
-    en: "why people come to us?",
-    uk: "Чому люди приходять до нас?",
-  },
-  title: {
     en: "iour benefits",
     uk: "наші переваги",
+  },
+  title: {
+    en: "why people come to us?",
+    uk: "Чому люди приходять до нас?",
   },
   preText: {
     en: "What's LAS?",
