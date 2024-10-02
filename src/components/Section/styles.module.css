@@ -34,3 +34,17 @@
 .contactUs {
   padding: 0;
 }
+
+@media screen and (min-width: 1200px) {
+  .contactUs {
+    display: flex;
+  }
+
+  .feedback {
+    flex-basis: calc(50% + 15px);
+  }
+
+  .contacts {
+    flex-basis: calc(50% - 15px);
+  }
+}

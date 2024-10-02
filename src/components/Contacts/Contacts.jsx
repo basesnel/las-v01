@@ -10,7 +10,11 @@ import styles from "./styles.module.css";
 
 const Contacts = () => {
   return (
-    <Section colorMode="dark" containerVariant="contacts">
+    <Section
+      colorMode="dark"
+      sectionVariant="contacts"
+      containerVariant="contacts"
+    >
       <div className={styles.content}>
         <Heading level={3} title="contacts" />
         <address className={styles.address}>
