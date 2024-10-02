@@ -21,12 +21,14 @@
   border: none;
   outline: none;
   border-bottom: 1px solid currentColor;
+  padding: 0;
   font-size: 18px;
   background-color: var(--dark);
   color: currentColor;
 }
 
 .textarea {
+  display: block;
   resize: none;
   height: 83px;
 }
