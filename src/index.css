@@ -1,3 +1,10 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"); */
+
 :root {
   --light: #f0f0f0;
   --dark: #191526;
