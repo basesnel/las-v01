@@ -67,8 +67,8 @@ const features = {
     {
       amount: 30,
       text: {
-        en: "Poltava's best masters",
-        uk: "Найкращих майстрів Полтави",
+        en: "The best masters",
+        uk: "Найкращих майстрів",
       },
     },
     {
