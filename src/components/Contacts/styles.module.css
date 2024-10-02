@@ -47,3 +47,13 @@
   font-style: normal;
   color: currentColor;
 }
+
+@media screen and (min-width: 768px) {
+  .content {
+    flex-basis: 330px;
+  }
+
+  .aside {
+    padding-top: 100px;
+  }
+}

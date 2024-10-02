@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 
 const Contacts = () => {
   return (
-    <Section colorMode="dark">
+    <Section colorMode="dark" containerVariant="contacts">
       <div className={styles.content}>
         <Heading level={3} title="contacts" />
         <address className={styles.address}>
@@ -32,7 +32,7 @@ const Contacts = () => {
           </ul>
         </address>
       </div>
-      <aside>
+      <aside className={styles.aside}>
         <Subtitle>working hours</Subtitle>
         <p>Monday-Saturday from 9:00 to 18:00</p>
       </aside>
