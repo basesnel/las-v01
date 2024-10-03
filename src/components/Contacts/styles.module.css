@@ -1,4 +1,4 @@
-.address {
+.content {
   margin-bottom: 44px;
 }
 
@@ -51,9 +51,20 @@
 @media screen and (min-width: 768px) {
   .content {
     flex-basis: 330px;
+    margin-bottom: 0;
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
   }
 
   .aside {
     padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    flex-basis: 270px;
   }
 }
