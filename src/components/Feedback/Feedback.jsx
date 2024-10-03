@@ -14,7 +14,11 @@ const Feedback = () => {
   };
 
   return (
-    <Section colorMode="dark" sectionVariant="feedback">
+    <Section
+      colorMode="dark"
+      sectionVariant="feedback"
+      containerVariant="feedback"
+    >
       <Heading level={3} title="feedback" />
       <form
         className={styles.form}

@@ -101,3 +101,14 @@
     flex-basis: 690px;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .field:nth-child(1),
+  .field:nth-child(2) {
+    flex-basis: 270px;
+  }
+
+  .field:nth-child(3) {
+    flex-basis: 570px;
+  }
+}
