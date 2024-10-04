@@ -5,12 +5,31 @@
 }
 
 .item {
+  display: none;
   flex-basis: 100%;
+}
+
+.item:nth-child(1),
+.item:nth-child(2),
+.item:nth-child(3),
+.item:nth-child(4),
+.item:nth-child(5),
+.item:nth-child(6) {
+  display: initial;
 }
 
 @media screen and (min-width: 336px) {
   .item {
     flex-basis: calc((100% - 30px) / 2);
+  }
+
+  .item:nth-child(7),
+  .item:nth-child(8),
+  .item:nth-child(9),
+  .item:nth-child(10),
+  .item:nth-child(11),
+  .item:nth-child(12) {
+    display: initial;
   }
 }
 

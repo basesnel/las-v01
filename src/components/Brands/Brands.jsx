@@ -11,7 +11,7 @@ const Brands = () => {
   return (
     <Section indexSection={8}>
       <Subtitle>repair of any complexity</Subtitle>
-      <Heading level={2} title="our clients" />
+      <Heading level={2} title="we work with brands" />
       <ul className={styles.list}>
         {carBrands.map(({ icon }, i) => (
           <li key={i} className={styles.item}>

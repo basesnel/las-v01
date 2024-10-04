@@ -13,8 +13,6 @@ const Section = (props) => {
   } = props;
   const { id, section } = sections[indexSection] ? sections[indexSection] : {};
 
-  console.log(sections[indexSection]);
-
   const colorModification = colorMode ? `${styles[colorMode]}` : "";
   const sectionVariation = sectionVariant ? `${styles[sectionVariant]}` : "";
 
