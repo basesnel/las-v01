@@ -1,10 +1,14 @@
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Button from "../Button/Button";
+import feedback from "../../constants/feedback";
 
 import styles from "./styles.module.css";
 
 const Feedback = () => {
+  const { title, form } = feedback;
+  const { name, phone, message, send, reset } = form;
+
   const onSubmitFeedback = (e) => {
     e.preventDefault();
     new FormData(e.currentTarget).forEach((value, name) =>
@@ -19,7 +23,7 @@ const Feedback = () => {
       sectionVariant="feedback"
       containerVariant="feedback"
     >
-      <Heading level={3} title="feedback" />
+      <Heading level={3} title={title.uk} />
       <form
         className={styles.form}
         autoComplete="off"
@@ -33,7 +37,7 @@ const Feedback = () => {
             placeholder=" "
             autoComplete="off"
           />
-          <span className={`${styles.label} ${styles.req}`}>name</span>
+          <span className={`${styles.label} ${styles.req}`}>{name.uk}</span>
         </label>
         <label className={styles.field}>
           <input
@@ -43,7 +47,7 @@ const Feedback = () => {
             placeholder=" "
             autoComplete="off"
           />
-          <span className={`${styles.label} ${styles.req}`}>phone</span>
+          <span className={`${styles.label} ${styles.req}`}>{phone.uk}</span>
         </label>
         <label className={styles.field}>
           <textarea
@@ -51,10 +55,10 @@ const Feedback = () => {
             className={styles.textarea}
             placeholder=" "
           />
-          <span className={`${styles.label}`}>message</span>
+          <span className={`${styles.label}`}>{message.uk}</span>
         </label>
-        <Button type="submit" caption="send" />
-        <Button type="reset" caption="reset" />
+        <Button type="submit" caption={send.uk} />
+        <Button type="reset" caption={reset.uk} />
       </form>
     </Section>
   );
