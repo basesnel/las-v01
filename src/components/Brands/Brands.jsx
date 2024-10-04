@@ -7,9 +7,9 @@ import carBrands from "../../constants/carBrands";
 
 import styles from "./styles.module.css";
 
-const Clients = () => {
+const Brands = () => {
   return (
-    <Section indexSection={10}>
+    <Section indexSection={8}>
       <Subtitle>repair of any complexity</Subtitle>
       <Heading level={2} title="our clients" />
       <ul className={styles.list}>
@@ -30,4 +30,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Brands;

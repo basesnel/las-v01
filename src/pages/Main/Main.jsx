@@ -5,7 +5,7 @@ import Features from "../../components/Features/Features";
 // import Automechanics from "../../components/Automechanics/Automechanics";
 // import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
-import Clients from "../../components/Clients/Clients";
+import Brands from "../../components/Brands/Brands";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -21,7 +21,7 @@ const Main = () => {
       {/* <Automechanics /> */}
       {/* <Gallery /> */}
       <ContactUs />
-      <Clients />
+      <Brands />
     </main>
   );
 };

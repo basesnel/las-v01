@@ -56,10 +56,10 @@ const sections = [
     },
   },
   {
-    id: "clients",
+    id: "brands",
     section: {
-      en: "we work with",
-      uk: "ми працюємо з",
+      en: "we work with brands",
+      uk: "працюємо з марками",
     },
   },
 ];
