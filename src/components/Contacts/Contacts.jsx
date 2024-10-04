@@ -9,6 +9,8 @@ import contacts from "../../constants/contacts";
 import styles from "./styles.module.css";
 
 const Contacts = () => {
+  const { title, list, subtitle1, subtitle2, text } = contacts;
+
   return (
     <Section
       colorMode="dark"
@@ -16,10 +18,10 @@ const Contacts = () => {
       containerVariant="contacts"
     >
       <div className={styles.content}>
-        <Heading level={3} title="contacts" />
+        <Heading level={3} title={title.uk} />
         <address className={styles.address}>
           <ul>
-            {contacts.map(({ id, text, src, icon }) => {
+            {list.map(({ id, text, src, icon }) => {
               if (id < 6)
                 return (
                   <li key={id} className={styles.item}>
@@ -30,7 +32,7 @@ const Contacts = () => {
                         height={24}
                         className={styles.icon}
                       />
-                      <span className={styles.text}>{text}</span>
+                      <span className={styles.text}>{text.uk}</span>
                     </Link>
                   </li>
                 );
@@ -39,11 +41,11 @@ const Contacts = () => {
         </address>
       </div>
       <aside className={styles.aside}>
-        <Subtitle mode="contacts">working hours</Subtitle>
-        <Text variant="contacts">Monday-Saturday from 9:00 to 18:00</Text>
-        <Subtitle mode="contacts">we are on socials</Subtitle>
+        <Subtitle mode="contacts">{subtitle1.uk}</Subtitle>
+        <Text variant="contacts">{text.uk}</Text>
+        <Subtitle mode="contacts">{subtitle2.uk}</Subtitle>
         <ul>
-          {contacts.map(({ id, text, src, icon }) => {
+          {list.map(({ id, text, src, icon }) => {
             if (id >= 6)
               return (
                 <li key={id} className={styles.item}>
@@ -54,7 +56,7 @@ const Contacts = () => {
                       height={24}
                       className={styles.icon}
                     />
-                    <span className={styles.text}>{text}</span>
+                    <span className={styles.text}>{text.uk}</span>
                   </Link>
                 </li>
               );
