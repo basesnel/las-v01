@@ -38,7 +38,7 @@
   }
 
   .content {
-    flex-basis: 560px;
+    flex-basis: 491px;
     padding: 20px 0;
   }
 
@@ -49,7 +49,7 @@
 
 @media screen and (min-width: 1200px) {
   .content {
-    flex-basis: 1040px;
+    flex-basis: 940px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;

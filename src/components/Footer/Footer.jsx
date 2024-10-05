@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <Container variant="footer">
         <div className={styles.thumb}>
-          <Logo isDark={true} />
+          <Logo isDark={true} variant="footer" />
         </div>
         <div className={styles.content}>
           <Socnets />

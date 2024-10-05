@@ -5,9 +5,11 @@ import Logodkpng from "../../assets/logo/logo-dark-130.png";
 
 import styles from "./styles.module.css";
 
-const Logo = ({ isDark }) => {
+const Logo = ({ isDark, variant }) => {
+  const variation = variant ? `${styles[variant]}` : "";
+
   return (
-    <a href="#" className={styles.logo} aria-label="logo">
+    <a href="#" className={`${styles.logo} ${variation}`} aria-label="logo">
       <picture focusable="false" aria-hidden="true">
         <source
           srcSet={Logodkwebp}
