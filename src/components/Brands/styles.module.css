@@ -33,6 +33,36 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .item {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+
+  /* .item:nth-child(7),
+  .item:nth-child(8),
+  .item:nth-child(9),
+  .item:nth-child(10),
+  .item:nth-child(11),
+  .item:nth-child(12) {
+    display: initial;
+  } */
+}
+
+@media screen and (min-width: 1200px) {
+  .item {
+    flex-basis: calc((100% - 5 * 30px) / 6);
+  }
+
+  .item:nth-child(13),
+  .item:nth-child(14),
+  .item:nth-child(15),
+  .item:nth-child(16),
+  .item:nth-child(17),
+  .item:nth-child(18) {
+    display: initial;
+  }
+}
+
 .link {
   display: flex;
   justify-content: center;
