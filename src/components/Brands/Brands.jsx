@@ -3,15 +3,17 @@ import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Link from "../Link/Link";
 import Icon from "../Icon/Icon";
-import carBrands from "../../constants/carBrands";
+import brands from "../../constants/brands";
 
 import styles from "./styles.module.css";
 
 const Brands = () => {
+  const { title, subTitle, carBrands } = brands;
+
   return (
     <Section indexSection={8}>
-      <Subtitle>repair of any complexity</Subtitle>
-      <Heading level={2} title="we work with brands" />
+      <Subtitle>{subTitle.uk}</Subtitle>
+      <Heading level={2} title={title.uk} />
       <ul className={styles.list}>
         {carBrands.map(({ icon }, i) => (
           <li key={i} className={styles.item}>
