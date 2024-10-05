@@ -38,11 +38,26 @@
   }
 
   .content {
-    flex-basis: calc(768px - 2 * 39px - 130px);
+    flex-basis: 560px;
     padding: 20px 0;
   }
 
   .thumb {
     padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    flex-basis: 1040px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .copyright {
+    margin-bottom: 0;
   }
 }

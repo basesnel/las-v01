@@ -84,3 +84,9 @@
     background-color: currentColor;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .list {
+    margin-bottom: 0;
+  }
+}
