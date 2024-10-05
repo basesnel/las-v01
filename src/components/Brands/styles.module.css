@@ -13,8 +13,7 @@
 .item:nth-child(2),
 .item:nth-child(3),
 .item:nth-child(4),
-.item:nth-child(5),
-.item:nth-child(6) {
+.item:nth-child(5) {
   display: initial;
 }
 
@@ -37,8 +36,8 @@
   background-position: 100% 100%;
   background-repeat: no-repeat;
   overflow: hidden;
-  box-shadow: 1px 0 1px var(--dark), 0 1px 1px var(--dark),
-    -1px 0 1px var(--dark), 0 -1px 1px var(--dark);
+  box-shadow: 1px 0 1px var(--neutral), 0 1px 1px var(--neutral),
+    -1px 0 1px var(--neutral), 0 -1px 1px var(--neutral);
   transition: background-position 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -80,6 +79,7 @@
     flex-basis: calc((100% - 30px) / 2);
   }
 
+  .item:nth-child(6),
   .item:nth-child(7),
   .item:nth-child(8),
   .item:nth-child(9),
