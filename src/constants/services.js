@@ -18,7 +18,7 @@ const services = {
   },
   reference: {
     en: "online-bookung",
-    uk: "бронювання онлайн",
+    uk: "бронювання",
   },
   list: [
     {
