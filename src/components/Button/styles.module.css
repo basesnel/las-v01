@@ -2,7 +2,6 @@
   display: inline-block;
   width: 90%;
   border: 1px solid var(--light);
-  margin: 0 auto 24px;
   border-radius: 12px;
   padding: 16px 20px;
   font-size: 12px;
@@ -47,10 +46,6 @@
     infinite;
 }
 
-.button:last-child {
-  margin: 0;
-}
-
 .button:hover,
 .button:focus {
   box-shadow: 0 0px 1px var(--light), 0 0 2px var(--light),
@@ -78,8 +73,6 @@
 @media screen and (min-width: 300px) {
   .button {
     width: auto;
-    margin: 0 24px 0 0;
-    margin-right: 24px;
     border-radius: 16px;
     padding: 16px 24px;
   }
