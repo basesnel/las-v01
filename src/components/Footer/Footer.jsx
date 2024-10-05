@@ -16,9 +16,10 @@ const Footer = () => {
           <Socnets />
           <p className={styles.copyright}>Copyright 2024</p>
           <p className={styles.date}>
-            {`created ${formatTimeAgo(
-              "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)"
-            )}`}
+            {formatTimeAgo(
+              "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)",
+              "uk"
+            )}
           </p>
         </div>
       </Container>
