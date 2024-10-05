@@ -63,6 +63,11 @@
     display: flex;
     gap: 30px;
   }
+
+  .footer {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

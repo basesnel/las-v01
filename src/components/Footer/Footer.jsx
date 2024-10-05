@@ -8,17 +8,19 @@ import Logo from "../Logo/Logo";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Container>
+      <Container variant="footer">
         <div className={styles.thumb}>
           <Logo isDark={true} />
         </div>
-        <Socnets />
-        <p className={styles.copyright}>Copyright 2024</p>
-        <p className={styles.date}>
-          {`created ${formatTimeAgo(
-            "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)"
-          )}`}
-        </p>
+        <div className={styles.content}>
+          <Socnets />
+          <p className={styles.copyright}>Copyright 2024</p>
+          <p className={styles.date}>
+            {`created ${formatTimeAgo(
+              "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)"
+            )}`}
+          </p>
+        </div>
       </Container>
     </footer>
   );
