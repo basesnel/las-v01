@@ -15,9 +15,9 @@ const Brands = () => {
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} title={title.uk} />
       <ul className={styles.list}>
-        {carBrands.map(({ icon }, i) => (
+        {carBrands.map(({ icon, label }, i) => (
           <li key={i} className={styles.item}>
-            <Link src="#" className={styles.link}>
+            <Link src="#" label={label.uk} className={styles.link}>
               <Icon
                 icon={icon}
                 width={120}
