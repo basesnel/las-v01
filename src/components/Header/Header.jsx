@@ -1,19 +1,15 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import sections from "../../constants/sections";
-import header from "../../constants/header";
 import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Menu from "../Menu/Menu";
 import Logo from "../Logo/Logo";
-// import Button from "../Button/Button";
 
 import styles from "./styles.module.css";
 
 const Header = () => {
-  const { button } = header;
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const openMenu = () => {
@@ -54,7 +50,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          {/* <Button type="button" caption={button.uk} /> */}
         </nav>
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
