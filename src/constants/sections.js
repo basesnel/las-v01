@@ -23,8 +23,8 @@ const sections = [
   {
     id: "features",
     section: {
-      en: "our benefits and features",
-      uk: "наші переваги та можливості",
+      en: "our benefits",
+      uk: "наші переваги",
     },
   },
   {
