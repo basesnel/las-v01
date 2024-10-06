@@ -7,7 +7,7 @@ import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Menu from "../Menu/Menu";
 import Logo from "../Logo/Logo";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 
 import styles from "./styles.module.css";
 
@@ -54,7 +54,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <Button type="button" caption={button.uk} />
+          {/* <Button type="button" caption={button.uk} /> */}
         </nav>
         <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
           <Icon
