@@ -26,6 +26,15 @@ import mob1s1440wpp from "../assets/images/banner/mobile/slide-img-1-1440.webp";
 import mob1s1920jpg from "../assets/images/banner/mobile/slide-img-1-1920.jpg";
 import mob1s1920wpp from "../assets/images/banner/mobile/slide-img-1-1920.webp";
 
+import mob2s0480jpg from "../assets/images/banner/mobile/slide-img-2-480.jpg";
+import mob2s0480wpp from "../assets/images/banner/mobile/slide-img-2-480.webp";
+import mob2s0960jpg from "../assets/images/banner/mobile/slide-img-2-960.jpg";
+import mob2s0960wpp from "../assets/images/banner/mobile/slide-img-2-960.webp";
+import mob2s1440jpg from "../assets/images/banner/mobile/slide-img-2-1440.jpg";
+import mob2s1440wpp from "../assets/images/banner/mobile/slide-img-2-1440.webp";
+import mob2s1920jpg from "../assets/images/banner/mobile/slide-img-2-1920.jpg";
+import mob2s1920wpp from "../assets/images/banner/mobile/slide-img-2-1920.webp";
+
 const slider = {
   slides: [
     {
@@ -51,6 +60,14 @@ const slider = {
     {
       mobWEBP: `${mobWebp2}`,
       mobJPG: `${mobJpg2}`,
+      mob1xJPG: `${mob2s0480jpg}`,
+      mob1xWBP: `${mob2s0480wpp}`,
+      mob2xJPG: `${mob2s0960jpg}`,
+      mob2xWBP: `${mob2s0960wpp}`,
+      mob3xJPG: `${mob2s1440jpg}`,
+      mob3xWBP: `${mob2s1440wpp}`,
+      mob4xJPG: `${mob2s1920jpg}`,
+      mob4xWBP: `${mob2s1920wpp}`,
       tabWEBP: `${tabWebp2}`,
       tabJPG: `${tabJpg2}`,
       deskWEBP: `${deskWebp2}`,
