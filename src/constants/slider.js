@@ -53,6 +53,15 @@ import tab1s1710wpp from "../assets/images/banner/tablet/slide-img-1-1710.webp";
 import tab1s2280jpg from "../assets/images/banner/tablet/slide-img-1-2280.jpg";
 import tab1s2280wpp from "../assets/images/banner/tablet/slide-img-1-2280.webp";
 
+import tab2s0570jpg from "../assets/images/banner/tablet/slide-img-2-570.jpg";
+import tab2s0570wpp from "../assets/images/banner/tablet/slide-img-2-570.webp";
+import tab2s1140jpg from "../assets/images/banner/tablet/slide-img-2-1140.jpg";
+import tab2s1140wpp from "../assets/images/banner/tablet/slide-img-2-1140.webp";
+import tab2s1710jpg from "../assets/images/banner/tablet/slide-img-2-1710.jpg";
+import tab2s1710wpp from "../assets/images/banner/tablet/slide-img-2-1710.webp";
+import tab2s2280jpg from "../assets/images/banner/tablet/slide-img-2-2280.jpg";
+import tab2s2280wpp from "../assets/images/banner/tablet/slide-img-2-2280.webp";
+
 const slider = {
   slides: [
     {
@@ -96,6 +105,14 @@ const slider = {
       mob4xWBP: `${mob2s1920wpp}`,
       tabWEBP: `${tabWebp2}`,
       tabJPG: `${tabJpg2}`,
+      tab1xJPG: `${tab2s0570jpg}`,
+      tab1xWBP: `${tab2s0570wpp}`,
+      tab2xJPG: `${tab2s1140jpg}`,
+      tab2xWBP: `${tab2s1140wpp}`,
+      tab3xJPG: `${tab2s1710jpg}`,
+      tab3xWBP: `${tab2s1710wpp}`,
+      tab4xJPG: `${tab2s2280jpg}`,
+      tab4xWBP: `${tab2s2280wpp}`,
       deskWEBP: `${deskWebp2}`,
       deskPNG: `${deskPng2}`,
       alt: {
