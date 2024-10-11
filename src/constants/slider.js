@@ -62,6 +62,15 @@ import tab2s1710wpp from "../assets/images/banner/tablet/slide-img-2-1710.webp";
 import tab2s2280jpg from "../assets/images/banner/tablet/slide-img-2-2280.jpg";
 import tab2s2280wpp from "../assets/images/banner/tablet/slide-img-2-2280.webp";
 
+import tab3s0570jpg from "../assets/images/banner/tablet/slide-img-3-570.jpg";
+import tab3s0570wpp from "../assets/images/banner/tablet/slide-img-3-570.webp";
+import tab3s1140jpg from "../assets/images/banner/tablet/slide-img-3-1140.jpg";
+import tab3s1140wpp from "../assets/images/banner/tablet/slide-img-3-1140.webp";
+import tab3s1710jpg from "../assets/images/banner/tablet/slide-img-3-1710.jpg";
+import tab3s1710wpp from "../assets/images/banner/tablet/slide-img-3-1710.webp";
+import tab3s2280jpg from "../assets/images/banner/tablet/slide-img-3-2280.jpg";
+import tab3s2280wpp from "../assets/images/banner/tablet/slide-img-3-2280.webp";
+
 const slider = {
   slides: [
     {
@@ -133,6 +142,14 @@ const slider = {
       mob4xWBP: `${mob3s1920wpp}`,
       tabWEBP: `${tabWebp3}`,
       tabJPG: `${tabJpg3}`,
+      tab1xJPG: `${tab3s0570jpg}`,
+      tab1xWBP: `${tab3s0570wpp}`,
+      tab2xJPG: `${tab3s1140jpg}`,
+      tab2xWBP: `${tab3s1140wpp}`,
+      tab3xJPG: `${tab3s1710jpg}`,
+      tab3xWBP: `${tab3s1710wpp}`,
+      tab4xJPG: `${tab3s2280jpg}`,
+      tab4xWBP: `${tab3s2280wpp}`,
       deskWEBP: `${deskWebp3}`,
       deskPNG: `${deskPng3}`,
       alt: { en: "Engine overhaul", uk: "Капитальний ремонт двигуна" },
