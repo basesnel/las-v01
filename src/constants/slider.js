@@ -89,6 +89,15 @@ import dtp2s3120wpp from "../assets/images/banner/desktop/slide-img-2-3120.webp"
 import dtp2s4160jpg from "../assets/images/banner/desktop/slide-img-2-4160.jpg";
 import dtp2s4160wpp from "../assets/images/banner/desktop/slide-img-2-4160.webp";
 
+import dtp3s1040jpg from "../assets/images/banner/desktop/slide-img-3-1040.jpg";
+import dtp3s1040wpp from "../assets/images/banner/desktop/slide-img-3-1040.webp";
+import dtp3s2080jpg from "../assets/images/banner/desktop/slide-img-3-2080.jpg";
+import dtp3s2080wpp from "../assets/images/banner/desktop/slide-img-3-2080.webp";
+import dtp3s3120jpg from "../assets/images/banner/desktop/slide-img-3-3120.jpg";
+import dtp3s3120wpp from "../assets/images/banner/desktop/slide-img-3-3120.webp";
+import dtp3s4160jpg from "../assets/images/banner/desktop/slide-img-3-4160.jpg";
+import dtp3s4160wpp from "../assets/images/banner/desktop/slide-img-3-4160.webp";
+
 const slider = {
   slides: [
     {
@@ -186,6 +195,14 @@ const slider = {
       tab4xWBP: `${tab3s2280wpp}`,
       deskWEBP: `${deskWebp3}`,
       deskPNG: `${deskPng3}`,
+      dtp1xJPG: `${dtp3s1040jpg}`,
+      dtp1xWBP: `${dtp3s1040wpp}`,
+      dtp2xJPG: `${dtp3s2080jpg}`,
+      dtp2xWBP: `${dtp3s2080wpp}`,
+      dtp3xJPG: `${dtp3s3120jpg}`,
+      dtp3xWBP: `${dtp3s3120wpp}`,
+      dtp4xJPG: `${dtp3s4160jpg}`,
+      dtp4xWBP: `${dtp3s4160wpp}`,
       alt: { en: "Engine overhaul", uk: "Капитальний ремонт двигуна" },
     },
   ],
