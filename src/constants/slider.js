@@ -71,6 +71,15 @@ import tab3s1710wpp from "../assets/images/banner/tablet/slide-img-3-1710.webp";
 import tab3s2280jpg from "../assets/images/banner/tablet/slide-img-3-2280.jpg";
 import tab3s2280wpp from "../assets/images/banner/tablet/slide-img-3-2280.webp";
 
+import dtp1s1040jpg from "../assets/images/banner/desktop/slide-img-1-1040.jpg";
+import dtp1s1040wpp from "../assets/images/banner/desktop/slide-img-1-1040.webp";
+import dtp1s2080jpg from "../assets/images/banner/desktop/slide-img-1-2080.jpg";
+import dtp1s2080wpp from "../assets/images/banner/desktop/slide-img-1-2080.webp";
+import dtp1s3120jpg from "../assets/images/banner/desktop/slide-img-1-3120.jpg";
+import dtp1s3120wpp from "../assets/images/banner/desktop/slide-img-1-3120.webp";
+import dtp1s4160jpg from "../assets/images/banner/desktop/slide-img-1-4160.jpg";
+import dtp1s4160wpp from "../assets/images/banner/desktop/slide-img-1-4160.webp";
+
 const slider = {
   slides: [
     {
@@ -96,6 +105,14 @@ const slider = {
       tab4xWBP: `${tab1s2280wpp}`,
       deskWEBP: `${deskWebp1}`,
       deskPNG: `${deskPng1}`,
+      dtp1xJPG: `${dtp1s1040jpg}`,
+      dtp1xWBP: `${dtp1s1040wpp}`,
+      dtp2xJPG: `${dtp1s2080jpg}`,
+      dtp2xWBP: `${dtp1s2080wpp}`,
+      dtp3xJPG: `${dtp1s3120jpg}`,
+      dtp3xWBP: `${dtp1s3120wpp}`,
+      dtp4xJPG: `${dtp1s4160jpg}`,
+      dtp4xWBP: `${dtp1s4160wpp}`,
       alt: {
         en: "Repair of the machine chassis",
         uk: "Ремонт ходової частини машини",
