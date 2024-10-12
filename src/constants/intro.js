@@ -8,6 +8,15 @@ import tabWebp2 from "../assets/images/about/tablet/img-about-2.webp";
 import deskJpg2 from "../assets/images/about/desktop/img-about-2.jpg";
 import deskWebp2 from "../assets/images/about/desktop/img-about-2.webp";
 
+import tab1s0330jpg from "../assets/images/about/tablet/about-img-1-330.jpg";
+import tab1s0330wpp from "../assets/images/about/tablet/about-img-1-330.webp";
+import tab1s0660jpg from "../assets/images/about/tablet/about-img-1-660.jpg";
+import tab1s0660wpp from "../assets/images/about/tablet/about-img-1-660.webp";
+import tab1s0990jpg from "../assets/images/about/tablet/about-img-1-990.jpg";
+import tab1s0990wpp from "../assets/images/about/tablet/about-img-1-990.webp";
+import tab1s1320jpg from "../assets/images/about/tablet/about-img-1-1320.jpg";
+import tab1s1320wpp from "../assets/images/about/tablet/about-img-1-1320.webp";
+
 const intro = {
   subTitle: {
     en: "about",
@@ -41,6 +50,14 @@ const intro = {
     {
       tabWEBP: `${tabWebp1}`,
       tabJPG: `${tabJpg1}`,
+      tab1xJPG: `${tab1s0330jpg}`,
+      tab1xWBP: `${tab1s0330wpp}`,
+      tab2xJPG: `${tab1s0660jpg}`,
+      tab2xWBP: `${tab1s0660wpp}`,
+      tab3xJPG: `${tab1s0990jpg}`,
+      tab3xWBP: `${tab1s0990wpp}`,
+      tab4xJPG: `${tab1s1320jpg}`,
+      tab4xWBP: `${tab1s1320wpp}`,
       deskWEBP: `${deskWebp1}`,
       deskJPG: `${deskJpg1}`,
       alt: {
