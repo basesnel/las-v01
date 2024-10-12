@@ -80,6 +80,15 @@ import dtp1s3120wpp from "../assets/images/banner/desktop/slide-img-1-3120.webp"
 import dtp1s4160jpg from "../assets/images/banner/desktop/slide-img-1-4160.jpg";
 import dtp1s4160wpp from "../assets/images/banner/desktop/slide-img-1-4160.webp";
 
+import dtp2s1040jpg from "../assets/images/banner/desktop/slide-img-2-1040.jpg";
+import dtp2s1040wpp from "../assets/images/banner/desktop/slide-img-2-1040.webp";
+import dtp2s2080jpg from "../assets/images/banner/desktop/slide-img-2-2080.jpg";
+import dtp2s2080wpp from "../assets/images/banner/desktop/slide-img-2-2080.webp";
+import dtp2s3120jpg from "../assets/images/banner/desktop/slide-img-2-3120.jpg";
+import dtp2s3120wpp from "../assets/images/banner/desktop/slide-img-2-3120.webp";
+import dtp2s4160jpg from "../assets/images/banner/desktop/slide-img-2-4160.jpg";
+import dtp2s4160wpp from "../assets/images/banner/desktop/slide-img-2-4160.webp";
+
 const slider = {
   slides: [
     {
@@ -141,6 +150,14 @@ const slider = {
       tab4xWBP: `${tab2s2280wpp}`,
       deskWEBP: `${deskWebp2}`,
       deskPNG: `${deskPng2}`,
+      dtp1xJPG: `${dtp2s1040jpg}`,
+      dtp1xWBP: `${dtp2s1040wpp}`,
+      dtp2xJPG: `${dtp2s2080jpg}`,
+      dtp2xWBP: `${dtp2s2080wpp}`,
+      dtp3xJPG: `${dtp2s3120jpg}`,
+      dtp3xWBP: `${dtp2s3120wpp}`,
+      dtp4xJPG: `${dtp2s4160jpg}`,
+      dtp4xWBP: `${dtp2s4160wpp}`,
       alt: {
         en: "Machine diagnostics",
         uk: "Діагностика машин",
