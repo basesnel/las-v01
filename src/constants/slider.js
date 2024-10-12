@@ -132,8 +132,8 @@ const slider = {
       dtp4xJPG: `${dtp1s4160jpg}`,
       dtp4xWBP: `${dtp1s4160wpp}`,
       alt: {
-        en: "Repair of the machine chassis",
-        uk: "Ремонт ходової частини машини",
+        en: "One of the sites of LAS, a high-quality car maintenance service",
+        uk: "Один з майданчиків LAS - якісного сервісу обслуговування автомобілів",
       },
     },
     {
@@ -168,8 +168,8 @@ const slider = {
       dtp4xJPG: `${dtp2s4160jpg}`,
       dtp4xWBP: `${dtp2s4160wpp}`,
       alt: {
-        en: "Machine diagnostics",
-        uk: "Діагностика машин",
+        en: "Maintaining the machine on a lift",
+        uk: "Обслуговування машини на підйомнику",
       },
     },
     {
@@ -203,7 +203,10 @@ const slider = {
       dtp3xWBP: `${dtp3s3120wpp}`,
       dtp4xJPG: `${dtp3s4160jpg}`,
       dtp4xWBP: `${dtp3s4160wpp}`,
-      alt: { en: "Engine overhaul", uk: "Капитальний ремонт двигуна" },
+      alt: {
+        en: "Comprehensive maintenance of passenger vehicles of any type",
+        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+      },
     },
   ],
   prev: {
