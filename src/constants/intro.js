@@ -26,6 +26,15 @@ import tab2s0990wpp from "../assets/images/about/tablet/about-img-2-990.webp";
 import tab2s1320jpg from "../assets/images/about/tablet/about-img-2-1320.jpg";
 import tab2s1320wpp from "../assets/images/about/tablet/about-img-2-1320.webp";
 
+import tab3s0330jpg from "../assets/images/about/tablet/about-img-3-330.jpg";
+import tab3s0330wpp from "../assets/images/about/tablet/about-img-3-330.webp";
+import tab3s0660jpg from "../assets/images/about/tablet/about-img-3-660.jpg";
+import tab3s0660wpp from "../assets/images/about/tablet/about-img-3-660.webp";
+import tab3s0990jpg from "../assets/images/about/tablet/about-img-3-990.jpg";
+import tab3s0990wpp from "../assets/images/about/tablet/about-img-3-990.webp";
+import tab3s1320jpg from "../assets/images/about/tablet/about-img-3-1320.jpg";
+import tab3s1320wpp from "../assets/images/about/tablet/about-img-3-1320.webp";
+
 const intro = {
   subTitle: {
     en: "about",
@@ -87,6 +96,20 @@ const intro = {
       tab4xWBP: `${tab2s1320wpp}`,
       deskWEBP: `${deskWebp2}`,
       deskJPG: `${deskJpg2}`,
+      alt: {
+        en: "Machine diagnostics",
+        uk: "Діагностика машин",
+      },
+    },
+    {
+      tab1xJPG: `${tab3s0330jpg}`,
+      tab1xWBP: `${tab3s0330wpp}`,
+      tab2xJPG: `${tab3s0660jpg}`,
+      tab2xWBP: `${tab3s0660wpp}`,
+      tab3xJPG: `${tab3s0990jpg}`,
+      tab3xWBP: `${tab3s0990wpp}`,
+      tab4xJPG: `${tab3s1320jpg}`,
+      tab4xWBP: `${tab3s1320wpp}`,
       alt: {
         en: "Machine diagnostics",
         uk: "Діагностика машин",

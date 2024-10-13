@@ -33,45 +33,46 @@ const Intro = () => {
       <aside className={styles.aside}>
         <ul className={styles.list}>
           {abouts.map((about, i) => {
-            return (
-              <li key={i} className={styles.item}>
-                <div className={styles.thumb}>
-                  <picture>
-                    <source
-                      srcSet={about.deskWEBP}
-                      media="(min-width: 1200px)"
-                      type="image/webp"
-                      width={270}
-                      height={445}
-                    />
+            if (i < 2)
+              return (
+                <li key={i} className={styles.item}>
+                  <div className={styles.thumb}>
+                    <picture>
+                      <source
+                        srcSet={about.deskWEBP}
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                        width={270}
+                        height={445}
+                      />
 
-                    <source
-                      srcSet={about.deskJPG}
-                      media="(min-width: 1200px)"
-                      type="image/jpeg"
-                      width={270}
-                      height={445}
-                    />
+                      <source
+                        srcSet={about.deskJPG}
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"
+                        width={270}
+                        height={445}
+                      />
 
-                    <source
-                      srcSet={about.tabWEBP}
-                      type="image/webp"
-                      width={330}
-                      height={235}
-                    />
+                      <source
+                        srcSet={about.tabWEBP}
+                        type="image/webp"
+                        width={330}
+                        height={235}
+                      />
 
-                    <img
-                      loading="lazy"
-                      src={about.tabJPG}
-                      alt={about.alt.uk}
-                      width={330}
-                      height={235}
-                      className={styles.image}
-                    />
-                  </picture>
-                </div>
-              </li>
-            );
+                      <img
+                        loading="lazy"
+                        src={about.tabJPG}
+                        alt={about.alt.uk}
+                        width={330}
+                        height={235}
+                        className={styles.image}
+                      />
+                    </picture>
+                  </div>
+                </li>
+              );
           })}
         </ul>
       </aside>
