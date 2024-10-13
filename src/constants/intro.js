@@ -35,6 +35,15 @@ import tab3s0990wpp from "../assets/images/about/tablet/about-img-3-990.webp";
 import tab3s1320jpg from "../assets/images/about/tablet/about-img-3-1320.jpg";
 import tab3s1320wpp from "../assets/images/about/tablet/about-img-3-1320.webp";
 
+import dtp1s0270jpg from "../assets/images/about/desktop/about-img-1-270.jpg";
+import dtp1s0270wpp from "../assets/images/about/desktop/about-img-1-270.webp";
+import dtp1s0540jpg from "../assets/images/about/desktop/about-img-1-540.jpg";
+import dtp1s0540wpp from "../assets/images/about/desktop/about-img-1-540.webp";
+import dtp1s0810jpg from "../assets/images/about/desktop/about-img-1-810.jpg";
+import dtp1s0810wpp from "../assets/images/about/desktop/about-img-1-810.webp";
+import dtp1s1080jpg from "../assets/images/about/desktop/about-img-1-1080.jpg";
+import dtp1s1080wpp from "../assets/images/about/desktop/about-img-1-1080.webp";
+
 const intro = {
   subTitle: {
     en: "about",
@@ -78,6 +87,14 @@ const intro = {
       tab4xWBP: `${tab1s1320wpp}`,
       deskWEBP: `${deskWebp1}`,
       deskJPG: `${deskJpg1}`,
+      dtp1xJPG: `${dtp1s0270jpg}`,
+      dtp1xWBP: `${dtp1s0270wpp}`,
+      dtp2xJPG: `${dtp1s0540jpg}`,
+      dtp2xWBP: `${dtp1s0540wpp}`,
+      dtp3xJPG: `${dtp1s0810jpg}`,
+      dtp3xWBP: `${dtp1s0810wpp}`,
+      dtp4xJPG: `${dtp1s1080jpg}`,
+      dtp4xWBP: `${dtp1s1080wpp}`,
       alt: {
         en: "Repair of the machine chassis",
         uk: "Ремонт ходової частини машини",
