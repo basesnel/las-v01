@@ -53,6 +53,15 @@ import dtp2s0810wpp from "../assets/images/about/desktop/about-img-2-810.webp";
 import dtp2s1080jpg from "../assets/images/about/desktop/about-img-2-1080.jpg";
 import dtp2s1080wpp from "../assets/images/about/desktop/about-img-2-1080.webp";
 
+import dtp3s0270jpg from "../assets/images/about/desktop/about-img-3-270.jpg";
+import dtp3s0270wpp from "../assets/images/about/desktop/about-img-3-270.webp";
+import dtp3s0540jpg from "../assets/images/about/desktop/about-img-3-540.jpg";
+import dtp3s0540wpp from "../assets/images/about/desktop/about-img-3-540.webp";
+import dtp3s0810jpg from "../assets/images/about/desktop/about-img-3-810.jpg";
+import dtp3s0810wpp from "../assets/images/about/desktop/about-img-3-810.webp";
+import dtp3s1080jpg from "../assets/images/about/desktop/about-img-3-1080.jpg";
+import dtp3s1080wpp from "../assets/images/about/desktop/about-img-3-1080.webp";
+
 const intro = {
   subTitle: {
     en: "about",
@@ -144,6 +153,14 @@ const intro = {
       tab3xWBP: `${tab3s0990wpp}`,
       tab4xJPG: `${tab3s1320jpg}`,
       tab4xWBP: `${tab3s1320wpp}`,
+      dtp1xJPG: `${dtp3s0270jpg}`,
+      dtp1xWBP: `${dtp3s0270wpp}`,
+      dtp2xJPG: `${dtp3s0540jpg}`,
+      dtp2xWBP: `${dtp3s0540wpp}`,
+      dtp3xJPG: `${dtp3s0810jpg}`,
+      dtp3xWBP: `${dtp3s0810wpp}`,
+      dtp4xJPG: `${dtp3s1080jpg}`,
+      dtp4xWBP: `${dtp3s1080wpp}`,
       alt: {
         en: "Machine diagnostics",
         uk: "Діагностика машин",
