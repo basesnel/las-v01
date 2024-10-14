@@ -140,8 +140,8 @@ const intro = {
       dtp4xJPG: `${dtp2s1080jpg}`,
       dtp4xWBP: `${dtp2s1080wpp}`,
       alt: {
-        en: "Machine diagnostics",
-        uk: "Діагностика машин",
+        en: "Washing the machine in process",
+        uk: "Мийка машини в процесі",
       },
     },
     {
@@ -162,8 +162,8 @@ const intro = {
       dtp4xJPG: `${dtp3s1080jpg}`,
       dtp4xWBP: `${dtp3s1080wpp}`,
       alt: {
-        en: "Machine diagnostics",
-        uk: "Діагностика машин",
+        en: "Car repair on the lift",
+        uk: "Ремонт машини на підйомнику",
       },
     },
   ],
