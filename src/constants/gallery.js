@@ -1,11 +1,20 @@
-import mob1s0418jpg from "../assets/images/banner/mobile/slide-img-1-418.jpg";
-import mob1s0418wpp from "../assets/images/banner/mobile/slide-img-1-418.webp";
-import mob1s0836jpg from "../assets/images/banner/mobile/slide-img-1-836.jpg";
-import mob1s0836wpp from "../assets/images/banner/mobile/slide-img-1-836.webp";
-import mob1s1254jpg from "../assets/images/banner/mobile/slide-img-1-1254.jpg";
-import mob1s1254wpp from "../assets/images/banner/mobile/slide-img-1-1254.webp";
-import mob1s1672jpg from "../assets/images/banner/mobile/slide-img-1-1672.jpg";
-import mob1s1672wpp from "../assets/images/banner/mobile/slide-img-1-1672.webp";
+import mob1s0418jpg from "../assets/images/gallery/mobile/gallery-1-418.jpg";
+import mob1s0418wpp from "../assets/images/gallery/mobile/gallery-1-418.webp";
+import mob1s0836jpg from "../assets/images/gallery/mobile/gallery-1-836.jpg";
+import mob1s0836wpp from "../assets/images/gallery/mobile/gallery-1-836.webp";
+import mob1s1254jpg from "../assets/images/gallery/mobile/gallery-1-1254.jpg";
+import mob1s1254wpp from "../assets/images/gallery/mobile/gallery-1-1254.webp";
+import mob1s1672jpg from "../assets/images/gallery/mobile/gallery-1-1672.jpg";
+import mob1s1672wpp from "../assets/images/gallery/mobile/gallery-1-1672.webp";
+
+import mob2s0418jpg from "../assets/images/gallery/mobile/gallery-2-418.jpg";
+import mob2s0418wpp from "../assets/images/gallery/mobile/gallery-2-418.webp";
+import mob2s0836jpg from "../assets/images/gallery/mobile/gallery-2-836.jpg";
+import mob2s0836wpp from "../assets/images/gallery/mobile/gallery-2-836.webp";
+import mob2s1254jpg from "../assets/images/gallery/mobile/gallery-2-1254.jpg";
+import mob2s1254wpp from "../assets/images/gallery/mobile/gallery-2-1254.webp";
+import mob2s1672jpg from "../assets/images/gallery/mobile/gallery-2-1672.jpg";
+import mob2s1672wpp from "../assets/images/gallery/mobile/gallery-2-1672.webp";
 
 // import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-570.jpg";
 // import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-570.webp";
@@ -43,6 +52,14 @@ const gallery = {
     },
     {
       alt: {
+        mob1xJPG: `${mob2s0418jpg}`,
+        mob1xWBP: `${mob2s0418wpp}`,
+        mob2xJPG: `${mob2s0836jpg}`,
+        mob2xWBP: `${mob2s0836wpp}`,
+        mob3xJPG: `${mob2s1254jpg}`,
+        mob3xWBP: `${mob2s1254wpp}`,
+        mob4xJPG: `${mob2s1672jpg}`,
+        mob4xWBP: `${mob2s1672wpp}`,
         en: "Maintaining the machine on a lift",
         uk: "Обслуговування машини на підйомнику",
       },
