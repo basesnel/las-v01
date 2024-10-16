@@ -2,7 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import Intro from "../../components/Intro/Intro";
 import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
-// import Gallery from "../../components/Gallery/Gallery";
+import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
 // import Shop from "../../components/Shop/Shop";
@@ -15,9 +15,9 @@ const Main = () => {
       <Banner />
       <Intro />
       <Services />
+      <Gallery />
       <Features />
       {/* <Shop /> */}
-      {/* <Gallery /> */}
       <ContactUs />
       <Brands />
     </main>

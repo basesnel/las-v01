@@ -22,6 +22,10 @@
   color: var(--neutral);
 }
 
+.gallery {
+  margin-bottom: 71px;
+}
+
 @media screen and (min-width: 480px) {
   .subtitle {
     display: flex;

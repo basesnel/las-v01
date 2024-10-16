@@ -3,17 +3,12 @@
 }
 
 .thumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  height: auto;
-  position: relative;
-  font-weight: 600;
-  background-color: var(--neutral);
-  color: var(--light);
+  overflow: hidden;
+  max-width: 418px;
 }
 
-.inner {
-  padding: 40% 0;
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

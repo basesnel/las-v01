@@ -53,7 +53,15 @@ import mob04s1672wpp from "../assets/images/gallery/mobile/gallery-04-1672.webp"
 // import dtp1s4160wpp from "../assets/images/banner/desktop/slide-img-1-4160.webp";
 
 const gallery = {
-  pictures: [
+  subTitle: {
+    en: "complex car repair",
+    uk: "комплексний ремонт автомобілів",
+  },
+  title: {
+    en: "gallery of our workshop",
+    uk: "галерея нашої майстерні",
+  },
+  images: [
     {
       mob1xJPG: `${mob01s0418jpg}`,
       mob1xWBP: `${mob01s0418wpp}`,
