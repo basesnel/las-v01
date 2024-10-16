@@ -117,8 +117,8 @@ const gallery = {
       mob4xJPG: `${mob01s1672jpg}`,
       mob4xWBP: `${mob01s1672wpp}`,
       alt: {
-        en: "One of the sites of LAS, a high-quality car maintenance service",
-        uk: "Один з майданчиків LAS - якісного сервісу обслуговування автомобілів",
+        en: "LAS car repair shop welcomes you: a car with the license plate “LAS”",
+        uk: "Автомайстерня LAS вітає Вас: машина з номером “LAS“",
       },
     },
     {
@@ -131,8 +131,8 @@ const gallery = {
       mob4xJPG: `${mob02s1672jpg}`,
       mob4xWBP: `${mob02s1672wpp}`,
       alt: {
-        en: "Maintaining the machine on a lift",
-        uk: "Обслуговування машини на підйомнику",
+        en: "View of the machine wheel on the lift",
+        uk: "Вигляд колеса машини на підйомнику",
       },
     },
     {
@@ -145,8 +145,8 @@ const gallery = {
       mob4xJPG: `${mob03s1672jpg}`,
       mob4xWBP: `${mob03s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "A couple of cars on a lift during maintenance",
+        uk: "Пара машин на підйомнику в процесі обслуговування",
       },
     },
     {
@@ -159,8 +159,8 @@ const gallery = {
       mob4xJPG: `${mob04s1672jpg}`,
       mob4xWBP: `${mob04s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "",
+        uk: "",
       },
     },
     {
@@ -173,8 +173,8 @@ const gallery = {
       mob4xJPG: `${mob05s1672jpg}`,
       mob4xWBP: `${mob05s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "",
+        uk: "",
       },
     },
     {
@@ -187,8 +187,8 @@ const gallery = {
       mob4xJPG: `${mob06s1672jpg}`,
       mob4xWBP: `${mob06s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "",
+        uk: "",
       },
     },
     {
@@ -201,8 +201,8 @@ const gallery = {
       mob4xJPG: `${mob07s1672jpg}`,
       mob4xWBP: `${mob07s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "",
+        uk: "",
       },
     },
     {
@@ -215,8 +215,8 @@ const gallery = {
       mob4xJPG: `${mob08s1672jpg}`,
       mob4xWBP: `${mob08s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "",
+        uk: "",
       },
     },
     {
@@ -229,8 +229,8 @@ const gallery = {
       mob4xJPG: `${mob09s1672jpg}`,
       mob4xWBP: `${mob09s1672wpp}`,
       alt: {
-        en: "Comprehensive maintenance of passenger vehicles of any type",
-        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+        en: "",
+        uk: "",
       },
     },
   ],
