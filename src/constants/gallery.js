@@ -159,8 +159,8 @@ const gallery = {
       mob4xJPG: `${mob04s1672jpg}`,
       mob4xWBP: `${mob04s1672wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "Tool kit for machine maintenance",
+        uk: "Набір інструментів для обслуговування машин",
       },
     },
     {
@@ -173,8 +173,8 @@ const gallery = {
       mob4xJPG: `${mob05s1672jpg}`,
       mob4xWBP: `${mob05s1672wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "Interesting graffiti on the wall in a car repair shop",
+        uk: "Цікаве графіті на стіні в автомайстерні",
       },
     },
     {
@@ -187,8 +187,8 @@ const gallery = {
       mob4xJPG: `${mob06s1672jpg}`,
       mob4xWBP: `${mob06s1672wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "The car's headlight looks like Venom's eye in the dark",
+        uk: "Фара машини виглядає як око Венома в темряві",
       },
     },
     {
