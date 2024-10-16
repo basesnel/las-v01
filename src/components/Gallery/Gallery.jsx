@@ -69,17 +69,12 @@ const Gallery = () => {
                   height="360"
                 /> */}
 
-                {/* <source
-                  srcset="
-                      ./images/portfolio/mobile/portfolio-1-418.webp   480w,
-                      ./images/portfolio/mobile/portfolio-1-836.webp   960w,
-                      ./images/portfolio/mobile/portfolio-1-1254.webp 1440w,
-                      ./images/portfolio/mobile/portfolio-1-1672.webp 1920w
-                    "
-                  width="418"
-                  height="360"
+                <source
+                  srcSet={`${image.mob1xWBP} 480w, ${image.mob2xWBP} 960w, ${image.mob3xWBP} 1440w, ${image.mob2xWBP} 1920w`}
+                  width={418}
+                  height={360}
                   type="image/webp"
-                /> */}
+                />
 
                 <img
                   loading="lazy"
