@@ -70,6 +70,15 @@ import mob08s1254wpp from "../assets/images/gallery/mobile/gallery-08-1254.webp"
 import mob08s1672jpg from "../assets/images/gallery/mobile/gallery-08-1672.jpg";
 import mob08s1672wpp from "../assets/images/gallery/mobile/gallery-08-1672.webp";
 
+import mob09s0418jpg from "../assets/images/gallery/mobile/gallery-09-418.jpg";
+import mob09s0418wpp from "../assets/images/gallery/mobile/gallery-09-418.webp";
+import mob09s0836jpg from "../assets/images/gallery/mobile/gallery-09-836.jpg";
+import mob09s0836wpp from "../assets/images/gallery/mobile/gallery-09-836.webp";
+import mob09s1254jpg from "../assets/images/gallery/mobile/gallery-09-1254.jpg";
+import mob09s1254wpp from "../assets/images/gallery/mobile/gallery-09-1254.webp";
+import mob09s1672jpg from "../assets/images/gallery/mobile/gallery-09-1672.jpg";
+import mob09s1672wpp from "../assets/images/gallery/mobile/gallery-09-1672.webp";
+
 // import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-570.jpg";
 // import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-570.webp";
 // import tab1s1140jpg from "../assets/images/banner/tablet/slide-img-1-1140.jpg";
@@ -205,6 +214,20 @@ const gallery = {
       mob3xWBP: `${mob08s1254wpp}`,
       mob4xJPG: `${mob08s1672jpg}`,
       mob4xWBP: `${mob08s1672wpp}`,
+      alt: {
+        en: "Comprehensive maintenance of passenger vehicles of any type",
+        uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
+      },
+    },
+    {
+      mob1xJPG: `${mob09s0418jpg}`,
+      mob1xWBP: `${mob09s0418wpp}`,
+      mob2xJPG: `${mob09s0836jpg}`,
+      mob2xWBP: `${mob09s0836wpp}`,
+      mob3xJPG: `${mob09s1254jpg}`,
+      mob3xWBP: `${mob09s1254wpp}`,
+      mob4xJPG: `${mob09s1672jpg}`,
+      mob4xWBP: `${mob09s1672wpp}`,
       alt: {
         en: "Comprehensive maintenance of passenger vehicles of any type",
         uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
