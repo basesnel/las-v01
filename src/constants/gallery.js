@@ -1,38 +1,38 @@
-import mob1s0418jpg from "../assets/images/gallery/mobile/gallery-1-418.jpg";
-import mob1s0418wpp from "../assets/images/gallery/mobile/gallery-1-418.webp";
-import mob1s0836jpg from "../assets/images/gallery/mobile/gallery-1-836.jpg";
-import mob1s0836wpp from "../assets/images/gallery/mobile/gallery-1-836.webp";
-import mob1s1254jpg from "../assets/images/gallery/mobile/gallery-1-1254.jpg";
-import mob1s1254wpp from "../assets/images/gallery/mobile/gallery-1-1254.webp";
-import mob1s1672jpg from "../assets/images/gallery/mobile/gallery-1-1672.jpg";
-import mob1s1672wpp from "../assets/images/gallery/mobile/gallery-1-1672.webp";
+import mob01s0418jpg from "../assets/images/gallery/mobile/gallery-01-418.jpg";
+import mob01s0418wpp from "../assets/images/gallery/mobile/gallery-01-418.webp";
+import mob01s0836jpg from "../assets/images/gallery/mobile/gallery-01-836.jpg";
+import mob01s0836wpp from "../assets/images/gallery/mobile/gallery-01-836.webp";
+import mob01s1254jpg from "../assets/images/gallery/mobile/gallery-01-1254.jpg";
+import mob01s1254wpp from "../assets/images/gallery/mobile/gallery-01-1254.webp";
+import mob01s1672jpg from "../assets/images/gallery/mobile/gallery-01-1672.jpg";
+import mob01s1672wpp from "../assets/images/gallery/mobile/gallery-01-1672.webp";
 
-import mob2s0418jpg from "../assets/images/gallery/mobile/gallery-2-418.jpg";
-import mob2s0418wpp from "../assets/images/gallery/mobile/gallery-2-418.webp";
-import mob2s0836jpg from "../assets/images/gallery/mobile/gallery-2-836.jpg";
-import mob2s0836wpp from "../assets/images/gallery/mobile/gallery-2-836.webp";
-import mob2s1254jpg from "../assets/images/gallery/mobile/gallery-2-1254.jpg";
-import mob2s1254wpp from "../assets/images/gallery/mobile/gallery-2-1254.webp";
-import mob2s1672jpg from "../assets/images/gallery/mobile/gallery-2-1672.jpg";
-import mob2s1672wpp from "../assets/images/gallery/mobile/gallery-2-1672.webp";
+import mob02s0418jpg from "../assets/images/gallery/mobile/gallery-02-418.jpg";
+import mob02s0418wpp from "../assets/images/gallery/mobile/gallery-02-418.webp";
+import mob02s0836jpg from "../assets/images/gallery/mobile/gallery-02-836.jpg";
+import mob02s0836wpp from "../assets/images/gallery/mobile/gallery-02-836.webp";
+import mob02s1254jpg from "../assets/images/gallery/mobile/gallery-02-1254.jpg";
+import mob02s1254wpp from "../assets/images/gallery/mobile/gallery-02-1254.webp";
+import mob02s1672jpg from "../assets/images/gallery/mobile/gallery-02-1672.jpg";
+import mob02s1672wpp from "../assets/images/gallery/mobile/gallery-02-1672.webp";
 
-import mob3s0418jpg from "../assets/images/gallery/mobile/gallery-3-418.jpg";
-import mob3s0418wpp from "../assets/images/gallery/mobile/gallery-3-418.webp";
-import mob3s0836jpg from "../assets/images/gallery/mobile/gallery-3-836.jpg";
-import mob3s0836wpp from "../assets/images/gallery/mobile/gallery-3-836.webp";
-import mob3s1254jpg from "../assets/images/gallery/mobile/gallery-3-1254.jpg";
-import mob3s1254wpp from "../assets/images/gallery/mobile/gallery-3-1254.webp";
-import mob3s1672jpg from "../assets/images/gallery/mobile/gallery-3-1672.jpg";
-import mob3s1672wpp from "../assets/images/gallery/mobile/gallery-3-1672.webp";
+import mob03s0418jpg from "../assets/images/gallery/mobile/gallery-03-418.jpg";
+import mob03s0418wpp from "../assets/images/gallery/mobile/gallery-03-418.webp";
+import mob03s0836jpg from "../assets/images/gallery/mobile/gallery-03-836.jpg";
+import mob03s0836wpp from "../assets/images/gallery/mobile/gallery-03-836.webp";
+import mob03s1254jpg from "../assets/images/gallery/mobile/gallery-03-1254.jpg";
+import mob03s1254wpp from "../assets/images/gallery/mobile/gallery-03-1254.webp";
+import mob03s1672jpg from "../assets/images/gallery/mobile/gallery-03-1672.jpg";
+import mob03s1672wpp from "../assets/images/gallery/mobile/gallery-03-1672.webp";
 
-import mob4s0418jpg from "../assets/images/gallery/mobile/gallery-4-418.jpg";
-import mob4s0418wpp from "../assets/images/gallery/mobile/gallery-4-418.webp";
-import mob4s0836jpg from "../assets/images/gallery/mobile/gallery-4-836.jpg";
-import mob4s0836wpp from "../assets/images/gallery/mobile/gallery-4-836.webp";
-import mob4s1254jpg from "../assets/images/gallery/mobile/gallery-4-1254.jpg";
-import mob4s1254wpp from "../assets/images/gallery/mobile/gallery-4-1254.webp";
-import mob4s1672jpg from "../assets/images/gallery/mobile/gallery-4-1672.jpg";
-import mob4s1672wpp from "../assets/images/gallery/mobile/gallery-4-1672.webp";
+import mob04s0418jpg from "../assets/images/gallery/mobile/gallery-04-418.jpg";
+import mob04s0418wpp from "../assets/images/gallery/mobile/gallery-04-418.webp";
+import mob04s0836jpg from "../assets/images/gallery/mobile/gallery-04-836.jpg";
+import mob04s0836wpp from "../assets/images/gallery/mobile/gallery-04-836.webp";
+import mob04s1254jpg from "../assets/images/gallery/mobile/gallery-04-1254.jpg";
+import mob04s1254wpp from "../assets/images/gallery/mobile/gallery-04-1254.webp";
+import mob04s1672jpg from "../assets/images/gallery/mobile/gallery-04-1672.jpg";
+import mob04s1672wpp from "../assets/images/gallery/mobile/gallery-04-1672.webp";
 
 // import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-570.jpg";
 // import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-570.webp";
@@ -55,56 +55,56 @@ import mob4s1672wpp from "../assets/images/gallery/mobile/gallery-4-1672.webp";
 const gallery = {
   pictures: [
     {
-      mob1xJPG: `${mob1s0418jpg}`,
-      mob1xWBP: `${mob1s0418wpp}`,
-      mob2xJPG: `${mob1s0836jpg}`,
-      mob2xWBP: `${mob1s0836wpp}`,
-      mob3xJPG: `${mob1s1254jpg}`,
-      mob3xWBP: `${mob1s1254wpp}`,
-      mob4xJPG: `${mob1s1672jpg}`,
-      mob4xWBP: `${mob1s1672wpp}`,
+      mob1xJPG: `${mob01s0418jpg}`,
+      mob1xWBP: `${mob01s0418wpp}`,
+      mob2xJPG: `${mob01s0836jpg}`,
+      mob2xWBP: `${mob01s0836wpp}`,
+      mob3xJPG: `${mob01s1254jpg}`,
+      mob3xWBP: `${mob01s1254wpp}`,
+      mob4xJPG: `${mob01s1672jpg}`,
+      mob4xWBP: `${mob01s1672wpp}`,
       alt: {
         en: "One of the sites of LAS, a high-quality car maintenance service",
         uk: "Один з майданчиків LAS - якісного сервісу обслуговування автомобілів",
       },
     },
     {
-      mob1xJPG: `${mob2s0418jpg}`,
-      mob1xWBP: `${mob2s0418wpp}`,
-      mob2xJPG: `${mob2s0836jpg}`,
-      mob2xWBP: `${mob2s0836wpp}`,
-      mob3xJPG: `${mob2s1254jpg}`,
-      mob3xWBP: `${mob2s1254wpp}`,
-      mob4xJPG: `${mob2s1672jpg}`,
-      mob4xWBP: `${mob2s1672wpp}`,
+      mob1xJPG: `${mob02s0418jpg}`,
+      mob1xWBP: `${mob02s0418wpp}`,
+      mob2xJPG: `${mob02s0836jpg}`,
+      mob2xWBP: `${mob02s0836wpp}`,
+      mob3xJPG: `${mob02s1254jpg}`,
+      mob3xWBP: `${mob02s1254wpp}`,
+      mob4xJPG: `${mob02s1672jpg}`,
+      mob4xWBP: `${mob02s1672wpp}`,
       alt: {
         en: "Maintaining the machine on a lift",
         uk: "Обслуговування машини на підйомнику",
       },
     },
     {
-      mob1xJPG: `${mob3s0418jpg}`,
-      mob1xWBP: `${mob3s0418wpp}`,
-      mob2xJPG: `${mob3s0836jpg}`,
-      mob2xWBP: `${mob3s0836wpp}`,
-      mob3xJPG: `${mob3s1254jpg}`,
-      mob3xWBP: `${mob3s1254wpp}`,
-      mob4xJPG: `${mob3s1672jpg}`,
-      mob4xWBP: `${mob3s1672wpp}`,
+      mob1xJPG: `${mob03s0418jpg}`,
+      mob1xWBP: `${mob03s0418wpp}`,
+      mob2xJPG: `${mob03s0836jpg}`,
+      mob2xWBP: `${mob03s0836wpp}`,
+      mob3xJPG: `${mob03s1254jpg}`,
+      mob3xWBP: `${mob03s1254wpp}`,
+      mob4xJPG: `${mob03s1672jpg}`,
+      mob4xWBP: `${mob03s1672wpp}`,
       alt: {
         en: "Comprehensive maintenance of passenger vehicles of any type",
         uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
       },
     },
     {
-      mob1xJPG: `${mob4s0418jpg}`,
-      mob1xWBP: `${mob4s0418wpp}`,
-      mob2xJPG: `${mob4s0836jpg}`,
-      mob2xWBP: `${mob4s0836wpp}`,
-      mob3xJPG: `${mob4s1254jpg}`,
-      mob3xWBP: `${mob4s1254wpp}`,
-      mob4xJPG: `${mob4s1672jpg}`,
-      mob4xWBP: `${mob4s1672wpp}`,
+      mob1xJPG: `${mob04s0418jpg}`,
+      mob1xWBP: `${mob04s0418wpp}`,
+      mob2xJPG: `${mob04s0836jpg}`,
+      mob2xWBP: `${mob04s0836wpp}`,
+      mob3xJPG: `${mob04s1254jpg}`,
+      mob3xWBP: `${mob04s1254wpp}`,
+      mob4xJPG: `${mob04s1672jpg}`,
+      mob4xWBP: `${mob04s1672wpp}`,
       alt: {
         en: "Comprehensive maintenance of passenger vehicles of any type",
         uk: "Комплексне обслуговуванння легкового транспорту будь-якого виду",
