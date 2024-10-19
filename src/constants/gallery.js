@@ -97,6 +97,15 @@ import tab02s0990wpp from "../assets/images/gallery/tablet/gallery-02-0990.webp"
 import tab02s1320jpg from "../assets/images/gallery/tablet/gallery-02-1320.jpg";
 import tab02s1320wpp from "../assets/images/gallery/tablet/gallery-02-1320.webp";
 
+import tab03s0330jpg from "../assets/images/gallery/tablet/gallery-03-0330.jpg";
+import tab03s0330wpp from "../assets/images/gallery/tablet/gallery-03-0330.webp";
+import tab03s0660jpg from "../assets/images/gallery/tablet/gallery-03-0660.jpg";
+import tab03s0660wpp from "../assets/images/gallery/tablet/gallery-03-0660.webp";
+import tab03s0990jpg from "../assets/images/gallery/tablet/gallery-03-0990.jpg";
+import tab03s0990wpp from "../assets/images/gallery/tablet/gallery-03-0990.webp";
+import tab03s1320jpg from "../assets/images/gallery/tablet/gallery-03-1320.jpg";
+import tab03s1320wpp from "../assets/images/gallery/tablet/gallery-03-1320.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -160,6 +169,14 @@ const gallery = {
       mob3xWBP: `${mob03s1254wpp}`,
       mob4xJPG: `${mob03s1672jpg}`,
       mob4xWBP: `${mob03s1672wpp}`,
+      tab1xJPG: `${tab03s0330jpg}`,
+      tab1xWBP: `${tab03s0330wpp}`,
+      tab2xJPG: `${tab03s0660jpg}`,
+      tab2xWBP: `${tab03s0660wpp}`,
+      tab3xJPG: `${tab03s0990jpg}`,
+      tab3xWBP: `${tab03s0990wpp}`,
+      tab4xJPG: `${tab03s1320jpg}`,
+      tab4xWBP: `${tab03s1320wpp}`,
       alt: {
         en: "A couple of cars on a lift during maintenance",
         uk: "Пара машин на підйомнику в процесі обслуговування",
