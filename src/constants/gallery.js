@@ -79,6 +79,15 @@ import mob09s1254wpp from "../assets/images/gallery/mobile/gallery-09-1254.webp"
 import mob09s1672jpg from "../assets/images/gallery/mobile/gallery-09-1672.jpg";
 import mob09s1672wpp from "../assets/images/gallery/mobile/gallery-09-1672.webp";
 
+import tab01s0330jpg from "../assets/images/gallery/tablet/gallery-01-0330.jpg";
+import tab01s0330wpp from "../assets/images/gallery/tablet/gallery-01-0330.webp";
+import tab01s0660jpg from "../assets/images/gallery/tablet/gallery-01-0660.jpg";
+import tab01s0660wpp from "../assets/images/gallery/tablet/gallery-01-0660.webp";
+import tab01s0990jpg from "../assets/images/gallery/tablet/gallery-01-0990.jpg";
+import tab01s0990wpp from "../assets/images/gallery/tablet/gallery-01-0990.webp";
+import tab01s1320jpg from "../assets/images/gallery/tablet/gallery-01-1320.jpg";
+import tab01s1320wpp from "../assets/images/gallery/tablet/gallery-01-1320.webp";
+
 // import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-570.jpg";
 // import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-570.webp";
 // import tab1s1140jpg from "../assets/images/banner/tablet/slide-img-1-1140.jpg";
@@ -116,6 +125,14 @@ const gallery = {
       mob3xWBP: `${mob01s1254wpp}`,
       mob4xJPG: `${mob01s1672jpg}`,
       mob4xWBP: `${mob01s1672wpp}`,
+      tab1xJPG: `${tab01s0330jpg}`,
+      tab1xWBP: `${tab01s0330wpp}`,
+      tab2xJPG: `${tab01s0660jpg}`,
+      tab2xWBP: `${tab01s0660wpp}`,
+      tab3xJPG: `${tab01s0990jpg}`,
+      tab3xWBP: `${tab01s0990wpp}`,
+      tab4xJPG: `${tab01s1320jpg}`,
+      tab4xWBP: `${tab01s1320wpp}`,
       alt: {
         en: "LAS car repair shop welcomes you: a car with the license plate “LAS”",
         uk: "Автомайстерня LAS вітає Вас: машина з номером “LAS“",
