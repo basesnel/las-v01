@@ -115,6 +115,15 @@ import tab04s0990wpp from "../assets/images/gallery/tablet/gallery-04-0990.webp"
 import tab04s1320jpg from "../assets/images/gallery/tablet/gallery-04-1320.jpg";
 import tab04s1320wpp from "../assets/images/gallery/tablet/gallery-04-1320.webp";
 
+import tab05s0330jpg from "../assets/images/gallery/tablet/gallery-05-0330.jpg";
+import tab05s0330wpp from "../assets/images/gallery/tablet/gallery-05-0330.webp";
+import tab05s0660jpg from "../assets/images/gallery/tablet/gallery-05-0660.jpg";
+import tab05s0660wpp from "../assets/images/gallery/tablet/gallery-05-0660.webp";
+import tab05s0990jpg from "../assets/images/gallery/tablet/gallery-05-0990.jpg";
+import tab05s0990wpp from "../assets/images/gallery/tablet/gallery-05-0990.webp";
+import tab05s1320jpg from "../assets/images/gallery/tablet/gallery-05-1320.jpg";
+import tab05s1320wpp from "../assets/images/gallery/tablet/gallery-05-1320.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -222,6 +231,14 @@ const gallery = {
       mob3xWBP: `${mob05s1254wpp}`,
       mob4xJPG: `${mob05s1672jpg}`,
       mob4xWBP: `${mob05s1672wpp}`,
+      tab1xJPG: `${tab05s0330jpg}`,
+      tab1xWBP: `${tab05s0330wpp}`,
+      tab2xJPG: `${tab05s0660jpg}`,
+      tab2xWBP: `${tab05s0660wpp}`,
+      tab3xJPG: `${tab05s0990jpg}`,
+      tab3xWBP: `${tab05s0990wpp}`,
+      tab4xJPG: `${tab05s1320jpg}`,
+      tab4xWBP: `${tab05s1320wpp}`,
       alt: {
         en: "Interesting graffiti on the wall in a car repair shop",
         uk: "Цікаве графіті на стіні в автомайстерні",
