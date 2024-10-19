@@ -133,6 +133,15 @@ import tab06s0990wpp from "../assets/images/gallery/tablet/gallery-06-0990.webp"
 import tab06s1320jpg from "../assets/images/gallery/tablet/gallery-06-1320.jpg";
 import tab06s1320wpp from "../assets/images/gallery/tablet/gallery-06-1320.webp";
 
+import tab07s0330jpg from "../assets/images/gallery/tablet/gallery-07-0330.jpg";
+import tab07s0330wpp from "../assets/images/gallery/tablet/gallery-07-0330.webp";
+import tab07s0660jpg from "../assets/images/gallery/tablet/gallery-07-0660.jpg";
+import tab07s0660wpp from "../assets/images/gallery/tablet/gallery-07-0660.webp";
+import tab07s0990jpg from "../assets/images/gallery/tablet/gallery-07-0990.jpg";
+import tab07s0990wpp from "../assets/images/gallery/tablet/gallery-07-0990.webp";
+import tab07s1320jpg from "../assets/images/gallery/tablet/gallery-07-1320.jpg";
+import tab07s1320wpp from "../assets/images/gallery/tablet/gallery-07-1320.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -284,6 +293,14 @@ const gallery = {
       mob3xWBP: `${mob07s1254wpp}`,
       mob4xJPG: `${mob07s1672jpg}`,
       mob4xWBP: `${mob07s1672wpp}`,
+      tab1xJPG: `${tab07s0330jpg}`,
+      tab1xWBP: `${tab07s0330wpp}`,
+      tab2xJPG: `${tab07s0660jpg}`,
+      tab2xWBP: `${tab07s0660wpp}`,
+      tab3xJPG: `${tab07s0990jpg}`,
+      tab3xWBP: `${tab07s0990wpp}`,
+      tab4xJPG: `${tab07s1320jpg}`,
+      tab4xWBP: `${tab07s1320wpp}`,
       alt: {
         en: "",
         uk: "",
