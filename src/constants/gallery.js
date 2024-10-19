@@ -106,6 +106,15 @@ import tab03s0990wpp from "../assets/images/gallery/tablet/gallery-03-0990.webp"
 import tab03s1320jpg from "../assets/images/gallery/tablet/gallery-03-1320.jpg";
 import tab03s1320wpp from "../assets/images/gallery/tablet/gallery-03-1320.webp";
 
+import tab04s0330jpg from "../assets/images/gallery/tablet/gallery-04-0330.jpg";
+import tab04s0330wpp from "../assets/images/gallery/tablet/gallery-04-0330.webp";
+import tab04s0660jpg from "../assets/images/gallery/tablet/gallery-04-0660.jpg";
+import tab04s0660wpp from "../assets/images/gallery/tablet/gallery-04-0660.webp";
+import tab04s0990jpg from "../assets/images/gallery/tablet/gallery-04-0990.jpg";
+import tab04s0990wpp from "../assets/images/gallery/tablet/gallery-04-0990.webp";
+import tab04s1320jpg from "../assets/images/gallery/tablet/gallery-04-1320.jpg";
+import tab04s1320wpp from "../assets/images/gallery/tablet/gallery-04-1320.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -191,6 +200,14 @@ const gallery = {
       mob3xWBP: `${mob04s1254wpp}`,
       mob4xJPG: `${mob04s1672jpg}`,
       mob4xWBP: `${mob04s1672wpp}`,
+      tab1xJPG: `${tab04s0330jpg}`,
+      tab1xWBP: `${tab04s0330wpp}`,
+      tab2xJPG: `${tab04s0660jpg}`,
+      tab2xWBP: `${tab04s0660wpp}`,
+      tab3xJPG: `${tab04s0990jpg}`,
+      tab3xWBP: `${tab04s0990wpp}`,
+      tab4xJPG: `${tab04s1320jpg}`,
+      tab4xWBP: `${tab04s1320wpp}`,
       alt: {
         en: "Tool kit for machine maintenance",
         uk: "Набір інструментів для обслуговування машин",
