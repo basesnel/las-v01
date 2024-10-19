@@ -124,6 +124,15 @@ import tab05s0990wpp from "../assets/images/gallery/tablet/gallery-05-0990.webp"
 import tab05s1320jpg from "../assets/images/gallery/tablet/gallery-05-1320.jpg";
 import tab05s1320wpp from "../assets/images/gallery/tablet/gallery-05-1320.webp";
 
+import tab06s0330jpg from "../assets/images/gallery/tablet/gallery-06-0330.jpg";
+import tab06s0330wpp from "../assets/images/gallery/tablet/gallery-06-0330.webp";
+import tab06s0660jpg from "../assets/images/gallery/tablet/gallery-06-0660.jpg";
+import tab06s0660wpp from "../assets/images/gallery/tablet/gallery-06-0660.webp";
+import tab06s0990jpg from "../assets/images/gallery/tablet/gallery-06-0990.jpg";
+import tab06s0990wpp from "../assets/images/gallery/tablet/gallery-06-0990.webp";
+import tab06s1320jpg from "../assets/images/gallery/tablet/gallery-06-1320.jpg";
+import tab06s1320wpp from "../assets/images/gallery/tablet/gallery-06-1320.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -253,6 +262,14 @@ const gallery = {
       mob3xWBP: `${mob06s1254wpp}`,
       mob4xJPG: `${mob06s1672jpg}`,
       mob4xWBP: `${mob06s1672wpp}`,
+      tab1xJPG: `${tab06s0330jpg}`,
+      tab1xWBP: `${tab06s0330wpp}`,
+      tab2xJPG: `${tab06s0660jpg}`,
+      tab2xWBP: `${tab06s0660wpp}`,
+      tab3xJPG: `${tab06s0990jpg}`,
+      tab3xWBP: `${tab06s0990wpp}`,
+      tab4xJPG: `${tab06s1320jpg}`,
+      tab4xWBP: `${tab06s1320wpp}`,
       alt: {
         en: "The car's headlight looks like Venom's eye in the dark",
         uk: "Фара машини виглядає як око Венома в темряві",
