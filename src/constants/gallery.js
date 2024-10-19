@@ -88,23 +88,14 @@ import tab01s0990wpp from "../assets/images/gallery/tablet/gallery-01-0990.webp"
 import tab01s1320jpg from "../assets/images/gallery/tablet/gallery-01-1320.jpg";
 import tab01s1320wpp from "../assets/images/gallery/tablet/gallery-01-1320.webp";
 
-// import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-570.jpg";
-// import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-570.webp";
-// import tab1s1140jpg from "../assets/images/banner/tablet/slide-img-1-1140.jpg";
-// import tab1s1140wpp from "../assets/images/banner/tablet/slide-img-1-1140.webp";
-// import tab1s1710jpg from "../assets/images/banner/tablet/slide-img-1-1710.jpg";
-// import tab1s1710wpp from "../assets/images/banner/tablet/slide-img-1-1710.webp";
-// import tab1s2280jpg from "../assets/images/banner/tablet/slide-img-1-2280.jpg";
-// import tab1s2280wpp from "../assets/images/banner/tablet/slide-img-1-2280.webp";
-
-// import dtp1s1040jpg from "../assets/images/banner/desktop/slide-img-1-1040.jpg";
-// import dtp1s1040wpp from "../assets/images/banner/desktop/slide-img-1-1040.webp";
-// import dtp1s2080jpg from "../assets/images/banner/desktop/slide-img-1-2080.jpg";
-// import dtp1s2080wpp from "../assets/images/banner/desktop/slide-img-1-2080.webp";
-// import dtp1s3120jpg from "../assets/images/banner/desktop/slide-img-1-3120.jpg";
-// import dtp1s3120wpp from "../assets/images/banner/desktop/slide-img-1-3120.webp";
-// import dtp1s4160jpg from "../assets/images/banner/desktop/slide-img-1-4160.jpg";
-// import dtp1s4160wpp from "../assets/images/banner/desktop/slide-img-1-4160.webp";
+import tab02s0330jpg from "../assets/images/gallery/tablet/gallery-02-0330.jpg";
+import tab02s0330wpp from "../assets/images/gallery/tablet/gallery-02-0330.webp";
+import tab02s0660jpg from "../assets/images/gallery/tablet/gallery-02-0660.jpg";
+import tab02s0660wpp from "../assets/images/gallery/tablet/gallery-02-0660.webp";
+import tab02s0990jpg from "../assets/images/gallery/tablet/gallery-02-0990.jpg";
+import tab02s0990wpp from "../assets/images/gallery/tablet/gallery-02-0990.webp";
+import tab02s1320jpg from "../assets/images/gallery/tablet/gallery-02-1320.jpg";
+import tab02s1320wpp from "../assets/images/gallery/tablet/gallery-02-1320.webp";
 
 const gallery = {
   subTitle: {
@@ -147,6 +138,14 @@ const gallery = {
       mob3xWBP: `${mob02s1254wpp}`,
       mob4xJPG: `${mob02s1672jpg}`,
       mob4xWBP: `${mob02s1672wpp}`,
+      tab1xJPG: `${tab02s0330jpg}`,
+      tab1xWBP: `${tab02s0330wpp}`,
+      tab2xJPG: `${tab02s0660jpg}`,
+      tab2xWBP: `${tab02s0660wpp}`,
+      tab3xJPG: `${tab02s0990jpg}`,
+      tab3xWBP: `${tab02s0990wpp}`,
+      tab4xJPG: `${tab02s1320jpg}`,
+      tab4xWBP: `${tab02s1320wpp}`,
       alt: {
         en: "View of the machine wheel on the lift",
         uk: "Вигляд колеса машини на підйомнику",
