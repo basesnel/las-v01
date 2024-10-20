@@ -250,6 +250,15 @@ import dtp04s0810wpp from "../assets/images/gallery/desktop/gallery-04-0810.webp
 import dtp04s1080jpg from "../assets/images/gallery/desktop/gallery-04-1080.jpg";
 import dtp04s1080wpp from "../assets/images/gallery/desktop/gallery-04-1080.webp";
 
+import dtp05s0270jpg from "../assets/images/gallery/desktop/gallery-05-0270.jpg";
+import dtp05s0270wpp from "../assets/images/gallery/desktop/gallery-05-0270.webp";
+import dtp05s0540jpg from "../assets/images/gallery/desktop/gallery-05-0540.jpg";
+import dtp05s0540wpp from "../assets/images/gallery/desktop/gallery-05-0540.webp";
+import dtp05s0810jpg from "../assets/images/gallery/desktop/gallery-05-0810.jpg";
+import dtp05s0810wpp from "../assets/images/gallery/desktop/gallery-05-0810.webp";
+import dtp05s1080jpg from "../assets/images/gallery/desktop/gallery-05-1080.jpg";
+import dtp05s1080wpp from "../assets/images/gallery/desktop/gallery-05-1080.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -397,6 +406,14 @@ const gallery = {
       tab3xWBP: `${tab05s0990wpp}`,
       tab4xJPG: `${tab05s1320jpg}`,
       tab4xWBP: `${tab05s1320wpp}`,
+      dtp1xJPG: `${dtp05s0270jpg}`,
+      dtp1xWBP: `${dtp05s0270wpp}`,
+      dtp2xJPG: `${dtp05s0540jpg}`,
+      dtp2xWBP: `${dtp05s0540wpp}`,
+      dtp3xJPG: `${dtp05s0810jpg}`,
+      dtp3xWBP: `${dtp05s0810wpp}`,
+      dtp4xJPG: `${dtp05s1080jpg}`,
+      dtp4xWBP: `${dtp05s1080wpp}`,
       alt: {
         en: "Interesting graffiti on the wall in a car repair shop",
         uk: "Цікаве графіті на стіні в автомайстерні",
