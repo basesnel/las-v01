@@ -88,6 +88,15 @@ import mob10s1254wpp from "../assets/images/gallery/mobile/gallery-10-1254.webp"
 import mob10s1672jpg from "../assets/images/gallery/mobile/gallery-10-1672.jpg";
 import mob10s1672wpp from "../assets/images/gallery/mobile/gallery-10-1672.webp";
 
+import mob11s0418jpg from "../assets/images/gallery/mobile/gallery-11-0418.jpg";
+import mob11s0418wpp from "../assets/images/gallery/mobile/gallery-11-0418.webp";
+import mob11s0836jpg from "../assets/images/gallery/mobile/gallery-11-0836.jpg";
+import mob11s0836wpp from "../assets/images/gallery/mobile/gallery-11-0836.webp";
+import mob11s1254jpg from "../assets/images/gallery/mobile/gallery-11-1254.jpg";
+import mob11s1254wpp from "../assets/images/gallery/mobile/gallery-11-1254.webp";
+import mob11s1672jpg from "../assets/images/gallery/mobile/gallery-11-1672.jpg";
+import mob11s1672wpp from "../assets/images/gallery/mobile/gallery-11-1672.webp";
+
 import tab01s0330jpg from "../assets/images/gallery/tablet/gallery-01-0330.jpg";
 import tab01s0330wpp from "../assets/images/gallery/tablet/gallery-01-0330.webp";
 import tab01s0660jpg from "../assets/images/gallery/tablet/gallery-01-0660.jpg";
@@ -386,6 +395,20 @@ const gallery = {
       mob3xWBP: `${mob10s1254wpp}`,
       mob4xJPG: `${mob10s1672jpg}`,
       mob4xWBP: `${mob10s1672wpp}`,
+      alt: {
+        en: "",
+        uk: "",
+      },
+    },
+    {
+      mob1xJPG: `${mob11s0418jpg}`,
+      mob1xWBP: `${mob11s0418wpp}`,
+      mob2xJPG: `${mob11s0836jpg}`,
+      mob2xWBP: `${mob11s0836wpp}`,
+      mob3xJPG: `${mob11s1254jpg}`,
+      mob3xWBP: `${mob11s1254wpp}`,
+      mob4xJPG: `${mob11s1672jpg}`,
+      mob4xWBP: `${mob11s1672wpp}`,
       alt: {
         en: "",
         uk: "",
