@@ -214,6 +214,15 @@ import tab12s0990wpp from "../assets/images/gallery/tablet/gallery-12-0990.webp"
 import tab12s1320jpg from "../assets/images/gallery/tablet/gallery-12-1320.jpg";
 import tab12s1320wpp from "../assets/images/gallery/tablet/gallery-12-1320.webp";
 
+import dtp01s0270jpg from "../assets/images/gallery/desktop/gallery-01-0270.jpg";
+import dtp01s0270wpp from "../assets/images/gallery/desktop/gallery-01-0270.webp";
+import dtp01s0540jpg from "../assets/images/gallery/desktop/gallery-01-0540.jpg";
+import dtp01s0540wpp from "../assets/images/gallery/desktop/gallery-01-0540.webp";
+import dtp01s0810jpg from "../assets/images/gallery/desktop/gallery-01-0810.jpg";
+import dtp01s0810wpp from "../assets/images/gallery/desktop/gallery-01-0810.webp";
+import dtp01s1080jpg from "../assets/images/gallery/desktop/gallery-01-1080.jpg";
+import dtp01s1080wpp from "../assets/images/gallery/desktop/gallery-01-1080.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -241,6 +250,14 @@ const gallery = {
       tab3xWBP: `${tab01s0990wpp}`,
       tab4xJPG: `${tab01s1320jpg}`,
       tab4xWBP: `${tab01s1320wpp}`,
+      dtp1xJPG: `${dtp01s0270jpg}`,
+      dtp1xWBP: `${dtp01s0270wpp}`,
+      dtp2xJPG: `${dtp01s0540jpg}`,
+      dtp2xWBP: `${dtp01s0540wpp}`,
+      dtp3xJPG: `${dtp01s0810jpg}`,
+      dtp3xWBP: `${dtp01s0810wpp}`,
+      dtp4xJPG: `${dtp01s1080jpg}`,
+      dtp4xWBP: `${dtp01s1080wpp}`,
       alt: {
         en: "LAS car repair shop welcomes you: a car with the license plate “LAS”",
         uk: "Автомайстерня LAS вітає Вас: машина з номером “LAS“",
