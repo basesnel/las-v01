@@ -12,7 +12,7 @@ const Gallery = () => {
     <Section indexSection={6}>
       <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
       <Heading level={2} mode="hidden" title={title.uk} />
-      <ul>
+      <ul className={styles.list}>
         {images.map((image, i) => (
           <li key={i} className={styles.item}>
             <div className={styles.thumb}>
@@ -41,33 +41,23 @@ const Gallery = () => {
                   type="image/jpeg"
                   width="270"
                   height="360"
-                />
-
-                <source
-                  srcset="
-                      ./images/portfolio/tablet/portfolio-1-330.webp   768w,
-                      ./images/portfolio/tablet/portfolio-1-660.webp  1536w,
-                      ./images/portfolio/tablet/portfolio-1-990.webp  2304w,
-                      ./images/portfolio/tablet/portfolio-1-1320.webp 3072w
-                    "
-                  media="(min-width: 768px) and (max-width: 1199px)"
-                  type="image/webp"
-                  width="330"
-                  height="360"
-                />
-
-                <source
-                  srcset="
-                      ./images/portfolio/tablet/portfolio-1-330.jpg   768w,
-                      ./images/portfolio/tablet/portfolio-1-660.jpg  1536w,
-                      ./images/portfolio/tablet/portfolio-1-990.jpg  2304w,
-                      ./images/portfolio/tablet/portfolio-1-1320.jpg 3072w
-                    "
-                  media="(min-width: 768px) and (max-width: 1199px)"
-                  type="image/jpeg"
-                  width="450"
-                  height="360"
                 /> */}
+
+                <source
+                  srcSet={`${image.tab1xWBP} 768w, ${image.tab2xWBP} 1536w, ${image.tab3xWBP} 2304w, ${image.tab2xWBP} 2072w`}
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  width={330}
+                  height={360}
+                  type="image/webp"
+                />
+
+                <source
+                  srcSet={`${image.tab1xJPG} 768w, ${image.tab2xJPG} 1536w, ${image.tab3xJPG} 2304w, ${image.tab2xJPG} 2072w`}
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  width={330}
+                  height={360}
+                  type="image/jpeg"
+                />
 
                 <source
                   srcSet={`${image.mob1xWBP} 480w, ${image.mob2xWBP} 960w, ${image.mob3xWBP} 1440w, ${image.mob2xWBP} 1920w`}
