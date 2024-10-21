@@ -304,6 +304,15 @@ import dtp10s0810wpp from "../assets/images/gallery/desktop/gallery-10-0810.webp
 import dtp10s1080jpg from "../assets/images/gallery/desktop/gallery-10-1080.jpg";
 import dtp10s1080wpp from "../assets/images/gallery/desktop/gallery-10-1080.webp";
 
+import dtp11s0270jpg from "../assets/images/gallery/desktop/gallery-11-0270.jpg";
+import dtp11s0270wpp from "../assets/images/gallery/desktop/gallery-11-0270.webp";
+import dtp11s0540jpg from "../assets/images/gallery/desktop/gallery-11-0540.jpg";
+import dtp11s0540wpp from "../assets/images/gallery/desktop/gallery-11-0540.webp";
+import dtp11s0810jpg from "../assets/images/gallery/desktop/gallery-11-0810.jpg";
+import dtp11s0810wpp from "../assets/images/gallery/desktop/gallery-11-0810.webp";
+import dtp11s1080jpg from "../assets/images/gallery/desktop/gallery-11-1080.jpg";
+import dtp11s1080wpp from "../assets/images/gallery/desktop/gallery-11-1080.webp";
+
 const gallery = {
   subTitle: {
     en: "complex car repair",
@@ -631,6 +640,14 @@ const gallery = {
       tab3xWBP: `${tab11s0990wpp}`,
       tab4xJPG: `${tab11s1320jpg}`,
       tab4xWBP: `${tab11s1320wpp}`,
+      dtp1xJPG: `${dtp11s0270jpg}`,
+      dtp1xWBP: `${dtp11s0270wpp}`,
+      dtp2xJPG: `${dtp11s0540jpg}`,
+      dtp2xWBP: `${dtp11s0540wpp}`,
+      dtp3xJPG: `${dtp11s0810jpg}`,
+      dtp3xWBP: `${dtp11s0810wpp}`,
+      dtp4xJPG: `${dtp11s1080jpg}`,
+      dtp4xWBP: `${dtp11s1080wpp}`,
       alt: {
         en: "",
         uk: "",
