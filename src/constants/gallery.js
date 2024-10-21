@@ -538,8 +538,8 @@ const gallery = {
       dtp4xJPG: `${dtp07s1080jpg}`,
       dtp4xWBP: `${dtp07s1080wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "Car on the lift: view from below",
+        uk: "Машина на підйомнику: вигляд знизу",
       },
     },
     {
@@ -568,8 +568,8 @@ const gallery = {
       dtp4xJPG: `${dtp08s1080jpg}`,
       dtp4xWBP: `${dtp08s1080wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "Engine in the open hood against the background of another car on the lift",
+        uk: "Двигун у відкритому капоті на фоні іншої машини на підйомнику",
       },
     },
     {
@@ -598,8 +598,8 @@ const gallery = {
       dtp4xJPG: `${dtp09s1080jpg}`,
       dtp4xWBP: `${dtp09s1080wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "A close-up of a car wheel in front of the entrance to a car repair shop",
+        uk: "Колесо машини на ближчому плані на фоні входу в автомайстерню",
       },
     },
     {
@@ -628,8 +628,8 @@ const gallery = {
       dtp4xJPG: `${dtp10s1080jpg}`,
       dtp4xWBP: `${dtp10s1080wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "Extended machine engine in the foreground from an interesting angle",
+        uk: "Витягнутий двигун машини на передньому плані у цікавому ракурсі",
       },
     },
     {
@@ -658,8 +658,8 @@ const gallery = {
       dtp4xJPG: `${dtp11s1080jpg}`,
       dtp4xWBP: `${dtp11s1080wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "A car mechanic is servicing the engine",
+        uk: "Авто-майстер обслуговує двигун",
       },
     },
     {
@@ -688,8 +688,8 @@ const gallery = {
       dtp4xJPG: `${dtp12s1080jpg}`,
       dtp4xWBP: `${dtp12s1080wpp}`,
       alt: {
-        en: "",
-        uk: "",
+        en: "A car mechanic services the chassis of a car on a lift",
+        uk: "Авто-майстер обслуговує ходову частину машини на підйомнику",
       },
     },
   ],
