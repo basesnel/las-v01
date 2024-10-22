@@ -28,23 +28,23 @@ const Slider = () => {
               <div key={i} className={styles.slide}>
                 <picture>
                   <source
-                    srcSet={slide.deskWEBP}
+                    srcSet={`${slide.dtp1xWBP} 1200w, ${slide.dtp2xWBP} 2400w, ${slide.dtp3xWBP} 3600w, ${slide.dtp2xWBP} 4800w`}
                     media="(min-width: 1200px)"
+                    width={1070}
+                    height={680}
                     type="image/webp"
-                    width={1070}
-                    height={680}
                   />
 
                   <source
-                    srcSet={slide.deskPNG}
+                    srcSet={`${slide.dtp1xJPG} 1200w, ${slide.dtp2xJPG} 2400w, ${slide.dtp3xJPG} 3600w, ${slide.dtp2xJPG} 4800w`}
                     media="(min-width: 1200px)"
-                    type="image/png"
                     width={1070}
                     height={680}
+                    type="image/jpg"
                   />
 
                   <source
-                    srcSet={`${slide.tab1xWBP} 768w, ${slide.tab2xWBP} 1536w, ${slide.tab3xWBP} 2304w, ${slide.tab2xWBP} 2072w`}
+                    srcSet={`${slide.tab1xWBP} 768w, ${slide.tab2xWBP} 1536w, ${slide.tab3xWBP} 2304w, ${slide.tab2xWBP} 3072w`}
                     media="(min-width: 768px) and (max-width: 1199px)"
                     width={570}
                     height={680}
@@ -52,7 +52,7 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={`${slide.tab1xJPG} 768w, ${slide.tab2xJPG} 1536w, ${slide.tab3xJPG} 2304w, ${slide.tab2xJPG} 2072w`}
+                    srcSet={`${slide.tab1xJPG} 768w, ${slide.tab2xJPG} 1536w, ${slide.tab3xJPG} 2304w, ${slide.tab2xJPG} 3072w`}
                     media="(min-width: 768px) and (max-width: 1199px)"
                     width={570}
                     height={680}

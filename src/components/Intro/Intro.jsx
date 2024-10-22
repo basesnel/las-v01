@@ -55,7 +55,7 @@ const Intro = () => {
                       />
 
                       <source
-                        srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 2072w`}
+                        srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 3072w`}
                         width={330}
                         height={235}
                         type="image/webp"
@@ -63,7 +63,7 @@ const Intro = () => {
 
                       <img
                         loading="lazy"
-                        srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 2072w`}
+                        srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 3072w`}
                         src={about.tab3xJPG}
                         alt={about.alt.uk}
                         width={330}

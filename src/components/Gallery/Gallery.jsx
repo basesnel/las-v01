@@ -34,7 +34,7 @@ const Gallery = () => {
                 />
 
                 <source
-                  srcSet={`${image.tab1xWBP} 768w, ${image.tab2xWBP} 1536w, ${image.tab3xWBP} 2304w, ${image.tab2xWBP} 2072w`}
+                  srcSet={`${image.tab1xWBP} 768w, ${image.tab2xWBP} 1536w, ${image.tab3xWBP} 2304w, ${image.tab2xWBP} 3072w`}
                   media="(min-width: 768px) and (max-width: 1199px)"
                   width={330}
                   height={360}
@@ -42,7 +42,7 @@ const Gallery = () => {
                 />
 
                 <source
-                  srcSet={`${image.tab1xJPG} 768w, ${image.tab2xJPG} 1536w, ${image.tab3xJPG} 2304w, ${image.tab2xJPG} 2072w`}
+                  srcSet={`${image.tab1xJPG} 768w, ${image.tab2xJPG} 1536w, ${image.tab3xJPG} 2304w, ${image.tab2xJPG} 3072w`}
                   media="(min-width: 768px) and (max-width: 1199px)"
                   width={330}
                   height={360}
