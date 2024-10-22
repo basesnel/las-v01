@@ -44,19 +44,19 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={slide.tabWEBP}
+                    srcSet={`${slide.tab1xWBP} 768w, ${slide.tab2xWBP} 1536w, ${slide.tab3xWBP} 2304w, ${slide.tab2xWBP} 2072w`}
                     media="(min-width: 768px) and (max-width: 1199px)"
-                    type="image/webp"
                     width={570}
                     height={680}
+                    type="image/webp"
                   />
 
                   <source
-                    srcSet={slide.tabJPG}
+                    srcSet={`${slide.tab1xJPG} 768w, ${slide.tab2xJPG} 1536w, ${slide.tab3xJPG} 2304w, ${slide.tab2xJPG} 2072w`}
                     media="(min-width: 768px) and (max-width: 1199px)"
-                    type="image/jpeg"
                     width={570}
                     height={680}
+                    type="image/jpeg"
                   />
 
                   <source
