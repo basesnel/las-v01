@@ -60,15 +60,16 @@ const Slider = () => {
                   />
 
                   <source
-                    srcSet={slide.mobWEBP}
-                    type="image/webp"
+                    srcSet={`${slide.mob1xWBP} 480w, ${slide.mob2xWBP} 960w, ${slide.mob3xWBP} 1440w, ${slide.mob2xWBP} 1920w`}
                     width={480}
                     height={580}
+                    type="image/webp"
                   />
 
                   <img
                     loading="lazy"
-                    src={slide.mobJPG}
+                    srcSet={`${slide.mob1xJPG} 480w, ${slide.mob2xJPG} 960w, ${slide.mob3xJPG} 1440w, ${slide.mob2xJPG} 1920w`}
+                    src={slide.mob2xJPG}
                     alt={slide.alt.uk}
                     width={480}
                     height={580}
