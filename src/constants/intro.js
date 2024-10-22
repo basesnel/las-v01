@@ -8,30 +8,30 @@ import tabWebp2 from "../assets/images/about/tablet/img-about-2.webp";
 import deskJpg2 from "../assets/images/about/desktop/img-about-2.jpg";
 import deskWebp2 from "../assets/images/about/desktop/img-about-2.webp";
 
-import tab1s0330jpg from "../assets/images/about/tablet/about-img-1-330.jpg";
-import tab1s0330wpp from "../assets/images/about/tablet/about-img-1-330.webp";
-import tab1s0660jpg from "../assets/images/about/tablet/about-img-1-660.jpg";
-import tab1s0660wpp from "../assets/images/about/tablet/about-img-1-660.webp";
-import tab1s0990jpg from "../assets/images/about/tablet/about-img-1-990.jpg";
-import tab1s0990wpp from "../assets/images/about/tablet/about-img-1-990.webp";
+import tab1s0330jpg from "../assets/images/about/tablet/about-img-1-0330.jpg";
+import tab1s0330wpp from "../assets/images/about/tablet/about-img-1-0330.webp";
+import tab1s0660jpg from "../assets/images/about/tablet/about-img-1-0660.jpg";
+import tab1s0660wpp from "../assets/images/about/tablet/about-img-1-0660.webp";
+import tab1s0990jpg from "../assets/images/about/tablet/about-img-1-0990.jpg";
+import tab1s0990wpp from "../assets/images/about/tablet/about-img-1-0990.webp";
 import tab1s1320jpg from "../assets/images/about/tablet/about-img-1-1320.jpg";
 import tab1s1320wpp from "../assets/images/about/tablet/about-img-1-1320.webp";
 
-import tab2s0330jpg from "../assets/images/about/tablet/about-img-2-330.jpg";
-import tab2s0330wpp from "../assets/images/about/tablet/about-img-2-330.webp";
-import tab2s0660jpg from "../assets/images/about/tablet/about-img-2-660.jpg";
-import tab2s0660wpp from "../assets/images/about/tablet/about-img-2-660.webp";
-import tab2s0990jpg from "../assets/images/about/tablet/about-img-2-990.jpg";
-import tab2s0990wpp from "../assets/images/about/tablet/about-img-2-990.webp";
+import tab2s0330jpg from "../assets/images/about/tablet/about-img-2-0330.jpg";
+import tab2s0330wpp from "../assets/images/about/tablet/about-img-2-0330.webp";
+import tab2s0660jpg from "../assets/images/about/tablet/about-img-2-0660.jpg";
+import tab2s0660wpp from "../assets/images/about/tablet/about-img-2-0660.webp";
+import tab2s0990jpg from "../assets/images/about/tablet/about-img-2-0990.jpg";
+import tab2s0990wpp from "../assets/images/about/tablet/about-img-2-0990.webp";
 import tab2s1320jpg from "../assets/images/about/tablet/about-img-2-1320.jpg";
 import tab2s1320wpp from "../assets/images/about/tablet/about-img-2-1320.webp";
 
-import tab3s0330jpg from "../assets/images/about/tablet/about-img-3-330.jpg";
-import tab3s0330wpp from "../assets/images/about/tablet/about-img-3-330.webp";
-import tab3s0660jpg from "../assets/images/about/tablet/about-img-3-660.jpg";
-import tab3s0660wpp from "../assets/images/about/tablet/about-img-3-660.webp";
-import tab3s0990jpg from "../assets/images/about/tablet/about-img-3-990.jpg";
-import tab3s0990wpp from "../assets/images/about/tablet/about-img-3-990.webp";
+import tab3s0330jpg from "../assets/images/about/tablet/about-img-3-0330.jpg";
+import tab3s0330wpp from "../assets/images/about/tablet/about-img-3-0330.webp";
+import tab3s0660jpg from "../assets/images/about/tablet/about-img-3-0660.jpg";
+import tab3s0660wpp from "../assets/images/about/tablet/about-img-3-0660.webp";
+import tab3s0990jpg from "../assets/images/about/tablet/about-img-3-0990.jpg";
+import tab3s0990wpp from "../assets/images/about/tablet/about-img-3-0990.webp";
 import tab3s1320jpg from "../assets/images/about/tablet/about-img-3-1320.jpg";
 import tab3s1320wpp from "../assets/images/about/tablet/about-img-3-1320.webp";
 
