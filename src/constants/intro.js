@@ -1,13 +1,3 @@
-import tabJpg1 from "../assets/images/about/tablet/img-about-1.jpg";
-import tabWebp1 from "../assets/images/about/tablet/img-about-1.webp";
-import deskJpg1 from "../assets/images/about/desktop/img-about-1.jpg";
-import deskWebp1 from "../assets/images/about/desktop/img-about-1.webp";
-
-import tabJpg2 from "../assets/images/about/tablet/img-about-2.jpg";
-import tabWebp2 from "../assets/images/about/tablet/img-about-2.webp";
-import deskJpg2 from "../assets/images/about/desktop/img-about-2.jpg";
-import deskWebp2 from "../assets/images/about/desktop/img-about-2.webp";
-
 import tab1s0330jpg from "../assets/images/about/tablet/about-img-1-0330.jpg";
 import tab1s0330wpp from "../assets/images/about/tablet/about-img-1-0330.webp";
 import tab1s0660jpg from "../assets/images/about/tablet/about-img-1-0660.jpg";
@@ -93,8 +83,6 @@ const intro = {
   },
   abouts: [
     {
-      tabWEBP: `${tabWebp1}`,
-      tabJPG: `${tabJpg1}`,
       tab1xJPG: `${tab1s0330jpg}`,
       tab1xWBP: `${tab1s0330wpp}`,
       tab2xJPG: `${tab1s0660jpg}`,
@@ -103,8 +91,6 @@ const intro = {
       tab3xWBP: `${tab1s0990wpp}`,
       tab4xJPG: `${tab1s1320jpg}`,
       tab4xWBP: `${tab1s1320wpp}`,
-      deskWEBP: `${deskWebp1}`,
-      deskJPG: `${deskJpg1}`,
       dtp1xJPG: `${dtp1s0270jpg}`,
       dtp1xWBP: `${dtp1s0270wpp}`,
       dtp2xJPG: `${dtp1s0540jpg}`,
@@ -119,8 +105,6 @@ const intro = {
       },
     },
     {
-      tabWEBP: `${tabWebp2}`,
-      tabJPG: `${tabJpg2}`,
       tab1xJPG: `${tab2s0330jpg}`,
       tab1xWBP: `${tab2s0330wpp}`,
       tab2xJPG: `${tab2s0660jpg}`,
@@ -129,8 +113,6 @@ const intro = {
       tab3xWBP: `${tab2s0990wpp}`,
       tab4xJPG: `${tab2s1320jpg}`,
       tab4xWBP: `${tab2s1320wpp}`,
-      deskWEBP: `${deskWebp2}`,
-      deskJPG: `${deskJpg2}`,
       dtp1xJPG: `${dtp2s0270jpg}`,
       dtp1xWBP: `${dtp2s0270wpp}`,
       dtp2xJPG: `${dtp2s0540jpg}`,
