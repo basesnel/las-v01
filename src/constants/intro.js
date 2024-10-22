@@ -35,30 +35,30 @@ import tab3s0990wpp from "../assets/images/about/tablet/about-img-3-0990.webp";
 import tab3s1320jpg from "../assets/images/about/tablet/about-img-3-1320.jpg";
 import tab3s1320wpp from "../assets/images/about/tablet/about-img-3-1320.webp";
 
-import dtp1s0270jpg from "../assets/images/about/desktop/about-img-1-270.jpg";
-import dtp1s0270wpp from "../assets/images/about/desktop/about-img-1-270.webp";
-import dtp1s0540jpg from "../assets/images/about/desktop/about-img-1-540.jpg";
-import dtp1s0540wpp from "../assets/images/about/desktop/about-img-1-540.webp";
-import dtp1s0810jpg from "../assets/images/about/desktop/about-img-1-810.jpg";
-import dtp1s0810wpp from "../assets/images/about/desktop/about-img-1-810.webp";
+import dtp1s0270jpg from "../assets/images/about/desktop/about-img-1-0270.jpg";
+import dtp1s0270wpp from "../assets/images/about/desktop/about-img-1-0270.webp";
+import dtp1s0540jpg from "../assets/images/about/desktop/about-img-1-0540.jpg";
+import dtp1s0540wpp from "../assets/images/about/desktop/about-img-1-0540.webp";
+import dtp1s0810jpg from "../assets/images/about/desktop/about-img-1-0810.jpg";
+import dtp1s0810wpp from "../assets/images/about/desktop/about-img-1-0810.webp";
 import dtp1s1080jpg from "../assets/images/about/desktop/about-img-1-1080.jpg";
 import dtp1s1080wpp from "../assets/images/about/desktop/about-img-1-1080.webp";
 
-import dtp2s0270jpg from "../assets/images/about/desktop/about-img-2-270.jpg";
-import dtp2s0270wpp from "../assets/images/about/desktop/about-img-2-270.webp";
-import dtp2s0540jpg from "../assets/images/about/desktop/about-img-2-540.jpg";
-import dtp2s0540wpp from "../assets/images/about/desktop/about-img-2-540.webp";
-import dtp2s0810jpg from "../assets/images/about/desktop/about-img-2-810.jpg";
-import dtp2s0810wpp from "../assets/images/about/desktop/about-img-2-810.webp";
+import dtp2s0270jpg from "../assets/images/about/desktop/about-img-2-0270.jpg";
+import dtp2s0270wpp from "../assets/images/about/desktop/about-img-2-0270.webp";
+import dtp2s0540jpg from "../assets/images/about/desktop/about-img-2-0540.jpg";
+import dtp2s0540wpp from "../assets/images/about/desktop/about-img-2-0540.webp";
+import dtp2s0810jpg from "../assets/images/about/desktop/about-img-2-0810.jpg";
+import dtp2s0810wpp from "../assets/images/about/desktop/about-img-2-0810.webp";
 import dtp2s1080jpg from "../assets/images/about/desktop/about-img-2-1080.jpg";
 import dtp2s1080wpp from "../assets/images/about/desktop/about-img-2-1080.webp";
 
-import dtp3s0270jpg from "../assets/images/about/desktop/about-img-3-270.jpg";
-import dtp3s0270wpp from "../assets/images/about/desktop/about-img-3-270.webp";
-import dtp3s0540jpg from "../assets/images/about/desktop/about-img-3-540.jpg";
-import dtp3s0540wpp from "../assets/images/about/desktop/about-img-3-540.webp";
-import dtp3s0810jpg from "../assets/images/about/desktop/about-img-3-810.jpg";
-import dtp3s0810wpp from "../assets/images/about/desktop/about-img-3-810.webp";
+import dtp3s0270jpg from "../assets/images/about/desktop/about-img-3-0270.jpg";
+import dtp3s0270wpp from "../assets/images/about/desktop/about-img-3-0270.webp";
+import dtp3s0540jpg from "../assets/images/about/desktop/about-img-3-0540.jpg";
+import dtp3s0540wpp from "../assets/images/about/desktop/about-img-3-0540.webp";
+import dtp3s0810jpg from "../assets/images/about/desktop/about-img-3-0810.jpg";
+import dtp3s0810wpp from "../assets/images/about/desktop/about-img-3-0810.webp";
 import dtp3s1080jpg from "../assets/images/about/desktop/about-img-3-1080.jpg";
 import dtp3s1080wpp from "../assets/images/about/desktop/about-img-3-1080.webp";
 
