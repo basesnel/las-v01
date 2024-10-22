@@ -37,8 +37,61 @@ const Intro = () => {
               return (
                 <li key={i} className={styles.item}>
                   <div className={styles.thumb}>
-                    <picture>
+                    {/* <picture>
                       <source
+                        srcset="
+                        ./images/about/desktop/about-img-1-270.webp  1200w,
+                        ./images/about/desktop/about-img-1-540.webp  2400w,
+                        ./images/about/desktop/about-img-1-810.webp  3600w,
+                        ./images/about/desktop/about-img-1-1080.webp 4800w
+                      "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                        width="270"
+                        height="445"
+                      />
+
+                      <source
+                        srcset="
+                        ./images/about/desktop/about-img-1-270.jpg  1200w,
+                        ./images/about/desktop/about-img-1-540.jpg  2400w,
+                        ./images/about/desktop/about-img-1-810.jpg  3600w,
+                        ./images/about/desktop/about-img-1-1080.jpg 4800w
+                      "
+                        media="(min-width: 1200px)"
+                        type="image/jpeg"
+                        width="270"
+                        height="445"
+                      />
+
+                      <source
+                        srcset="
+                        ./images/about/tablet/about-img-1-330.webp   768w,
+                        ./images/about/tablet/about-img-1-660.webp  1536w,
+                        ./images/about/tablet/about-img-1-990.webp  2304w,
+                        ./images/about/tablet/about-img-1-1320.webp 3072w
+                      "
+                        type="image/webp"
+                        width="330"
+                        height="235"
+                      />
+
+                      <img
+                        srcset="
+                        ./images/about/tablet/about-img-1-330.jpg   768w,
+                        ./images/about/tablet/about-img-1-660.jpg  1536w,
+                        ./images/about/tablet/about-img-1-990.jpg  2304w,
+                        ./images/about/tablet/about-img-1-1320.jpg 3072w
+                      "
+                        src="./images/about/tablet/about-img-1-990.jpg"
+                        alt="Image 1: shaving in the process"
+                        width="330"
+                        height="235"
+                        class="about__image image"
+                      />
+                    </picture> */}
+                    <picture>
+                      {/* <source
                         srcSet={about.deskWEBP}
                         media="(min-width: 1200px)"
                         type="image/webp"
@@ -52,18 +105,19 @@ const Intro = () => {
                         type="image/jpeg"
                         width={270}
                         height={445}
-                      />
+                      /> */}
 
                       <source
-                        srcSet={about.tabWEBP}
-                        type="image/webp"
+                        srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 2072w`}
                         width={330}
                         height={235}
+                        type="image/webp"
                       />
 
                       <img
                         loading="lazy"
-                        src={about.tabJPG}
+                        srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 2072w`}
+                        src={about.tab3xJPG}
                         alt={about.alt.uk}
                         width={330}
                         height={235}
