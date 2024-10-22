@@ -44,8 +44,8 @@ import mob3s1440wpp from "../assets/images/banner/mobile/slide-img-3-1440.webp";
 import mob3s1920jpg from "../assets/images/banner/mobile/slide-img-3-1920.jpg";
 import mob3s1920wpp from "../assets/images/banner/mobile/slide-img-3-1920.webp";
 
-import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-570.jpg";
-import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-570.webp";
+import tab1s0570jpg from "../assets/images/banner/tablet/slide-img-1-0570.jpg";
+import tab1s0570wpp from "../assets/images/banner/tablet/slide-img-1-0570.webp";
 import tab1s1140jpg from "../assets/images/banner/tablet/slide-img-1-1140.jpg";
 import tab1s1140wpp from "../assets/images/banner/tablet/slide-img-1-1140.webp";
 import tab1s1710jpg from "../assets/images/banner/tablet/slide-img-1-1710.jpg";
@@ -53,8 +53,8 @@ import tab1s1710wpp from "../assets/images/banner/tablet/slide-img-1-1710.webp";
 import tab1s2280jpg from "../assets/images/banner/tablet/slide-img-1-2280.jpg";
 import tab1s2280wpp from "../assets/images/banner/tablet/slide-img-1-2280.webp";
 
-import tab2s0570jpg from "../assets/images/banner/tablet/slide-img-2-570.jpg";
-import tab2s0570wpp from "../assets/images/banner/tablet/slide-img-2-570.webp";
+import tab2s0570jpg from "../assets/images/banner/tablet/slide-img-2-0570.jpg";
+import tab2s0570wpp from "../assets/images/banner/tablet/slide-img-2-0570.webp";
 import tab2s1140jpg from "../assets/images/banner/tablet/slide-img-2-1140.jpg";
 import tab2s1140wpp from "../assets/images/banner/tablet/slide-img-2-1140.webp";
 import tab2s1710jpg from "../assets/images/banner/tablet/slide-img-2-1710.jpg";
@@ -62,8 +62,8 @@ import tab2s1710wpp from "../assets/images/banner/tablet/slide-img-2-1710.webp";
 import tab2s2280jpg from "../assets/images/banner/tablet/slide-img-2-2280.jpg";
 import tab2s2280wpp from "../assets/images/banner/tablet/slide-img-2-2280.webp";
 
-import tab3s0570jpg from "../assets/images/banner/tablet/slide-img-3-570.jpg";
-import tab3s0570wpp from "../assets/images/banner/tablet/slide-img-3-570.webp";
+import tab3s0570jpg from "../assets/images/banner/tablet/slide-img-3-0570.jpg";
+import tab3s0570wpp from "../assets/images/banner/tablet/slide-img-3-0570.webp";
 import tab3s1140jpg from "../assets/images/banner/tablet/slide-img-3-1140.jpg";
 import tab3s1140wpp from "../assets/images/banner/tablet/slide-img-3-1140.webp";
 import tab3s1710jpg from "../assets/images/banner/tablet/slide-img-3-1710.jpg";
