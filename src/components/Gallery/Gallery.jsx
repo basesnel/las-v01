@@ -17,31 +17,21 @@ const Gallery = () => {
           <li key={i} className={styles.item}>
             <div className={styles.thumb}>
               <picture>
-                {/* <source
-                  srcset="
-                      ./images/portfolio/desktop/portfolio-1-270.webp  1200w,
-                      ./images/portfolio/desktop/portfolio-1-540.webp  2400w,
-                      ./images/portfolio/desktop/portfolio-1-810.webp  3600w,
-                      ./images/portfolio/desktop/portfolio-1-1080.webp 4800w
-                    "
+                <source
+                  srcSet={`${image.dtp1xWBP} 1200w, ${image.dtp2xWBP} 2400w, ${image.dtp3xWBP} 3600w, ${image.dtp2xWBP} 4800w`}
                   media="(min-width: 1200px)"
+                  width={270}
+                  height={360}
                   type="image/webp"
-                  width="270"
-                  height="360"
                 />
 
                 <source
-                  srcset="
-                      ./images/portfolio/desktop/portfolio-1-270.jpg  1200w,
-                      ./images/portfolio/desktop/portfolio-1-540.jpg  2400w,
-                      ./images/portfolio/desktop/portfolio-1-810.jpg  3600w,
-                      ./images/portfolio/desktop/portfolio-1-1080.jpg 4800w
-                    "
+                  srcSet={`${image.dtp1xJPG} 1200w, ${image.dtp2xJPG} 2400w, ${image.dtp3xJPG} 3600w, ${image.dtp2xJPG} 4800w`}
                   media="(min-width: 1200px)"
+                  width={270}
+                  height={360}
                   type="image/jpeg"
-                  width="270"
-                  height="360"
-                /> */}
+                />
 
                 <source
                   srcSet={`${image.tab1xWBP} 768w, ${image.tab2xWBP} 1536w, ${image.tab3xWBP} 2304w, ${image.tab2xWBP} 2072w`}
