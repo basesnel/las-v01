@@ -1,3 +1,5 @@
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 import Banner from "../../components/Banner/Banner";
 import Intro from "../../components/Intro/Intro";
 import Services from "../../components/Services/Services";
@@ -11,16 +13,20 @@ import Brands from "../../components/Brands/Brands";
 
 const Main = () => {
   return (
-    <main>
-      <Banner />
-      <Intro />
-      <Services />
-      <Gallery />
-      <Features />
-      {/* <Shop /> */}
-      <ContactUs />
-      <Brands />
-    </main>
+    <>
+      <Header />
+      <main>
+        <Banner />
+        <Intro />
+        <Services />
+        <Gallery />
+        <Features />
+        {/* <Shop /> */}
+        <ContactUs />
+        <Brands />
+      </main>
+      <Footer />
+    </>
   );
 };
 

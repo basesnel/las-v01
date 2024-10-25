@@ -1,0 +1,10 @@
+.sandbox {
+  padding: 2rem;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+  background-color: #09f;
+  margin-bottom: 1rem;
+}
