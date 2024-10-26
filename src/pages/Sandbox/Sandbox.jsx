@@ -1,21 +1,31 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import styles from "./styles.module.css";
 
 const Sandbox = () => {
-  const [expanded, setExpanded] = useState(false);
   return (
     <section className={styles.sandbox}>
       <motion.div
         className={styles.box}
-        onClick={() => setExpanded(!expanded)}
+        transition={{
+          x: { type: "tween", duration: 1 },
+          y: { type: "tween", duration: 2 },
+        }}
         animate={{
-          width: expanded ? "calc(100vw - 4rem)" : 150,
-          opacity: 1,
-          background: "#f08",
-          borderRadius: 20,
+          x: 200,
+          y: 200,
         }}
       />
+      {/* <motion.div
+        className={styles.box}
+        transition={{
+          type: "tween",
+          duration: 0.3,
+          ease: "easeIn",
+        }}
+        animate={{
+          x: 200,
+        }}
+      /> */}
     </section>
   );
 };

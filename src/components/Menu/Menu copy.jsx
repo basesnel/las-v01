@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+// import { useEffect } from "react";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import Socnets from "../Socnets/Socnets";
@@ -12,21 +12,26 @@ const Menu = ({ onClose, onHide }) => {
     const part = { id: i, name: section.id, label: section.ariaLabel };
     parts.push(part);
   });
+  // useEffect(() => {
+  //   const menuToggle = () => {
+  //     const menu = document.querySelector("div[data-menu]");
+  //     setTimeout(() => {
+  //       menu.classList.toggle(styles.isOpen);
+  //       console.log(menu.classList);
+  //     }, 100);
+  //   };
+
+  //   menuToggle();
+
+  // return () => {
+  //   menuToggle();
+  //   setTimeout(() => {}, 250);
+  // };
+  // }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className={styles.backdrop}
-      onClick={onHide}
-    >
-      <motion.div
-        initial={{ x: "calc(100vw)" }}
-        animate={{ x: "calc(29vw)" }}
-        transition={{ type: "spring", damping: 30, stiffness: 300 }}
-        className={styles.menu}
-        data-menu
-      >
+    <div className={styles.backdrop} onClick={onHide}>
+      <div className={styles.menu} data-menu>
         <Togglemenu
           variant="closeMenu"
           onClick={onClose}
@@ -58,8 +63,8 @@ const Menu = ({ onClose, onHide }) => {
           </ul>
         </nav>
         <Socnets variant="menu" />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
