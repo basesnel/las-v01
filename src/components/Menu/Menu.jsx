@@ -5,6 +5,41 @@ import Socnets from "../Socnets/Socnets";
 
 import styles from "./styles.module.css";
 
+const overlayVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+const menuVariants = {
+  hidden: { x: "calc(100vw)" },
+  visible: {
+    x: "calc(29vw)",
+    transition: {
+      type: "spring",
+      damping: 30,
+      stiffness: 300,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const listVariants = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0 },
+};
+
 const Menu = ({ onClose, onHide }) => {
   const sections = document.querySelectorAll("section[id]");
   const parts = [];
@@ -15,15 +50,16 @@ const Menu = ({ onClose, onHide }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      variants={overlayVariants}
+      initial="hidden"
+      animate="visible"
       className={styles.backdrop}
       onClick={onHide}
     >
       <motion.div
-        initial={{ x: "calc(100vw)" }}
-        animate={{ x: "calc(29vw)" }}
-        transition={{ type: "spring", damping: 30, stiffness: 300 }}
+        variants={menuVariants}
+        initial="hidden"
+        animate="visible"
         className={styles.menu}
         data-menu
       >
@@ -41,10 +77,19 @@ const Menu = ({ onClose, onHide }) => {
           />
         </Togglemenu>
         <nav>
-          <ul className={styles.list}>
+          <motion.ul
+            className={styles.list}
+            variants={listVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {parts.map(({ id, name, label }) => {
               return (
-                <li key={id} className={styles.item}>
+                <motion.li
+                  key={id}
+                  className={styles.item}
+                  variants={itemVariants}
+                >
                   <a
                     href={`#${name}`}
                     onClick={onClose}
@@ -52,10 +97,10 @@ const Menu = ({ onClose, onHide }) => {
                   >
                     {label}
                   </a>
-                </li>
+                </motion.li>
               );
             })}
-          </ul>
+          </motion.ul>
         </nav>
         <Socnets variant="menu" />
       </motion.div>
