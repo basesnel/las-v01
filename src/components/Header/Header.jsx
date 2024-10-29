@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+// import { createPortal } from "react-dom";
+import { AnimatePresence } from "framer-motion";
 import sections from "../../constants/sections";
 import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
@@ -59,16 +60,16 @@ const Header = () => {
             className={styles.icon}
           />
         </Togglemenu>
-        {isMenuOpen &&
-          createPortal(
+        <AnimatePresence>
+          {isMenuOpen && (
             <Menu
               onHide={(event) => {
                 if (event.target === event.currentTarget) closeMenu();
               }}
               onClose={closeMenu}
-            />,
-            document.body
+            />
           )}
+        </AnimatePresence>
       </Container>
     </header>
   );

@@ -53,6 +53,7 @@ const Menu = ({ onClose, onHide }) => {
       variants={overlayVariants}
       initial="hidden"
       animate="visible"
+      exit="hidden"
       className={styles.backdrop}
       onClick={onHide}
     >
@@ -60,6 +61,7 @@ const Menu = ({ onClose, onHide }) => {
         variants={menuVariants}
         initial="hidden"
         animate="visible"
+        exit="hidden"
         className={styles.menu}
         data-menu
       >
