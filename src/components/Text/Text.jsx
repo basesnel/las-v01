@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import styles from "./styles.module.css";
 
 const Text = ({ variant, mode, children }) => {
@@ -5,7 +7,14 @@ const Text = ({ variant, mode, children }) => {
   const modification = mode ? `${styles[mode]}` : "";
 
   return (
-    <p className={`${styles.text} ${variation} ${modification}`}>{children}</p>
+    <motion.p
+      className={`${styles.text} ${variation} ${modification}`}
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ delay: 3, duration: 0.5, type: "tween" }}
+    >
+      {children}
+    </motion.p>
   );
 };
 
