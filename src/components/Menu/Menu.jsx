@@ -92,13 +92,22 @@ const Menu = ({ onClose, onHide }) => {
                   className={styles.item}
                   variants={itemVariants}
                 >
-                  <a
+                  <motion.a
                     href={`#${name}`}
                     onClick={onClose}
                     className={styles.link}
+                    whileHover={{
+                      scale: 1.1,
+                      color: "#f67307",
+                      x: 20,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                    }}
                   >
                     {label}
-                  </a>
+                  </motion.a>
                 </motion.li>
               );
             })}

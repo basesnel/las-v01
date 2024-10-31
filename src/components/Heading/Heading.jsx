@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import styles from "./styles.module.css";
 
 const Heading = ({ level, mode, title }) => {
@@ -6,14 +8,26 @@ const Heading = ({ level, mode, title }) => {
   switch (level) {
     case 1:
       return (
-        <h1 className={`${styles.heading} ${styles.heading01}`}>{title}</h1>
+        <motion.h1
+          className={`${styles.heading} ${styles.heading01}`}
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 2, duration: 0.5, type: "tween" }}
+        >
+          {title}
+        </motion.h1>
       );
 
     case 2:
       return (
-        <h2 className={`${styles.heading} ${styles.heading02} ${modification}`}>
+        <motion.h2
+          className={`${styles.heading} ${styles.heading02} ${modification}`}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5, type: "tween" }}
+        >
           {title}
-        </h2>
+        </motion.h2>
       );
 
     case 3:

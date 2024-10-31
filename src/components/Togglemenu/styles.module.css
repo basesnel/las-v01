@@ -28,8 +28,8 @@
   color: var(--neutral);
 }
 
-.openMenu:hover,
+/* .openMenu:hover,
 .openMenu.focus {
-  color: var(--accent-highlight);
+  color: var(--accent);
   transform: scale(1.2) rotate(180deg);
-}
+} */
