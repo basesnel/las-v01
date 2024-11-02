@@ -19,7 +19,6 @@ const menuVariants = {
       damping: 30,
       stiffness: 300,
       when: "beforeChildren",
-      staggerChildren: 0.2,
     },
   },
 };
@@ -37,7 +36,7 @@ const listVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0 },
 };
 
@@ -46,15 +45,16 @@ const socnetListVariants = {
   visible: {
     scale: 1,
     transition: {
+      delay: 1.2,
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 1,
     },
   },
 };
 
 const socnetItemVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, y: -100 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const Menu = ({ onClose, onHide }) => {
