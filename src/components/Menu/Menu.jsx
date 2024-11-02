@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
-// import Socnets from "../Socnets/Socnets";
 import socNets from "../../constants/socials";
 
 import styles from "./styles.module.css";
@@ -20,6 +19,7 @@ const menuVariants = {
       damping: 30,
       stiffness: 300,
       when: "beforeChildren",
+      staggerChildren: 0.2,
     },
   },
 };
@@ -37,6 +37,22 @@ const listVariants = {
 };
 
 const itemVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const socnetListVariants = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const socnetItemVariants = {
   hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0 },
 };
@@ -114,23 +130,35 @@ const Menu = ({ onClose, onHide }) => {
             })}
           </motion.ul>
         </nav>
-        {/* <Socnets variant="menu" /> */}
-        <ul className={styles.socnetList}>
+        <motion.ul className={styles.socnetList} variants={socnetListVariants}>
           {socNets.map(({ text, src }, i) => {
             return (
-              <li key={i} className={styles.socnetItem}>
-                <a
+              <motion.li
+                key={i}
+                className={styles.socnetItem}
+                variants={socnetItemVariants}
+              >
+                <motion.a
                   href={src}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className={styles.socnetLink}
+                  whileHover={{
+                    scale: 1.1,
+                    color: "#f67307",
+                    x: 20,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                  }}
                 >
                   {text}
-                </a>
-              </li>
+                </motion.a>
+              </motion.li>
             );
           })}
-        </ul>
+        </motion.ul>
       </motion.div>
     </motion.div>
   );
