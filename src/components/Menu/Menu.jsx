@@ -57,6 +57,18 @@ const socnetItemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
+const linkVariants = {
+  hover: {
+    scale: 1.1,
+    color: "#f67307",
+    x: 20,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+};
+
 const Menu = ({ onClose, onHide }) => {
   const sections = document.querySelectorAll("section[id]");
   const parts = [];
@@ -113,15 +125,8 @@ const Menu = ({ onClose, onHide }) => {
                     href={`#${name}`}
                     onClick={onClose}
                     className={styles.link}
-                    whileHover={{
-                      scale: 1.1,
-                      color: "#f67307",
-                      x: 20,
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                    }}
+                    variants={linkVariants}
+                    whileHover="hover"
                   >
                     {label}
                   </motion.a>
@@ -143,15 +148,8 @@ const Menu = ({ onClose, onHide }) => {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className={styles.socnetLink}
-                  whileHover={{
-                    scale: 1.1,
-                    color: "#f67307",
-                    x: 20,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                  }}
+                  variants={linkVariants}
+                  whileHover="hover"
                 >
                   {text}
                 </motion.a>
