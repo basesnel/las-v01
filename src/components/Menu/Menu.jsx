@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
-import Socnets from "../Socnets/Socnets";
+// import Socnets from "../Socnets/Socnets";
+import socNets from "../../constants/socials";
 
 import styles from "./styles.module.css";
 
@@ -113,7 +114,23 @@ const Menu = ({ onClose, onHide }) => {
             })}
           </motion.ul>
         </nav>
-        <Socnets variant="menu" />
+        {/* <Socnets variant="menu" /> */}
+        <ul className={styles.socnetList}>
+          {socNets.map(({ text, src }, i) => {
+            return (
+              <li key={i} className={styles.socnetItem}>
+                <a
+                  href={src}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={styles.socnetLink}
+                >
+                  {text}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
       </motion.div>
     </motion.div>
   );

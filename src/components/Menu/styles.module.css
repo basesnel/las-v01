@@ -75,3 +75,57 @@
     font-size: 18px;
   }
 }
+
+/* Socnet link styles */
+
+.socnetList {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.socnetItem {
+  font-size: 11px;
+  line-height: 1.363;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--neutral);
+}
+
+.socnetLink {
+  color: var(--neutral);
+}
+
+@media screen and (min-width: 480px) {
+  .socnetList {
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .socnetItem {
+    padding-left: 100px;
+    font-size: 14px;
+    line-height: 1.357;
+  }
+
+  .socnetItem:first-child {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .socnetItem:first-child:before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: currentColor;
+    transform: skewX(-30deg);
+  }
+}
