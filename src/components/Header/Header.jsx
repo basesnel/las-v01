@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-// import { createPortal } from "react-dom";
-import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import sections from "../../constants/sections";
 import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
@@ -11,31 +9,12 @@ import Logo from "../Logo/Logo";
 import styles from "./styles.module.css";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = () => {
-    setIsMenuOpen(true);
+    setShowMenu(true);
     document.body.style.overflow = "hidden";
   };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    document.body.style.overflow = "";
-  };
-
-  useEffect(() => {
-    const escFunction = (event) => {
-      if (event.key === "Escape") {
-        isMenuOpen && closeMenu();
-      }
-    };
-
-    document.addEventListener("keydown", escFunction, false);
-
-    return () => {
-      document.removeEventListener("keydown", escFunction, false);
-    };
-  }, [isMenuOpen]);
 
   return (
     <header className={styles.header}>
@@ -60,16 +39,7 @@ const Header = () => {
             className={styles.icon}
           />
         </Togglemenu>
-        <AnimatePresence>
-          {isMenuOpen && (
-            <Menu
-              onHide={(event) => {
-                if (event.target === event.currentTarget) closeMenu();
-              }}
-              onClose={closeMenu}
-            />
-          )}
-        </AnimatePresence>
+        <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
     </header>
   );
