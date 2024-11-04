@@ -8,17 +8,28 @@ import styles from "./styles.module.css";
 
 const backdrop = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      // delay: 0.5,
+      // type: "spring",
+      // damping: 30,
+      // stiffness: 300,
+      when: "beforeChildren",
+    },
+  },
 };
 
-const menuVariants = {
-  hidden: { x: "calc(100vw)" },
+const menu = {
+  hidden: { x: "100vw", opacity: 0 },
   visible: {
-    x: "calc(29vw)",
+    x: "29vw",
+    opacity: 1,
     transition: {
-      type: "spring",
-      damping: 30,
-      stiffness: 300,
+      //   delay: 0.5,
+      // type: "spring",
+      // damping: 30,
+      // stiffness: 300,
       when: "beforeChildren",
     },
   },
@@ -109,14 +120,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
           className={styles.backdrop}
           onClick={closeMenu}
         >
-          <motion.div
-            variants={menuVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            className={styles.menu}
-            data-menu
-          >
+          <motion.div variants={menu} className={styles.menu} data-menu>
             <Togglemenu
               variant="closeMenu"
               onClick={closeMenu}
