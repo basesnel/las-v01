@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
@@ -7,7 +8,9 @@ import socNets from "../../constants/socials";
 import styles from "./styles.module.css";
 
 const backdrop = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+  },
   visible: {
     opacity: 1,
     transition: {
@@ -15,7 +18,16 @@ const backdrop = {
       // type: "spring",
       // damping: 30,
       // stiffness: 300,
+      duration: 0.5,
       when: "beforeChildren",
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.5,
+      when: "afterChildren",
     },
   },
 };
@@ -30,7 +42,19 @@ const menu = {
       // type: "spring",
       // damping: 30,
       // stiffness: 300,
+      duration: 0.2,
       when: "beforeChildren",
+    },
+  },
+  exit: {
+    x: "100vw",
+    opacity: 0,
+    transition: {
+      //   delay: 0.5,
+      // type: "spring",
+      // damping: 30,
+      // stiffness: 300,
+      duration: 0.5,
     },
   },
 };
@@ -109,14 +133,14 @@ const Menu = ({ showMenu, setShowMenu }) => {
     };
   }, [showMenu]);
 
-  return (
+  return createPortal(
     <AnimatePresence mode="wait">
       {showMenu && (
         <motion.div
           variants={backdrop}
           initial="hidden"
           animate="visible"
-          exit="hidden"
+          exit="exit"
           className={styles.backdrop}
           onClick={closeMenu}
         >
@@ -190,7 +214,8 @@ const Menu = ({ showMenu, setShowMenu }) => {
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 
