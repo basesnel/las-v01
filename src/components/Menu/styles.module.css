@@ -1,42 +1,35 @@
 .backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-height: 100vh;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 150;
+}
 
-  background-color: rgba(25, 28, 38, 0.2);
-  /* opacity: 1; */
-  /* visibility: visible; */
+.menuPosition {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  z-index: 151;
+}
 
-  /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-  overflow-y: scroll;
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 16px 16px 16px 48px;
+  box-sizing: border-box;
 }
 
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* width: 100vw; */
-  width: 71vw;
-  height: 100vh;
-  padding: 118px 31px;
+  border-radius: 16px;
+  padding: 62px 31px;
   background-color: var(--light);
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12), 0px 4px 40px rgba(0, 0, 0, 0.14),
     0px 4px 40px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  /* transform: translateX(100%); */
-  transform: translateX(29vw);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-/* .menu.isOpen {
-  width: 71vw;
-  transform: translateX(29vw);
-} */
+  width: calc(100vw - 64px - 16px);
+}
 
 .icon {
   width: 40px;

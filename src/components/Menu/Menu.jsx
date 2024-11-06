@@ -14,46 +14,35 @@ const backdrop = {
   visible: {
     opacity: 1,
     transition: {
-      // delay: 0.5,
-      // type: "spring",
-      // damping: 30,
-      // stiffness: 300,
-      duration: 0.5,
-      when: "beforeChildren",
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      delay: 0.5,
-      duration: 0.5,
-      when: "afterChildren",
-    },
-  },
-};
-
-const menu = {
-  hidden: { x: "100vw", opacity: 0 },
-  visible: {
-    x: "29vw",
-    opacity: 1,
-    transition: {
-      //   delay: 0.5,
-      // type: "spring",
-      // damping: 30,
-      // stiffness: 300,
       duration: 0.2,
       when: "beforeChildren",
     },
   },
   exit: {
-    x: "100vw",
     opacity: 0,
     transition: {
-      //   delay: 0.5,
-      // type: "spring",
-      // damping: 30,
-      // stiffness: 300,
+      duration: 0.2,
+      delay: 0.4,
+    },
+  },
+};
+
+const position = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: "100vw",
+    transition: {
       duration: 0.5,
     },
   },
@@ -144,73 +133,87 @@ const Menu = ({ showMenu, setShowMenu }) => {
           className={styles.backdrop}
           onClick={closeMenu}
         >
-          <motion.div variants={menu} className={styles.menu} data-menu>
-            <Togglemenu
-              variant="closeMenu"
-              onClick={closeMenu}
-              type="button"
-              aria-label="Close the mobile menu"
-            >
-              <Icon
-                icon="menu-close"
-                width={40}
-                height={40}
-                className={styles.icon}
-              />
-            </Togglemenu>
-            <nav>
-              <motion.ul
-                className={styles.list}
-                variants={listVariants}
-                initial="hidden"
-                animate="visible"
+          <motion.div
+            className={styles.menuPosition}
+            variants={position}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <motion.div className={styles.menuContainer}>
+              <motion.div
+                className={styles.menu}
+                onClick={(e) => e.stopPropagation()}
+                data-menu
               >
-                {parts.map(({ id, name, label }) => {
-                  return (
-                    <motion.li
-                      key={id}
-                      className={styles.item}
-                      variants={itemVariants}
-                    >
-                      <motion.a
-                        href={`#${name}`}
-                        onClick={closeMenu}
-                        className={styles.link}
-                        variants={linkVariants}
-                        whileHover="hover"
-                      >
-                        {label}
-                      </motion.a>
-                    </motion.li>
-                  );
-                })}
-              </motion.ul>
-            </nav>
-            <motion.ul
-              className={styles.socnetList}
-              variants={socnetListVariants}
-            >
-              {socNets.map(({ text, src }, i) => {
-                return (
-                  <motion.li
-                    key={i}
-                    className={styles.socnetItem}
-                    variants={socnetItemVariants}
+                <Togglemenu
+                  variant="closeMenu"
+                  onClick={closeMenu}
+                  type="button"
+                  aria-label="Close the mobile menu"
+                >
+                  <Icon
+                    icon="menu-close"
+                    width={40}
+                    height={40}
+                    className={styles.icon}
+                  />
+                </Togglemenu>
+                <nav>
+                  <motion.ul
+                    className={styles.list}
+                    variants={listVariants}
+                    initial="hidden"
+                    animate="visible"
                   >
-                    <motion.a
-                      href={src}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className={styles.socnetLink}
-                      variants={linkVariants}
-                      whileHover="hover"
-                    >
-                      {text}
-                    </motion.a>
-                  </motion.li>
-                );
-              })}
-            </motion.ul>
+                    {parts.map(({ id, name, label }) => {
+                      return (
+                        <motion.li
+                          key={id}
+                          className={styles.item}
+                          variants={itemVariants}
+                        >
+                          <motion.a
+                            href={`#${name}`}
+                            onClick={closeMenu}
+                            className={styles.link}
+                            variants={linkVariants}
+                            whileHover="hover"
+                          >
+                            {label}
+                          </motion.a>
+                        </motion.li>
+                      );
+                    })}
+                  </motion.ul>
+                </nav>
+                <motion.ul
+                  className={styles.socnetList}
+                  variants={socnetListVariants}
+                >
+                  {socNets.map(({ text, src }, i) => {
+                    return (
+                      <motion.li
+                        key={i}
+                        className={styles.socnetItem}
+                        variants={socnetItemVariants}
+                      >
+                        <motion.a
+                          href={src}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className={styles.socnetLink}
+                          variants={linkVariants}
+                          whileHover="hover"
+                        >
+                          {text}
+                        </motion.a>
+                      </motion.li>
+                    );
+                  })}
+                </motion.ul>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}
