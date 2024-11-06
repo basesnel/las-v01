@@ -22,8 +22,8 @@
 
 .closeMenu {
   position: absolute;
-  top: 48px;
-  right: 48px;
+  top: 31px;
+  right: 20px;
   padding: 0;
   color: var(--neutral);
 }

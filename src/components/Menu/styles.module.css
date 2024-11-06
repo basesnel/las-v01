@@ -22,6 +22,7 @@
 }
 
 .menu {
+  position: relative;
   border-radius: 16px;
   padding: 62px 31px;
   background-color: var(--light);
