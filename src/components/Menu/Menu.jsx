@@ -4,95 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Icon from "../Icon/Icon";
 import socNets from "../../constants/socials";
+import {
+  backdrop,
+  position,
+  list,
+  item,
+  link,
+  socList,
+  socItem,
+  socLink,
+} from "./variants";
 
 import styles from "./styles.module.css";
-
-const backdrop = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.2,
-      when: "beforeChildren",
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.2,
-      delay: 0.4,
-    },
-  },
-};
-
-const position = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-  exit: {
-    opacity: 0,
-    x: "100vw",
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-const listVariants = {
-  hidden: { scale: 0 },
-  visible: {
-    scale: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.2,
-      staggerDirection: -1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const socnetListVariants = {
-  hidden: { scale: 0 },
-  visible: {
-    scale: 1,
-    transition: {
-      delay: 1.2,
-      when: "beforeChildren",
-      staggerChildren: 1,
-    },
-  },
-};
-
-const socnetItemVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const linkVariants = {
-  hover: {
-    scale: 1.1,
-    color: "#f67307",
-    x: 20,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-    },
-  },
-};
 
 const Menu = ({ showMenu, setShowMenu }) => {
   const sections = document.querySelectorAll("section[id]");
@@ -162,7 +85,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
                 <nav>
                   <motion.ul
                     className={styles.list}
-                    variants={listVariants}
+                    variants={list}
                     initial="hidden"
                     animate="visible"
                   >
@@ -171,13 +94,13 @@ const Menu = ({ showMenu, setShowMenu }) => {
                         <motion.li
                           key={id}
                           className={styles.item}
-                          variants={itemVariants}
+                          variants={item}
                         >
                           <motion.a
                             href={`#${name}`}
                             onClick={closeMenu}
                             className={styles.link}
-                            variants={linkVariants}
+                            variants={link}
                             whileHover="hover"
                           >
                             {label}
@@ -187,23 +110,20 @@ const Menu = ({ showMenu, setShowMenu }) => {
                     })}
                   </motion.ul>
                 </nav>
-                <motion.ul
-                  className={styles.socnetList}
-                  variants={socnetListVariants}
-                >
+                <motion.ul className={styles.socnetList} variants={socList}>
                   {socNets.map(({ text, src }, i) => {
                     return (
                       <motion.li
                         key={i}
                         className={styles.socnetItem}
-                        variants={socnetItemVariants}
+                        variants={socItem}
                       >
                         <motion.a
                           href={src}
                           target="_blank"
                           rel="noopener noreferrer nofollow"
                           className={styles.socnetLink}
-                          variants={linkVariants}
+                          variants={socLink}
                           whileHover="hover"
                         >
                           {text}

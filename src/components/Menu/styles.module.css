@@ -23,7 +23,7 @@
 
 .menu {
   position: relative;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 62px 31px;
   background-color: var(--light);
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12), 0px 4px 40px rgba(0, 0, 0, 0.14),
@@ -35,7 +35,6 @@
 .icon {
   width: 40px;
   height: 40px;
-
   fill: currentColor;
 }
 
@@ -47,7 +46,7 @@
   font-size: 14px;
   line-height: normal;
   font-weight: 600;
-  letter-spacing: 1.8px;
+  letter-spacing: 0.1em;
 }
 
 .link {
@@ -56,13 +55,7 @@
   text-transform: capitalize;
   word-break: break-all;
   color: var(--neutral);
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
-
-/* .link:hover,
-.link:focus {
-  color: var(--accent-highdark);
-} */
 
 @media screen and (min-width: 480px) {
   .item {
@@ -91,6 +84,7 @@
 }
 
 .socnetLink {
+  display: inline-block;
   color: var(--neutral);
 }
 
