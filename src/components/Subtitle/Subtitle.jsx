@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import styles from "./styles.module.css";
 
-const subtitleVariants = {
+const variants = {
   hidden: { x: 100, opacity: 0, scaleX: 0 },
   visible: {
     x: 0,
@@ -18,9 +18,10 @@ const Subtitle = ({ mode, children }) => {
   return (
     <motion.p
       className={`${styles.subtitle} ${modification}`}
-      variants={subtitleVariants}
+      variants={variants}
       initial="hidden"
       whileInView="visible"
+      viewport={{ once: true }}
     >
       {children}
     </motion.p>
