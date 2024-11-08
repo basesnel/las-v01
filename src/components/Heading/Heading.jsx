@@ -31,6 +31,7 @@ const Heading = ({ level, mode, title }) => {
           variants={firstHeading}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
         >
           {title}
         </motion.h1>
@@ -43,6 +44,7 @@ const Heading = ({ level, mode, title }) => {
           variants={secondHeading}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
         >
           {title}
         </motion.h2>
@@ -55,6 +57,7 @@ const Heading = ({ level, mode, title }) => {
           variants={secondHeading}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
         >
           {title}
         </motion.h3>
