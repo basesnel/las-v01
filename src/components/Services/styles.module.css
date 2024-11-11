@@ -53,16 +53,16 @@
   .item:nth-child(odd) {
     background-image: linear-gradient(
       180deg,
-      #171a24 0%,
-      rgba(23, 26, 36, 0.2) 100%
+      rgba(24, 24, 24, 0.8) 0%,
+      rgba(36, 36, 36, 0.1) 100%
     );
   }
 
   .item:nth-child(even) {
     background-image: linear-gradient(
       180deg,
-      rgb(9, 11, 19),
-      rgba(9, 11, 19, 0.2) 100%
+      rgba(9, 9, 9, 0.8) 0%,
+      rgba(9, 9, 9, 0.1) 100%
     );
   }
 }
