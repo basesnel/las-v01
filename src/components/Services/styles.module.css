@@ -104,7 +104,7 @@
 
 .service {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 4px;
   word-break: break-all;
 }
