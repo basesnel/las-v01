@@ -54,11 +54,12 @@
 
   .itemDecor:first-child:before {
     content: "";
-
     display: inline-block;
     width: 60px;
-    height: 1px;
+    height: 3px;
+    border-radius: 1px;
     background-color: currentColor;
+    transform: skewX(-30deg);
   }
 }
 
