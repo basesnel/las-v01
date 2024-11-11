@@ -108,30 +108,6 @@ const services = {
         uk: ukCountPrice,
       },
     },
-    {
-      id: 8,
-      service: {
-        en: "Glass wrapping and pasting",
-        uk: "Обгортка, поклейка скла",
-      },
-      price: {
-        count: 2900,
-        en: enCountPrice,
-        uk: ukCountPrice,
-      },
-    },
-    {
-      id: 9,
-      service: {
-        en: "Servicing of electric cars",
-        uk: "Сервіс електромобілів",
-      },
-      price: {
-        count: 4000,
-        en: enCountPrice,
-        uk: ukCountPrice,
-      },
-    },
   ],
 };
 

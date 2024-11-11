@@ -17,7 +17,7 @@ const Services = () => {
         <li className={styles.item}>
           <ul className={styles.innerList}>
             {list.map(({ id, service, price }) => {
-              if (id < 5)
+              if (id < 4)
                 return (
                   <li key={id} className={styles.innerItem}>
                     <span className={styles.service}>{service.uk}</span>
@@ -30,7 +30,7 @@ const Services = () => {
         <li className={styles.item}>
           <ul className={styles.innerList}>
             {list.map(({ id, service, price }) => {
-              if (id >= 5)
+              if (id >= 4)
                 return (
                   <li key={id} className={styles.innerItem}>
                     <span className={styles.service}>{service.uk}</span>
