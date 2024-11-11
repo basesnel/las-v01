@@ -9,7 +9,7 @@ import contacts from "../../constants/contacts";
 import styles from "./styles.module.css";
 
 const Contacts = () => {
-  const { title, list, subtitle1, subtitle2, text } = contacts;
+  const { title, list, subtitle1, text } = contacts;
 
   return (
     <Section
@@ -43,7 +43,7 @@ const Contacts = () => {
       <aside className={styles.aside}>
         <Subtitle mode="contacts">{subtitle1.uk}</Subtitle>
         <Text variant="contacts">{text.uk}</Text>
-        <Subtitle mode="contacts">{subtitle2.uk}</Subtitle>
+        {/* <Subtitle mode="contacts">{subtitle2.uk}</Subtitle>
         <ul>
           {list.map(({ id, text, src, icon }) => {
             if (id >= 6)
@@ -61,7 +61,7 @@ const Contacts = () => {
                 </li>
               );
           })}
-        </ul>
+        </ul> */}
       </aside>
     </Section>
   );
