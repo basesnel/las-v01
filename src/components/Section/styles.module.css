@@ -29,6 +29,27 @@
 
 .service {
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("../../assets/images/services/mobile/services-bg-0480.png");
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .services {
+    background-image: url("../../assets/images/services/mobile/services-bg-0960.png");
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+  .services {
+    background-image: url("../../assets/images/services/mobile/services-bg-1440.png");
+  }
 }
 
 .contactUs {
