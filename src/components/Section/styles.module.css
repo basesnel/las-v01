@@ -61,6 +61,28 @@
 }
 
 @media screen and (min-width: 480px) {
+  .services {
+    background-image: url("../../assets/images/services/tablet/services-bg-0768.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .services {
+      background-image: url("../../assets/images/services/tablet/services-bg-1536.png");
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .services {
+      background-image: url("../../assets/images/services/tablet/services-bg-2304.png");
+    }
+  }
+
   .contacts {
     background-image: url("../../assets/images/contacts/tablet/contacts-bg-0768.png");
   }
@@ -89,7 +111,7 @@
   }
 
   .services {
-    background-image: url("../../assets/images/services/tablet/services-bg-0768.png");
+    background-image: url("../../assets/images/services/laptop/services-bg-1200.png");
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -97,7 +119,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .services {
-      background-image: url("../../assets/images/services/tablet/services-bg-1536.png");
+      background-image: url("../../assets/images/services/laptop/services-bg-2400.png");
     }
   }
 
@@ -106,7 +128,7 @@
     (min-resolution: 288dpi),
     (min-resolution: 3dppx) {
     .services {
-      background-image: url("../../assets/images/services/tablet/services-bg-2304.png");
+      background-image: url("../../assets/images/services/laptop/services-bg-3600.png");
     }
   }
 
