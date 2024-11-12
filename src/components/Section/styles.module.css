@@ -47,7 +47,7 @@
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .services {
+  .contacts {
     background-image: url("../../assets/images/contacts/mobile/contacts-bg-0960.png");
   }
 }
@@ -55,7 +55,7 @@
   (-webkit-min-device-pixel-ratio: 3),
   (min-resolution: 288dpi),
   (min-resolution: 3dppx) {
-  .services {
+  .contacts {
     background-image: url("../../assets/images/contacts/mobile/contacts-bg-1440.png");
   }
 }
@@ -86,7 +86,7 @@
     }
   }
 
-  .services {
+  .contacts {
     background-image: url("../../assets/images/contacts/tablet/contacts-bg-0768.png");
   }
 
@@ -94,7 +94,7 @@
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .services {
+    .contacts {
       background-image: url("../../assets/images/contacts/tablet/contacts-bg-1536.png");
     }
   }
@@ -102,7 +102,7 @@
     (-webkit-min-device-pixel-ratio: 3),
     (min-resolution: 288dpi),
     (min-resolution: 3dppx) {
-    .services {
+    .contacts {
       background-image: url("../../assets/images/contacts/tablet/contacts-bg-2304.png");
     }
   }
@@ -125,6 +125,7 @@
       background-image: url("../../assets/images/services/desktop/services-bg-3200.png");
     }
   }
+
   @media (min-device-pixel-ratio: 3),
     (-webkit-min-device-pixel-ratio: 3),
     (min-resolution: 288dpi),
@@ -144,6 +145,25 @@
 
   .contacts {
     flex-basis: calc(50% - 15px);
+    background-image: url("../../assets/images/contacts/desktop/contacts-bg-0785.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/desktop/contacts-bg-1570.png");
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/desktop/contacts-bg-2355.png");
+    }
   }
 }
 
