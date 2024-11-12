@@ -11,7 +11,7 @@
   background-color: var(--highlight);
 }
 
-.service {
+.services {
   text-align: center;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -41,7 +41,7 @@
     padding: 100px 0;
   }
 
-  .service {
+  .services {
     background-image: url("../../assets/images/services/tablet/services-bg-0768.png");
   }
 
@@ -68,7 +68,7 @@
     padding: 120px 0;
   }
 
-  .service {
+  .services {
     background-image: url("../../assets/images/services/desktop/services-bg-1600.png");
   }
 

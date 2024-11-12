@@ -10,7 +10,7 @@ const Services = () => {
   const { subTitle, title, reference, list } = services;
 
   return (
-    <Section indexSection={2} colorMode="dark" sectionVariant="service">
+    <Section indexSection={2} colorMode="dark" sectionVariant="services">
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} mode="service" title={title.uk} />
       <ul className={styles.list}>
