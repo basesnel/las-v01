@@ -23,6 +23,7 @@
 
 @media screen and (min-width: 320px) {
   .container {
+    flex-direction: row-reverse;
     max-width: 480px;
     padding: 0 31px;
   }

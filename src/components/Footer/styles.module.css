@@ -119,12 +119,12 @@
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 0;
+    background-position: 60% 69px, 60% 109px;
   }
 
   .content {
     flex-basis: 491px;
-    padding: 20px 0;
+    padding: 30px 0 30px 140px;
   }
 
   .thumb {
