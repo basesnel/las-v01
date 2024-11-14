@@ -52,6 +52,7 @@
     background-image: url("../../assets/images/contacts/mobile/contacts-bg-0960.png");
   }
 }
+
 @media (min-device-pixel-ratio: 3),
   (-webkit-min-device-pixel-ratio: 3),
   (min-resolution: 288dpi),
@@ -61,53 +62,9 @@
   }
 }
 
-@media screen and (min-width: 480px) {
-  .contacts {
-    background-image: url("../../assets/images/contacts/tablet/contacts-bg-0768.png");
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contacts {
-      background-image: url("../../assets/images/contacts/tablet/contacts-bg-1536.png");
-    }
-  }
-  @media (min-device-pixel-ratio: 3),
-    (-webkit-min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    .contacts {
-      background-image: url("../../assets/images/contacts/tablet/contacts-bg-2304.png");
-    }
-  }
-}
-
 @media screen and (min-width: 768px) {
   .section {
     padding: 100px 0;
-  }
-
-  .contacts {
-    background-image: url("../../assets/images/contacts/laptop/contacts-bg-1200.png");
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contacts {
-      background-image: url("../../assets/images/contacts/laptop/contacts-bg-2400.png");
-    }
-  }
-  @media (min-device-pixel-ratio: 3),
-    (-webkit-min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    .contacts {
-      background-image: url("../../assets/images/contacts/laptop/contacts-bg-3600.png");
-    }
   }
 }
 
@@ -122,29 +79,6 @@
 
   .feedback {
     flex-basis: calc(50% + 15px);
-  }
-
-  .contacts {
-    flex-basis: calc(50% - 15px);
-    background-image: url("../../assets/images/contacts/desktop/contacts-bg-0785.png");
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contacts {
-      background-image: url("../../assets/images/contacts/desktop/contacts-bg-1570.png");
-    }
-  }
-
-  @media (min-device-pixel-ratio: 3),
-    (-webkit-min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    .contacts {
-      background-image: url("../../assets/images/contacts/desktop/contacts-bg-2355.png");
-    }
   }
 }
 
@@ -178,6 +112,28 @@
       background-image: url("../../assets/images/services/tablet/services-bg-2304.png");
     }
   }
+
+  .contacts {
+    background-image: url("../../assets/images/contacts/tablet/contacts-bg-0768.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/tablet/contacts-bg-1536.png");
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/tablet/contacts-bg-2304.png");
+    }
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -202,6 +158,53 @@
       background-image: url("../../assets/images/services/laptop/services-bg-3600.png");
     }
   }
+
+  .contacts {
+    background-image: url("../../assets/images/contacts/laptop/contacts-bg-1200.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/laptop/contacts-bg-2400.png");
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/laptop/contacts-bg-3600.png");
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    flex-basis: calc(50% - 15px);
+    background-image: url("../../assets/images/contacts/desktop/contacts-bg-0785.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/desktop/contacts-bg-1570.png");
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/desktop/contacts-bg-2355.png");
+    }
+  }
 }
 
 @media screen and (min-width: 1201px) {
@@ -224,6 +227,29 @@
     (min-resolution: 3dppx) {
     .services {
       background-image: url("../../assets/images/services/desktop/services-bg-4800.png");
+    }
+  }
+
+  .contacts {
+    flex-basis: calc(50% - 15px);
+    background-image: url("../../assets/images/contacts/desktop/contacts-bg-0785.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/desktop/contacts-bg-1570.png");
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    .contacts {
+      background-image: url("../../assets/images/contacts/desktop/contacts-bg-2355.png");
     }
   }
 }
