@@ -22,7 +22,7 @@ const Contacts = () => {
         <address className={styles.address}>
           <ul>
             {list.map(({ id, text, src, icon }) => {
-              if (id < 6)
+              if (id < 4)
                 return (
                   <li key={id} className={styles.item}>
                     <Link src={src} className={styles.link}>
