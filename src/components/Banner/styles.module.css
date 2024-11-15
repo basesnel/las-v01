@@ -143,6 +143,10 @@
   .content {
     padding: 189px 62px 166px 100px;
   }
+
+  .content::after {
+    background-position: 100% top, 100% bottom;
+  }
 }
 
 .aside {
