@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import useCloseMenu from "../../hooks/useCloseMenu";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
@@ -18,9 +18,6 @@ import {
 import styles from "./styles.module.css";
 
 const Menu = ({ showMenu, setShowMenu }) => {
-  const mediaQuery = "(max-width: 768px)";
-  const query = window.matchMedia(mediaQuery);
-
   const sections = document.querySelectorAll("section[id]");
 
   const parts = [];
@@ -34,30 +31,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
     document.body.style.overflow = "";
   };
 
-  useEffect(() => {
-    const escFunction = (event) => {
-      if (event.key === "Escape") {
-        showMenu && closeMenu();
-      }
-    };
-
-    document.addEventListener("keydown", escFunction, false);
-
-    return () => {
-      document.removeEventListener("keydown", escFunction, false);
-    };
-  }, [showMenu]);
-
-  useLayoutEffect(() => {
-    const updateValue = () => {
-      console.log(query);
-      !query.matches && closeMenu();
-    };
-
-    query.addEventListener("change", updateValue);
-
-    return () => query.removeEventListener("change", updateValue);
-  }, [query]);
+  useCloseMenu(showMenu, closeMenu);
 
   return createPortal(
     <AnimatePresence mode="wait">
