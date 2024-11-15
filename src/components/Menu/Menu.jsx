@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
@@ -18,12 +18,8 @@ import {
 import styles from "./styles.module.css";
 
 const Menu = ({ showMenu, setShowMenu }) => {
-  const query = window.matchMedia("(max-width: 768px)");
-
-  const [isMobile, setIsMobile] = useState(
-    () => window.matchMedia("(max-width: 768px)").matches
-  );
-  console.log(isMobile);
+  const mediaQuery = "(max-width: 768px)";
+  const query = window.matchMedia(mediaQuery);
 
   const sections = document.querySelectorAll("section[id]");
 
@@ -54,9 +50,8 @@ const Menu = ({ showMenu, setShowMenu }) => {
 
   useLayoutEffect(() => {
     const updateValue = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-      console.log(isMobile);
-      isMobile && closeMenu();
+      console.log(query);
+      !query.matches && closeMenu();
     };
 
     query.addEventListener("change", updateValue);
