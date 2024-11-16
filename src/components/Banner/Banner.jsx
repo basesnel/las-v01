@@ -18,10 +18,8 @@ const Banner = () => {
       <div className={styles.content}>
         <Subtitle mode="banner">{subTitle.uk}</Subtitle>
         <Heading level={1} title="liashenko auto service" />
-        <Text mode="banner">
-          {text.uk} <Reference src="#services" label="До послуг" />
-        </Text>
-
+        <Text mode="banner">{text.uk}</Text>
+        <Reference src="#services" label="До послуг" />
         <Data mode="banner">{data.uk}</Data>
         <Slider />
       </div>

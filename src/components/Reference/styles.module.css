@@ -16,6 +16,10 @@
 }
 
 .reference.iconOnly {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  z-index: 10;
   padding: 3px;
 }
 

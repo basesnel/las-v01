@@ -6,8 +6,8 @@ const banner = {
     uk: "якісний авто-сервіс у полтаві",
   },
   text: {
-    en: "Services for cars. We invite you to visit LAS, where you can get a full range of quality services, namely:",
-    uk: "Послуги для автомобілів. Запрошуємо Вас відвідати LAS, де Ви зможете отримати повний спектр якісних послуг, а саме:",
+    en: "Services for cars. We invite you to visit LAS, where you can get a full range of quality services:",
+    uk: "Послуги для автомобілів. Запрошуємо Вас відвідати LAS, де Ви зможете отримати повний спектр якісних послуг:",
   },
   data: {
     en: `Auto-tool | ${formatDate(new Date(), "en-US")}`,
