@@ -19,7 +19,12 @@ const Banner = () => {
         <Subtitle mode="banner">{subTitle.uk}</Subtitle>
         <Heading level={1} title="liashenko auto service" />
         <Text mode="banner">{text.uk}</Text>
-        <Reference src="#services" label="До послуг" />
+        <Reference
+          src="#services"
+          caption="До послуг"
+          mode="light"
+          part="banner"
+        />
         <Data mode="banner">{data.uk}</Data>
         <Slider />
       </div>

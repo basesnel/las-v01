@@ -15,11 +15,16 @@
   cursor: pointer;
 }
 
-.reference.iconOnly {
-  position: absolute;
-  left: 40px;
-  bottom: 30px;
+.reference.light {
+  color: var(--light);
+}
+
+.reference.banner {
+  position: relative;
   z-index: 10;
+}
+
+.reference.iconOnly {
   padding: 3px;
 }
 

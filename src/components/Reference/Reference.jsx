@@ -38,7 +38,10 @@ const icon = {
 };
 
 const Reference = (props) => {
-  const { caption, label, src } = props;
+  const { caption, label, src, mode, part } = props;
+  const modify = mode
+    ? `${styles.reference} ${styles[part]} ${styles[mode]}`
+    : `${styles.reference} ${styles[part]}`;
 
   const control = useAnimation();
   const handleMouseEnter = () => {
@@ -58,9 +61,7 @@ const Reference = (props) => {
       whileTap="tap"
       href={src}
       aria-label={label}
-      className={
-        label ? `${styles.reference} ${styles.iconOnly}` : styles.reference
-      }
+      className={label ? `${modify} ${styles.iconOnly}` : modify}
       onMouseEnter={handleMouseEnter}
       onFocus={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
