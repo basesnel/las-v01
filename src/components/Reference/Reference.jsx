@@ -38,8 +38,8 @@ const icon = {
 };
 
 const Reference = (props) => {
-  const { caption, src } = props;
-  // const modification = mode ? `${styles[mode]}` : "";
+  const { caption, label, src } = props;
+
   const control = useAnimation();
   const handleMouseEnter = () => {
     control.start("hover");
@@ -57,7 +57,10 @@ const Reference = (props) => {
       whileFocus="hover"
       whileTap="tap"
       href={src}
-      className={styles.reference}
+      aria-label={label}
+      className={
+        label ? `${styles.reference} ${styles.iconOnly}` : styles.reference
+      }
       onMouseEnter={handleMouseEnter}
       onFocus={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

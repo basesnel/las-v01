@@ -8,6 +8,7 @@ import Slider from "../Slider/Slider";
 import banner from "../../constants/banner";
 
 import styles from "./styles.module.css";
+import Reference from "../Reference/Reference";
 
 const Banner = () => {
   const { subTitle, text, data } = banner;
@@ -17,7 +18,10 @@ const Banner = () => {
       <div className={styles.content}>
         <Subtitle mode="banner">{subTitle.uk}</Subtitle>
         <Heading level={1} title="liashenko auto service" />
-        <Text mode="banner">{text.uk}</Text>
+        <Text mode="banner">
+          {text.uk} <Reference src="#services" label="До послуг" />
+        </Text>
+
         <Data mode="banner">{data.uk}</Data>
         <Slider />
       </div>
