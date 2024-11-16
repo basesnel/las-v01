@@ -54,11 +54,14 @@ const Reference = (props) => {
       initial="initial"
       animate="animate"
       whileHover="hover"
+      whileFocus="hover"
       whileTap="tap"
       href={src}
       className={styles.reference}
       onMouseEnter={handleMouseEnter}
+      onFocus={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onBlur={handleMouseLeave}
     >
       {caption}
       <motion.svg
