@@ -79,7 +79,7 @@ const intro = {
   },
   reference: {
     en: "contact us",
-    uk: "зв'яжіться з нами",
+    uk: "завітайте до нас",
   },
   abouts: [
     {

@@ -1,7 +1,17 @@
 .reference {
-}
-
-.decor {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 3px 3px 3px 18px;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--dark);
+  background-color: transparent;
 }
 
 .icon {
