@@ -28,7 +28,7 @@ const Intro = () => {
         <Text mode="intro">{firstText.uk}</Text>
         <Text mode="intro">{secondText.uk}</Text>
         <Text mode="intro">{thirdText.uk}</Text>
-        <Reference type="button" caption={reference.uk} mode="light" />
+        <Reference src="#contact-us" caption={reference.uk} />
       </div>
       <aside className={styles.aside}>
         <ul className={styles.list}>
