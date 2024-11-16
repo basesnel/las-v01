@@ -3,6 +3,7 @@
   padding: 130px 48px 130px 24px;
   border: 1px solid var(--highlight);
   color: var(--light);
+  text-align: center;
 }
 
 .content::after {
