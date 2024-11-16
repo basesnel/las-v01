@@ -12,6 +12,7 @@
 .heading01 {
   position: relative;
   z-index: 50;
+  margin-bottom: 10px;
   /* font-family: "Tinos", system-ui; */
   font-family: "Gelasio", serif;
   line-height: 1.618;
@@ -49,6 +50,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .heading01 {
+    margin-bottom: 20px;
+  }
+
   .heading02 {
     text-align: initial;
   }
