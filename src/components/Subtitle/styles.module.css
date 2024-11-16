@@ -12,6 +12,7 @@
 .banner {
   position: relative;
   z-index: 50;
+  text-align: left;
 }
 
 .contacts {
