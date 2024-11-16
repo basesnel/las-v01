@@ -39,9 +39,7 @@ const icon = {
 
 const Reference = (props) => {
   const { caption, label, src, mode, part } = props;
-  const modify = mode
-    ? `${styles.reference} ${styles[part]} ${styles[mode]}`
-    : `${styles.reference} ${styles[part]}`;
+  const modify = `${styles.reference} ${styles[part]} ${styles[mode]}`;
 
   const control = useAnimation();
   const handleMouseEnter = () => {
