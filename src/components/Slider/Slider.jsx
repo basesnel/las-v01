@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import slider from "../../constants/slider";
 
 import styles from "./styles.module.css";
@@ -21,9 +22,14 @@ const Slider = () => {
 
   return (
     <div className={styles.slider}>
-      <div className={styles.wrapper}>
+      <motion.div
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        animate={{ translateX: `-0%` }}
+        className={styles.wrapper}
+      >
         <Slides />
-      </div>
+      </motion.div>
       <div className={styles.buttons}>
         <button className={`${styles.button} ${styles.prev}`}>{prev.uk}</button>
         <button className={`${styles.button} ${styles.next}`}>{next.uk}</button>
@@ -35,7 +41,7 @@ const Slider = () => {
 
 const Slides = () => {
   return (
-    <div className={styles.line}>
+    <>
       {slides.map((slide, i) => {
         return (
           <div key={i} className={styles.slide}>
@@ -92,7 +98,7 @@ const Slides = () => {
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 
