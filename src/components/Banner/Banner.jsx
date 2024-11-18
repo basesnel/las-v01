@@ -11,7 +11,7 @@ import styles from "./styles.module.css";
 import Reference from "../Reference/Reference";
 
 const Banner = () => {
-  const { subTitle, text, data } = banner;
+  const { subTitle, text, link, data } = banner;
 
   return (
     <Section indexSection={0} sectionVariant="banner" containerVariant="banner">
@@ -21,7 +21,7 @@ const Banner = () => {
         <Text mode="banner">{text.uk}</Text>
         <Reference
           src="#services"
-          caption="До послуг"
+          caption={link.uk}
           mode="light"
           part="banner"
         />
