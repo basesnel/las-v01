@@ -62,7 +62,7 @@ const Slides = () => {
               <source
                 srcSet={`${slide.dtp1xWBP} 1200w, ${slide.dtp2xWBP} 2400w, ${slide.dtp3xWBP} 3600w, ${slide.dtp2xWBP} 4800w`}
                 media="(min-width: 1200px)"
-                width={1070}
+                width={1040}
                 height={680}
                 type="image/webp"
               />
@@ -70,7 +70,7 @@ const Slides = () => {
               <source
                 srcSet={`${slide.dtp1xJPG} 1200w, ${slide.dtp2xJPG} 2400w, ${slide.dtp3xJPG} 3600w, ${slide.dtp2xJPG} 4800w`}
                 media="(min-width: 1200px)"
-                width={1070}
+                width={1040}
                 height={680}
                 type="image/jpg"
               />
