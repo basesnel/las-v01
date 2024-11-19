@@ -1,16 +1,53 @@
-import { useState } from "react";
-import { motion, useMotionValue } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, useMotionValue, useMotionValueEvent } from "framer-motion";
 import slider from "../../constants/slider";
 
 import styles from "./styles.module.css";
 
 const { slides, prev, next } = slider;
 
+const ONE_SECOND = 1000;
+const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
+
+const SPRING_OPTIONS = {
+  type: "spring",
+  mass: 3,
+  stiffness: 400,
+  damping: 50,
+};
 
 const Slider = () => {
   const [dragging, setDragging] = useState(false);
   const [imgIndex, setImgIndex] = useState(0);
+
+  const dragX = useMotionValue(0);
+  const dragXProgress = useMotionValue(0);
+
+  useMotionValueEvent(dragX, "change", (latest) => {
+    if (typeof latest === "number" && dragging) {
+      dragXProgress.set(latest);
+    } else {
+      dragXProgress.set(0);
+    }
+  });
+
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      const x = dragXProgress.get();
+
+      if (x === 0) {
+        setImgIndex((pv) => {
+          if (pv === slides.length - 1) {
+            return 0;
+          }
+          return pv + 1;
+        });
+      }
+    }, AUTO_DELAY);
+
+    return () => clearInterval(intervalRef);
+  }, []);
 
   const onDragStart = () => {
     setDragging(true);
@@ -28,20 +65,19 @@ const Slider = () => {
     }
   };
 
-  const dragX = useMotionValue(0);
-
   return (
     <div className={styles.slider}>
       <motion.div
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         animate={{ translateX: `-${imgIndex * 100}%` }}
+        transition={SPRING_OPTIONS}
         style={{ x: dragX }}
         onDragStart={onDragStart}
         onDragEnd={onDragEnd}
         className={styles.wrapper}
       >
-        <Slides />
+        <Slides imgIndex={imgIndex} />
       </motion.div>
       <div className={styles.buttons}>
         <button className={`${styles.button} ${styles.prev}`}>{prev.uk}</button>
@@ -52,12 +88,17 @@ const Slider = () => {
   );
 };
 
-const Slides = () => {
+const Slides = ({ imgIndex }) => {
   return (
     <>
       {slides.map((slide, i) => {
         return (
-          <div key={i} className={styles.slide}>
+          <motion.div
+            key={i}
+            animate={{ scale: imgIndex === i ? 1 : 0.5 }}
+            transition={SPRING_OPTIONS}
+            className={styles.slide}
+          >
             <picture>
               <source
                 srcSet={`${slide.dtp1xWBP} 1200w, ${slide.dtp2xWBP} 2400w, ${slide.dtp3xWBP} 3600w, ${slide.dtp2xWBP} 4800w`}
@@ -108,7 +149,7 @@ const Slides = () => {
                 className={styles.image}
               />
             </picture>
-          </div>
+          </motion.div>
         );
       })}
     </>
