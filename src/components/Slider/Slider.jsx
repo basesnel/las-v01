@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 const { slides, prev, next } = slider;
 
 const ONE_SECOND = 1000;
-const AUTO_DELAY = ONE_SECOND * 10;
+const AUTO_DELAY = ONE_SECOND * 20;
 const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {
@@ -84,6 +84,7 @@ const Slider = () => {
         <button className={`${styles.button} ${styles.next}`}>{next.uk}</button>
       </div>
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+      <GradientEdges />
     </div>
   );
 };
@@ -185,6 +186,15 @@ const Dots = ({ imgIndex, setImgIndex }) => {
         );
       })}
     </div>
+  );
+};
+
+const GradientEdges = () => {
+  return (
+    <>
+      <div className={styles.gradientLeftEdge} />
+      <div className={styles.gradientRightEdge} />
+    </>
   );
 };
 
