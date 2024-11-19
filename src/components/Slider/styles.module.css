@@ -112,6 +112,7 @@
 
 .dot {
   position: relative;
+  border: none;
   width: 18px;
   height: 14px;
   color: #9da4bd;

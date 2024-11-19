@@ -1,31 +1,44 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import slider from "../../constants/slider";
 
 import styles from "./styles.module.css";
 
 const { slides, prev, next } = slider;
 
+const DRAG_BUFFER = 50;
+
 const Slider = () => {
-  const [index] = useState(0);
+  const [dragging, setDragging] = useState(false);
+  const [imgIndex, setImgIndex] = useState(0);
 
-  const dots = [];
+  const onDragStart = () => {
+    setDragging(true);
+  };
 
-  for (let i = 0; i < slides.length; i++) {
-    dots.push(
-      <div
-        key={i}
-        className={i === index ? `${styles.dot} ${styles.active}` : styles.dot}
-      ></div>
-    );
-  }
+  const onDragEnd = () => {
+    setDragging(false);
+
+    const x = dragX.get();
+
+    if (x <= -DRAG_BUFFER && imgIndex < slides.length - 1) {
+      setImgIndex((pv) => pv + 1);
+    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
+      setImgIndex((pv) => pv - 1);
+    }
+  };
+
+  const dragX = useMotionValue(0);
 
   return (
     <div className={styles.slider}>
       <motion.div
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
-        animate={{ translateX: `-0%` }}
+        animate={{ translateX: `-${imgIndex * 100}%` }}
+        style={{ x: dragX }}
+        onDragStart={onDragStart}
+        onDragEnd={onDragEnd}
         className={styles.wrapper}
       >
         <Slides />
@@ -34,7 +47,7 @@ const Slider = () => {
         <button className={`${styles.button} ${styles.prev}`}>{prev.uk}</button>
         <button className={`${styles.button} ${styles.next}`}>{next.uk}</button>
       </div>
-      <div className={styles.dots}>{dots}</div>
+      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
     </div>
   );
 };
@@ -99,6 +112,38 @@ const Slides = () => {
         );
       })}
     </>
+  );
+};
+
+const Dots = ({ imgIndex, setImgIndex }) => {
+  const dots = [];
+
+  for (let i = 0; i < slides.length; i++) {
+    dots.push(
+      <button
+        key={i}
+        className={
+          i === imgIndex ? `${styles.dot} ${styles.active}` : styles.dot
+        }
+      />
+    );
+  }
+
+  // return <div className={styles.dots}>{dots}</div>;
+  return (
+    <div className={styles.dots}>
+      {slides.map((_, idx) => {
+        return (
+          <button
+            key={idx}
+            onClick={() => setImgIndex(idx)}
+            className={
+              idx === imgIndex ? `${styles.dot} ${styles.active}` : styles.dot
+            }
+          />
+        );
+      })}
+    </div>
   );
 };
 
