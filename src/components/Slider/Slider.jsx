@@ -20,19 +20,25 @@ const SPRING_OPTIONS = {
 const buttonPrev = {
   hover: {
     scale: 1.2,
+    x: -5,
+    y: -2,
+    color: "#f0f0f0",
     transition: {
       type: "spring",
       stiffness: 300,
     },
   },
   tap: {
-    scale: 0.8,
+    scale: 0.9,
   },
 };
 
 const buttonNext = {
   hover: {
     scale: 1.2,
+    x: 5,
+    y: -2,
+    color: "#f0f0f0",
     transition: {
       type: "spring",
       stiffness: 300,
