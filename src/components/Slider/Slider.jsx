@@ -45,7 +45,33 @@ const buttonNext = {
     },
   },
   tap: {
-    scale: 0.8,
+    scale: 0.9,
+  },
+};
+
+const buttonDots = {
+  hover: {
+    scale: 1.2,
+    x: -2,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+};
+
+const buttonDot = {
+  hover: {
+    scale: 1.4,
+    x: -4,
+    color: "#f0f0f0",
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+  tap: {
+    scale: 0.9,
   },
 };
 
@@ -220,10 +246,18 @@ const Controls = ({ imgIndex, setImgIndex }) => {
           {next.uk}
         </motion.button>
       </div>
-      <div className={styles.dots}>
+      <motion.div
+        variants={buttonDots}
+        whileHover="hover"
+        className={styles.dots}
+      >
         {slides.map((_, idx) => {
           return (
-            <button
+            <motion.button
+              variants={buttonDot}
+              whileHover="hover"
+              whileFocus="hover"
+              whileTap="tap"
               key={idx}
               onClick={() => setImgIndex(idx)}
               className={
@@ -232,7 +266,7 @@ const Controls = ({ imgIndex, setImgIndex }) => {
             />
           );
         })}
-      </div>
+      </motion.div>
     </>
   );
 };
