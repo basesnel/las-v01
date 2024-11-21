@@ -79,31 +79,7 @@ const Slider = () => {
       >
         <Slides imgIndex={imgIndex} />
       </motion.div>
-      <div className={styles.buttons}>
-        <button
-          className={`${styles.button} ${styles.prev}`}
-          onClick={() =>
-            setImgIndex((i) => {
-              if (i === 0) return slides.length - 1;
-              return i - 1;
-            })
-          }
-        >
-          {prev.uk}
-        </button>
-        <button
-          className={`${styles.button} ${styles.next}`}
-          onClick={() =>
-            setImgIndex((i) => {
-              if (i === slides.length - 1) return 0;
-              return i + 1;
-            })
-          }
-        >
-          {next.uk}
-        </button>
-      </div>
-      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+      <Controls imgIndex={imgIndex} setImgIndex={setImgIndex} />
       <GradientEdges />
     </div>
   );
@@ -177,21 +153,47 @@ const Slides = ({ imgIndex }) => {
   );
 };
 
-const Dots = ({ imgIndex, setImgIndex }) => {
+const Controls = ({ imgIndex, setImgIndex }) => {
   return (
-    <div className={styles.dots}>
-      {slides.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setImgIndex(idx)}
-            className={
-              idx === imgIndex ? `${styles.dot} ${styles.active}` : styles.dot
-            }
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className={styles.buttons}>
+        <button
+          className={`${styles.button} ${styles.prev}`}
+          onClick={() =>
+            setImgIndex((i) => {
+              if (i === 0) return slides.length - 1;
+              return i - 1;
+            })
+          }
+        >
+          {prev.uk}
+        </button>
+        <button
+          className={`${styles.button} ${styles.next}`}
+          onClick={() =>
+            setImgIndex((i) => {
+              if (i === slides.length - 1) return 0;
+              return i + 1;
+            })
+          }
+        >
+          {next.uk}
+        </button>
+      </div>
+      <div className={styles.dots}>
+        {slides.map((_, idx) => {
+          return (
+            <button
+              key={idx}
+              onClick={() => setImgIndex(idx)}
+              className={
+                idx === imgIndex ? `${styles.dot} ${styles.active}` : styles.dot
+              }
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
