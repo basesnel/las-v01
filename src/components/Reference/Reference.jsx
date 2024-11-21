@@ -53,7 +53,6 @@ const Reference = (props) => {
     <motion.a
       variants={link}
       initial="initial"
-      animate="animate"
       whileHover="hover"
       whileFocus="hover"
       whileTap="tap"

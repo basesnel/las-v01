@@ -17,6 +17,32 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
+const buttonPrev = {
+  hover: {
+    scale: 1.2,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+  tap: {
+    scale: 0.8,
+  },
+};
+
+const buttonNext = {
+  hover: {
+    scale: 1.2,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+  tap: {
+    scale: 0.8,
+  },
+};
+
 const Slider = () => {
   const [dragging, setDragging] = useState(false);
   const [imgIndex, setImgIndex] = useState(0);
@@ -157,7 +183,11 @@ const Controls = ({ imgIndex, setImgIndex }) => {
   return (
     <>
       <div className={styles.buttons}>
-        <button
+        <motion.button
+          variants={buttonPrev}
+          whileHover="hover"
+          whileFocus="hover"
+          whileTap="tap"
           className={`${styles.button} ${styles.prev}`}
           onClick={() =>
             setImgIndex((i) => {
@@ -167,8 +197,12 @@ const Controls = ({ imgIndex, setImgIndex }) => {
           }
         >
           {prev.uk}
-        </button>
-        <button
+        </motion.button>
+        <motion.button
+          variants={buttonNext}
+          whileHover="hover"
+          whileFocus="hover"
+          whileTap="tap"
           className={`${styles.button} ${styles.next}`}
           onClick={() =>
             setImgIndex((i) => {
@@ -178,7 +212,7 @@ const Controls = ({ imgIndex, setImgIndex }) => {
           }
         >
           {next.uk}
-        </button>
+        </motion.button>
       </div>
       <div className={styles.dots}>
         {slides.map((_, idx) => {
