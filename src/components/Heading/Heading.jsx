@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 
 const firstHeading = {
-  hidden: { scale: 0, opacity: 0 },
+  hidden: { x: 100, scale: 0, opacity: 0 },
   visible: {
+    x: 0,
     scale: 1,
     opacity: 1,
-    transition: { delay: 2, duration: 0.5, type: "tween" },
+    transition: { delay: 0.6, type: "spring", stiffness: 300 },
   },
 };
 

@@ -8,7 +8,7 @@ const variants = {
     x: 0,
     opacity: 1,
     scaleX: 1,
-    transition: { delay: 0.5, type: "spring", stiffness: 120 },
+    transition: { delay: 0.3, type: "spring", stiffness: 300 },
   },
 };
 
