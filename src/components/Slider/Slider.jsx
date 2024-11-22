@@ -150,7 +150,10 @@ const Slides = ({ imgIndex }) => {
         return (
           <motion.div
             key={i}
-            animate={{ scale: imgIndex === i ? 1 : 0.5 }}
+            animate={{
+              opacity: imgIndex === i ? 0.8 : 1,
+              scale: imgIndex === i ? 1 : 0.5,
+            }}
             transition={SPRING_OPTIONS}
             className={styles.slide}
           >
