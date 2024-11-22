@@ -246,11 +246,7 @@ const Controls = ({ imgIndex, setImgIndex }) => {
           {next.uk}
         </motion.button>
       </div>
-      <motion.div
-        variants={buttonDots}
-        whileHover="hover"
-        className={styles.dots}
-      >
+      <div className={styles.dots}>
         {slides.map((_, idx) => {
           return (
             <motion.button
@@ -266,7 +262,7 @@ const Controls = ({ imgIndex, setImgIndex }) => {
             />
           );
         })}
-      </motion.div>
+      </div>
     </>
   );
 };
