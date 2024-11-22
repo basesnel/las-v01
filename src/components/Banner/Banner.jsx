@@ -1,19 +1,51 @@
+import { motion } from "framer-motion";
+
 import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Data from "../Data/Data";
-import Link from "../Link/Link";
+import Reference from "../Reference/Reference";
+import Slider from "../Slider/Slider";
+
+import banner from "../../constants/banner";
 import socNets from "../../constants/socials";
 
-import Slider from "../Slider/Slider";
-import banner from "../../constants/banner";
-
 import styles from "./styles.module.css";
-import Reference from "../Reference/Reference";
 
 const Banner = () => {
   const { subTitle, text, link, data } = banner;
+
+  const socList = {
+    hidden: { opacity: 0, scale: 0.8, rotate: -180 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: -90,
+      transition: {
+        delay: 2.5,
+        type: "spring",
+        stiffness: 80,
+      },
+    },
+  };
+
+  const socItem = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const socLink = {
+    hover: {
+      scale: 1.3,
+      color: "#f67307",
+      x: 13,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+  };
 
   return (
     <Section indexSection={0} sectionVariant="banner" containerVariant="banner">
@@ -31,7 +63,14 @@ const Banner = () => {
         <Slider />
       </div>
       <aside className={styles.aside}>
-        <ul className={styles.socNetList}>
+        <motion.ul
+          className={styles.socNetList}
+          variants={socList}
+          style={{ originX: 0, originY: 0, x: 138 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {socNets.map(({ text, src }, i) => {
             return (
               <li
@@ -42,13 +81,20 @@ const Banner = () => {
                     : `${styles.socNetItem}`
                 }
               >
-                <Link src={src} className={styles.socNetLink}>
+                <motion.a
+                  href={src}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={styles.socNetLink}
+                  variants={socLink}
+                  whileHover="hover"
+                >
                   {text}
-                </Link>
+                </motion.a>
               </li>
             );
           })}
-        </ul>
+        </motion.ul>
       </aside>
     </Section>
   );

@@ -198,7 +198,8 @@
   margin-bottom: 10px;
   flex-wrap: nowrap;
   margin-bottom: 0;
-  transform: rotate(-90deg) translateX(148px);
+  /* transform: rotate(-90deg) translateX(148px); */
+  /* transform-origin: bottom center; */
 }
 
 .socNetItem {
@@ -211,8 +212,8 @@
 
 .socNetLink {
   text-decoration: none;
+  display: inline-block;
   color: var(--neutral);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .itemDecor {
