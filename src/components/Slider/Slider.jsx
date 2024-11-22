@@ -17,6 +17,17 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
+const buttons = {
+  hidden: { x: 90, y: 90, opacity: 0, scale: 0 },
+  visible: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: { delay: 2.2, type: "spring", stiffness: 300 },
+  },
+};
+
 const buttonPrev = {
   hover: {
     scale: 1.2,
@@ -50,13 +61,12 @@ const buttonNext = {
 };
 
 const buttonDots = {
-  hover: {
-    scale: 1.2,
-    x: -2,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-    },
+  hidden: { y: 100, opacity: 0, scaleY: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    scaleY: 1,
+    transition: { delay: 2, type: "spring", stiffness: 300 },
   },
 };
 
@@ -216,7 +226,13 @@ const Slides = ({ imgIndex }) => {
 const Controls = ({ imgIndex, setImgIndex }) => {
   return (
     <>
-      <div className={styles.buttons}>
+      <motion.div
+        variants={buttons}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.buttons}
+      >
         <motion.button
           variants={buttonPrev}
           whileHover="hover"
@@ -247,8 +263,14 @@ const Controls = ({ imgIndex, setImgIndex }) => {
         >
           {next.uk}
         </motion.button>
-      </div>
-      <div className={styles.dots}>
+      </motion.div>
+      <motion.div
+        variants={buttonDots}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className={styles.dots}
+      >
         {slides.map((_, idx) => {
           return (
             <motion.button
@@ -264,7 +286,7 @@ const Controls = ({ imgIndex, setImgIndex }) => {
             />
           );
         })}
-      </div>
+      </motion.div>
     </>
   );
 };
