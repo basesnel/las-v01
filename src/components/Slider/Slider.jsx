@@ -137,7 +137,6 @@ const Slider = () => {
       >
         <Slides imgIndex={imgIndex} />
       </motion.div>
-      <GradientEdges />
       <Controls imgIndex={imgIndex} setImgIndex={setImgIndex} />
     </div>
   );
@@ -268,10 +267,6 @@ const Controls = ({ imgIndex, setImgIndex }) => {
       </div>
     </>
   );
-};
-
-const GradientEdges = () => {
-  return <div className={styles.gradientEdges} />;
 };
 
 export default Slider;
