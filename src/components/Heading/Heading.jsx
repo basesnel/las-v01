@@ -8,7 +8,7 @@ const firstHeading = {
     x: 0,
     scale: 1,
     opacity: 1,
-    transition: { delay: 0.6, type: "spring", stiffness: 300 },
+    transition: { delay: 0.8, type: "spring", stiffness: 300 },
   },
 };
 
