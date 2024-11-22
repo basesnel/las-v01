@@ -6,7 +6,7 @@ const Data = ({ mode, children }) => {
   const modification = mode ? `${styles[mode]}` : "";
 
   const variants = {
-    hidden: { x: -400, opacity: 0, scaleX: 0 },
+    hidden: { x: -100, opacity: 0, scaleX: 0 },
     visible: {
       x: 0,
       opacity: 1,
