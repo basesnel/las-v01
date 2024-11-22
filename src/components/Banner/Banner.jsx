@@ -3,7 +3,9 @@ import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Data from "../Data/Data";
-import Socnets from "../Socnets/Socnets";
+import Link from "../Link/Link";
+import socNets from "../../constants/socials";
+
 import Slider from "../Slider/Slider";
 import banner from "../../constants/banner";
 
@@ -29,7 +31,24 @@ const Banner = () => {
         <Slider />
       </div>
       <aside className={styles.aside}>
-        <Socnets variant="aside" />
+        <ul className={styles.socNetList}>
+          {socNets.map(({ text, src }, i) => {
+            return (
+              <li
+                key={i}
+                className={
+                  i === 0
+                    ? `${styles.socNetItem} ${styles.itemDecor}`
+                    : `${styles.socNetItem}`
+                }
+              >
+                <Link src={src} className={styles.socNetLink}>
+                  {text}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </aside>
     </Section>
   );

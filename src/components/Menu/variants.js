@@ -89,6 +89,7 @@ const socLink = {
   hover: {
     scale: 1.3,
     color: "#f67307",
+    x: 13,
     transition: {
       type: "spring",
       stiffness: 300,

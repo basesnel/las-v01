@@ -11,7 +11,7 @@ const Data = ({ mode, children }) => {
       x: 0,
       opacity: 1,
       scaleX: 1,
-      transition: { delay: 0.4, type: "spring", stiffness: 300 },
+      transition: { delay: 2.4, type: "spring", stiffness: 300 },
     },
   };
 
