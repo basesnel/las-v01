@@ -1,16 +1,8 @@
 import { motion } from "framer-motion";
-import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
-const Togglemenu = ({
-  variant,
-  handleClick,
-  children,
-  icon,
-  iconStyle,
-  ...delegated
-}) => {
+const Togglemenu = ({ variant, handleClick, children, ...delegated }) => {
   const variation = variant ? `${styles[variant]}` : "";
 
   const toggleVariants = {
@@ -36,7 +28,7 @@ const Togglemenu = ({
     },
   };
 
-  const iconVariants = {
+  const icon = {
     hover: {
       fill: "#f67307",
       transition: {
@@ -57,16 +49,7 @@ const Togglemenu = ({
       }}
       {...delegated}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={40}
-        height={40}
-        focusable="false"
-        aria-hidden={true}
-        className={iconStyle}
-      >
-        <use href={`${icons}#${icon}`}></use>
-      </svg>
+      {children}
     </motion.button>
   );
 };
