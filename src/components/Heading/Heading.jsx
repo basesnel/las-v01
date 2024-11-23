@@ -17,7 +17,7 @@ const secondHeading = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { delay: 1.5, type: "spring", stiffness: 120 },
+    transition: { delay: 0.8, type: "spring", stiffness: 300 },
   },
 };
 
