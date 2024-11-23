@@ -22,19 +22,24 @@ const position = {
   hidden: {
     opacity: 0,
     x: "100vw",
+    skewX: 45,
   },
   visible: {
     opacity: 1,
     x: 0,
+    skewX: 0,
     transition: {
-      duration: 0.5,
+      type: "spring",
+      stiffness: 300,
     },
   },
   exit: {
     opacity: 0,
     x: "100vw",
+    skewX: -6,
     transition: {
-      duration: 0.5,
+      type: "spring",
+      stiffness: 300,
     },
   },
 };
