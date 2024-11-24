@@ -1,7 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import icons from "../../assets/icons.svg";
-
-import { useState } from "react";
 
 import styles from "./styles.module.css";
 
