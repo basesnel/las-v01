@@ -1,15 +1,6 @@
 .logo {
   padding: 10px 0;
-  font-weight: 700;
-  color: var(--light);
-  text-decoration: none;
-  text-transform: uppercase;
 }
-/*
-.logo:hover,
-.logo:focus {
-  color: var(--accent-highdark);
-} */
 
 .image {
   display: block;
