@@ -19,20 +19,19 @@ const Togglemenu = ({
       scale: 1,
       opacity: 1,
       rotate: 0,
-      transition: { type: "spring", stiffness: 300 },
+      transition: { type: "spring", stiffness: 120 },
     },
     hover: {
       scale: 1.2,
-      backgroundColor: "#f67307",
+      color: "#f67307",
       rotate: 180,
       transition: {
         type: "spring",
-        stiffness: 300,
+        stiffness: 120,
       },
     },
     tap: {
       scale: 0.8,
-      rotate: 0,
     },
   };
 
@@ -48,13 +47,15 @@ const Togglemenu = ({
 
   return (
     <motion.button
+      variants={toggleVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      whileFocus="hover"
+      whileTap="tap"
       className={`${styles.openMenu} ${variation}`}
       onClick={handleClick}
       type="button"
-      whileHover={{
-        scale: 1.1,
-        color: "#f67307",
-      }}
       {...delegated}
     >
       <svg
