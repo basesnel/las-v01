@@ -3,15 +3,9 @@ import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
-const Togglemenu = ({
-  variant,
-  handleClick,
-  children,
-  icon,
-  iconStyle,
-  ...delegated
-}) => {
-  const variation = variant ? `${styles[variant]}` : "";
+const Togglemenu = ({ variant, handleClick, icon, ...delegated }) => {
+  const buttonMode = variant ? `${styles.closeMenu}` : "";
+  const iconMode = variant ? `${styles.closeIcon}` : "";
 
   const toggleVariants = {
     hidden: { scale: 0, opacity: 0, rotate: -180 },
@@ -19,7 +13,7 @@ const Togglemenu = ({
       scale: 1,
       opacity: 1,
       rotate: 0,
-      transition: { type: "spring", stiffness: 120 },
+      transition: { delay: 0.4, type: "spring", stiffness: 120 },
     },
     hover: {
       scale: 1.2,
@@ -35,16 +29,6 @@ const Togglemenu = ({
     },
   };
 
-  const iconVariants = {
-    hover: {
-      fill: "#f67307",
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
-  };
-
   return (
     <motion.button
       variants={toggleVariants}
@@ -53,9 +37,8 @@ const Togglemenu = ({
       whileHover="hover"
       whileFocus="hover"
       whileTap="tap"
-      className={`${styles.openMenu} ${variation}`}
+      className={`${styles.openMenu} ${buttonMode}`}
       onClick={handleClick}
-      type="button"
       {...delegated}
     >
       <svg
@@ -64,7 +47,7 @@ const Togglemenu = ({
         height={40}
         focusable="false"
         aria-hidden={true}
-        className={iconStyle}
+        className={`${styles.openIcon} ${iconMode}`}
       >
         <use href={`${icons}#${icon}`}></use>
       </svg>

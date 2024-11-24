@@ -25,3 +25,15 @@
   padding: 0;
   color: var(--neutral);
 }
+
+.openIcon {
+  width: 28px;
+  height: 28px;
+
+  fill: currentColor;
+}
+
+.closeIcon {
+  width: 40px;
+  height: 40px;
+}

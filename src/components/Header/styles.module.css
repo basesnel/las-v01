@@ -66,10 +66,3 @@
   color: var(--light);
   text-transform: capitalize;
 }
-
-.icon {
-  width: 28px;
-  height: 28px;
-
-  fill: currentColor;
-}

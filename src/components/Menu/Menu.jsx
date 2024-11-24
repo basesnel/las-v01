@@ -57,26 +57,12 @@ const Menu = ({ showMenu, setShowMenu }) => {
                 onClick={(e) => e.stopPropagation()}
                 data-menu
               >
-                {/* <Togglemenu
-                  variant="closeMenu"
-                  onClick={closeMenu}
-                  type="button"
-                  aria-label="Close the mobile menu"
-                >
-                  <Icon
-                    icon="menu-close"
-                    width={40}
-                    height={40}
-                    className={styles.icon}
-                  />
-                </Togglemenu> */}
                 <Togglemenu
                   variant="closeMenu"
                   onClick={closeMenu}
                   type="button"
                   aria-label="Close the mobile menu"
                   icon="menu-close"
-                  iconStyle={styles.icon}
                 />
                 <nav>
                   <motion.ul

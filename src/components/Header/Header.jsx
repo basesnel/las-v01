@@ -31,20 +31,11 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        {/* <Togglemenu onClick={openMenu} aria-label="Open the mobile menu">
-          <Icon
-            icon="icon-menu"
-            width={28}
-            height={28}
-            className={styles.icon}
-          />
-        </Togglemenu> */}
         <Togglemenu
           onClick={openMenu}
           type="button"
           aria-label="Open the mobile menu"
           icon="icon-menu"
-          iconStyle={styles.icon}
         />
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
