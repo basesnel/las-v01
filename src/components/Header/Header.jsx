@@ -71,13 +71,7 @@ const Header = () => {
       <Container variant="header">
         <Logo />
         <nav className={styles.nav}>
-          <motion.ul
-            className={styles.list}
-            variants={list}
-            initial="hidden"
-            animate="visible"
-          >
-            {/* {sections.map(({ id, section }) => (
+          {/* {sections.map(({ id, section }) => (
               <motion.li key={id} className={styles.item} variants={item}>
                 <motion.a
                   href={`#${id}`}
@@ -89,8 +83,7 @@ const Header = () => {
                 </motion.a>
               </motion.li>
             ))} */}
-            {isDomLoaded ? <LoadedParts /> : <span>nav is loading</span>}
-          </motion.ul>
+          {isDomLoaded ? <LoadedParts /> : <span>nav is loading</span>}
         </nav>
         <Togglemenu
           onClick={openMenu}
@@ -111,7 +104,7 @@ const LoadedParts = () => {
     const part = { id: i, name: section.id, label: section.ariaLabel };
     parts.push(part);
   });
-  console.log("window loaded");
+  // console.log("window loaded");
 
   {
     /* {sections.map(({ id, section }) => (
@@ -129,11 +122,17 @@ const LoadedParts = () => {
   }
 
   return (
-    <>
-      {parts.map(({ id, label }) => (
+    <motion.ul
+      className={styles.list}
+      variants={list}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {parts.map(({ id, name, label }) => (
         <motion.li key={id} className={styles.item} variants={item}>
           <motion.a
-            href={`#${id}`}
+            href={`#${name}`}
             className={styles.link}
             variants={link}
             whileHover="hover"
@@ -142,7 +141,7 @@ const LoadedParts = () => {
           </motion.a>
         </motion.li>
       ))}
-    </>
+    </motion.ul>
   );
 };
 
