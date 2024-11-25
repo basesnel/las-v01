@@ -1,8 +1,11 @@
-import useCloseMenu from "../../hooks/useCloseMenu";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Togglemenu from "../Togglemenu/Togglemenu";
+
 import socNets from "../../constants/socials";
+
+import useCloseMenu from "../../hooks/useCloseMenu";
+
 import {
   backdrop,
   position,
