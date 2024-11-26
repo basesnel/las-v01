@@ -12,6 +12,7 @@ const listVariants = {
   visible: {
     scale: 1,
     transition: {
+      duration: 1,
       when: "beforeChildren",
       staggerChildren: 1,
       staggerDirection: -1,
@@ -38,7 +39,7 @@ const Services = () => {
             className={styles.innerList}
             variants={listVariants}
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
           >
             {list.map(({ id, service, price }) => {
               if (id < 4)
@@ -48,7 +49,7 @@ const Services = () => {
                     className={styles.innerItem}
                     variants={itemVariants}
                     initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
-                    whileInView="visible"
+                    animate="visible"
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
@@ -62,7 +63,7 @@ const Services = () => {
             className={styles.innerList}
             variants={listVariants}
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
           >
             {list.map(({ id, service, price }) => {
               if (id >= 4)
@@ -72,7 +73,7 @@ const Services = () => {
                     className={styles.innerItem}
                     variants={itemVariants}
                     initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
-                    whileInView="visible"
+                    animate="visible"
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
