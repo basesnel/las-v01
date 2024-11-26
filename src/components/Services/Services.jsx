@@ -13,7 +13,7 @@ const listVariants = {
     scale: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 1,
       staggerDirection: -1,
     },
   },
@@ -32,15 +32,14 @@ const Services = () => {
     <Section indexSection={2} colorMode="dark" sectionVariant="services">
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} mode="service" title={title.uk} />
-      {/* <AnimatePresence mode="wait"> */}
-      <motion.ul
-        className={styles.list}
-        variants={listVariants}
-        initial="hidden"
-        whileInView="visible"
-      >
+      <ul className={styles.list}>
         <li className={styles.item}>
-          <ul className={styles.innerList}>
+          <motion.ul
+            className={styles.innerList}
+            variants={listVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             {list.map(({ id, service, price }) => {
               if (id < 4)
                 return (
@@ -56,10 +55,15 @@ const Services = () => {
                   </motion.li>
                 );
             })}
-          </ul>
+          </motion.ul>
         </li>
         <li className={styles.item}>
-          <ul className={styles.innerList}>
+          <motion.ul
+            className={styles.innerList}
+            variants={listVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             {list.map(({ id, service, price }) => {
               if (id >= 4)
                 return (
@@ -75,10 +79,9 @@ const Services = () => {
                   </motion.li>
                 );
             })}
-          </ul>
+          </motion.ul>
         </li>
-      </motion.ul>
-      {/* </AnimatePresence> */}
+      </ul>
       <Button type="button" caption={reference.uk} />
     </Section>
   );
