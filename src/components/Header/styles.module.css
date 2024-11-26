@@ -66,6 +66,13 @@
   text-transform: capitalize;
 }
 
+.loaderContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .loader {
   width: 0;
   height: 3px;

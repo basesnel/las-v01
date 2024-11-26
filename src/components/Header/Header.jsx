@@ -33,13 +33,17 @@ const Header = () => {
           {isDomLoaded ? (
             <LoadedParts />
           ) : (
-            <motion.div
-              className={styles.loader}
+            <div
+              className={styles.loaderContainer}
               aria-label="loader"
               aria-hidden={true}
-              animate={{ width: "100%" }}
-              transition={{ ease: "linear", duration: 2, repeat: Infinity }}
-            />
+            >
+              <motion.div
+                className={styles.loader}
+                animate={{ width: "100%" }}
+                transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+              />
+            </div>
           )}
         </nav>
         {isDomLoaded ? (
