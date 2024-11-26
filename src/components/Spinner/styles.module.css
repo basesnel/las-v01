@@ -1,0 +1,9 @@
+.spinner {
+  fill: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+  .spinner {
+    display: none;
+  }
+}

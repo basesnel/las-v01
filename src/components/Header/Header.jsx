@@ -4,6 +4,7 @@ import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Menu from "../Menu/Menu";
 import Logo from "../Logo/Logo";
+import Spinner from "../Spinner/Spinner";
 
 import useOnloadEffect from "../../hooks/useOnloadEffect";
 
@@ -31,12 +32,17 @@ const Header = () => {
         <nav className={styles.nav}>
           {isDomLoaded ? <LoadedParts /> : <span>nav is loading</span>}
         </nav>
-        <Togglemenu
-          onClick={openMenu}
-          type="button"
-          aria-label="Open the mobile menu"
-          icon="icon-menu"
-        />
+        {isDomLoaded ? (
+          <Togglemenu
+            onClick={openMenu}
+            type="button"
+            aria-label="Open the mobile menu"
+            icon="icon-menu"
+          />
+        ) : (
+          <Spinner />
+        )}
+
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
     </header>
