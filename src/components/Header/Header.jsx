@@ -30,7 +30,17 @@ const Header = () => {
       <Container variant="header">
         <Logo />
         <nav className={styles.nav}>
-          {isDomLoaded ? <LoadedParts /> : <span>nav is loading</span>}
+          {isDomLoaded ? (
+            <LoadedParts />
+          ) : (
+            <motion.div
+              className={styles.loader}
+              aria-label="loader"
+              aria-hidden={true}
+              animate={{ width: "100%" }}
+              transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+            />
+          )}
         </nav>
         {isDomLoaded ? (
           <Togglemenu
