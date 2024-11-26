@@ -7,6 +7,8 @@ import Logo from "../Logo/Logo";
 
 import useOnloadEffect from "../../hooks/useOnloadEffect";
 
+import loadedParts from "../../helpers/loadedParts";
+
 import styles from "./styles.module.css";
 
 import { list, item, link } from "./variants";
@@ -15,7 +17,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
 
-  useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 1000));
+  useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 1600));
 
   const openMenu = () => {
     setShowMenu(true);
@@ -42,12 +44,7 @@ const Header = () => {
 };
 
 const LoadedParts = () => {
-  const sections = document.querySelectorAll("section[id]");
-  const parts = [];
-  sections.forEach((section, i) => {
-    const part = { id: i, name: section.id, label: section.ariaLabel };
-    parts.push(part);
-  });
+  const parts = loadedParts();
 
   return (
     <motion.ul

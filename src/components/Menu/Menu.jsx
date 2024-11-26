@@ -6,6 +6,8 @@ import socNets from "../../constants/socials";
 
 import useCloseMenu from "../../hooks/useCloseMenu";
 
+import loadedParts from "../../helpers/loadedParts";
+
 import {
   backdrop,
   position,
@@ -20,13 +22,7 @@ import {
 import styles from "./styles.module.css";
 
 const Menu = ({ showMenu, setShowMenu }) => {
-  const sections = document.querySelectorAll("section[id]");
-
-  const parts = [];
-  sections.forEach((section, i) => {
-    const part = { id: i, name: section.id, label: section.ariaLabel };
-    parts.push(part);
-  });
+  const parts = loadedParts();
 
   const closeMenu = () => {
     setShowMenu(false);
