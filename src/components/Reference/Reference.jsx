@@ -6,9 +6,10 @@ import icons from "../../assets/icons.svg";
 import styles from "./styles.module.css";
 
 const Reference = (props) => {
+  const { caption, label, src, mode, part } = props;
+
   const [isHover, setIsHover] = useState(false);
 
-  const { caption, label, src, mode, part } = props;
   const modify = `${styles.reference} ${styles[part]} ${styles[mode]}`;
 
   const control = useAnimation();
