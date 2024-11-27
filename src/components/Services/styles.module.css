@@ -50,7 +50,7 @@
     padding: 0;
   }
 
-  .item:nth-child(odd) {
+  .item:nth-child(odd) .innerList {
     background-image: linear-gradient(
       180deg,
       rgba(24, 24, 24, 0.8) 0%,
@@ -58,7 +58,7 @@
     );
   }
 
-  .item:nth-child(even) {
+  .item:nth-child(even) .innerList {
     background-image: linear-gradient(
       180deg,
       rgba(9, 9, 9, 0.8) 0%,

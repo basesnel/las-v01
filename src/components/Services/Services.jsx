@@ -14,15 +14,16 @@ const listVariants = {
     transition: {
       duration: 1,
       when: "beforeChildren",
-      staggerChildren: 1,
+      staggerChildren: 0.2,
       staggerDirection: -1,
     },
   },
 };
 
 const itemVariants = {
-  hiddenLeft: { opacity: 0, x: -100 },
-  hiddenRight: { opacity: 0, x: 100 },
+  // hiddenLeft: { opacity: 0, x: -100 },
+  // hiddenRight: { opacity: 0, x: 100 },
+  hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0, transition: { duration: 1 } },
 };
 
@@ -48,8 +49,8 @@ const Services = () => {
                     key={id}
                     className={styles.innerItem}
                     variants={itemVariants}
-                    initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
-                    animate="visible"
+                    // initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
+                    // animate="visible"
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
@@ -72,8 +73,8 @@ const Services = () => {
                     key={id}
                     className={styles.innerItem}
                     variants={itemVariants}
-                    initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
-                    animate="visible"
+                    // initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
+                    // animate="visible"
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
