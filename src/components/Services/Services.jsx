@@ -7,40 +7,7 @@ import services from "../../constants/services";
 import styles from "./styles.module.css";
 import Button from "../Button/Button";
 
-const outerList = {
-  hidden: { scale: 0 },
-  visible: {
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
-  },
-};
-
-const innerList = {
-  hidden: { scale: 0 },
-  visible: {
-    scale: 1,
-    transition: {
-      delay: 0.8,
-      type: "spring",
-      stiffness: 100,
-    },
-  },
-};
-
-const itemVariants = {
-  hiddenLeft: { scale: 0.5, opacity: 0, x: -200 },
-  hiddenRight: { scale: 0.5, opacity: 0, x: 200 },
-  // hidden: { opacity: 0, x: -100 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    x: 0,
-    // transition: { delay: 1.3, type: "spring", stiffness: 100 },
-  },
-};
+import { outerList, innerList, innerItem } from "./variants";
 
 const Services = () => {
   const { subTitle, title, reference, list } = services;
@@ -54,6 +21,7 @@ const Services = () => {
         variants={outerList}
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
       >
         <li className={styles.item}>
           <motion.ul
@@ -61,6 +29,7 @@ const Services = () => {
             variants={innerList}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             {list.map(({ id, service, price }) => {
               if (id < 4)
@@ -68,7 +37,7 @@ const Services = () => {
                   <motion.li
                     key={id}
                     className={styles.innerItem}
-                    variants={itemVariants}
+                    variants={innerItem}
                     initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
                     whileInView="visible"
                     transition={{
@@ -76,6 +45,7 @@ const Services = () => {
                       type: "spring",
                       stiffness: 100,
                     }}
+                    viewport={{ once: true }}
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
@@ -90,6 +60,7 @@ const Services = () => {
             variants={innerList}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             {list.map(({ id, service, price }) => {
               if (id >= 4)
@@ -97,7 +68,7 @@ const Services = () => {
                   <motion.li
                     key={id}
                     className={styles.innerItem}
-                    variants={itemVariants}
+                    variants={innerItem}
                     initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
                     whileInView="visible"
                     transition={{
@@ -105,6 +76,7 @@ const Services = () => {
                       type: "spring",
                       stiffness: 100,
                     }}
+                    viewport={{ once: true }}
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
