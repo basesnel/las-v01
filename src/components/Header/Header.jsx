@@ -6,7 +6,7 @@ import Menu from "../Menu/Menu";
 import Logo from "../Logo/Logo";
 import Spinner from "../Spinner/Spinner";
 
-import useOnloadEffect from "../../hooks/useOnloadEffect";
+// import useOnloadEffect from "../../hooks/useOnloadEffect";
 
 import loadedParts from "../../helpers/loadedParts";
 
@@ -18,11 +18,11 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
 
-  useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 1600));
-  // useEffect(() => {
-  //   setIsDomLoaded(true);
-  //   console.log("page is loaded", isDomLoaded);
-  // }, []);
+  // useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 1600));
+  useEffect(() => {
+    setTimeout(() => setIsDomLoaded(true), 1600);
+    console.log("page is loaded:", isDomLoaded);
+  }, []);
 
   const openMenu = () => {
     setShowMenu(true);
