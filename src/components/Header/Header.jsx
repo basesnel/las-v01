@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
@@ -19,6 +19,10 @@ const Header = () => {
   const [isDomLoaded, setIsDomLoaded] = useState(false);
 
   useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 1600));
+  // useEffect(() => {
+  //   setIsDomLoaded(true);
+  //   console.log("page is loaded", isDomLoaded);
+  // }, []);
 
   const openMenu = () => {
     setShowMenu(true);
