@@ -22,8 +22,8 @@ const Features = () => {
   const statItem = {
     hiddenFirst: { scale: 0.5, opacity: 0, x: -50, y: -50 },
     hiddenSecond: { scale: 0.5, opacity: 0, x: 50, y: -50 },
-    hiddenThird: { scale: 0.5, opacity: 0, x: 50, y: 50 },
-    hiddenFourth: { scale: 0.5, opacity: 0, x: -50, y: 50 },
+    hiddenThird: { scale: 0.5, opacity: 0, x: -50, y: 50 },
+    hiddenFourth: { scale: 0.5, opacity: 0, x: 50, y: 50 },
     visible: {
       scale: 1,
       opacity: 1,
@@ -78,11 +78,11 @@ const Features = () => {
               initial={switchStat(i)}
               whileInView="visible"
               transition={{
-                delay: i * 0.5,
+                delay: i * 0.2,
                 type: "spring",
                 stiffness: 100,
               }}
-              viewport={{ once: true }}
+              // viewport={{ once: true }}
             >
               <div className={styles.benefit}>
                 <p className={styles.amount}>{amount}</p>
