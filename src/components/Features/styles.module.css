@@ -75,11 +75,11 @@
   }
 }
 
-@media screen and (min-width: 408px) {
+/* @media screen and (min-width: 408px) {
   .item:nth-child(odd) {
     transform: translateY(-36px);
   }
-}
+} */
 
 @media screen and (min-width: 480px) {
   .item {

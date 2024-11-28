@@ -24,12 +24,8 @@ const Features = () => {
     hiddenSecond: { scale: 0.5, opacity: 0, x: 50, y: -50 },
     hiddenThird: { scale: 0.5, opacity: 0, x: -50, y: 50 },
     hiddenFourth: { scale: 0.5, opacity: 0, x: 50, y: 50 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      x: 0,
-      y: 0,
-    },
+    oddVisible: { scale: 1, opacity: 1, x: 0, y: -36 },
+    evenVisible: { scale: 1, opacity: 1, x: 0, y: 0 },
   };
 
   const switchStat = (i) => {
@@ -76,7 +72,7 @@ const Features = () => {
               className={styles.item}
               variants={statItem}
               initial={switchStat(i)}
-              whileInView="visible"
+              whileInView={i % 2 ? "evenVisible" : "oddVisible"}
               transition={{
                 delay: i * 0.2,
                 type: "spring",
