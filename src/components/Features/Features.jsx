@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
@@ -17,6 +18,38 @@ const Features = () => {
     list,
     stats,
   } = features;
+
+  const statItem = {
+    hiddenFirst: { scale: 0.5, opacity: 0, x: -50, y: -50 },
+    hiddenSecond: { scale: 0.5, opacity: 0, x: 50, y: -50 },
+    hiddenThird: { scale: 0.5, opacity: 0, x: 50, y: 50 },
+    hiddenFourth: { scale: 0.5, opacity: 0, x: -50, y: 50 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      x: 0,
+      y: 0,
+    },
+  };
+
+  const switchStat = (i) => {
+    switch (i % 4) {
+      case 0:
+        return "hiddenFirst";
+
+      case 1:
+        return "hiddenSecond";
+
+      case 2:
+        return "hiddenThird";
+
+      case 3:
+        return "hiddenFourth";
+
+      default:
+        return;
+    }
+  };
 
   return (
     <Section indexSection={3} containerVariant="features">
@@ -38,12 +71,24 @@ const Features = () => {
       <ul className={styles.list}>
         {stats.map(({ amount, text }, i) => {
           return (
-            <li key={i} className={styles.item}>
+            <motion.li
+              key={i}
+              className={styles.item}
+              variants={statItem}
+              initial={switchStat(i)}
+              whileInView="visible"
+              transition={{
+                delay: 1.3 + i * 0.5,
+                type: "spring",
+                stiffness: 100,
+              }}
+              viewport={{ once: true }}
+            >
               <div className={styles.benefit}>
                 <p className={styles.amount}>{amount}</p>
                 <p className={styles.feature}>{text.uk}</p>
               </div>
-            </li>
+            </motion.li>
           );
         })}
       </ul>
