@@ -78,7 +78,7 @@ const Features = () => {
               initial={switchStat(i)}
               whileInView="visible"
               transition={{
-                delay: 1.3 + i * 0.5,
+                delay: i * 0.5,
                 type: "spring",
                 stiffness: 100,
               }}

@@ -41,7 +41,7 @@ const Services = () => {
                     initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
                     whileInView="visible"
                     transition={{
-                      delay: 1.3 + id * 0.5,
+                      delay: id * 0.5,
                       type: "spring",
                       stiffness: 100,
                     }}
