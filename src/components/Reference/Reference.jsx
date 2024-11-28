@@ -30,7 +30,7 @@ const Reference = (props) => {
       y: 0,
       scale: 1,
       opacity: 1,
-      transition: { delay: isHover ? 0 : 1.6, type: "spring", stiffness: 300 },
+      transition: { delay: isHover ? 0 : 0.5, type: "spring", stiffness: 300 },
     },
     hover: {
       scale: 1.2,
