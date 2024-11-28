@@ -7,7 +7,7 @@ import features from "../../constants/features";
 
 import useSmallMobile from "../../hooks/useSmallMobile";
 
-import { statItem, switchStat } from "./variants";
+import { featureItem, statItem, switchStat } from "./variants";
 
 import styles from "./styles.module.css";
 
@@ -34,9 +34,21 @@ const Features = () => {
         <Text mode="intro">{firstText.uk}</Text>
         <ul className={styles.featuresList}>
           {list.map(({ uk }, i) => (
-            <li key={i} className={styles.featuresItem}>
+            <motion.li
+              key={i}
+              className={styles.featuresItem}
+              variants={featureItem}
+              initial={i % 2 ? "hiddenLeft" : "hiddenRight"}
+              whileInView="visible"
+              transition={{
+                delay: i * 0.5,
+                type: "spring",
+                stiffness: 100,
+              }}
+              viewport={{ once: true }}
+            >
               {uk}
-            </li>
+            </motion.li>
           ))}
         </ul>
         <Text mode="intro">{secondText.uk}</Text>

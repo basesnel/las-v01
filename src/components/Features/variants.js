@@ -1,3 +1,13 @@
+const featureItem = {
+  hiddenLeft: { scale: 0.5, opacity: 0, x: -200 },
+  hiddenRight: { scale: 0.5, opacity: 0, x: 200 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    x: 0,
+  },
+};
+
 const statItem = {
   hiddenFirst: { scale: 0.5, opacity: 0, x: -50, y: -50 },
   hiddenSecond: { scale: 0.5, opacity: 0, x: 50, y: -50 },
@@ -26,4 +36,4 @@ const switchStat = (i) => {
   }
 };
 
-export { statItem, switchStat };
+export { featureItem, statItem, switchStat };
