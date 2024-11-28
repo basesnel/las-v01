@@ -1,10 +1,11 @@
-import { useState, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
 import Text from "../Text/Text";
 import features from "../../constants/features";
+
+import useSmallMobile from "../../hooks/useSmallMobile";
 
 import styles from "./styles.module.css";
 
@@ -20,20 +21,7 @@ const Features = () => {
     stats,
   } = features;
 
-  const mediaQuery = "(max-width: 407px)";
-  const query = window.matchMedia(mediaQuery);
-
-  const [isSmallMobile, setIsSmallMobile] = useState(query.matches);
-
-  useLayoutEffect(() => {
-    const updateMedia = () => {
-      query.matches ? setIsSmallMobile(true) : setIsSmallMobile(false);
-    };
-
-    query.addEventListener("change", updateMedia);
-
-    return () => query.removeEventListener("change", updateMedia);
-  }, [query]);
+  const isSmallMobile = useSmallMobile();
 
   const statItem = {
     hiddenFirst: { scale: 0.5, opacity: 0, x: -50, y: -50 },
