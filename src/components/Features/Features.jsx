@@ -29,7 +29,6 @@ const Features = () => {
     hiddenThird: { scale: 0.5, opacity: 0, x: -50, y: 50 },
     hiddenFourth: { scale: 0.5, opacity: 0, x: 50, y: 50 },
     oddVisible: { scale: 1, opacity: 1, x: 0, y: -36 },
-    oddSmallMobileVisible: { scale: 1, opacity: 1, x: 0, y: 0 },
     evenVisible: { scale: 1, opacity: 1, x: 0, y: 0 },
   };
 
@@ -81,7 +80,7 @@ const Features = () => {
                 i % 2
                   ? "evenVisible"
                   : isSmallMobile
-                  ? "oddSmallMobileVisible"
+                  ? "evenVisible"
                   : "oddVisible"
               }
               transition={{
