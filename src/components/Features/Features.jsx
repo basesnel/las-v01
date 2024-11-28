@@ -1,3 +1,4 @@
+import { useState, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
@@ -19,12 +20,28 @@ const Features = () => {
     stats,
   } = features;
 
+  const mediaQuery = "(max-width: 407px)";
+  const query = window.matchMedia(mediaQuery);
+
+  const [isSmallMobile, setIsSmallMobile] = useState(query.matches);
+
+  useLayoutEffect(() => {
+    const updateMedia = () => {
+      query.matches ? setIsSmallMobile(true) : setIsSmallMobile(false);
+    };
+
+    query.addEventListener("change", updateMedia);
+
+    return () => query.removeEventListener("change", updateMedia);
+  }, [query]);
+
   const statItem = {
     hiddenFirst: { scale: 0.5, opacity: 0, x: -50, y: -50 },
     hiddenSecond: { scale: 0.5, opacity: 0, x: 50, y: -50 },
     hiddenThird: { scale: 0.5, opacity: 0, x: -50, y: 50 },
     hiddenFourth: { scale: 0.5, opacity: 0, x: 50, y: 50 },
     oddVisible: { scale: 1, opacity: 1, x: 0, y: -36 },
+    oddSmallMobileVisible: { scale: 1, opacity: 1, x: 0, y: 0 },
     evenVisible: { scale: 1, opacity: 1, x: 0, y: 0 },
   };
 
@@ -72,7 +89,13 @@ const Features = () => {
               className={styles.item}
               variants={statItem}
               initial={switchStat(i)}
-              whileInView={i % 2 ? "evenVisible" : "oddVisible"}
+              whileInView={
+                i % 2
+                  ? "evenVisible"
+                  : isSmallMobile
+                  ? "oddSmallMobileVisible"
+                  : "oddVisible"
+              }
               transition={{
                 delay: i * 0.2,
                 type: "spring",
