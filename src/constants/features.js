@@ -73,7 +73,7 @@ const features = {
     },
     {
       amount: 100,
-      text: { en: "Promotional discounts.", uk: "Акційних знижок" },
+      text: { en: "Promotional discounts.", uk: "Дієвих акцій зі знижками" },
     },
   ],
 };

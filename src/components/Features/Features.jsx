@@ -78,7 +78,7 @@ const Features = () => {
                 type: "spring",
                 stiffness: 100,
               }}
-              // viewport={{ once: true }}
+              viewport={{ once: true }}
             >
               <div className={styles.benefit}>
                 <p className={styles.amount}>{amount}</p>
