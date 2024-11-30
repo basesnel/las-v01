@@ -28,6 +28,46 @@ const Contacts = () => {
     visible: { opacity: 1, x: 0 },
   };
 
+  const contactLink = {
+    // hidden: { y: 100, scale: 0, opacity: 0 },
+    // visible: {
+    //   y: 0,
+    //   scale: 1,
+    //   opacity: 1,
+    //   transition: { delay: isHover ? 0 : 0.5, type: "spring", stiffness: 300 },
+    // },
+    hover: {
+      scale: 1.2,
+      x: 20,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+    tap: {
+      scale: 0.8,
+    },
+  };
+
+  const contactIcon = {
+    initial: {
+      rotate: 0,
+      scale: 1,
+      backgroundColor: "#f67307",
+      fill: "#fff",
+    },
+    hover: {
+      rotate: 90,
+      scale: [1.2, 1],
+      backgroundColor: "#FFF",
+      fill: "#f67307",
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+  };
+
   return (
     <Section
       colorMode="dark"
@@ -41,6 +81,7 @@ const Contacts = () => {
             variants={contactList}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             {list.map(({ id, text, src, icon }) => {
               if (id < 4)
@@ -56,12 +97,17 @@ const Contacts = () => {
                       type: "spring",
                       stiffness: 300,
                     }}
+                    viewport={{ once: true }}
                   >
-                    <a
+                    <motion.a
                       href={src}
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       className={styles.link}
+                      variants={contactLink}
+                      whileHover="hover"
+                      whileFocus="hover"
+                      whileTap="tap"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +120,7 @@ const Contacts = () => {
                         <use href={`${icons}#${icon}`}></use>
                       </svg>
                       <span className={styles.text}>{text.uk}</span>
-                    </a>
+                    </motion.a>
                   </motion.li>
                 );
             })}
