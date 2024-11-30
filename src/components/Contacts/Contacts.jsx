@@ -1,10 +1,12 @@
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
-import Link from "../Link/Link";
-import Icon from "../Icon/Icon";
+// import Link from "../Link/Link";
+// import Icon from "../Icon/Icon";
 import Text from "../Text/Text";
 import contacts from "../../constants/contacts";
+
+import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
@@ -25,15 +27,24 @@ const Contacts = () => {
               if (id < 4)
                 return (
                   <li key={id} className={styles.item}>
-                    <Link src={src} className={styles.link}>
-                      <Icon
-                        icon={icon}
+                    <a
+                      href={src}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className={styles.link}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
                         width={24}
                         height={24}
+                        focusable="false"
+                        aria-hidden={true}
                         className={styles.icon}
-                      />
+                      >
+                        <use href={`${icons}#${icon}`}></use>
+                      </svg>
                       <span className={styles.text}>{text.uk}</span>
-                    </Link>
+                    </a>
                   </li>
                 );
             })}
