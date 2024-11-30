@@ -1,14 +1,28 @@
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
-// import Link from "../Link/Link";
-// import Icon from "../Icon/Icon";
 import brands from "../../constants/brands";
 
 import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
+
+const brandList = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+};
+
+const brandItem = {
+  hidden: { opacity: 0, scale: 0, x: 100 },
+  visible: { opacity: 1, scale: 1, x: 0 },
+};
 
 const Brands = () => {
   const { title, subTitle, carBrands } = brands;
@@ -17,17 +31,27 @@ const Brands = () => {
     <Section indexSection={8}>
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} title={title.uk} />
-      <ul className={styles.list}>
+      <motion.ul
+        className={styles.list}
+        variants={brandList}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         {carBrands.map(({ icon, label }, i) => (
-          <li key={i} className={styles.item}>
-            {/* <Link src="#" label={label.uk} className={styles.link}>
-              <Icon
-                icon={icon}
-                width={120}
-                height={90}
-                className={styles.icon}
-              />
-            </Link> */}
+          <motion.li
+            key={i}
+            className={styles.item}
+            variants={brandItem}
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              delay: i * 0.2,
+              type: "spring",
+              stiffness: 300,
+            }}
+            viewport={{ once: true }}
+          >
             <a
               href="#"
               aria-label={label.uk}
@@ -48,9 +72,9 @@ const Brands = () => {
                 <use href={`${icons}#${icon}`}></use>
               </svg>
             </a>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </Section>
   );
 };
