@@ -1,6 +1,6 @@
 const featureItem = {
-  hiddenLeft: { scale: 0.5, opacity: 0, x: -200 },
-  hiddenRight: { scale: 0.5, opacity: 0, x: 200 },
+  hiddenLeft: { scale: 0, opacity: 0, x: -200 },
+  hiddenRight: { scale: 0, opacity: 0, x: 200 },
   visible: {
     scale: 1,
     opacity: 1,
@@ -9,10 +9,10 @@ const featureItem = {
 };
 
 const statItem = {
-  hiddenFirst: { scale: 0.5, opacity: 0, x: -50, y: -50 },
-  hiddenSecond: { scale: 0.5, opacity: 0, x: 50, y: -50 },
-  hiddenThird: { scale: 0.5, opacity: 0, x: -50, y: 50 },
-  hiddenFourth: { scale: 0.5, opacity: 0, x: 50, y: 50 },
+  hiddenFirst: { scale: 0, opacity: 0, x: -50, y: -50 },
+  hiddenSecond: { scale: 0, opacity: 0, x: 50, y: -50 },
+  hiddenThird: { scale: 0, opacity: 0, x: -50, y: 50 },
+  hiddenFourth: { scale: 0, opacity: 0, x: 50, y: 50 },
   oddVisible: { scale: 1, opacity: 1, x: 0, y: -36 },
   evenVisible: { scale: 1, opacity: 1, x: 0, y: 0 },
 };
