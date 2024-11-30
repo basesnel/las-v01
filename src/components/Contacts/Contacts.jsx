@@ -106,15 +106,16 @@ const Contact = ({ src, text, icon }) => {
 
   const contactIcon = {
     initial: {
-      rotate: 0,
       scale: 1,
+      rotate: 0,
     },
     hover: {
-      rotate: 90,
-      scale: [1.2, 1],
+      scale: [1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2],
+      rotate: [0, 0, -13, 8, -5, 3, -2, 1, 0],
       transition: {
-        type: "spring",
-        stiffness: 300,
+        delay: 0.5,
+        duration: 0.5,
+        times: [0, 0.3, 0.4, 0.64, 0.8, 0.89, 0.95, 0.99, 1],
       },
     },
   };
