@@ -1,6 +1,6 @@
 const featureItem = {
-  hiddenLeft: { scale: 0, opacity: 0, x: -200 },
-  hiddenRight: { scale: 0, opacity: 0, x: 200 },
+  hiddenLeft: { scale: 0, opacity: 0, x: -100 },
+  hiddenRight: { scale: 0, opacity: 0, x: 100 },
   visible: {
     scale: 1,
     opacity: 1,
