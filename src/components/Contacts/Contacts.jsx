@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+// import { useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
@@ -26,46 +27,6 @@ const Contacts = () => {
   const contactItem = {
     hidden: { opacity: 0, x: 100 },
     visible: { opacity: 1, x: 0 },
-  };
-
-  const contactLink = {
-    // hidden: { y: 100, scale: 0, opacity: 0 },
-    // visible: {
-    //   y: 0,
-    //   scale: 1,
-    //   opacity: 1,
-    //   transition: { delay: isHover ? 0 : 0.5, type: "spring", stiffness: 300 },
-    // },
-    hover: {
-      scale: 1.2,
-      x: 20,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
-    tap: {
-      scale: 0.8,
-    },
-  };
-
-  const contactIcon = {
-    initial: {
-      rotate: 0,
-      scale: 1,
-      backgroundColor: "#f67307",
-      fill: "#fff",
-    },
-    hover: {
-      rotate: 90,
-      scale: [1.2, 1],
-      backgroundColor: "#FFF",
-      fill: "#f67307",
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
   };
 
   return (
@@ -99,28 +60,7 @@ const Contacts = () => {
                     }}
                     viewport={{ once: true }}
                   >
-                    <motion.a
-                      href={src}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className={styles.link}
-                      variants={contactLink}
-                      whileHover="hover"
-                      whileFocus="hover"
-                      whileTap="tap"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={24}
-                        focusable="false"
-                        aria-hidden={true}
-                        className={styles.icon}
-                      >
-                        <use href={`${icons}#${icon}`}></use>
-                      </svg>
-                      <span className={styles.text}>{text.uk}</span>
-                    </motion.a>
+                    <Contact src={src} text={text} icon={icon} />
                   </motion.li>
                 );
             })}
@@ -132,6 +72,82 @@ const Contacts = () => {
         <Text variant="contacts">{text.uk}</Text>
       </aside>
     </Section>
+  );
+};
+
+const Contact = ({ src, text, icon }) => {
+  // const [isHover, setIsHover] = useState(false);
+
+  const control = useAnimation();
+
+  const handleMouseEnter = () => {
+    control.start("hover");
+    // setIsHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    control.start("initial");
+    // setIsHover(false);
+  };
+
+  const contactLink = {
+    hover: {
+      scale: 1.2,
+      x: 20,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+    tap: {
+      scale: 0.8,
+    },
+  };
+
+  const contactIcon = {
+    initial: {
+      rotate: 0,
+      scale: 1,
+    },
+    hover: {
+      rotate: 90,
+      scale: [1.2, 1],
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+  };
+
+  return (
+    <motion.a
+      href={src}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      className={styles.link}
+      variants={contactLink}
+      whileHover="hover"
+      whileFocus="hover"
+      whileTap="tap"
+      onMouseEnter={handleMouseEnter}
+      onFocus={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onBlur={handleMouseLeave}
+    >
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={24}
+        height={24}
+        focusable="false"
+        aria-hidden={true}
+        className={styles.icon}
+        variants={contactIcon}
+        animate={control}
+      >
+        <use href={`${icons}#${icon}`}></use>
+      </motion.svg>
+      <span className={styles.text}>{text.uk}</span>
+    </motion.a>
   );
 };
 
