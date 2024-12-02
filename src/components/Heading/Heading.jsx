@@ -2,13 +2,23 @@ import { motion } from "framer-motion";
 
 import styles from "./styles.module.css";
 
+// const firstHeading = {
+//   hidden: { x: 100, scale: 0, opacity: 0 },
+//   visible: {
+//     x: 0,
+//     scale: 1,
+//     opacity: 1,
+//     transition: { delay: 0.8, type: "spring", stiffness: 300 },
+//   },
+// };
+
 const firstHeading = {
   hidden: { x: 100, scale: 0, opacity: 0 },
   visible: {
     x: 0,
     scale: 1,
     opacity: 1,
-    transition: { delay: 0.8, type: "spring", stiffness: 300 },
+    transition: { type: "tween", duration: 0.5 },
   },
 };
 
@@ -22,7 +32,7 @@ const firstHeading = {
 // };
 
 const secondHeading = {
-  hidden: { x: -100, scale: 0, opacity: 0 },
+  hidden: { x: 100, scale: 0, opacity: 0 },
   visible: {
     x: 0,
     scale: 1,
@@ -42,7 +52,7 @@ const Heading = ({ level, mode, title }) => {
           variants={firstHeading}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
         >
           {title}
         </motion.h1>
