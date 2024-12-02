@@ -31,6 +31,42 @@ const Footer = () => {
     },
   };
 
+  const socList = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+  };
+
+  const socItem = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const socLink = {
+    hover: {
+      scale: 1.3,
+      color: "#f67307",
+      x: 13,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+    tap: {
+      scale: 0.8,
+      x: -13,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+  };
+
   return (
     <footer className={styles.footer}>
       <Container variant="footer">
@@ -39,29 +75,48 @@ const Footer = () => {
         </div>
         <div className={styles.content}>
           {/* <Socnets /> */}
-          <ul className={`${styles.list}`}>
+          <motion.ul
+            className={styles.list}
+            variants={socList}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {socNets.map(({ text, src }, i) => {
               return (
-                <li
+                <motion.li
                   key={i}
                   className={
                     i === 0 ? `${styles.item} ${styles.itemDecor}` : styles.item
                   }
+                  variants={socList}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{
+                    delay: i * 0.2,
+                    type: "spring",
+                    stiffness: 300,
+                  }}
+                  viewport={{ once: true }}
                 >
                   {/* <Link src={src} className={styles.link}> */}
-                  <a
+                  <motion.a
                     href={src}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     className={styles.link}
+                    variants={socLink}
+                    whileHover="hover"
+                    whileFocus="hover"
+                    whileTap="tap"
                   >
                     {text}
-                  </a>
+                  </motion.a>
                   {/* </Link> */}
-                </li>
+                </motion.li>
               );
             })}
-          </ul>
+          </motion.ul>
           <motion.p
             className={styles.copyright}
             variants={copirightVariants}
