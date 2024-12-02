@@ -71,6 +71,14 @@ const link = {
       stiffness: 300,
     },
   },
+  tap: {
+    scale: 0.8,
+    x: -13,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
 };
 
 const socList = {
@@ -95,6 +103,14 @@ const socLink = {
     scale: 1.3,
     color: "#f67307",
     x: 13,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+  tap: {
+    scale: 0.8,
+    x: -13,
     transition: {
       type: "spring",
       stiffness: 300,

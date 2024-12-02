@@ -82,6 +82,8 @@ const Menu = ({ showMenu, setShowMenu }) => {
                             className={styles.link}
                             variants={link}
                             whileHover="hover"
+                            whileFocus="hover"
+                            whileTap="tap"
                           >
                             {label}
                           </motion.a>
@@ -105,6 +107,8 @@ const Menu = ({ showMenu, setShowMenu }) => {
                           className={styles.socnetLink}
                           variants={socLink}
                           whileHover="hover"
+                          whileFocus="hover"
+                          whileTap="tap"
                         >
                           {text}
                         </motion.a>
