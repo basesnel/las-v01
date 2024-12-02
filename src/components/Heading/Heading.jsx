@@ -2,16 +2,6 @@ import { motion } from "framer-motion";
 
 import styles from "./styles.module.css";
 
-// const firstHeading = {
-//   hidden: { x: 100, scale: 0, opacity: 0 },
-//   visible: {
-//     x: 0,
-//     scale: 1,
-//     opacity: 1,
-//     transition: { delay: 0.8, type: "spring", stiffness: 300 },
-//   },
-// };
-
 const firstHeading = {
   hidden: { x: 100, scale: 0, opacity: 0 },
   visible: {
@@ -21,15 +11,6 @@ const firstHeading = {
     transition: { type: "tween", duration: 0.5 },
   },
 };
-
-// const secondHeading = {
-//   hidden: { y: 100, opacity: 0 },
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     transition: { delay: 0.8, type: "spring", stiffness: 300 },
-//   },
-// };
 
 const secondHeading = {
   hidden: { x: 100, scale: 0, opacity: 0 },
