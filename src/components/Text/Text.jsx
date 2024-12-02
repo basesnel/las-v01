@@ -2,13 +2,23 @@ import { motion } from "framer-motion";
 
 import styles from "./styles.module.css";
 
+// const variants = {
+//   hidden: { x: 100, scale: 0, opacity: 0 },
+//   visible: {
+//     x: 0,
+//     scale: 1,
+//     opacity: 1,
+//     transition: { type: "spring", stiffness: 300 },
+//   },
+// };
+
 const variants = {
-  hidden: { x: 100, scale: 0, opacity: 0 },
+  hidden: { y: 50, opacity: 0, scaleY: 0 },
   visible: {
-    x: 0,
-    scale: 1,
+    y: 0,
     opacity: 1,
-    transition: { type: "spring", stiffness: 300 },
+    scaleY: 1,
+    transition: { type: "tween", duration: 0.5 },
   },
 };
 
