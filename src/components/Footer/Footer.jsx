@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-
 import Container from "../Container/Container";
-// import Socnets from "../Socnets/Socnets";
 import Logo from "../Logo/Logo";
 
 import formatTimeAgo from "../../helpers/formatTimeAgo";
@@ -10,63 +8,9 @@ import socNets from "../../constants/socials";
 
 import styles from "./styles.module.css";
 
+import { date, copyright, socList, socItem, socLink } from "./variants";
+
 const Footer = () => {
-  const dateVariants = {
-    hidden: { x: -100, opacity: 0, scaleX: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      scaleX: 1,
-      transition: { type: "tween", duration: 0.5 },
-    },
-  };
-
-  const copirightVariants = {
-    hidden: { y: 20, opacity: 0, scaleY: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      scaleY: 1,
-      transition: { type: "tween", duration: 0.5 },
-    },
-  };
-
-  const socList = {
-    hidden: { scale: 0 },
-    visible: {
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
-  };
-
-  const socItem = {
-    hidden: { opacity: 0, y: -100 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const socLink = {
-    hover: {
-      scale: 1.3,
-      color: "#f67307",
-      x: 13,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
-    tap: {
-      scale: 0.8,
-      x: -13,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-      },
-    },
-  };
-
   return (
     <footer className={styles.footer}>
       <Container variant="footer">
@@ -74,7 +18,6 @@ const Footer = () => {
           <Logo isDark={true} variant="footer" />
         </div>
         <div className={styles.content}>
-          {/* <Socnets /> */}
           <motion.ul
             className={styles.list}
             variants={socList}
@@ -99,7 +42,6 @@ const Footer = () => {
                   }}
                   viewport={{ once: true }}
                 >
-                  {/* <Link src={src} className={styles.link}> */}
                   <motion.a
                     href={src}
                     target="_blank"
@@ -112,14 +54,13 @@ const Footer = () => {
                   >
                     {text}
                   </motion.a>
-                  {/* </Link> */}
                 </motion.li>
               );
             })}
           </motion.ul>
           <motion.p
             className={styles.copyright}
-            variants={copirightVariants}
+            variants={copyright}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -128,7 +69,7 @@ const Footer = () => {
           </motion.p>
           <motion.p
             className={styles.date}
-            variants={dateVariants}
+            variants={date}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
