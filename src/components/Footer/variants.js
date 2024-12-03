@@ -1,20 +1,18 @@
 const date = {
-  hidden: { x: -100, opacity: 0, scaleX: 0 },
+  hidden: { opacity: 0, scale: 0 },
   visible: {
-    x: 0,
     opacity: 1,
-    scaleX: 1,
-    transition: { type: "tween", duration: 0.5 },
+    scale: 1,
+    transition: { type: "tween", duration: 1 },
   },
 };
 
 const copyright = {
-  hidden: { y: 20, opacity: 0, scaleY: 0 },
+  hidden: { opacity: 0, scale: 0 },
   visible: {
-    y: 0,
     opacity: 1,
-    scaleY: 1,
-    transition: { type: "tween", duration: 0.5 },
+    scale: 1,
+    transition: { type: "tween", duration: 1 },
   },
 };
 

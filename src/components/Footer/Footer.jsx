@@ -58,21 +58,31 @@ const Footer = () => {
               );
             })}
           </motion.ul>
-          <motion.p
+          <p
             className={styles.copyright}
-            variants={copyright}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            // style={{ originX: 0.5, originY: 1 }}
+            // variants={copyright}
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{ once: true }}
           >
-            Copyright 2024
-          </motion.p>
+            <motion.span
+              className={styles.copyrightSpan}
+              style={{ originX: 0.5, originY: 1 }}
+              variants={copyright}
+              initial="hidden"
+              whileInView="visible"
+            >
+              Copyright 2024
+            </motion.span>
+          </p>
           <motion.p
             className={styles.date}
+            style={{ originX: 1, originY: 0.5 }}
             variants={date}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
           >
             {formatTimeAgo(
               "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)",
