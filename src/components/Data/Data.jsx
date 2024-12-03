@@ -6,22 +6,22 @@ const Data = ({ mode, children }) => {
   const modification = mode ? `${styles[mode]}` : "";
 
   const variants = {
-    hidden: { x: -100, opacity: 0, scaleX: 0 },
+    hidden: { opacity: 0, scale: 0 },
     visible: {
-      x: 0,
       opacity: 1,
-      scaleX: 1,
-      transition: { delay: 2.4, type: "spring", stiffness: 300 },
+      scale: 1,
+      transition: { type: "tween", duration: 1, delay: 0.4 },
     },
   };
 
   return (
     <motion.p
+      className={`${styles.data} ${modification}`}
+      style={{ originX: 1, originY: 0.5 }}
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
-      className={`${styles.data} ${modification}`}
+      // viewport={{ once: true }}
     >
       {children}
     </motion.p>
