@@ -86,6 +86,7 @@
 .socnetLink {
   display: inline-block;
   color: var(--neutral);
+  transform-origin: 100% 50% 0px;
 }
 
 @media screen and (min-width: 480px) {
@@ -115,5 +116,9 @@
     border-radius: 1px;
     background-color: currentColor;
     transform: skewX(-30deg);
+  }
+
+  .socnetLink {
+    transform-origin: 0% 50% 0px;
   }
 }

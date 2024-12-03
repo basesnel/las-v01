@@ -65,7 +65,6 @@ const link = {
   hover: {
     scale: 1.2,
     color: "#f67307",
-    x: 20,
     transition: {
       type: "spring",
       stiffness: 300,
@@ -73,7 +72,6 @@ const link = {
   },
   tap: {
     scale: 0.8,
-    x: -13,
     transition: {
       type: "spring",
       stiffness: 300,
@@ -102,7 +100,6 @@ const socLink = {
   hover: {
     scale: 1.3,
     color: "#f67307",
-    x: 13,
     transition: {
       type: "spring",
       stiffness: 300,
@@ -110,7 +107,6 @@ const socLink = {
   },
   tap: {
     scale: 0.8,
-    x: -13,
     transition: {
       type: "spring",
       stiffness: 300,

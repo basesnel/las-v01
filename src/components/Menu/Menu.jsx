@@ -80,6 +80,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
                             href={`#${name}`}
                             onClick={closeMenu}
                             className={styles.link}
+                            style={{ originX: 0, originY: 0.5 }}
                             variants={link}
                             whileHover="hover"
                             whileFocus="hover"
