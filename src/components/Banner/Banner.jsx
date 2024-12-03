@@ -23,9 +23,9 @@ const Banner = () => {
       scale: 1,
       rotate: -90,
       transition: {
-        delay: 2.5,
+        delay: 0.5,
         type: "spring",
-        stiffness: 80,
+        stiffness: 300,
       },
     },
   };
@@ -37,9 +37,15 @@ const Banner = () => {
 
   const socLink = {
     hover: {
-      scale: 1.3,
+      scale: 1.2,
       color: "#f67307",
-      x: 13,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
+    },
+    tap: {
+      scale: 0.8,
       transition: {
         type: "spring",
         stiffness: 300,
@@ -69,7 +75,7 @@ const Banner = () => {
           style={{ originX: 0, originY: 0, x: 138 }}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
         >
           {socNets.map(({ text, src }, i) => {
             return (
@@ -86,8 +92,11 @@ const Banner = () => {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className={styles.socNetLink}
+                  style={{ originX: 0, originY: 0.5 }}
                   variants={socLink}
                   whileHover="hover"
+                  whileFocus="hover"
+                  whileTap="tap"
                 >
                   {text}
                 </motion.a>
