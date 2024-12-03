@@ -30,10 +30,11 @@ const Heading = ({ level, mode, title }) => {
       return (
         <motion.h1
           className={`${styles.heading} ${styles.heading01}`}
+          style={{ originX: 0, originY: 0.5 }}
           variants={firstHeading}
           initial="hidden"
           whileInView="visible"
-          // viewport={{ once: true }}
+          viewport={{ once: true }}
         >
           {title}
         </motion.h1>
@@ -43,6 +44,7 @@ const Heading = ({ level, mode, title }) => {
       return (
         <motion.h2
           className={`${styles.heading} ${styles.heading02} ${modification}`}
+          style={{ originX: 0, originY: 0.5 }}
           variants={secondHeading}
           initial="hidden"
           whileInView="visible"
