@@ -24,6 +24,13 @@ const link = {
       stiffness: 300,
     },
   },
+  tap: {
+    scale: 0.8,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
 };
 
 export { list, item, link };

@@ -75,7 +75,7 @@ const Banner = () => {
           style={{ originX: 0, originY: 0, x: 138 }}
           initial="hidden"
           whileInView="visible"
-          // viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           {socNets.map(({ text, src }, i) => {
             return (

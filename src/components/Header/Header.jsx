@@ -86,6 +86,8 @@ const LoadedParts = () => {
             className={styles.link}
             variants={link}
             whileHover="hover"
+            whileFocus="hover"
+            whileTap="tap"
           >
             {label}
           </motion.a>
