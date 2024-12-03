@@ -47,7 +47,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     className={styles.link}
+                    style={{ originX: 0, originY: 0.5 }}
                     variants={socLink}
+                    initial="initial"
                     whileHover="hover"
                     whileFocus="hover"
                     whileTap="tap"
