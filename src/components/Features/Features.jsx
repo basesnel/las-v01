@@ -66,7 +66,8 @@ const Features = () => {
               key={i}
               className={styles.item}
               variants={statItem}
-              initial={switchStat(i)}
+              style={switchStat(i)}
+              initial="hidden"
               whileInView={
                 i % 2
                   ? "evenVisible"
@@ -75,9 +76,8 @@ const Features = () => {
                   : "oddVisible"
               }
               transition={{
-                delay: i * 0.2,
-                type: "spring",
-                stiffness: 100,
+                type: "tween",
+                duration: 0.5,
               }}
               viewport={{ once: true }}
             >
