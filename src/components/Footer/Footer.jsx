@@ -58,14 +58,7 @@ const Footer = () => {
               );
             })}
           </motion.ul>
-          <p
-            className={styles.copyright}
-            // style={{ originX: 0.5, originY: 1 }}
-            // variants={copyright}
-            // initial="hidden"
-            // whileInView="visible"
-            // viewport={{ once: true }}
-          >
+          <p className={styles.copyright}>
             <motion.span
               className={styles.copyrightSpan}
               style={{ originX: 0.5, originY: 1 }}

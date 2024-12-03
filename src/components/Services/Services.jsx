@@ -38,12 +38,17 @@ const Services = () => {
                     key={id}
                     className={styles.innerItem}
                     variants={innerItem}
-                    initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
+                    style={
+                      id % 2
+                        ? { originX: 1, originY: 0.5 }
+                        : { originX: 0, originY: 0.5 }
+                    }
+                    initial="hidden"
                     whileInView="visible"
                     transition={{
-                      delay: id * 0.5,
-                      type: "spring",
-                      stiffness: 100,
+                      type: "tween",
+                      duration: 0.5,
+                      delay: id * 0.4,
                     }}
                     viewport={{ once: true }}
                   >
@@ -69,12 +74,17 @@ const Services = () => {
                     key={id}
                     className={styles.innerItem}
                     variants={innerItem}
-                    initial={id % 2 ? "hiddenLeft" : "hiddenRight"}
+                    style={
+                      id % 2
+                        ? { originX: 1, originY: 0.5 }
+                        : { originX: 0, originY: 0.5 }
+                    }
+                    initial="hidden"
                     whileInView="visible"
                     transition={{
-                      delay: 1.3 + id * 0.5,
-                      type: "spring",
-                      stiffness: 100,
+                      type: "tween",
+                      duration: 0.5,
+                      delay: id * 0.4,
                     }}
                     viewport={{ once: true }}
                   >
