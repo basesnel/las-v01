@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 
 const variants = {
-  hidden: { y: 50, opacity: 0, scaleY: 0 },
+  hidden: { opacity: 0, scale: 0 },
   visible: {
-    y: 0,
     opacity: 1,
-    scaleY: 1,
-    transition: { type: "tween", duration: 0.5 },
+    scale: 1,
+    transition: { type: "tween", duration: 1, delay: 0.3 },
   },
 };
 
@@ -19,10 +18,11 @@ const Text = ({ variant, mode, children }) => {
   return (
     <motion.p
       className={`${styles.text} ${variation} ${modification}`}
+      style={{ originX: 0.5, originY: 1 }}
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      // viewport={{ once: true }}
     >
       {children}
     </motion.p>
