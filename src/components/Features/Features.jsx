@@ -38,12 +38,17 @@ const Features = () => {
               key={i}
               className={styles.featuresItem}
               variants={featureItem}
-              initial={i % 2 ? "hiddenLeft" : "hiddenRight"}
+              style={
+                i % 2
+                  ? { originX: 1, originY: 0.5 }
+                  : { originX: 0, originY: 0.5 }
+              }
+              initial="hidden"
               whileInView="visible"
               transition={{
-                delay: i * 0.5,
-                type: "spring",
-                stiffness: 100,
+                type: "tween",
+                duration: 0.5,
+                delay: i * 0.4,
               }}
               viewport={{ once: true }}
             >
