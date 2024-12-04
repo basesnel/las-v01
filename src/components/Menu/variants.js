@@ -50,15 +50,22 @@ const list = {
     scale: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 0.5,
       staggerDirection: -1,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
 };
 
 const link = {
@@ -92,8 +99,15 @@ const socList = {
 };
 
 const socItem = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
 };
 
 const socLink = {

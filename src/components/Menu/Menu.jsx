@@ -74,6 +74,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
                         <motion.li
                           key={id}
                           className={styles.item}
+                          style={{ originX: 0, originY: 0.5 }}
                           variants={item}
                         >
                           <motion.a
@@ -100,6 +101,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
                         key={i}
                         className={styles.socnetItem}
                         variants={socItem}
+                        style={{ originX: 1, originY: 1 }}
                       >
                         <motion.a
                           href={src}
