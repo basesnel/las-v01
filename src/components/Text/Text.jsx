@@ -22,7 +22,7 @@ const Text = ({ variant, mode, children }) => {
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      // viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px 0px" }}
     >
       {children}
     </motion.p>
