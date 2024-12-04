@@ -80,7 +80,12 @@ const LoadedParts = () => {
       viewport={{ once: true }}
     >
       {parts.map(({ id, name, label }) => (
-        <motion.li key={id} className={styles.item} variants={item}>
+        <motion.li
+          key={id}
+          className={styles.item}
+          style={{ originX: 1, originY: 0.5 }}
+          variants={item}
+        >
           <motion.a
             href={`#${name}`}
             className={styles.link}

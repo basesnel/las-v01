@@ -4,15 +4,22 @@ const list = {
     scale: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.2,
+      staggerChildren: 0.5,
       staggerDirection: -1,
     },
   },
 };
 
 const item = {
-  hidden: { scale: 0, opacity: 0, x: -50 },
-  visible: { scale: 1, opacity: 1, x: 0 },
+  hidden: { scale: 0, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
 };
 
 const link = {
