@@ -35,6 +35,7 @@ const Contacts = () => {
                   <motion.li
                     key={id}
                     className={styles.item}
+                    style={{ originX: 0, originY: 0.5 }}
                     variants={contactItem}
                     initial="hidden"
                     whileInView="visible"
@@ -77,6 +78,7 @@ const Contact = ({ src, text, icon }) => {
       target="_blank"
       rel="noopener noreferrer nofollow"
       className={styles.link}
+      style={{ originX: 0, originY: 0.5 }}
       variants={contactLink}
       whileHover="hover"
       whileFocus="hover"
