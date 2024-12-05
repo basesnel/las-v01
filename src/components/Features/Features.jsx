@@ -11,7 +11,6 @@ import useSmallMobile from "../../hooks/useSmallMobile";
 import { featureItem, statItem, switchStat } from "./variants";
 
 import styles from "./styles.module.css";
-import { useEffect } from "react";
 
 const Features = () => {
   const { subTitle, title, preText, firstText, secondText, thirdText } =
@@ -50,13 +49,12 @@ const List = () => {
             i % 2 ? { originX: 1, originY: 0.5 } : { originX: 0, originY: 0.5 }
           }
           initial="hidden"
-          whileInView={isInView && "visible"}
+          animate={isInView && "visible"}
           transition={{
             type: "tween",
             duration: 0.5,
             delay: 0.4,
           }}
-          viewport={{ once: true }}
         >
           {uk}
         </motion.li>
