@@ -10,7 +10,7 @@ const Data = ({ mode, children }) => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { type: "tween", duration: 1, delay: 0.4 },
+      transition: { type: "tween", duration: 0.5, delay: 0.4 },
     },
   };
 
@@ -21,7 +21,7 @@ const Data = ({ mode, children }) => {
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      // viewport={{ once: true }}
+      viewport={{ once: true, amount: 1 }}
     >
       {children}
     </motion.p>
