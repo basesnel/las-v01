@@ -7,7 +7,7 @@ const firstHeading = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { type: "tween", duration: 0.5, delay: 0.2 },
+    transition: { type: "tween", duration: 0.5 },
   },
 };
 
@@ -32,7 +32,7 @@ const Heading = ({ level, mode, title }) => {
           variants={firstHeading}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 1 }}
         >
           {title}
         </motion.h1>
