@@ -2,22 +2,12 @@ import { motion } from "framer-motion";
 
 import styles from "./styles.module.css";
 
-// const variants = {
-//   hidden: { x: 100, opacity: 0, scaleX: 0 },
-//   visible: {
-//     x: 0,
-//     opacity: 1,
-//     scaleX: 1,
-//     transition: { delay: 0.4, type: "spring", stiffness: 300 },
-//   },
-// };
-
 const variants = {
   hidden: { opacity: 0, scaleX: 0 },
   visible: {
     opacity: 1,
     scaleX: 1,
-    transition: { type: "tween", duration: 0.5, delay: 0.1 },
+    transition: { type: "tween", duration: 0.5, delay: 0.2 },
   },
 };
 
@@ -31,7 +21,7 @@ const Subtitle = ({ mode, children }) => {
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      // viewport={{ once: true }}
+      viewport={{ once: true, amount: 1, margin: "-60px 0px -180px 0px" }}
     >
       {children}
     </motion.p>
