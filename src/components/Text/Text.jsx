@@ -7,7 +7,7 @@ const variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: "tween", duration: 1, delay: 0.3 },
+    transition: { type: "tween", duration: 0.5, delay: 0.4 },
   },
 };
 
@@ -22,7 +22,7 @@ const Text = ({ variant, mode, children }) => {
       variants={variants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px 0px" }}
+      viewport={{ once: true, margin: "-10px 0px -80px 0px" }}
     >
       {children}
     </motion.p>
