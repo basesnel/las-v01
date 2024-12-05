@@ -60,7 +60,7 @@ const Heading = ({ level, mode, title }) => {
           variants={secondHeading}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px 0px" }}
+          viewport={{ once: true, amount: 1, margin: "-50px 0px -150px 0px" }}
         >
           {title}
         </motion.h3>
