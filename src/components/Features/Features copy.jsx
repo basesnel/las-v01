@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
@@ -23,9 +22,6 @@ const Features = () => {
     list,
     stats,
   } = features;
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
 
   const isSmallMobile = useSmallMobile();
 
@@ -63,7 +59,7 @@ const Features = () => {
         <Text mode="intro">{secondText.uk}</Text>
         <Text mode="intro">{thirdText.uk}</Text>
       </div>
-      <ul ref={ref} className={styles.list}>
+      <ul className={styles.list}>
         {stats.map(({ amount, text }, i) => {
           return (
             <motion.li
@@ -72,20 +68,18 @@ const Features = () => {
               variants={statItem}
               style={switchStat(i)}
               initial="hidden"
-              animate={
-                isInView &&
-                `${
-                  i % 2
-                    ? "evenVisible"
-                    : isSmallMobile
-                    ? "evenVisible"
-                    : "oddVisible"
-                }`
+              whileInView={
+                i % 2
+                  ? "evenVisible"
+                  : isSmallMobile
+                  ? "evenVisible"
+                  : "oddVisible"
               }
               transition={{
                 type: "tween",
                 duration: 0.5,
               }}
+              viewport={{ once: true }}
             >
               <div className={styles.benefit}>
                 <p className={styles.amount}>{amount}</p>
