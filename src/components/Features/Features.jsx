@@ -11,9 +11,10 @@ import useSmallMobile from "../../hooks/useSmallMobile";
 import { featureItem, statItem, switchStat } from "./variants";
 
 import styles from "./styles.module.css";
+import { useEffect } from "react";
 
 const Features = () => {
-  const { subTitle, title, preText, firstText, secondText, thirdText, list } =
+  const { subTitle, title, preText, firstText, secondText, thirdText } =
     features;
 
   return (
@@ -23,35 +24,44 @@ const Features = () => {
         <Heading level={2} mode="features" title={title.uk} />
         <Text mode="introWelcome">{preText.uk}</Text>
         <Text mode="intro">{firstText.uk}</Text>
-        <ul className={styles.featuresList}>
-          {list.map(({ uk }, i) => (
-            <motion.li
-              key={i}
-              className={styles.featuresItem}
-              variants={featureItem}
-              style={
-                i % 2
-                  ? { originX: 1, originY: 0.5 }
-                  : { originX: 0, originY: 0.5 }
-              }
-              initial="hidden"
-              whileInView="visible"
-              transition={{
-                type: "tween",
-                duration: 0.5,
-                delay: i * 0.4,
-              }}
-              viewport={{ once: true }}
-            >
-              {uk}
-            </motion.li>
-          ))}
-        </ul>
+        <List />
         <Text mode="intro">{secondText.uk}</Text>
         <Text mode="intro">{thirdText.uk}</Text>
       </div>
       <Stats />
     </Section>
+  );
+};
+
+const List = () => {
+  const { list } = features;
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: "all", once: true });
+
+  return (
+    <ul ref={ref} className={styles.featuresList}>
+      {list.map(({ uk }, i) => (
+        <motion.li
+          key={i}
+          className={styles.featuresItem}
+          variants={featureItem}
+          style={
+            i % 2 ? { originX: 1, originY: 0.5 } : { originX: 0, originY: 0.5 }
+          }
+          initial="hidden"
+          whileInView={isInView && "visible"}
+          transition={{
+            type: "tween",
+            duration: 0.5,
+            delay: 0.4,
+          }}
+          viewport={{ once: true }}
+        >
+          {uk}
+        </motion.li>
+      ))}
+    </ul>
   );
 };
 
@@ -86,6 +96,7 @@ const Stats = () => {
             transition={{
               type: "tween",
               duration: 0.5,
+              delay: 0.4,
             }}
           >
             <div className={styles.benefit}>
