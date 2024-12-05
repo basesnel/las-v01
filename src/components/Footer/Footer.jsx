@@ -67,6 +67,7 @@ const Footer = () => {
               variants={copyright}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true, amount: 1 }}
             >
               Copyright 2024
             </motion.span>
@@ -77,7 +78,7 @@ const Footer = () => {
             variants={date}
             initial="hidden"
             whileInView="visible"
-            // viewport={{ once: true }}
+            viewport={{ once: true, amount: 1 }}
           >
             {formatTimeAgo(
               "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)",
