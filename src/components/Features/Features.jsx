@@ -13,21 +13,8 @@ import { featureItem, statItem, switchStat } from "./variants";
 import styles from "./styles.module.css";
 
 const Features = () => {
-  const {
-    subTitle,
-    title,
-    preText,
-    firstText,
-    secondText,
-    thirdText,
-    list,
-    stats,
-  } = features;
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
-
-  const isSmallMobile = useSmallMobile();
+  const { subTitle, title, preText, firstText, secondText, thirdText, list } =
+    features;
 
   return (
     <Section indexSection={3} containerVariant="features">
@@ -63,39 +50,52 @@ const Features = () => {
         <Text mode="intro">{secondText.uk}</Text>
         <Text mode="intro">{thirdText.uk}</Text>
       </div>
-      <ul ref={ref} className={styles.list}>
-        {stats.map(({ amount, text }, i) => {
-          return (
-            <motion.li
-              key={i}
-              className={styles.item}
-              variants={statItem}
-              style={switchStat(i)}
-              initial="hidden"
-              animate={
-                isInView &&
-                `${
-                  i % 2
-                    ? "evenVisible"
-                    : isSmallMobile
-                    ? "evenVisible"
-                    : "oddVisible"
-                }`
-              }
-              transition={{
-                type: "tween",
-                duration: 0.5,
-              }}
-            >
-              <div className={styles.benefit}>
-                <p className={styles.amount}>{amount}</p>
-                <p className={styles.feature}>{text.uk}</p>
-              </div>
-            </motion.li>
-          );
-        })}
-      </ul>
+      <Stats />
     </Section>
+  );
+};
+
+const Stats = () => {
+  const { stats } = features;
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: "all", once: true });
+
+  const isSmallMobile = useSmallMobile();
+
+  return (
+    <ul ref={ref} className={styles.list}>
+      {stats.map(({ amount, text }, i) => {
+        return (
+          <motion.li
+            key={i}
+            className={styles.item}
+            variants={statItem}
+            style={switchStat(i)}
+            initial="hidden"
+            animate={
+              isInView &&
+              `${
+                i % 2
+                  ? "evenVisible"
+                  : isSmallMobile
+                  ? "evenVisible"
+                  : "oddVisible"
+              }`
+            }
+            transition={{
+              type: "tween",
+              duration: 0.5,
+            }}
+          >
+            <div className={styles.benefit}>
+              <p className={styles.amount}>{amount}</p>
+              <p className={styles.feature}>{text.uk}</p>
+            </div>
+          </motion.li>
+        );
+      })}
+    </ul>
   );
 };
 
