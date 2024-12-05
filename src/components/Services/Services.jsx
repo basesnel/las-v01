@@ -110,86 +110,89 @@ const List = () => {
   const isInView = useInView(ref, { amount: "all" });
 
   return (
-    <motion.ul
-      ref={ref}
-      className={styles.list}
-      variants={outerList}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-    >
-      <li className={styles.item}>
-        <motion.ul
-          className={styles.innerList}
-          variants={innerList}
-          // initial="hidden"
-          // whileInView="visible"
-          // viewport={{ once: true }}
-        >
-          {list.map(({ id, service, price }) => {
-            if (id < 4)
-              return (
-                <motion.li
-                  key={id}
-                  className={styles.innerItem}
-                  variants={innerItem}
-                  style={
-                    id % 2
-                      ? { originX: 1, originY: 0.5 }
-                      : { originX: 0, originY: 0.5 }
-                  }
-                  // initial="hidden"
-                  // whileInView="visible"
-                  // transition={{
-                  //   type: "tween",
-                  //   duration: 0.5,
-                  //   delay: 0.4,
-                  // }}
-                  // viewport={{ once: true }}
-                >
-                  <span className={styles.service}>{service.uk}</span>
-                  <span className={styles.price}>{price.uk()}</span>
-                </motion.li>
-              );
-          })}
-        </motion.ul>
-      </li>
-      <li className={styles.item}>
-        <motion.ul
-          className={styles.innerList}
-          variants={innerList}
-          // initial="hidden"
-          // whileInView="visible"
-          // viewport={{ once: true }}
-        >
-          {list.map(({ id, service, price }) => {
-            if (id >= 4)
-              return (
-                <motion.li
-                  key={id}
-                  className={styles.innerItem}
-                  variants={innerItem}
-                  style={
-                    id % 2
-                      ? { originX: 1, originY: 0.5 }
-                      : { originX: 0, originY: 0.5 }
-                  }
-                  // initial="hidden"
-                  // whileInView="visible"
-                  // transition={{
-                  //   type: "tween",
-                  //   duration: 0.5,
-                  //   delay: 0.4,
-                  // }}
-                  // viewport={{ once: true }}
-                >
-                  <span className={styles.service}>{service.uk}</span>
-                  <span className={styles.price}>{price.uk()}</span>
-                </motion.li>
-              );
-          })}
-        </motion.ul>
-      </li>
-    </motion.ul>
+    <div ref={ref}>
+      <ul
+        className={styles.list}
+        variants={outerList}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <li className={styles.item}>
+          <motion.ul
+            className={styles.innerList}
+            variants={innerList}
+            // animate={isInView && "visible"}
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{ once: true }}
+          >
+            {list.map(({ id, service, price }) => {
+              if (id < 4)
+                return (
+                  <motion.li
+                    key={id}
+                    className={styles.innerItem}
+                    variants={innerItem}
+                    style={
+                      id % 2
+                        ? { originX: 1, originY: 0.5 }
+                        : { originX: 0, originY: 0.5 }
+                    }
+                    // initial="hidden"
+                    // animate={isInView && "visible"}
+                    // transition={{
+                    //   type: "tween",
+                    //   duration: 0.5,
+                    //   delay: 0.4,
+                    // }}
+                    // viewport={{ once: true }}
+                  >
+                    <span className={styles.service}>{service.uk}</span>
+                    <span className={styles.price}>{price.uk()}</span>
+                  </motion.li>
+                );
+            })}
+          </motion.ul>
+        </li>
+        <li className={styles.item}>
+          <motion.ul
+            className={styles.innerList}
+            variants={innerList}
+            // animate={isInView && "visible"}
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{ once: true }}
+          >
+            {list.map(({ id, service, price }) => {
+              if (id >= 4)
+                return (
+                  <motion.li
+                    key={id}
+                    className={styles.innerItem}
+                    variants={innerItem}
+                    style={
+                      id % 2
+                        ? { originX: 1, originY: 0.5 }
+                        : { originX: 0, originY: 0.5 }
+                    }
+                    // initial="hidden"
+                    // animate={isInView && "visible"}
+                    // transition={{
+                    //   type: "tween",
+                    //   duration: 0.5,
+                    //   delay: 0.4,
+                    // }}
+                    // viewport={{ once: true }}
+                  >
+                    <span className={styles.service}>{service.uk}</span>
+                    <span className={styles.price}>{price.uk()}</span>
+                  </motion.li>
+                );
+            })}
+          </motion.ul>
+        </li>
+      </ul>
+    </div>
   );
 };
 
