@@ -14,10 +14,7 @@ import styles from "./styles.module.css";
 import { contactItem, contactLink, contactIcon } from "./variants";
 
 const Contacts = () => {
-  const { title, list, subtitle1, text } = contacts;
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
+  const { title, subtitle1, text } = contacts;
 
   return (
     <Section
@@ -28,28 +25,7 @@ const Contacts = () => {
       <div className={styles.content}>
         <Heading level={3} title={title.uk} />
         <address className={styles.address}>
-          <ul ref={ref}>
-            {list.map(({ id, text, src, icon }) => {
-              if (id < 4)
-                return (
-                  <motion.li
-                    key={id}
-                    className={styles.item}
-                    style={{ originX: 0, originY: 0.5 }}
-                    variants={contactItem}
-                    initial="hidden"
-                    animate={isInView && "visible"}
-                    transition={{
-                      delay: id * 0.1,
-                      type: "spring",
-                      stiffness: 300,
-                    }}
-                  >
-                    <Contact src={src} text={text} icon={icon} />
-                  </motion.li>
-                );
-            })}
-          </ul>
+          <ContactList />
         </address>
       </div>
       <aside className={styles.aside}>
@@ -57,6 +33,38 @@ const Contacts = () => {
         <Text variant="contacts">{text.uk}</Text>
       </aside>
     </Section>
+  );
+};
+
+const ContactList = () => {
+  const { list } = contacts;
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: "all", once: true });
+
+  return (
+    <ul ref={ref}>
+      {list.map(({ id, text, src, icon }) => {
+        if (id < 4)
+          return (
+            <motion.li
+              key={id}
+              className={styles.item}
+              style={{ originX: 0, originY: 0.5 }}
+              variants={contactItem}
+              initial="hidden"
+              animate={isInView && "visible"}
+              transition={{
+                delay: 0.4 + id * 0.2,
+                type: "spring",
+                stiffness: 300,
+              }}
+            >
+              <Contact src={src} text={text} icon={icon} />
+            </motion.li>
+          );
+      })}
+    </ul>
   );
 };
 
