@@ -18,86 +18,6 @@ const Services = () => {
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} mode="service" title={title.uk} />
       <List />
-      {/* <motion.ul
-        className={styles.list}
-        variants={outerList}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <li className={styles.item}>
-          <motion.ul
-            className={styles.innerList}
-            variants={innerList}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {list.map(({ id, service, price }) => {
-              if (id < 4)
-                return (
-                  <motion.li
-                    key={id}
-                    className={styles.innerItem}
-                    variants={innerItem}
-                    style={
-                      id % 2
-                        ? { originX: 1, originY: 0.5 }
-                        : { originX: 0, originY: 0.5 }
-                    }
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                      type: "tween",
-                      duration: 0.5,
-                      delay: id * 0.4,
-                    }}
-                    viewport={{ once: true }}
-                  >
-                    <span className={styles.service}>{service.uk}</span>
-                    <span className={styles.price}>{price.uk()}</span>
-                  </motion.li>
-                );
-            })}
-          </motion.ul>
-        </li>
-        <li className={styles.item}>
-          <motion.ul
-            className={styles.innerList}
-            variants={innerList}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {list.map(({ id, service, price }) => {
-              if (id >= 4)
-                return (
-                  <motion.li
-                    key={id}
-                    className={styles.innerItem}
-                    variants={innerItem}
-                    style={
-                      id % 2
-                        ? { originX: 1, originY: 0.5 }
-                        : { originX: 0, originY: 0.5 }
-                    }
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{
-                      type: "tween",
-                      duration: 0.5,
-                      delay: id * 0.4,
-                    }}
-                    viewport={{ once: true }}
-                  >
-                    <span className={styles.service}>{service.uk}</span>
-                    <span className={styles.price}>{price.uk()}</span>
-                  </motion.li>
-                );
-            })}
-          </motion.ul>
-        </li>
-      </motion.ul> */}
       <Button type="button" caption={reference.uk} />
     </Section>
   );
@@ -107,25 +27,18 @@ const List = () => {
   const { list } = services;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all" });
+  const isInView = useInView(ref, { amount: "all", once: true });
 
   return (
     <div ref={ref}>
-      <ul
+      <motion.ul
         className={styles.list}
         variants={outerList}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isInView && "visible"}
       >
         <li className={styles.item}>
-          <motion.ul
-            className={styles.innerList}
-            variants={innerList}
-            // animate={isInView && "visible"}
-            // initial="hidden"
-            // whileInView="visible"
-            // viewport={{ once: true }}
-          >
+          <motion.ul className={styles.innerList} variants={innerList}>
             {list.map(({ id, service, price }) => {
               if (id < 4)
                 return (
@@ -138,14 +51,6 @@ const List = () => {
                         ? { originX: 1, originY: 0.5 }
                         : { originX: 0, originY: 0.5 }
                     }
-                    // initial="hidden"
-                    // animate={isInView && "visible"}
-                    // transition={{
-                    //   type: "tween",
-                    //   duration: 0.5,
-                    //   delay: 0.4,
-                    // }}
-                    // viewport={{ once: true }}
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
@@ -155,14 +60,7 @@ const List = () => {
           </motion.ul>
         </li>
         <li className={styles.item}>
-          <motion.ul
-            className={styles.innerList}
-            variants={innerList}
-            // animate={isInView && "visible"}
-            // initial="hidden"
-            // whileInView="visible"
-            // viewport={{ once: true }}
-          >
+          <motion.ul className={styles.innerList} variants={innerList}>
             {list.map(({ id, service, price }) => {
               if (id >= 4)
                 return (
@@ -175,14 +73,6 @@ const List = () => {
                         ? { originX: 1, originY: 0.5 }
                         : { originX: 0, originY: 0.5 }
                     }
-                    // initial="hidden"
-                    // animate={isInView && "visible"}
-                    // transition={{
-                    //   type: "tween",
-                    //   duration: 0.5,
-                    //   delay: 0.4,
-                    // }}
-                    // viewport={{ once: true }}
                   >
                     <span className={styles.service}>{service.uk}</span>
                     <span className={styles.price}>{price.uk()}</span>
@@ -191,7 +81,7 @@ const List = () => {
             })}
           </motion.ul>
         </li>
-      </ul>
+      </motion.ul>
     </div>
   );
 };
