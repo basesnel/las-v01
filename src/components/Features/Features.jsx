@@ -36,7 +36,7 @@ const List = () => {
   const { list } = features;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
+  const isInView = useInView(ref, { amount: 0.8, once: true });
 
   return (
     <ul ref={ref} className={styles.featuresList}>
@@ -67,7 +67,7 @@ const Stats = () => {
   const { stats } = features;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
+  const isInView = useInView(ref, { amount: 0.8, once: true });
 
   const isSmallMobile = useSmallMobile();
 

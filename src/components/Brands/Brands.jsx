@@ -30,7 +30,7 @@ const BrandList = () => {
   const { carBrands } = brands;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.8, once: true });
+  const isInView = useInView(ref, { amount: 0.5, once: true });
 
   return (
     <ul ref={ref} className={styles.list}>

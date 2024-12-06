@@ -40,7 +40,7 @@ const ContactList = () => {
   const { list } = contacts;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
+  const isInView = useInView(ref, { amount: 0.8, once: true });
 
   return (
     <ul ref={ref}>
