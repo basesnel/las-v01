@@ -9,7 +9,7 @@ import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
-import { brandItem, brandLink, switchStat } from "./variants";
+import { brandItem, brandLink, switchBrand } from "./variants";
 
 const Brands = () => {
   const { title, subTitle, carBrands } = brands;
@@ -26,15 +26,15 @@ const Brands = () => {
           <motion.li
             key={i}
             className={styles.item}
+            style={switchBrand(i)}
             variants={brandItem}
-            initial={switchStat(i)}
+            initial="hidden"
             animate={isInView && "visible"}
             transition={{
-              delay: i * 0.2,
+              delay: 0.4 + i * 0.2,
               type: "spring",
-              stiffness: 300,
+              stiffness: 80,
             }}
-            viewport={{ once: true }}
           >
             {/* <Brand icon={icon} label={label} /> */}
             <motion.a
