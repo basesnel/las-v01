@@ -1,13 +1,13 @@
-// const contactList = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       type: "spring",
-//       stiffness: 300,
-//     },
-//   },
-// };
+const contactList = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+    },
+  },
+};
 
 const contactItem = {
   hidden: { opacity: 0, scale: 0 },
@@ -43,4 +43,4 @@ const contactIcon = {
   },
 };
 
-export { contactItem, contactLink, contactIcon };
+export { contactList, contactItem, contactLink, contactIcon };

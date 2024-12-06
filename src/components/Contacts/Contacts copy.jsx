@@ -1,23 +1,18 @@
-import { useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
 import Text from "../Text/Text";
-
 import contacts from "../../constants/contacts";
 
 import icons from "../../assets/icons.svg";
 
 import styles from "./styles.module.css";
 
-import { contactItem, contactLink, contactIcon } from "./variants";
+import { contactList, contactItem, contactLink, contactIcon } from "./variants";
 
 const Contacts = () => {
   const { title, list, subtitle1, text } = contacts;
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "all", once: true });
 
   return (
     <Section
@@ -28,7 +23,12 @@ const Contacts = () => {
       <div className={styles.content}>
         <Heading level={3} title={title.uk} />
         <address className={styles.address}>
-          <ul ref={ref}>
+          <motion.ul
+            variants={contactList}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {list.map(({ id, text, src, icon }) => {
               if (id < 4)
                 return (
@@ -38,18 +38,19 @@ const Contacts = () => {
                     style={{ originX: 0, originY: 0.5 }}
                     variants={contactItem}
                     initial="hidden"
-                    animate={isInView && "visible"}
+                    whileInView="visible"
                     transition={{
-                      delay: id * 0.1,
+                      delay: id * 0.2,
                       type: "spring",
                       stiffness: 300,
                     }}
+                    viewport={{ once: true }}
                   >
                     <Contact src={src} text={text} icon={icon} />
                   </motion.li>
                 );
             })}
-          </ul>
+          </motion.ul>
         </address>
       </div>
       <aside className={styles.aside}>
