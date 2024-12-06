@@ -1,22 +1,3 @@
-// const brandList = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       type: "spring",
-//       stiffness: 300,
-//     },
-//   },
-// };
-
-// const brandItem = {
-//   hiddenFirst: { scale: 0, opacity: 0, x: -50, y: -50 },
-//   hiddenSecond: { scale: 0, opacity: 0, x: 50, y: -50 },
-//   hiddenThird: { scale: 0, opacity: 0, x: -50, y: 50 },
-//   hiddenFourth: { scale: 0, opacity: 0, x: 50, y: 50 },
-//   visible: { opacity: 1, scale: 1, x: 0, y: 0 },
-// };
-
 const brandItem = {
   hidden: { scale: 0, opacity: 0 },
   visible: { opacity: 1, scale: 1 },
@@ -28,7 +9,7 @@ const brandLink = {
     rotate: 0,
   },
   hover: {
-    scale: [1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2],
+    scale: [1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1],
     rotate: [0, 0, -13, 8, -5, 3, -2, 1, 0],
     transition: {
       duration: 0.5,
@@ -36,7 +17,7 @@ const brandLink = {
     },
   },
   tap: {
-    scale: 0.8,
+    scale: 0.9,
     transition: {
       type: "spring",
       stiffness: 300,
@@ -44,38 +25,19 @@ const brandLink = {
   },
 };
 
-// const switchStat = (i) => {
-//   switch (i % 4) {
-//     case 0:
-//       return "hiddenFirst";
-
-//     case 1:
-//       return "hiddenSecond";
-
-//     case 2:
-//       return "hiddenThird";
-
-//     case 3:
-//       return "hiddenFourth";
-
-//     default:
-//       return;
-//   }
-// };
-
 const switchBrand = (i) => {
   switch (i % 4) {
     case 0:
-      return { originX: 0, originY: 0 };
+      return { originX: 1, originY: 1 };
 
     case 1:
-      return { originX: 1, originY: 0 };
-
-    case 2:
       return { originX: 0, originY: 1 };
 
+    case 2:
+      return { originX: 1, originY: 0 };
+
     case 3:
-      return { originX: 1, originY: 1 };
+      return { originX: 0, originY: 0 };
 
     default:
       return;
