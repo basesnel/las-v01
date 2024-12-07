@@ -20,9 +20,9 @@ const Header = () => {
 
   isDomLoaded && console.log("page is loaded:", isDomLoaded);
 
-  // useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 1600));
+  // useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 500));
   useEffect(() => {
-    setTimeout(() => setIsDomLoaded(true), 1600);
+    setTimeout(() => setIsDomLoaded(true), 500);
   }, []);
 
   const openMenu = () => {

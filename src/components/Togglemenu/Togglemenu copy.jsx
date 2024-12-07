@@ -5,13 +5,23 @@ import icons from "../../assets/icons.svg";
 import styles from "./styles.module.css";
 
 const Togglemenu = ({ variant, handleClick, icon, ...delegated }) => {
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+
   const toggleVariants = {
     hidden: { scale: 0, opacity: 0, rotate: -180 },
     visible: {
       scale: 1,
       opacity: 1,
       rotate: 0,
-      transition: { type: "spring", stiffness: 120 },
+      transition: { delay: isHover ? 0 : 0.4, type: "spring", stiffness: 120 },
     },
     hover: {
       scale: 1.2,
@@ -40,6 +50,10 @@ const Togglemenu = ({ variant, handleClick, icon, ...delegated }) => {
         variant ? `${styles.openMenu} ${styles.closeMenu}` : styles.openMenu
       }
       onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onFocus={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onBlur={handleMouseLeave}
       {...delegated}
     >
       <svg
