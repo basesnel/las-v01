@@ -19,31 +19,8 @@ const Footer = () => {
         </div>
         <div className={styles.content}>
           <SocnetList />
-          <p className={styles.copyright}>
-            <motion.span
-              className={styles.copyrightSpan}
-              style={{ originX: 0.5, originY: 1 }}
-              variants={copyright}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 1 }}
-            >
-              Copyright 2024
-            </motion.span>
-          </p>
-          <motion.p
-            className={styles.date}
-            style={{ originX: 1, originY: 0.5 }}
-            variants={date}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 1 }}
-          >
-            {formatTimeAgo(
-              "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)",
-              "uk"
-            )}
-          </motion.p>
+          <Copyright />
+          <Date />
         </div>
       </Container>
     </footer>
@@ -89,6 +66,41 @@ const SocnetList = () => {
         );
       })}
     </ul>
+  );
+};
+
+const Date = () => {
+  return (
+    <motion.p
+      className={styles.date}
+      style={{ originX: 1, originY: 0.5 }}
+      variants={date}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 1 }}
+    >
+      {formatTimeAgo(
+        "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)",
+        "uk"
+      )}
+    </motion.p>
+  );
+};
+
+const Copyright = () => {
+  return (
+    <p className={styles.copyright}>
+      <motion.span
+        className={styles.copyrightSpan}
+        style={{ originX: 0.5, originY: 1 }}
+        variants={copyright}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 1 }}
+      >
+        Copyright 2024
+      </motion.span>
+    </p>
   );
 };
 
