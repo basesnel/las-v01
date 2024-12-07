@@ -16,26 +16,11 @@ const copyright = {
   },
 };
 
-// const socList = {
-//   hidden: { scale: 0 },
-//   visible: {
-//     scale: 1,
-//     transition: {
-//       type: "spring",
-//       stiffness: 300,
-//     },
-//   },
-// };
-
 const socItem = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-    },
   },
 };
 

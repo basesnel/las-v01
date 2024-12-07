@@ -65,7 +65,7 @@ const SocnetList = () => {
             initial="hidden"
             whileInView="visible"
             transition={{
-              delay: i * 0.2,
+              delay: 0.5 + i * 0.2,
               type: "spring",
               stiffness: 300,
             }}
