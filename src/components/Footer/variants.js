@@ -16,20 +16,27 @@ const copyright = {
   },
 };
 
-const socList = {
-  hidden: { scale: 0 },
+// const socList = {
+//   hidden: { scale: 0 },
+//   visible: {
+//     scale: 1,
+//     transition: {
+//       type: "spring",
+//       stiffness: 300,
+//     },
+//   },
+// };
+
+const socItem = {
+  hidden: { opacity: 0, scale: 0 },
   visible: {
+    opacity: 1,
     scale: 1,
     transition: {
       type: "spring",
       stiffness: 300,
     },
   },
-};
-
-const socItem = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
 };
 
 const socLink = {
@@ -50,4 +57,4 @@ const socLink = {
   },
 };
 
-export { date, copyright, socList, socItem, socLink };
+export { date, copyright, socItem, socLink };
