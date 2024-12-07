@@ -18,21 +18,17 @@ const SPRING_OPTIONS = {
 };
 
 const buttons = {
-  hidden: { x: 90, y: 90, opacity: 0, scale: 0 },
+  hidden: { opacity: 0, scale: 0 },
   visible: {
-    x: 0,
-    y: 0,
     opacity: 1,
     scale: 1,
-    transition: { delay: 2.2, type: "spring", stiffness: 300 },
+    transition: { delay: 0.5, type: "spring", stiffness: 300 },
   },
 };
 
 const buttonPrev = {
   hover: {
     scale: 1.2,
-    x: -5,
-    y: -2,
     color: "#f0f0f0",
     transition: {
       type: "spring",
@@ -47,8 +43,6 @@ const buttonPrev = {
 const buttonNext = {
   hover: {
     scale: 1.2,
-    x: 5,
-    y: -2,
     color: "#f0f0f0",
     transition: {
       type: "spring",
@@ -66,14 +60,13 @@ const buttonDots = {
     y: 0,
     opacity: 1,
     scaleY: 1,
-    transition: { delay: 2, type: "spring", stiffness: 300 },
+    transition: { delay: 0.5, type: "spring", stiffness: 300 },
   },
 };
 
 const buttonDot = {
   hover: {
     scale: 1.4,
-    x: -4,
     color: "#f0f0f0",
     transition: {
       type: "spring",
@@ -227,18 +220,20 @@ const Controls = ({ imgIndex, setImgIndex }) => {
   return (
     <>
       <motion.div
+        className={styles.buttons}
+        style={{ originX: 1, originY: 1 }}
         variants={buttons}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className={styles.buttons}
       >
         <motion.button
+          className={`${styles.button} ${styles.prev}`}
+          style={{ originX: 1, originY: 1 }}
           variants={buttonPrev}
           whileHover="hover"
           whileFocus="hover"
           whileTap="tap"
-          className={`${styles.button} ${styles.prev}`}
           onClick={() =>
             setImgIndex((i) => {
               if (i === 0) return slides.length - 1;
@@ -249,11 +244,12 @@ const Controls = ({ imgIndex, setImgIndex }) => {
           {prev.uk}
         </motion.button>
         <motion.button
+          className={`${styles.button} ${styles.next}`}
+          style={{ originX: 0, originY: 1 }}
           variants={buttonNext}
           whileHover="hover"
           whileFocus="hover"
           whileTap="tap"
-          className={`${styles.button} ${styles.next}`}
           onClick={() =>
             setImgIndex((i) => {
               if (i === slides.length - 1) return 0;
@@ -274,15 +270,16 @@ const Controls = ({ imgIndex, setImgIndex }) => {
         {slides.map((_, idx) => {
           return (
             <motion.button
+              key={idx}
+              className={
+                idx === imgIndex ? `${styles.dot} ${styles.active}` : styles.dot
+              }
+              style={{ originX: 1, originY: 0.5 }}
               variants={buttonDot}
               whileHover="hover"
               whileFocus="hover"
               whileTap="tap"
-              key={idx}
               onClick={() => setImgIndex(idx)}
-              className={
-                idx === imgIndex ? `${styles.dot} ${styles.active}` : styles.dot
-              }
             />
           );
         })}

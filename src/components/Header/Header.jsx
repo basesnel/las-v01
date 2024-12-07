@@ -18,7 +18,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
 
-  isDomLoaded && console.log("page is loaded:", isDomLoaded);
+  // isDomLoaded && console.log("page is loaded:", isDomLoaded);
 
   // useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 500));
   useEffect(() => {
