@@ -3,19 +3,17 @@ import { motion, useInView } from "framer-motion";
 import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
+
 import brands from "../../constants/brands";
 
 import icons from "../../assets/icons.svg";
 
-import styles from "./styles.module.css";
-
 import { brandItem, brandLink, switchBrand } from "./variants";
 
-const Brands = () => {
-  const { title, subTitle, carBrands } = brands;
+import styles from "./styles.module.css";
 
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, { amount: "all", once: true });
+const Brands = () => {
+  const { title, subTitle } = brands;
 
   return (
     <Section indexSection={8}>
@@ -43,7 +41,7 @@ const BrandList = () => {
           initial="hidden"
           animate={isInView && "visible"}
           transition={{
-            delay: 0.4,
+            delay: 0.5,
             type: "spring",
             stiffness: 80,
           }}
