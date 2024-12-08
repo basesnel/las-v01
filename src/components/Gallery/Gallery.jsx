@@ -83,7 +83,7 @@ const Gallery = () => {
 };
 
 const Card = () => {
-  return <div>Card</div>;
+  return <div className={styles.card}>Card</div>;
 };
 
 export default Gallery;

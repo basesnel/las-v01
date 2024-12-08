@@ -35,14 +35,27 @@
 }
 
 .galleryContainer {
-  position: absolute;
-  left: 0;
   overflow: hidden;
-  /* height: 200px; */
   min-width: 200px;
   width: 100vw;
+  padding: 2rem 0;
+  border-radius: 0.75rem;
   display: flex;
   justify-items: center;
   align-items: center;
   gap: 1rem;
+  /* background-color: rgb(209 213 219); */
+  background-color: rgb(212 212 212);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  min-width: 200px;
+  border-radius: 12px;
+  background-color: rgb(148 163 184);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

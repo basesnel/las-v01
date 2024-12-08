@@ -16,18 +16,7 @@ const Section = (props) => {
   const colorModification = colorMode ? `${styles[colorMode]}` : "";
   const sectionVariation = sectionVariant ? `${styles[sectionVariant]}` : "";
 
-  if (id === "gallery")
-    return (
-      <section
-        className={`${styles.section} ${colorModification} ${sectionVariation}`}
-        id={id || null}
-        aria-label={section?.uk}
-      >
-        {children}
-      </section>
-    );
-
-  if (id === "contact-us")
+  if (id === "gallery" || id === "contact-us")
     return (
       <section
         className={`${styles.section} ${colorModification} ${sectionVariation}`}
