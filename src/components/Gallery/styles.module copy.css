@@ -33,16 +33,3 @@
     max-width: 270px;
   }
 }
-
-.galleryContainer {
-  position: absolute;
-  left: 0;
-  overflow: hidden;
-  /* height: 200px; */
-  min-width: 200px;
-  width: 100vw;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  gap: 1rem;
-}

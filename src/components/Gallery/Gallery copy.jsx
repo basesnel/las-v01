@@ -4,23 +4,15 @@ import Subtitle from "../Subtitle/Subtitle";
 import gallery from "../../constants/gallery";
 
 import styles from "./styles.module.css";
-import Container from "../Container/Container";
 
 const Gallery = () => {
   const { subTitle, title, images } = gallery;
 
   return (
     <Section indexSection={6}>
-      <Container>
-        <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
-        <Heading level={2} mode="hidden" title={title.uk} />
-      </Container>
-      <div className={styles.galleryContainer}>
-        {images.map((image, i) => (
-          <Card key={i} />
-        ))}
-      </div>
-      {/* <ul className={styles.list}>
+      <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
+      <Heading level={2} mode="hidden" title={title.uk} />
+      <ul className={styles.list}>
         {images.map((image, i) => (
           <li key={i} className={styles.item}>
             <div className={styles.thumb}>
@@ -77,13 +69,9 @@ const Gallery = () => {
             </div>
           </li>
         ))}
-      </ul> */}
+      </ul>
     </Section>
   );
-};
-
-const Card = () => {
-  return <div>Card</div>;
 };
 
 export default Gallery;
