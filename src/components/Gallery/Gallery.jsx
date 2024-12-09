@@ -25,10 +25,12 @@ const Gallery = () => {
   useEffect(() => {
     let controls;
     let finalPosition = -width / 2 - 12;
+
     controls = animate(xTransition, [0, finalPosition], {
       ease: "linear",
-      duration: 25,
+      duration: 50,
       repeat: Infinity,
+      repeatType: "loop",
       repeatDelay: 0,
     });
 
@@ -41,15 +43,17 @@ const Gallery = () => {
         <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
         <Heading level={2} mode="hidden" title={title.uk} />
       </Container>
-      <motion.div
-        className={styles.galleryContainer}
-        ref={ref}
-        style={{ x: xTransition }}
-      >
-        {[...images, ...images].map((image, i) => (
-          <Card key={i} image={image} />
-        ))}
-      </motion.div>
+      <div className={styles.wrapper}>
+        <motion.div
+          className={styles.galleryContainer}
+          ref={ref}
+          style={{ x: xTransition }}
+        >
+          {[...images, ...images].map((image, i) => (
+            <Card key={i} image={image} />
+          ))}
+        </motion.div>
+      </div>
       {/* <ul className={styles.list}>
         {images.map((image, i) => (
           <li key={i} className={styles.item}>

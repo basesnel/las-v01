@@ -34,10 +34,19 @@
   }
 }
 
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 424px;
+}
+
 .galleryContainer {
+  position: absolute;
+  left: 0;
   overflow: hidden;
   min-width: 200px;
-  width: 100vw;
+  /* width: 100vw; */
   padding: 2rem 0;
   display: flex;
   justify-items: center;
