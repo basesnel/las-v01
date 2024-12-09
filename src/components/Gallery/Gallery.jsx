@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
@@ -5,6 +6,7 @@ import gallery from "../../constants/gallery";
 
 import styles from "./styles.module.css";
 import Container from "../Container/Container";
+import { useState } from "react";
 
 const Gallery = () => {
   const { subTitle, title, images } = gallery;
@@ -83,8 +85,20 @@ const Gallery = () => {
 };
 
 const Card = ({ image }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
   return (
-    <div className={styles.card}>
+    <motion.div
+      className={styles.card}
+      onHoverStart={() => setShowOverlay(true)}
+      onHoverEnd={() => setShowOverlay(false)}
+    >
+      {showOverlay && (
+        <div className={styles.cardOverlay}>
+          <div className={styles.bgBlack} />
+          <span className={styles.label}>{image.alt.uk}</span>
+        </div>
+      )}
       <picture>
         <source
           srcSet={`${image.dtp1xWBP} 1200w, ${image.dtp2xWBP} 2400w, ${image.dtp3xWBP} 3600w, ${image.dtp2xWBP} 4800w`}
@@ -135,7 +149,7 @@ const Card = ({ image }) => {
           className={styles.image}
         />
       </picture>
-    </div>
+    </motion.div>
   );
 };
 
