@@ -39,7 +39,6 @@
   min-width: 200px;
   width: 100vw;
   padding: 2rem 0;
-  border-radius: 0.75rem;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -51,11 +50,24 @@
 .card {
   position: relative;
   overflow: hidden;
-  height: 200px;
-  min-width: 200px;
+  /* height: 200px;
+  min-width: 200px; */
+  min-width: 418px;
   border-radius: 12px;
   background-color: rgb(148 163 184);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    min-width: 330px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    min-width: 270px;
+  }
 }
