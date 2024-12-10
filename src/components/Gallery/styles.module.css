@@ -88,14 +88,18 @@
 }
 
 .label {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
   padding: 16px 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  z-index: 10;
   background-color: rgb(255, 255, 255);
   opacity: 0.75;
 }

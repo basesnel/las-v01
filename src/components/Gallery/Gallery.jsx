@@ -28,7 +28,7 @@ const Gallery = () => {
 
     controls = animate(xTransition, [0, finalPosition], {
       ease: "linear",
-      duration: 50,
+      duration: 240,
       repeat: Infinity,
       repeatType: "loop",
       repeatDelay: 0,
@@ -134,14 +134,14 @@ const Card = ({ image }) => {
             exit={{ opacity: 0, transition: { duration: 0.5 } }}
           >
             <div className={styles.bgBlack} />
-            <span
+            <motion.span
               className={styles.label}
               initial={{ y: 20 }}
               animate={{ y: 0, transition: { duration: 0.5 } }}
               exit={{ y: 20, transition: { duration: 0.5 } }}
             >
               {image.alt.uk}
-            </span>
+            </motion.span>
           </motion.div>
         )}
       </AnimatePresence>
