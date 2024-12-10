@@ -1,25 +1,65 @@
-.galleryContainer {
+.item {
+  margin-bottom: 30px;
+}
+
+.thumb {
+  overflow: hidden;
+  max-width: 418px;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .item {
+    margin-bottom: 0;
+  }
+
+  .thumb {
+    max-width: 330px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .thumb {
+    max-width: 270px;
+  }
+}
+
+.wrapper {
   position: relative;
   overflow: hidden;
   height: 424px;
 }
 
-.galleryList {
+.galleryContainer {
   position: absolute;
   left: 0;
   overflow: hidden;
-  min-width: 150px;
+  min-width: 200px;
+  /* width: 100vw; */
   padding: 2rem 0;
   display: flex;
   justify-items: center;
   align-items: center;
   gap: 1rem;
+  /* background-color: rgb(209 213 219); */
   background-color: rgb(212 212 212);
 }
 
 .card {
   position: relative;
   overflow: hidden;
+  /* height: 200px;
+  min-width: 200px; */
   min-width: 418px;
   border-radius: 12px;
   background-color: rgb(148 163 184);
@@ -34,6 +74,7 @@
   z-index: 10;
   display: flex;
   justify-content: center;
+  /* align-items: center; */
   align-items: flex-end;
 }
 
@@ -47,6 +88,9 @@
 }
 
 .label {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   position: absolute;
   bottom: 0;
   z-index: 10;
@@ -62,12 +106,6 @@
 
 .label:hover {
   opacity: 0.5;
-}
-
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 @media screen and (min-width: 768px) {
