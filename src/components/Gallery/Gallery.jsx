@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useMeasure from "react-use-measure";
 import {
   animate,
@@ -7,16 +7,30 @@ import {
   useMotionValue,
 } from "framer-motion";
 import Section from "../Section/Section";
+import Container from "../Container/Container";
 import Heading from "../Heading/Heading";
 import Subtitle from "../Subtitle/Subtitle";
+
 import gallery from "../../constants/gallery";
 
 import styles from "./styles.module.css";
-import Container from "../Container/Container";
-import { useEffect } from "react";
 
 const Gallery = () => {
-  const { subTitle, title, images } = gallery;
+  const { subTitle, title } = gallery;
+
+  return (
+    <Section indexSection={6}>
+      <Container>
+        <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
+        <Heading level={2} mode="hidden" title={title.uk} />
+      </Container>
+      <GalleryList />
+    </Section>
+  );
+};
+
+const GalleryList = () => {
+  const { images } = gallery;
 
   const FAST_DURATION = 240;
   const SLOW_DURATION = 600;
@@ -57,33 +71,27 @@ const Gallery = () => {
   }, [xTransition, width, duration, rerender]);
 
   return (
-    <Section indexSection={6}>
-      <Container>
-        <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
-        <Heading level={2} mode="hidden" title={title.uk} />
-      </Container>
-      <div className={styles.galleryContainer}>
-        <motion.ul
-          className={styles.galleryList}
-          ref={ref}
-          style={{ x: xTransition }}
-          onHoverStart={() => {
-            setMustFinish(true);
-            setDuration(SLOW_DURATION);
-          }}
-          onHoverEnd={() => {
-            setMustFinish(true);
-            setDuration(FAST_DURATION);
-          }}
-        >
-          {[...images, ...images].map((image, i) => (
-            <li key={i}>
-              <Card image={image} />
-            </li>
-          ))}
-        </motion.ul>
-      </div>
-    </Section>
+    <div className={styles.galleryContainer}>
+      <motion.ul
+        className={styles.galleryList}
+        ref={ref}
+        style={{ x: xTransition }}
+        onHoverStart={() => {
+          setMustFinish(true);
+          setDuration(SLOW_DURATION);
+        }}
+        onHoverEnd={() => {
+          setMustFinish(true);
+          setDuration(FAST_DURATION);
+        }}
+      >
+        {[...images, ...images].map((image, i) => (
+          <li key={i}>
+            <Card image={image} />
+          </li>
+        ))}
+      </motion.ul>
+    </div>
   );
 };
 
