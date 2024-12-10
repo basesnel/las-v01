@@ -18,24 +18,43 @@ import { useEffect } from "react";
 const Gallery = () => {
   const { subTitle, title, images } = gallery;
 
+  const FAST_DURATION = 240;
+  const SLOW_DURATION = 600;
+
+  const [duration, setDuration] = useState(FAST_DURATION);
+
   let [ref, { width }] = useMeasure();
 
   const xTransition = useMotionValue(0);
+
+  const [mustFinish, setMustFinish] = useState(false);
+  const [rerender, setRerender] = useState(false);
 
   useEffect(() => {
     let controls;
     let finalPosition = -width / 2 - 12;
 
-    controls = animate(xTransition, [0, finalPosition], {
-      ease: "linear",
-      duration: 240,
-      repeat: Infinity,
-      repeatType: "loop",
-      repeatDelay: 0,
-    });
+    if (mustFinish) {
+      controls = animate(xTransition, [xTransition.get(), finalPosition], {
+        ease: "linear",
+        duration: duration * (1 - xTransition.get() / finalPosition),
+        onComplete: () => {
+          setMustFinish(false);
+          setRerender(!rerender);
+        },
+      });
+    } else {
+      controls = animate(xTransition, [0, finalPosition], {
+        ease: "linear",
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "loop",
+        repeatDelay: 0,
+      });
+    }
 
     return controls.stop;
-  }, [xTransition, width]);
+  }, [xTransition, width, duration, rerender]);
 
   return (
     <Section indexSection={6}>
@@ -48,6 +67,14 @@ const Gallery = () => {
           className={styles.galleryContainer}
           ref={ref}
           style={{ x: xTransition }}
+          onHoverStart={() => {
+            setMustFinish(true);
+            setDuration(SLOW_DURATION);
+          }}
+          onHoverEnd={() => {
+            setMustFinish(true);
+            setDuration(FAST_DURATION);
+          }}
         >
           {[...images, ...images].map((image, i) => (
             <Card key={i} image={image} />
