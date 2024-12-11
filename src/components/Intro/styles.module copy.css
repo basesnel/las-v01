@@ -1,6 +1,14 @@
 .aside {
   display: none;
-  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    flex-basis: 330px;
+  }
+  .aside {
+    display: initial;
+  }
 }
 
 .list {
@@ -14,35 +22,14 @@
   border-radius: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  .content {
-    flex-basis: 330px;
-  }
-
-  .aside {
-    display: initial;
-    width: 330px;
-    height: 500px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .content {
     flex-basis: 570px;
     padding-right: 100px;
   }
 
-  .aside {
-    width: 570px;
-    height: 480px;
-  }
-
   .list {
     flex-direction: row;
-  }
-
-  .item {
-    flex-shrink: 0;
   }
 }
 

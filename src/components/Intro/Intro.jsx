@@ -33,47 +33,46 @@ const Intro = () => {
       <aside className={styles.aside}>
         <ul className={styles.list}>
           {abouts.map((about, i) => {
-            if (i < 2)
-              return (
-                <li key={i} className={styles.item}>
-                  <div className={styles.thumb}>
-                    <picture>
-                      <source
-                        srcSet={`${about.dtp1xWBP} 1200w, ${about.dtp2xWBP} 2400w, ${about.dtp3xWBP} 3600w, ${about.dtp2xWBP} 4800w`}
-                        media="(min-width: 1200px)"
-                        width={270}
-                        height={445}
-                        type="image/webp"
-                      />
+            return (
+              <li key={i} className={styles.item}>
+                <div className={styles.thumb}>
+                  <picture>
+                    <source
+                      srcSet={`${about.dtp1xWBP} 1200w, ${about.dtp2xWBP} 2400w, ${about.dtp3xWBP} 3600w, ${about.dtp2xWBP} 4800w`}
+                      media="(min-width: 1200px)"
+                      width={270}
+                      height={445}
+                      type="image/webp"
+                    />
 
-                      <source
-                        srcSet={`${about.dtp1xJPG} 1200w, ${about.dtp2xJPG} 2400w, ${about.dtp3xJPG} 3600w, ${about.dtp2xJPG} 4800w`}
-                        media="(min-width: 1200px)"
-                        width={270}
-                        height={445}
-                        type="image/jpeg"
-                      />
+                    <source
+                      srcSet={`${about.dtp1xJPG} 1200w, ${about.dtp2xJPG} 2400w, ${about.dtp3xJPG} 3600w, ${about.dtp2xJPG} 4800w`}
+                      media="(min-width: 1200px)"
+                      width={270}
+                      height={445}
+                      type="image/jpeg"
+                    />
 
-                      <source
-                        srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 3072w`}
-                        width={330}
-                        height={235}
-                        type="image/webp"
-                      />
+                    <source
+                      srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 3072w`}
+                      width={330}
+                      height={235}
+                      type="image/webp"
+                    />
 
-                      <img
-                        loading="lazy"
-                        srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 3072w`}
-                        src={about.tab3xJPG}
-                        alt={about.alt.uk}
-                        width={330}
-                        height={235}
-                        className={styles.image}
-                      />
-                    </picture>
-                  </div>
-                </li>
-              );
+                    <img
+                      loading="lazy"
+                      srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 3072w`}
+                      src={about.tab3xJPG}
+                      alt={about.alt.uk}
+                      width={330}
+                      height={235}
+                      className={styles.image}
+                    />
+                  </picture>
+                </div>
+              </li>
+            );
           })}
         </ul>
       </aside>
