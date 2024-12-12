@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import formatTimeAgo from "../../helpers/formatTimeAgo";
 
 import socNets from "../../constants/socials";
+import copyrightData from "../../constants/copyright";
 
 import styles from "./styles.module.css";
 
@@ -19,7 +20,7 @@ const Footer = () => {
         </div>
         <div className={styles.content}>
           <SocnetList />
-          <Copyright />
+          <Copyright copyright={copyrightData} />
           <Date />
         </div>
       </Container>
@@ -87,9 +88,9 @@ const Date = () => {
   );
 };
 
-const Copyright = () => {
+const Copyright = ({ copyright }) => {
   return (
-    <p className={styles.copyright}>
+    <p className={styles.copyright} lang="en">
       <motion.span
         className={styles.copyrightSpan}
         style={{ originX: 0.5, originY: 1 }}
@@ -98,7 +99,7 @@ const Copyright = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 1 }}
       >
-        Copyright 2024
+        {copyright.uk}
       </motion.span>
     </p>
   );
