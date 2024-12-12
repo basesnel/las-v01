@@ -13,7 +13,7 @@ import { featureItem, statItem, switchStat } from "./variants";
 import styles from "./styles.module.css";
 
 const Features = () => {
-  const { subTitle, title, preText, firstText, secondText, thirdText } =
+  const { subTitle, title, preText, firstText, secondText, thirdText, list } =
     features;
 
   return (
@@ -23,7 +23,7 @@ const Features = () => {
         <Heading level={2} mode="features" title={title.uk} />
         <Text mode="introWelcome">{preText.uk}</Text>
         <Text mode="intro">{firstText.uk}</Text>
-        <List />
+        <List list={list} />
         <Text mode="intro">{secondText.uk}</Text>
         <Text mode="intro">{thirdText.uk}</Text>
       </div>
@@ -32,9 +32,7 @@ const Features = () => {
   );
 };
 
-const List = () => {
-  const { list } = features;
-
+const List = ({ list }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.8, once: true });
 
