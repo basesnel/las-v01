@@ -7,7 +7,7 @@ const brands = {
     en: "repair of any complexity",
     uk: "ремонт будь-якої складності",
   },
-  carBrands: [
+  brandList: [
     {
       icon: "audi",
       iconInv: "audi-inv",

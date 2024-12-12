@@ -13,26 +13,24 @@ import { brandItem, brandLink, switchBrand } from "./variants";
 import styles from "./styles.module.css";
 
 const Brands = () => {
-  const { title, subTitle } = brands;
+  const { title, subTitle, brandList } = brands;
 
   return (
     <Section indexSection={8}>
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} title={title.uk} />
-      <BrandList />
+      <BrandList brandList={brandList} />
     </Section>
   );
 };
 
-const BrandList = () => {
-  const { carBrands } = brands;
-
+const BrandList = ({ brandList }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once: true });
 
   return (
     <ul ref={ref} className={styles.list}>
-      {carBrands.map(({ icon, label }, i) => (
+      {brandList.map(({ icon, label }, i) => (
         <motion.li
           key={i}
           className={styles.item}
