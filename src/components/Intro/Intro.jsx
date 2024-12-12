@@ -41,7 +41,7 @@ const Intro = () => {
     };
 
     intervalId.current = setInterval(() => {
-      setImages((prevImages) => [...shuffle(prevImages)]);
+      setImages(shuffle(images));
       console.log("Effecting images...");
     }, 10000);
 
