@@ -14,6 +14,16 @@
   border-radius: 10px;
 }
 
+.thumb {
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 768px) {
   .content {
     flex-basis: 330px;
@@ -44,14 +54,4 @@
   .item {
     flex-shrink: 0;
   }
-}
-
-.thumb {
-  overflow: hidden;
-}
-
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
