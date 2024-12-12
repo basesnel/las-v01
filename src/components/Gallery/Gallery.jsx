@@ -16,7 +16,7 @@ import gallery from "../../constants/gallery";
 import styles from "./styles.module.css";
 
 const Gallery = () => {
-  const { subTitle, title } = gallery;
+  const { subTitle, title, images } = gallery;
 
   return (
     <Section indexSection={6}>
@@ -24,14 +24,12 @@ const Gallery = () => {
         <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
         <Heading level={2} mode="hidden" title={title.uk} />
       </Container>
-      <GalleryList />
+      <GalleryList images={images} />
     </Section>
   );
 };
 
-const GalleryList = () => {
-  const { images } = gallery;
-
+const GalleryList = ({ images }) => {
   const FAST_DURATION = 240;
   const SLOW_DURATION = 600;
 

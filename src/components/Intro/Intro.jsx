@@ -61,11 +61,9 @@ const IntroList = ({ abouts }) => {
 
     intervalId.current = setInterval(() => {
       setImages(shuffle(images));
-      console.log("Effecting images...");
     }, 10000);
 
     return () => {
-      console.log("This is clear function to the effect trigger");
       clearInterval(intervalId.current);
     };
   }, []);
