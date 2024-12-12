@@ -4,7 +4,7 @@ const list = {
     scale: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
       staggerDirection: -1,
     },
   },
