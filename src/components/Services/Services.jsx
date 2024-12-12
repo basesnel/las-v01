@@ -11,21 +11,19 @@ import Button from "../Button/Button";
 import { outerList, innerList, innerItem } from "./variants";
 
 const Services = () => {
-  const { subTitle, title, reference } = services;
+  const { subTitle, title, reference, list } = services;
 
   return (
     <Section indexSection={2} colorMode="dark" sectionVariant="services">
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} mode="service" title={title.uk} />
-      <List />
+      <List list={list} />
       <Button type="button" caption={reference.uk} />
     </Section>
   );
 };
 
-const List = () => {
-  const { list } = services;
-
+const List = ({ list }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.8, once: true });
 
