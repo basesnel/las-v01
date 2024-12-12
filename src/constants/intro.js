@@ -83,6 +83,7 @@ const intro = {
   },
   abouts: [
     {
+      id: 0,
       tab1xJPG: `${tab1s0330jpg}`,
       tab1xWBP: `${tab1s0330wpp}`,
       tab2xJPG: `${tab1s0660jpg}`,
@@ -105,6 +106,7 @@ const intro = {
       },
     },
     {
+      id: 1,
       tab1xJPG: `${tab2s0330jpg}`,
       tab1xWBP: `${tab2s0330wpp}`,
       tab2xJPG: `${tab2s0660jpg}`,
@@ -127,6 +129,7 @@ const intro = {
       },
     },
     {
+      id: 2,
       tab1xJPG: `${tab3s0330jpg}`,
       tab1xWBP: `${tab3s0330wpp}`,
       tab2xJPG: `${tab3s0660jpg}`,
