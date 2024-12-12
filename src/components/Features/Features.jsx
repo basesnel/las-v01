@@ -13,8 +13,16 @@ import { featureItem, statItem, switchStat } from "./variants";
 import styles from "./styles.module.css";
 
 const Features = () => {
-  const { subTitle, title, preText, firstText, secondText, thirdText, list } =
-    features;
+  const {
+    subTitle,
+    title,
+    preText,
+    firstText,
+    secondText,
+    thirdText,
+    list,
+    stats,
+  } = features;
 
   return (
     <Section indexSection={3} containerVariant="features">
@@ -27,7 +35,7 @@ const Features = () => {
         <Text mode="intro">{secondText.uk}</Text>
         <Text mode="intro">{thirdText.uk}</Text>
       </div>
-      <Stats />
+      <Stats stats={stats} />
     </Section>
   );
 };
@@ -61,9 +69,7 @@ const List = ({ list }) => {
   );
 };
 
-const Stats = () => {
-  const { stats } = features;
-
+const Stats = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.8, once: true });
 

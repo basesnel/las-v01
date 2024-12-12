@@ -14,7 +14,7 @@ import styles from "./styles.module.css";
 import { contactItem, contactLink, contactIcon } from "./variants";
 
 const Contacts = () => {
-  const { title, subtitle1, text } = contacts;
+  const { title, subtitle1, text, list } = contacts;
 
   return (
     <Section
@@ -25,7 +25,7 @@ const Contacts = () => {
       <div className={styles.content}>
         <Heading level={3} title={title.uk} />
         <address className={styles.address}>
-          <ContactList />
+          <ContactList list={list} />
         </address>
       </div>
       <aside className={styles.aside}>
@@ -36,9 +36,7 @@ const Contacts = () => {
   );
 };
 
-const ContactList = () => {
-  const { list } = contacts;
-
+const ContactList = ({ list }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.8, once: true });
 
