@@ -121,6 +121,56 @@
   color: var(--dark);
 }
 
+.list {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.item {
+  font-size: 11px;
+  line-height: normal;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--neutral);
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--neutral);
+}
+
+.itemDecor {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+  .itemDecor {
+    padding-left: 100px;
+  }
+
+  .itemDecor:first-child {
+    padding-left: 0;
+  }
+
+  .itemDecor:first-child:before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: currentColor;
+    transform: skewX(-30deg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     background-position: 60% 69px, 60% 109px;
@@ -254,6 +304,10 @@
   .copyright {
     margin-bottom: 0;
   }
+
+  .list {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -288,61 +342,5 @@
         rgba(32, 32, 32, 1) 25%,
         rgba(240, 240, 240, 1) 25%
       );
-  }
-}
-
-.list {
-  display: flex;
-  column-gap: 40px;
-  row-gap: 10px;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.item {
-  font-size: 11px;
-  line-height: normal;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--neutral);
-}
-
-.link {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--neutral);
-}
-
-.itemDecor {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-@media screen and (min-width: 480px) {
-  .itemDecor {
-    padding-left: 100px;
-  }
-
-  .itemDecor:first-child {
-    padding-left: 0;
-  }
-
-  .itemDecor:first-child:before {
-    content: "";
-    display: inline-block;
-    width: 60px;
-    height: 3px;
-    border-radius: 1px;
-    background-color: currentColor;
-    transform: skewX(-30deg);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .list {
-    margin-bottom: 0;
   }
 }
