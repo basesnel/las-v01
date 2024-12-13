@@ -17,6 +17,7 @@ import { list, item, link } from "./variants";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   // isDomLoaded && console.log("page is loaded:", isDomLoaded);
 
@@ -31,7 +32,12 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <motion.header
+      className={styles.header}
+      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+    >
       <Container variant="header">
         <Logo />
         <nav className={styles.nav}>
@@ -64,7 +70,7 @@ const Header = () => {
 
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
-    </header>
+    </motion.header>
   );
 };
 
