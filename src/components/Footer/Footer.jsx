@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
 
-import formatTimeAgo from "../../helpers/formatTimeAgo";
-
-import socNets from "../../constants/socials";
 import copyrightData from "../../constants/copyright";
+import socNets from "../../constants/socials";
+
+import formatTimeAgo from "../../helpers/formatTimeAgo";
 
 import styles from "./styles.module.css";
 
@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div className={styles.content}>
           <SocnetList />
-          <Copyright copyright={copyrightData} />
+          <Copyright copyrightData={copyrightData} />
           <Date />
         </div>
       </Container>
@@ -88,7 +88,7 @@ const Date = () => {
   );
 };
 
-const Copyright = ({ copyright }) => {
+const Copyright = ({ copyrightData }) => {
   return (
     <p className={styles.copyright} lang="en">
       <motion.span
@@ -99,7 +99,7 @@ const Copyright = ({ copyright }) => {
         whileInView="visible"
         viewport={{ once: true, amount: 1 }}
       >
-        {copyright.uk}
+        {copyrightData.uk}
       </motion.span>
     </p>
   );
