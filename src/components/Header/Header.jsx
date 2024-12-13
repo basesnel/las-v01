@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Container from "../Container/Container";
 import Togglemenu from "../Togglemenu/Togglemenu";
 import Menu from "../Menu/Menu";
@@ -19,9 +19,29 @@ const Header = () => {
   const [isDomLoaded, setIsDomLoaded] = useState(false);
   const [hidden, setHidden] = useState(false);
 
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    console.log(latest, previous);
+
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
+  // useEffect(() => {
+  //   const unsub = scrollY.on("change", (latest) => console.log(latest));
+
+  //   return () => unsub();
+  // }, [scrollY]);
+
   // isDomLoaded && console.log("page is loaded:", isDomLoaded);
 
   // useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 500));
+
   useEffect(() => {
     setTimeout(() => setIsDomLoaded(true), 500);
   }, []);
