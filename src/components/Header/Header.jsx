@@ -90,6 +90,7 @@ const Header = () => {
 
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
+      <div className={styles.bground} aria-hidden={true} />
     </motion.header>
   );
 };

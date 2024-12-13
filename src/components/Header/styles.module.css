@@ -5,6 +5,14 @@
   width: 100%;
 }
 
+.bground {
+  position: absolute;
+  inset: 0;
+  background-color: var(--neutral);
+  border-bottom: 1px solid var(--dark);
+  opacity: 0.5;
+}
+
 .logo {
   padding: 10px 0;
   font-weight: 700;
@@ -25,6 +33,7 @@
 
 @media screen and (min-width: 768px) {
   .nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
