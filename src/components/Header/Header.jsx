@@ -18,7 +18,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [bgHidden, setBgHidden] = useState(false);
+  const [bgHidden, setBgHidden] = useState(true);
 
   const { scrollY } = useScroll();
 
