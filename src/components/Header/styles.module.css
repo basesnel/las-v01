@@ -8,9 +8,8 @@
 .bground {
   position: absolute;
   inset: 0;
-  background-color: var(--neutral);
-  border-bottom: 1px solid var(--dark);
-  opacity: 0.5;
+  background-color: var(--dark);
+  /* opacity: 0.75; */
 }
 
 .logo {
@@ -32,6 +31,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .bground {
+    background-color: var(--neutral);
+    border-bottom: 1px solid var(--dark);
+    /* opacity: 0.5; */
+  }
+
   .nav {
     position: relative;
     display: flex;

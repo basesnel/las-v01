@@ -18,6 +18,7 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [isDomLoaded, setIsDomLoaded] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [bgHidden, setBgHidden] = useState(false);
 
   const { scrollY } = useScroll();
 
@@ -29,6 +30,12 @@ const Header = () => {
       setHidden(true);
     } else {
       setHidden(false);
+    }
+
+    if (latest > 150) {
+      setBgHidden(false);
+    } else {
+      setBgHidden(true);
     }
   });
 
@@ -58,6 +65,13 @@ const Header = () => {
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
     >
+      <motion.div
+        className={styles.bground}
+        aria-hidden={true}
+        variants={{ visible: { opacity: 0.75 }, hidden: { opacity: 0 } }}
+        animate={bgHidden ? "hidden" : "visible"}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+      />
       <Container variant="header">
         <Logo />
         <nav className={styles.nav}>
@@ -90,7 +104,6 @@ const Header = () => {
 
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
       </Container>
-      <div className={styles.bground} aria-hidden={true} />
     </motion.header>
   );
 };
