@@ -31,22 +31,12 @@ const Header = () => {
       setHidden(false);
     }
 
-    if (latest > 150) {
+    if (latest > 100) {
       setBgHidden(false);
     } else {
       setBgHidden(true);
     }
   });
-
-  // useEffect(() => {
-  //   const unsub = scrollY.on("change", (latest) => console.log(latest));
-
-  //   return () => unsub();
-  // }, [scrollY]);
-
-  // isDomLoaded && console.log("page is loaded:", isDomLoaded);
-
-  // useOnloadEffect(() => setTimeout(() => setIsDomLoaded(true), 500));
 
   useEffect(() => {
     setTimeout(() => setIsDomLoaded(true), 500);
