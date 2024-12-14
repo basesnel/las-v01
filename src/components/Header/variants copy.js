@@ -23,8 +23,6 @@ const item = {
 };
 
 const link = {
-  light: { color: "#f0f0f0" },
-  dark: { color: "#171717" },
   hover: {
     scale: 1.2,
     color: "#f67307",

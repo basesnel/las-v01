@@ -68,7 +68,7 @@ const Header = () => {
       <motion.div
         className={styles.bground}
         aria-hidden={true}
-        variants={{ visible: { opacity: 0.75 }, hidden: { opacity: 0 } }}
+        variants={{ visible: { opacity: 0.8 }, hidden: { opacity: 0 } }}
         animate={bgHidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       />
@@ -76,7 +76,7 @@ const Header = () => {
         <Logo />
         <nav className={styles.nav}>
           {isDomLoaded ? (
-            <LoadedParts />
+            <LoadedParts bgHidden={bgHidden} />
           ) : (
             <div
               className={styles.loaderContainer}
@@ -108,7 +108,7 @@ const Header = () => {
   );
 };
 
-const LoadedParts = () => {
+const LoadedParts = ({ bgHidden }) => {
   const parts = loadedParts();
 
   return (
@@ -130,6 +130,7 @@ const LoadedParts = () => {
             href={`#${name}`}
             className={styles.link}
             variants={link}
+            animate={bgHidden ? "light" : "dark"}
             whileHover="hover"
             whileFocus="hover"
             whileTap="tap"
