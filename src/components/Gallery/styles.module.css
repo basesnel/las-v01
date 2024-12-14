@@ -14,7 +14,7 @@
   justify-items: center;
   align-items: center;
   gap: 1rem;
-  background-color: rgb(212 212 212);
+  background-color: var(--highlight);
 }
 
 .card {
