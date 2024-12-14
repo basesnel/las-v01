@@ -63,21 +63,7 @@ const Header = () => {
       <Container variant="header">
         <Logo />
         <nav className={styles.nav}>
-          {isDomLoaded ? (
-            <LoadedParts bgHidden={bgHidden} />
-          ) : (
-            <div
-              className={styles.loaderContainer}
-              aria-label="loader"
-              aria-hidden={true}
-            >
-              <motion.div
-                className={styles.loader}
-                animate={{ width: "100%" }}
-                transition={{ ease: "linear", duration: 2, repeat: Infinity }}
-              />
-            </div>
-          )}
+          {isDomLoaded ? <LoadedParts bgHidden={bgHidden} /> : <Loader />}
         </nav>
         {isDomLoaded ? (
           <Togglemenu
@@ -128,6 +114,22 @@ const LoadedParts = ({ bgHidden }) => {
         </motion.li>
       ))}
     </motion.ul>
+  );
+};
+
+const Loader = () => {
+  return (
+    <div
+      className={styles.loaderContainer}
+      aria-label="loader"
+      aria-hidden={true}
+    >
+      <motion.div
+        className={styles.loader}
+        animate={{ width: "100%" }}
+        transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+      />
+    </div>
   );
 };
 
