@@ -1,3 +1,25 @@
+const header = {
+  hidden: { y: "-100%" },
+  visible: {
+    y: 0,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+    },
+  },
+};
+
+const backdrop = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 0.8,
+    transition: {
+      type: "tween",
+      duration: 0.5,
+    },
+  },
+};
+
 const list = {
   hidden: { scale: 0 },
   visible: {
@@ -42,4 +64,4 @@ const link = {
   },
 };
 
-export { list, item, link };
+export { header, backdrop, list, item, link };

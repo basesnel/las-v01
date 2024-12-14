@@ -12,7 +12,7 @@ import loadedParts from "../../helpers/loadedParts";
 
 import styles from "./styles.module.css";
 
-import { list, item, link } from "./variants";
+import { header, backdrop, list, item, link } from "./variants";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -60,17 +60,15 @@ const Header = () => {
   return (
     <motion.header
       className={styles.header}
-      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+      variants={header}
       animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
     >
       <motion.div
         className={styles.bground}
         aria-hidden={true}
-        variants={{ visible: { opacity: 0.8 }, hidden: { opacity: 0 } }}
+        variants={backdrop}
         initial="hidden"
         animate={bgHidden ? "hidden" : "visible"}
-        transition={{ duration: 0.35, ease: "easeInOut" }}
       />
       <Container variant="header">
         <Logo />
