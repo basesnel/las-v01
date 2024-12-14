@@ -24,7 +24,6 @@ const Header = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    console.log(latest, previous);
 
     if (latest > previous && latest > 150) {
       setHidden(true);
@@ -69,6 +68,7 @@ const Header = () => {
         className={styles.bground}
         aria-hidden={true}
         variants={{ visible: { opacity: 0.8 }, hidden: { opacity: 0 } }}
+        initial="hidden"
         animate={bgHidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       />
