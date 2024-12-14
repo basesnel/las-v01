@@ -6,8 +6,6 @@ import Menu from "../Menu/Menu";
 import Logo from "../Logo/Logo";
 import Spinner from "../Spinner/Spinner";
 
-// import useOnloadEffect from "../../hooks/useOnloadEffect";
-
 import loadedParts from "../../helpers/loadedParts";
 
 import styles from "./styles.module.css";
