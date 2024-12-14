@@ -97,31 +97,11 @@ const Card = ({ image }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
-    <motion.div
+    <motion.figure
       className={styles.card}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >
-      <AnimatePresence>
-        {showOverlay && (
-          <motion.div
-            className={styles.cardOverlay}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.5 } }}
-            exit={{ opacity: 0, transition: { duration: 0.5 } }}
-          >
-            <div className={styles.bgBlack} />
-            <motion.span
-              className={styles.label}
-              initial={{ y: 20 }}
-              animate={{ y: 0, transition: { duration: 0.5 } }}
-              exit={{ y: 20, transition: { duration: 0.5 } }}
-            >
-              {image.alt.uk}
-            </motion.span>
-          </motion.div>
-        )}
-      </AnimatePresence>
       <picture>
         <source
           srcSet={`${image.dtp1xWBP} 1200w, ${image.dtp2xWBP} 2400w, ${image.dtp3xWBP} 3600w, ${image.dtp2xWBP} 4800w`}
@@ -172,7 +152,27 @@ const Card = ({ image }) => {
           className={styles.image}
         />
       </picture>
-    </motion.div>
+      <AnimatePresence>
+        {showOverlay && (
+          <motion.figcaption
+            className={styles.cardOverlay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+            exit={{ opacity: 0, transition: { duration: 0.5 } }}
+          >
+            <div className={styles.bgBlack} aria-hidden="true" />
+            <motion.span
+              className={styles.label}
+              initial={{ y: 20 }}
+              animate={{ y: 0, transition: { duration: 0.5 } }}
+              exit={{ y: 20, transition: { duration: 0.5 } }}
+            >
+              {image.alt.uk}
+            </motion.span>
+          </motion.figcaption>
+        )}
+      </AnimatePresence>
+    </motion.figure>
   );
 };
 
