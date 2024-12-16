@@ -29,7 +29,7 @@ const Feedback = () => {
 };
 
 const Form = ({ form }) => {
-  const { name, phone, message, send, reset, firstToast } = form;
+  const { name, phone, message, send, reset, firstToast, secondToast } = form;
 
   const [userName, setUserName] = useLocalStorage("name", "");
   const [userPhone, setUserPhone] = useLocalStorage("phone", "");
@@ -89,7 +89,10 @@ const Form = ({ form }) => {
     new FormData(e.currentTarget).forEach((value, name) =>
       console.log(`${name}: ${value}`)
     );
-    e.currentTarget.reset();
+    setUserName("");
+    setUserPhone("");
+    setUserMessage("");
+    showToast(secondToast.uk);
   };
 
   const onResetFeedback = (e) => {
