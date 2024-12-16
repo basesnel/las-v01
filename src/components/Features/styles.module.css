@@ -61,8 +61,7 @@
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
-  line-height: 1.43;
-  word-break: break-all;
+  line-height: 1.618;
   color: var(--neutral);
 }
 
