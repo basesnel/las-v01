@@ -59,11 +59,18 @@ const Form = ({ form }) => {
     e.currentTarget.reset();
   };
 
+  const onResetFeedback = (e) => {
+    setUserName("");
+    setUserPhone("");
+    setUserMessage("");
+  };
+
   return (
     <form
       className={styles.form}
       autoComplete="off"
       onSubmit={onSubmitFeedback}
+      onReset={onResetFeedback}
     >
       <label className={styles.field}>
         <input
