@@ -28,6 +28,7 @@ const Form = ({ form }) => {
 
   const [userName, setUserName] = useLocalStorage("name", "");
   const [userPhone, setUserPhone] = useLocalStorage("phone", "");
+  const [userMessage, setUserMessage] = useLocalStorage("message", "");
 
   const onHandleChange = (event) => {
     const { name, value } = event.target;
@@ -39,6 +40,10 @@ const Form = ({ form }) => {
 
       case "phone":
         setUserPhone(value);
+        break;
+
+      case "message":
+        setUserMessage(value);
         break;
 
       default:
@@ -85,7 +90,13 @@ const Form = ({ form }) => {
         <span className={`${styles.label} ${styles.req}`}>{phone.uk}</span>
       </label>
       <label className={styles.field}>
-        <textarea name="message" className={styles.textarea} placeholder=" " />
+        <textarea
+          name="message"
+          value={userMessage}
+          className={styles.textarea}
+          placeholder=" "
+          onChange={onHandleChange}
+        />
         <span className={`${styles.label}`}>{message.uk}</span>
       </label>
       <Button type="submit" caption={send.uk} />
