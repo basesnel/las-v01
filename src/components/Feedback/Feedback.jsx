@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
@@ -33,6 +35,8 @@ const Form = ({ form }) => {
   const [userPhone, setUserPhone] = useLocalStorage("phone", "");
   const [userMessage, setUserMessage] = useLocalStorage("message", "");
 
+  const [toastVisible, setToastVisible] = useState(false);
+
   const onHandleChange = (event) => {
     const { name, value } = event.target;
 
@@ -53,20 +57,25 @@ const Form = ({ form }) => {
         return;
     }
 
-    setTimeout(() => {
+    if (!toastVisible) {
       Toastify({
         text: "This form is in test development. Your feedback won't be send. But you can use the contacts.",
         duration: "5000",
         gravity: "bottom",
         style: {
-          maxWidth: "calc(100% - 40px)",
+          width: "calc(100% - 40px)",
+          maxWidth: "400px",
           right: "20px",
           bottom: "20px",
           background: "#f0f0f0",
           color: "#171717",
         },
       }).showToast();
-    }, 1000);
+      setToastVisible(true);
+      setTimeout(() => {
+        setToastVisible(false);
+      }, 7000);
+    }
   };
 
   const onSubmitFeedback = (e) => {
