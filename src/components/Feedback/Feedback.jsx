@@ -1,3 +1,6 @@
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Button from "../Button/Button";
@@ -49,6 +52,21 @@ const Form = ({ form }) => {
       default:
         return;
     }
+
+    setTimeout(() => {
+      Toastify({
+        text: "This form is in test development. Your feedback won't be send. But you can use the contacts.",
+        duration: "5000",
+        gravity: "bottom",
+        style: {
+          maxWidth: "calc(100% - 40px)",
+          right: "20px",
+          bottom: "20px",
+          background: "#f0f0f0",
+          color: "#171717",
+        },
+      }).showToast();
+    }, 1000);
   };
 
   const onSubmitFeedback = (e) => {
