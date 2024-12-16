@@ -1,6 +1,9 @@
 import Section from "../Section/Section";
 import Heading from "../Heading/Heading";
 import Button from "../Button/Button";
+
+import useLocalStorage from "../../hooks/uselocalStorage";
+
 import feedback from "../../constants/feedback";
 
 import styles from "./styles.module.css";
@@ -23,6 +26,26 @@ const Feedback = () => {
 const Form = ({ form }) => {
   const { name, phone, message, send, reset } = form;
 
+  const [userName, setUserName] = useLocalStorage("name", "");
+  const [userPhone, setUserPhone] = useLocalStorage("phone", "");
+
+  const onHandleChange = (event) => {
+    const { name, value } = event.target;
+
+    switch (name) {
+      case "name":
+        setUserName(value);
+        break;
+
+      case "phone":
+        setUserPhone(value);
+        break;
+
+      default:
+        return;
+    }
+  };
+
   const onSubmitFeedback = (e) => {
     e.preventDefault();
     new FormData(e.currentTarget).forEach((value, name) =>
@@ -41,19 +64,23 @@ const Form = ({ form }) => {
         <input
           type="text"
           name="name"
+          value={userName}
           className={styles.input}
           placeholder=" "
           autoComplete="off"
+          onChange={onHandleChange}
         />
         <span className={`${styles.label} ${styles.req}`}>{name.uk}</span>
       </label>
       <label className={styles.field}>
         <input
           type="tel"
-          name="tel"
+          name="phone"
+          value={userPhone}
           className={styles.input}
           placeholder=" "
           autoComplete="off"
+          onChange={onHandleChange}
         />
         <span className={`${styles.label} ${styles.req}`}>{phone.uk}</span>
       </label>
