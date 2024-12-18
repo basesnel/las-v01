@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
 
-import copyrightData from "../../constants/copyright";
+import footer from "../../constants/footer";
 import socNets from "../../constants/socials";
 
 import formatTimeAgo from "../../helpers/formatTimeAgo";
@@ -12,6 +12,8 @@ import styles from "./styles.module.css";
 import { date, copyright, socItem, socLink } from "./variants";
 
 const Footer = () => {
+  const { copyrightData, days } = footer;
+
   return (
     <footer className={styles.footer}>
       <Container variant="footer">
@@ -21,7 +23,7 @@ const Footer = () => {
         <div className={styles.content}>
           <SocnetList />
           <Copyright copyrightData={copyrightData} />
-          <Date />
+          <Date lan={days.uk} />
         </div>
       </Container>
     </footer>
@@ -70,7 +72,7 @@ const SocnetList = () => {
   );
 };
 
-const Date = () => {
+const Date = ({ lan }) => {
   return (
     <motion.p
       className={styles.date}
@@ -81,8 +83,8 @@ const Date = () => {
       viewport={{ once: true, amount: 1 }}
     >
       {formatTimeAgo(
-        "Mon Aug 12 2024 16:50:00 GMT+0300 (Eastern European Summer Time)",
-        "uk"
+        "Tue Dec 16 2024 19:05:00 GMT+0300 (Eastern European Summer Time)",
+        lan
       )}
     </motion.p>
   );
