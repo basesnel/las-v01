@@ -8,15 +8,25 @@ import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
 import HeaderSkeleton from "../../components/HeaderSkeleton/HeaderSkeleton";
+import { useState, useEffect } from "react";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
 
 const Main = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <>
+      {isLoading ? <HeaderSkeleton /> : <Header />}
       {/* <Header /> */}
-      <HeaderSkeleton />
+
       <main>
         <Banner />
         <Intro />

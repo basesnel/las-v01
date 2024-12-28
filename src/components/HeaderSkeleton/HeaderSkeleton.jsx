@@ -1,16 +1,20 @@
-// import { useState, useEffect } from "react";
-// import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { motion, easeOut, useTime, useTransform } from "framer-motion";
 
 import styles from "./styles.module.css";
 
 const HeaderSkeleton = () => {
+  const time = useTime();
+  const pulseOpacity = useTransform(time, [0, 1000, 2000, 3000], [1, 0, 1, 0], {
+    ease: easeOut,
+  });
+
   return (
-    <div className={styles.header}>
+    <motion.div className={styles.header} style={{ opacity: pulseOpacity }}>
       <div className={styles.container} variant="header">
         <div className={styles.logo}></div>
         <div className={styles.menu}></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
