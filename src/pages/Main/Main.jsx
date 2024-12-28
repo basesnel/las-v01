@@ -7,6 +7,7 @@ import Features from "../../components/Features/Features";
 import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
+import HeaderSkeleton from "../../components/HeaderSkeleton/HeaderSkeleton";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -14,7 +15,8 @@ import Brands from "../../components/Brands/Brands";
 const Main = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <HeaderSkeleton />
       <main>
         <Banner />
         <Intro />
