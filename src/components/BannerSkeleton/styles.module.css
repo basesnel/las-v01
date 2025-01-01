@@ -5,7 +5,7 @@
 .content {
   height: 580px;
   /* background-color: rgba(229, 231, 235, 0.5); */
-  background-color: rgb(150, 150, 235);
+  background-color: rgba(150, 150, 150, 0.5);
 }
 
 .aside {
@@ -35,7 +35,8 @@
     display: block;
     width: 90px;
     height: 680px;
-    background-color: rgba(229, 231, 235, 0.5);
+    /* background-color: rgba(229, 231, 235, 0.5); */
+    background-color: rgba(150, 150, 150, 0.5);
   }
 }
 
