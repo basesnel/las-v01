@@ -10,6 +10,7 @@ import Features from "../../components/Features/Features";
 import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
+import BannerSkeleton from "../../components/BannerSkeleton/BannerSkeleton";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -19,7 +20,7 @@ const Main = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false);
+      setIsLoading(true);
     }, 3000);
   }, []);
 
@@ -39,10 +40,10 @@ const Main = () => {
           <Header />
         )}
       </AnimatePresence>
-      {/* <Header /> */}
 
       <main>
-        <Banner />
+        {isLoading ? <BannerSkeleton /> : <Banner />}
+
         <Intro />
         <Services />
         <Gallery />
