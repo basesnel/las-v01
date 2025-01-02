@@ -9,11 +9,15 @@ const BannerSkeleton = () => {
   });
 
   return (
-    <motion.div style={{ opacity: pulseOpacity }}>
+    <motion.div className={styles.section} style={{ opacity: pulseOpacity }}>
       <div className={styles.container}>
-        <div className={styles.content}></div>
+        <div className={styles.content}>
+          <div className={styles.innerContent} />
+        </div>
         <div className={styles.aside}>
-          <div className={styles.socnet}></div>
+          <div className={styles.socnet}>
+            <div className={styles.innerAside} />
+          </div>
         </div>
       </div>
     </motion.div>

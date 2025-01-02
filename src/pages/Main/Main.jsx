@@ -43,7 +43,6 @@ const Main = () => {
 
       <main>
         {isLoading ? <BannerSkeleton /> : <Banner />}
-
         <Intro />
         <Services />
         <Gallery />
