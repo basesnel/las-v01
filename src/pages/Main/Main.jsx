@@ -26,7 +26,7 @@ const Main = () => {
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {isLoading ? (
           <motion.div
             key="loadingHeader"
@@ -39,7 +39,9 @@ const Main = () => {
         ) : (
           <Header />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+
+      {isLoading ? null : <Header />}
 
       <main>
         {isLoading ? <BannerSkeleton /> : <Banner />}
