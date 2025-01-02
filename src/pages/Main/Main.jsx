@@ -44,24 +44,26 @@ const Main = () => {
       {isLoading ? null : <Header />}
 
       <main>
-        {isLoading ? (
-          <motion.div
-            key="bannerLoading"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <BannerSkeleton />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="bannerLoaded"
-            initial={{ opacity: 0, scale: 0.3 }}
-            animate={{ opacity: 1, scale: 1 }}
-          >
-            <Banner />
-          </motion.div>
-        )}
+        <AnimatePresence mode="wait">
+          {isLoading ? (
+            <motion.div
+              key="bannerLoading"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <BannerSkeleton />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="bannerLoaded"
+              initial={{ opacity: 0, scale: 0.3 }}
+              animate={{ opacity: 1, scale: 1 }}
+            >
+              <Banner />
+            </motion.div>
+          )}
+        </AnimatePresence>
         <Intro />
         <Services />
         <Gallery />
