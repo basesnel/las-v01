@@ -11,6 +11,7 @@ import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
 import BannerSkeleton from "../../components/BannerSkeleton/BannerSkeleton";
+import IntroSkeleton from "../../components/IntroSkeleton/IntroSkeleton";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -53,6 +54,7 @@ const Main = () => {
               exit={{ opacity: 0 }}
             >
               <BannerSkeleton />
+              <IntroSkeleton />
             </motion.div>
           ) : (
             <motion.div
@@ -65,6 +67,7 @@ const Main = () => {
           )}
         </AnimatePresence>
         <Intro />
+        {/* <IntroSkeleton /> */}
         <Services />
         <Gallery />
         <Features />
