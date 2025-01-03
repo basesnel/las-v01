@@ -34,9 +34,8 @@ const IntroSkeleton = () => {
           <div className={styles.reference} />
         </div>
         <div className={styles.aside}>
-          <div className={styles.socnet}>
-            <div className={styles.innerAside} />
-          </div>
+          <div className={styles.img} />
+          <div className={styles.img} />
         </div>
       </div>
       {/* </div> */}
