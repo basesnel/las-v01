@@ -12,6 +12,7 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
 import BannerSkeleton from "../../components/BannerSkeleton/BannerSkeleton";
 import IntroSkeleton from "../../components/IntroSkeleton/IntroSkeleton";
+import ServicesSkeleton from "../../components/ServicesSkeleton/ServicesSkeleton";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -67,8 +68,8 @@ const Main = () => {
           )}
         </AnimatePresence>
         <Intro />
-        {/* <IntroSkeleton /> */}
         <Services />
+        <ServicesSkeleton />
         <Gallery />
         <Features />
         {/* <Shop /> */}
