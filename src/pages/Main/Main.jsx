@@ -56,6 +56,7 @@ const Main = () => {
             >
               <BannerSkeleton />
               <IntroSkeleton />
+              <ServicesSkeleton />
             </motion.div>
           ) : (
             <motion.div
@@ -64,12 +65,11 @@ const Main = () => {
               animate={{ opacity: 1, scale: 1 }}
             >
               <Banner />
+              <Intro />
+              <Services />
             </motion.div>
           )}
         </AnimatePresence>
-        <Intro />
-        <Services />
-        <ServicesSkeleton />
         <Gallery />
         <Features />
         {/* <Shop /> */}
