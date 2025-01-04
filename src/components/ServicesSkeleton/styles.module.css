@@ -1,6 +1,6 @@
 .section {
   position: absolute;
-  top: 1218px;
+  top: 1380px;
   left: 0;
   right: 0;
   opacity: 0.5;
@@ -70,21 +70,31 @@
   .container {
     max-width: 768px;
     padding: 0 39px;
-    display: flex;
-    gap: 30px;
-    flex-direction: row-reverse;
+  }
+
+  .subtitle {
+    max-width: 400px;
   }
 
   .title {
-    max-width: 230px;
-    height: 33px;
+    max-width: 420px;
+    height: 49px;
+    margin: 0 auto 44px 0;
+  }
+
+  .outerList {
+    padding: 32px 27px 32px 40px;
+  }
+
+  .item {
+    height: 30px;
     border-radius: 10px;
-    margin: 0 auto 25px 0;
+    margin-bottom: 20px;
     background-color: rgba(229, 231, 235, 0.8);
   }
 
-  .paragraph.last {
-    margin-bottom: 65px;
+  .item:last-child {
+    margin-bottom: 0;
   }
 }
 
