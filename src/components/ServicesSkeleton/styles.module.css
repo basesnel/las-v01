@@ -1,6 +1,6 @@
 .section {
   position: absolute;
-  top: 1380px;
+  top: 1400px;
   left: 0;
   right: 0;
   opacity: 0.5;
@@ -109,7 +109,25 @@
   }
 
   .title {
-    max-width: 320px;
+    max-width: 420px;
     height: 49px;
+  }
+
+  .outerList {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .innerList {
+    flex-basis: 570px;
+  }
+
+  .innerList:first-child {
+    padding: 30px 22px 30px 20px;
+  }
+
+  .innerList:last-child {
+    padding: 30px 22px 30px 20px;
   }
 }
