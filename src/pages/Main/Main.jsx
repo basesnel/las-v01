@@ -58,6 +58,7 @@ const Main = () => {
               <BannerSkeleton />
               <IntroSkeleton />
               <ServicesSkeleton />
+              <GalletySkeleton />
             </motion.div>
           ) : (
             <motion.div
@@ -68,11 +69,10 @@ const Main = () => {
               <Banner />
               <Intro />
               <Services />
+              <Gallery />
             </motion.div>
           )}
         </AnimatePresence>
-        <Gallery />
-        <GalletySkeleton />
         <Features />
         {/* <Shop /> */}
         <ContactUs />
