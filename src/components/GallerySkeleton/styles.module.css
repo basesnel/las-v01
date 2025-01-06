@@ -1,6 +1,6 @@
 .section {
   position: absolute;
-  top: 1956px;
+  top: 2235px;
   left: 0;
   right: 0;
   opacity: 0.5;
@@ -41,18 +41,6 @@
   background-color: rgba(229, 231, 235, 0.8);
 }
 
-.item:last-child {
-  margin-bottom: 0;
-}
-
-.button {
-  max-width: 160px;
-  height: 40px;
-  border-radius: 20px;
-  margin: 0 auto;
-  background-color: rgba(229, 231, 235, 0.8);
-}
-
 @media screen and (min-width: 768px) {
   .section {
     padding: 100px 0;
@@ -67,25 +55,8 @@
     max-width: 400px;
   }
 
-  .title {
-    max-width: 420px;
-    height: 49px;
-    margin: 0 auto 44px 0;
-  }
-
-  .outerList {
-    padding: 32px 27px 32px 40px;
-  }
-
   .item {
-    height: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: rgba(229, 231, 235, 0.8);
-  }
-
-  .item:last-child {
-    margin-bottom: 0;
+    min-width: 330px;
   }
 }
 
