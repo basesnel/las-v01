@@ -145,7 +145,7 @@ const Card = ({ image }) => {
 
         <img
           loading="lazy"
-          srcSet={`${image.mob1xJPG} 480w, ${image.mob2xJPG} 960w, ${image.mob3xJPG} 1440w, ${image.mob2xJPG} 1920w`}
+          srcSet={`${image.mob1xJPG} 418w, ${image.mob2xJPG} 836w, ${image.mob3xJPG} 1254w, ${image.mob2xJPG} 1672w`}
           sizes="(max-width: 480px) calc(100vw - 62px), 418px"
           src={image.mob2xJPG}
           alt={image.alt.uk}
