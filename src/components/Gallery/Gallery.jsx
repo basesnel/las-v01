@@ -136,7 +136,7 @@ const Card = ({ image }) => {
         />
 
         <source
-          srcSet={`${image.mob1xWBP} 480w, ${image.mob2xWBP} 960w, ${image.mob3xWBP} 1440w, ${image.mob2xWBP} 1920w`}
+          srcSet={`${image.mob1xWBP} 418w, ${image.mob2xWBP} 836w, ${image.mob3xWBP} 1254w, ${image.mob2xWBP} 1672w`}
           sizes="(max-width: 480px) calc(100vw - 62px), 418px"
           width={418}
           height={360}
