@@ -104,7 +104,7 @@ const Card = ({ image }) => {
     >
       <picture>
         <source
-          srcSet={`${image.dtp1xWBP} 1200w, ${image.dtp2xWBP} 2400w, ${image.dtp3xWBP} 3600w, ${image.dtp2xWBP} 4800w`}
+          srcSet={`${image.dtp1xWBP} 1200w, ${image.dtp2xWBP} 2400w, ${image.dtp3xWBP} 3600w, ${image.dtp4xWBP} 4800w`}
           media="(min-width: 1200px)"
           width={270}
           height={360}
@@ -112,7 +112,7 @@ const Card = ({ image }) => {
         />
 
         <source
-          srcSet={`${image.dtp1xJPG} 1200w, ${image.dtp2xJPG} 2400w, ${image.dtp3xJPG} 3600w, ${image.dtp2xJPG} 4800w`}
+          srcSet={`${image.dtp1xJPG} 1200w, ${image.dtp2xJPG} 2400w, ${image.dtp3xJPG} 3600w, ${image.dtp4xJPG} 4800w`}
           media="(min-width: 1200px)"
           width={270}
           height={360}
@@ -120,7 +120,7 @@ const Card = ({ image }) => {
         />
 
         <source
-          srcSet={`${image.tab1xWBP} 768w, ${image.tab2xWBP} 1536w, ${image.tab3xWBP} 2304w, ${image.tab2xWBP} 3072w`}
+          srcSet={`${image.tab1xWBP} 330w, ${image.tab2xWBP} 660w, ${image.tab3xWBP} 990w, ${image.tab4xWBP} 1320w`}
           sizes="330px"
           media="(min-width: 768px) and (max-width: 1199px)"
           width={330}
@@ -129,7 +129,7 @@ const Card = ({ image }) => {
         />
 
         <source
-          srcSet={`${image.tab1xJPG} 768w, ${image.tab2xJPG} 1536w, ${image.tab3xJPG} 2304w, ${image.tab2xJPG} 3072w`}
+          srcSet={`${image.tab1xJPG} 768w, ${image.tab2xJPG} 1536w, ${image.tab3xJPG} 2304w, ${image.tab4xJPG} 3072w`}
           sizes="330px"
           media="(min-width: 768px) and (max-width: 1199px)"
           width={330}
@@ -138,7 +138,7 @@ const Card = ({ image }) => {
         />
 
         <source
-          srcSet={`${image.mob1xWBP} 418w, ${image.mob2xWBP} 836w, ${image.mob3xWBP} 1254w, ${image.mob2xWBP} 1672w`}
+          srcSet={`${image.mob1xWBP} 418w, ${image.mob2xWBP} 836w, ${image.mob3xWBP} 1254w, ${image.mob4xWBP} 1672w`}
           sizes="(max-width: 480px) calc(100vw - 62px), 418px"
           width={418}
           height={360}
@@ -147,7 +147,7 @@ const Card = ({ image }) => {
 
         <img
           loading="lazy"
-          srcSet={`${image.mob1xJPG} 418w, ${image.mob2xJPG} 836w, ${image.mob3xJPG} 1254w, ${image.mob2xJPG} 1672w`}
+          srcSet={`${image.mob1xJPG} 418w, ${image.mob2xJPG} 836w, ${image.mob3xJPG} 1254w, ${image.mob4xJPG} 1672w`}
           sizes="(max-width: 480px) calc(100vw - 62px), 418px"
           src={image.mob2xJPG}
           alt={image.alt.uk}
