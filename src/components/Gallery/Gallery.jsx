@@ -129,7 +129,7 @@ const Card = ({ image }) => {
         />
 
         <source
-          srcSet={`${image.tab1xJPG} 768w, ${image.tab2xJPG} 1536w, ${image.tab3xJPG} 2304w, ${image.tab4xJPG} 3072w`}
+          srcSet={`${image.tab1xJPG} 330w, ${image.tab2xJPG} 660w, ${image.tab3xJPG} 990w, ${image.tab4xJPG} 1320w`}
           sizes="330px"
           media="(min-width: 768px) and (max-width: 1199px)"
           width={330}
