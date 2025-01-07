@@ -104,7 +104,8 @@ const Card = ({ image }) => {
     >
       <picture>
         <source
-          srcSet={`${image.dtp1xWBP} 1200w, ${image.dtp2xWBP} 2400w, ${image.dtp3xWBP} 3600w, ${image.dtp4xWBP} 4800w`}
+          srcSet={`${image.dtp1xWBP} 270w, ${image.dtp2xWBP} 540w, ${image.dtp3xWBP} 810w, ${image.dtp4xWBP} 1080w`}
+          sizes="270px"
           media="(min-width: 1200px)"
           width={270}
           height={360}
