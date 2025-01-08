@@ -1,9 +1,9 @@
 .section {
-  position: absolute;
+  /* position: absolute;
   top: 0px;
   left: 0;
   right: 0;
-  opacity: 0.5;
+  opacity: 0.5; */
   background-color: rgba(20, 20, 20, 0.8);
 }
 
