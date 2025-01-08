@@ -102,6 +102,7 @@ const IntroList = ({ abouts }) => {
                 <img
                   loading="lazy"
                   srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 3072w`}
+                  sizes="330px"
                   src={about.tab3xJPG}
                   alt={about.alt.uk}
                   width={330}
