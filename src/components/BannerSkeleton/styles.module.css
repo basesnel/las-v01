@@ -157,6 +157,30 @@
     padding: 0 15px;
   }
 
+  .innerContent {
+    padding: 142px 52px 143px 90px;
+  }
+
+  .titleFirst,
+  .titleSecond {
+    max-width: 780px;
+    height: 55px;
+    margin-bottom: 32px;
+  }
+
+  .titleSecond {
+    max-width: 380px;
+    margin-bottom: 45px;
+  }
+
+  .text {
+    max-width: 480px;
+  }
+
+  .text:last-child {
+    max-width: 250px;
+  }
+
   .aside {
     width: 100px;
   }
