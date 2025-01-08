@@ -23,6 +23,7 @@ const BannerSkeleton = () => {
               <div className={styles.text} />
             </div>
             <div className={styles.reference} />
+            <div className={styles.footer} />
           </div>
         </div>
         <div className={styles.aside}>
