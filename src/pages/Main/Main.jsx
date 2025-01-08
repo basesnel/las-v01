@@ -67,7 +67,7 @@ const Main = () => {
               animate={{ opacity: 1, scale: 1 }}
             >
               <Banner />
-              <BannerSkeleton />
+              {/* <BannerSkeleton /> */}
               <Intro />
               <Services />
               <Gallery />
