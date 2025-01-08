@@ -121,6 +121,10 @@
     height: 18px;
   }
 
+  .text:last-child {
+    max-width: 300px;
+  }
+
   .reference {
     max-width: 150px;
     height: 40px;
@@ -134,14 +138,14 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 20px;
+    padding: 10px;
     width: 90px;
     height: 680px;
   }
 
   .innerAside {
     width: 16px;
-    height: 240px;
+    height: 300px;
     border-radius: 10px;
     background-color: rgba(229, 231, 235, 0.8);
   }
