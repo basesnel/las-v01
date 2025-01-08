@@ -92,7 +92,7 @@ const IntroList = ({ abouts }) => {
                 />
 
                 <source
-                  srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 3072w`}
+                  srcSet={`${about.tab1xWBP} 330w, ${about.tab2xWBP} 660w, ${about.tab3xWBP} 990w, ${about.tab4xWBP} 1320w`}
                   sizes="330px"
                   width={330}
                   height={235}
@@ -101,7 +101,7 @@ const IntroList = ({ abouts }) => {
 
                 <img
                   loading="lazy"
-                  srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab2xJPG} 3072w`}
+                  srcSet={`${about.tab1xJPG} 768w, ${about.tab2xJPG} 1536w, ${about.tab3xJPG} 2304w, ${about.tab4xJPG} 3072w`}
                   sizes="330px"
                   src={about.tab3xJPG}
                   alt={about.alt.uk}
