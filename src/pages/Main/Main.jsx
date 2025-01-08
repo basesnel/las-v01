@@ -14,6 +14,7 @@ import BannerSkeleton from "../../components/BannerSkeleton/BannerSkeleton";
 import IntroSkeleton from "../../components/IntroSkeleton/IntroSkeleton";
 import ServicesSkeleton from "../../components/ServicesSkeleton/ServicesSkeleton";
 import GalletySkeleton from "../../components/GallerySkeleton/GallerySkeleton";
+import FeaturesSkeleton from "../../components/FeaturesSkeleton/FeaturesSkeleton";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -74,6 +75,7 @@ const Main = () => {
           )}
         </AnimatePresence>
         <Features />
+        <FeaturesSkeleton />
         {/* <Shop /> */}
         <ContactUs />
         <Brands />
