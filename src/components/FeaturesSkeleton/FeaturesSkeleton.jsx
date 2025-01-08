@@ -30,7 +30,7 @@ const FeaturesSkeleton = () => {
             <div className={styles.item} />
             <div className={styles.item} />
           </div>
-          <div className={`${styles.paragraph} ${styles.last}`}>
+          <div className={styles.paragraph}>
             <div className={styles.text} />
             <div className={styles.text} />
           </div>
@@ -39,8 +39,12 @@ const FeaturesSkeleton = () => {
           </div>
         </div>
         <div className={styles.aside}>
-          <div className={styles.img} />
-          <div className={styles.img} />
+          <div className={styles.features}>
+            <div className={styles.feature} />
+            <div className={styles.feature} />
+            <div className={styles.feature} />
+            <div className={styles.feature} />
+          </div>
         </div>
       </div>
     </div>
