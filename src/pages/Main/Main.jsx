@@ -75,7 +75,7 @@ const Main = () => {
           )}
         </AnimatePresence>
         <Features />
-        <FeaturesSkeleton />
+        {/* <FeaturesSkeleton /> */}
         {/* <Shop /> */}
         <ContactUs />
         <Brands />

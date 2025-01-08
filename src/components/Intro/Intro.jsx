@@ -93,6 +93,7 @@ const IntroList = ({ abouts }) => {
 
                 <source
                   srcSet={`${about.tab1xWBP} 768w, ${about.tab2xWBP} 1536w, ${about.tab3xWBP} 2304w, ${about.tab2xWBP} 3072w`}
+                  sizes="330px"
                   width={330}
                   height={235}
                   type="image/webp"
