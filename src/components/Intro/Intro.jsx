@@ -76,7 +76,7 @@ const IntroList = ({ abouts }) => {
             <div className={styles.thumb}>
               <picture>
                 <source
-                  srcSet={`${about.dtp1xWBP} 1200w, ${about.dtp2xWBP} 2400w, ${about.dtp3xWBP} 3600w, ${about.dtp2xWBP} 4800w`}
+                  srcSet={`${about.dtp1xWBP} 270w, ${about.dtp2xWBP} 540w, ${about.dtp3xWBP} 810w, ${about.dtp4xWBP} 1080w`}
                   sizes="270px"
                   media="(min-width: 1200px)"
                   width={270}
@@ -85,7 +85,7 @@ const IntroList = ({ abouts }) => {
                 />
 
                 <source
-                  srcSet={`${about.dtp1xJPG} 1200w, ${about.dtp2xJPG} 2400w, ${about.dtp3xJPG} 3600w, ${about.dtp2xJPG} 4800w`}
+                  srcSet={`${about.dtp1xJPG} 1200w, ${about.dtp2xJPG} 2400w, ${about.dtp3xJPG} 3600w, ${about.dtp4xJPG} 4800w`}
                   sizes="270px"
                   media="(min-width: 1200px)"
                   width={270}
