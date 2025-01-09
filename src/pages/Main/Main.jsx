@@ -45,10 +45,11 @@ const Main = () => {
         )}
       </AnimatePresence> */}
 
-      {isLoading ? null : <Header />}
+      {/* {isLoading ? null : <Header />} */}
+      <Header />
 
       <main>
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {isLoading ? (
             <motion.div
               key="bannerLoading"
@@ -73,9 +74,13 @@ const Main = () => {
               <Gallery />
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
+        <Banner />
+        <Intro />
+        <Services />
+        <Gallery />
         <Features />
-        <FeaturesSkeleton />
+        {/* <FeaturesSkeleton /> */}
         {/* <Shop /> */}
         <ContactUs />
         <Brands />
