@@ -78,6 +78,7 @@ const IntroList = ({ abouts }) => {
                 <source
                   srcSet={`${about.dtp1xWBP} 1200w, ${about.dtp2xWBP} 2400w, ${about.dtp3xWBP} 3600w, ${about.dtp2xWBP} 4800w`}
                   media="(min-width: 1200px)"
+                  sizes="270px"
                   width={270}
                   height={445}
                   type="image/webp"
