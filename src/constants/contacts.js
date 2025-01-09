@@ -7,7 +7,7 @@ const contacts = {
     {
       id: 0,
       text: { en: "2A Dovzhenko St.", uk: "вул. Довженко, 2A" },
-      src: "https://maps.app.goo.gl/PFpUFDA69XfQLM9u9",
+      src: "https://maps.app.goo.gl/5qLVWqojS4WnqdXw5",
       icon: "map-pin",
     },
     {
