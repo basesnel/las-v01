@@ -125,7 +125,7 @@ const Slides = ({ imgIndex }) => {
               />
 
               <source
-                srcSet={`${slide.tab1xWBP} 768w, ${slide.tab2xWBP} 1536w, ${slide.tab3xWBP} 2304w, ${slide.tab2xWBP} 3072w`}
+                srcSet={`${slide.tab1xWBP} 570w, ${slide.tab2xWBP} 1140w, ${slide.tab3xWBP} 1710w, ${slide.tab4xWBP} 2280w`}
                 sizes="570px"
                 media="(min-width: 768px) and (max-width: 1199px)"
                 width={570}
@@ -134,7 +134,8 @@ const Slides = ({ imgIndex }) => {
               />
 
               <source
-                srcSet={`${slide.tab1xJPG} 768w, ${slide.tab2xJPG} 1536w, ${slide.tab3xJPG} 2304w, ${slide.tab2xJPG} 3072w`}
+                srcSet={`${slide.tab1xJPG} 768w, ${slide.tab2xJPG} 1536w, ${slide.tab3xJPG} 2304w, ${slide.tab4xJPG} 3072w`}
+                sizes="570px"
                 media="(min-width: 768px) and (max-width: 1199px)"
                 width={570}
                 height={680}
