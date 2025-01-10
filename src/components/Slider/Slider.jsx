@@ -109,7 +109,7 @@ const Slides = ({ imgIndex }) => {
           >
             <picture>
               <source
-                srcSet={`${slide.dtp1xWBP} 1040w, ${slide.dtp2xWBP} 2080w, ${slide.dtp3xWBP} 3120w, ${slide.dtp2xWBP} 4160w`}
+                srcSet={`${slide.dtp1xWBP} 1040w, ${slide.dtp2xWBP} 2080w, ${slide.dtp3xWBP} 3120w, ${slide.dtp4xWBP} 4160w`}
                 sizes="1040px"
                 media="(min-width: 1200px)"
                 width={1040}
@@ -118,7 +118,7 @@ const Slides = ({ imgIndex }) => {
               />
 
               <source
-                srcSet={`${slide.dtp1xJPG} 1200w, ${slide.dtp2xJPG} 2400w, ${slide.dtp3xJPG} 3600w, ${slide.dtp2xJPG} 4800w`}
+                srcSet={`${slide.dtp1xJPG} 1040w, ${slide.dtp2xJPG} 2080w, ${slide.dtp3xJPG} 3120w, ${slide.dtp4xJPG} 4160w`}
                 sizes="1040px"
                 media="(min-width: 1200px)"
                 width={1040}
