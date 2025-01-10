@@ -141,7 +141,7 @@ const Slides = ({ imgIndex }) => {
               />
 
               <source
-                srcSet={`${slide.mob1xWBP} 480w, ${slide.mob2xWBP} 960w, ${slide.mob3xWBP} 1440w, ${slide.mob2xWBP} 1920w`}
+                srcSet={`${slide.mob1xWBP} 480w, ${slide.mob2xWBP} 960w, ${slide.mob3xWBP} 1440w, ${slide.mob4xWBP} 1920w`}
                 sizes="(max-width: 480px) 100vw, 480px"
                 width={480}
                 height={580}
@@ -150,7 +150,8 @@ const Slides = ({ imgIndex }) => {
 
               <img
                 loading="lazy"
-                srcSet={`${slide.mob1xJPG} 480w, ${slide.mob2xJPG} 960w, ${slide.mob3xJPG} 1440w, ${slide.mob2xJPG} 1920w`}
+                srcSet={`${slide.mob1xJPG} 480w, ${slide.mob2xJPG} 960w, ${slide.mob3xJPG} 1440w, ${slide.mob4xJPG} 1920w`}
+                sizes="(max-width: 480px) 100vw, 480px"
                 src={slide.mob2xJPG}
                 alt={slide.alt.uk}
                 width={480}
