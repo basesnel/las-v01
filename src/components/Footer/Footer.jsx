@@ -83,7 +83,7 @@ const Date = ({ lan }) => {
       viewport={{ once: true, amount: 1 }}
     >
       {formatTimeAgo(
-        "Tue Dec 16 2024 19:05:00 GMT+0300 (Eastern European Summer Time)",
+        "Tue Jan 10 2025 17:47:00 GMT+0300 (Eastern European Summer Time)",
         lan
       )}
     </motion.p>
