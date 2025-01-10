@@ -142,6 +142,7 @@ const Slides = ({ imgIndex }) => {
 
               <source
                 srcSet={`${slide.mob1xWBP} 480w, ${slide.mob2xWBP} 960w, ${slide.mob3xWBP} 1440w, ${slide.mob2xWBP} 1920w`}
+                sizes="(max-width: 480px) 100vw, 480px"
                 width={480}
                 height={580}
                 type="image/webp"
