@@ -119,6 +119,7 @@ const Slides = ({ imgIndex }) => {
 
               <source
                 srcSet={`${slide.dtp1xJPG} 1200w, ${slide.dtp2xJPG} 2400w, ${slide.dtp3xJPG} 3600w, ${slide.dtp2xJPG} 4800w`}
+                sizes="1040px"
                 media="(min-width: 1200px)"
                 width={1040}
                 height={680}
