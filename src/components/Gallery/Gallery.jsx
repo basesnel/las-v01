@@ -30,7 +30,7 @@ const Gallery = () => {
 };
 
 const GalleryList = ({ images }) => {
-  const FAST_DURATION = 240;
+  const FAST_DURATION = 60;
   const SLOW_DURATION = 600;
 
   const [duration, setDuration] = useState(FAST_DURATION);
