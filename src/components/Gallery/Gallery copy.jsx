@@ -5,7 +5,6 @@ import {
   AnimatePresence,
   motion,
   useMotionValue,
-  useSpring,
 } from "framer-motion";
 import Section from "../Section/Section";
 import Container from "../Container/Container";
@@ -72,7 +71,6 @@ const GalleryList = ({ images }) => {
   return (
     <div className={styles.galleryContainer}>
       <motion.ul
-        drag="x"
         className={styles.galleryList}
         ref={ref}
         style={{ x: xTransition }}
