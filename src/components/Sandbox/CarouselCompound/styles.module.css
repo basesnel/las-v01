@@ -25,3 +25,11 @@
 .arrow {
   cursor: pointer;
 }
+
+.pageMainContainer {
+  height: 100%;
+}
+
+.pageMainContainer > * {
+  height: 100%;
+}
