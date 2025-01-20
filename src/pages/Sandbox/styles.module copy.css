@@ -2,19 +2,11 @@
   padding: 2rem;
 }
 
-/* .item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-} */
-
 .item {
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
-  height: 100%;
 }
 
 .item1 {
@@ -57,10 +49,4 @@
 
 .arrow {
   cursor: pointer;
-}
-
-/* Compaund carousel */
-
-.pageMainContainer {
-  height: 100%;
 }
