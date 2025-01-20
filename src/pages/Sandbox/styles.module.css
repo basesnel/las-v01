@@ -2,9 +2,51 @@
   padding: 2rem;
 }
 
-.box {
-  width: 150px;
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.item1 {
+  background-color: cornflowerblue;
+}
+
+.item2 {
+  background-color: coral;
+}
+
+.item3 {
+  background-color: darkseagreen;
+}
+
+/* Carousel component */
+
+.mainContainer {
   height: 150px;
-  background-color: #09f;
-  margin-bottom: 1rem;
+  width: 450px;
+
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.allItemsContainer {
+  height: 100%;
+  display: flex;
+
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.arrow {
+  cursor: pointer;
 }
