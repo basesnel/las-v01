@@ -1,98 +1,29 @@
 // import { motion } from "framer-motion";
-// import { useState, useEffect, Children, cloneElement } from "react";
-import { useState } from "react";
+import Carousel from "../../components/Sandbox/CarouselBase/Carousel";
+import CarouselCompound from "../../components/Sandbox/CarouselCompound/Carousel";
 import styles from "./styles.module.css";
-
-const PAGE_WIDTH = 450;
 
 const Sandbox = () => {
   return (
     <section className={styles.sandbox}>
-      {/* <Carousel>
+      <Carousel>
         <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
         <div className={`${styles.item} ${styles.item2}`}>Item 2</div>
         <div className={`${styles.item} ${styles.item3}`}>Item 3</div>
-      </Carousel> */}
-      <Carousel>
-        <Carousel.Page>
-          <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
-        </Carousel.Page>
-        <Carousel.Page>
-          <div className={`${styles.item} ${styles.item2}`}>Item 2</div>
-        </Carousel.Page>
-        <Carousel.Page>
-          <div className={`${styles.item} ${styles.item3}`}>Item 3</div>
-        </Carousel.Page>
       </Carousel>
+      <CarouselCompound>
+        <CarouselCompound.Page>
+          <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
+        </CarouselCompound.Page>
+        <CarouselCompound.Page>
+          <div className={`${styles.item} ${styles.item2}`}>Item 2</div>
+        </CarouselCompound.Page>
+        <CarouselCompound.Page>
+          <div className={`${styles.item} ${styles.item3}`}>Item 3</div>
+        </CarouselCompound.Page>
+      </CarouselCompound>
     </section>
   );
 };
-
-const Carousel = ({ children }) => {
-  // const [pages, setPages] = useState([]);
-  const [offset, setOffset] = useState(0);
-
-  const handleLeftArrowClick = () => {
-    console.log("handleLeftArrowClick");
-
-    setOffset((currentOffset) => {
-      const newOffset = currentOffset + PAGE_WIDTH;
-      console.log(newOffset);
-      return Math.min(newOffset, 0);
-    });
-  };
-
-  const handleRightArrowClick = () => {
-    console.log("handleRightArrowClick");
-
-    setOffset((currentOffset) => {
-      const newOffset = currentOffset - PAGE_WIDTH;
-
-      const maxOffset = -(PAGE_WIDTH * (pages.length - 1));
-      console.log(newOffset);
-      return Math.max(newOffset, maxOffset);
-    });
-  };
-
-  // useEffect(() => {
-  //   setPages(
-  //     Children.map(children, (child) => {
-  //       return cloneElement(child, {
-  //         style: {
-  //           height: "100%",
-  //           minWidth: `${PAGE_WIDTH}px`,
-  //           maxWidth: `${PAGE_WIDTH}px`,
-  //         },
-  //       });
-  //     })
-  //   );
-  //   console.log(pages);
-  // }, []);
-
-  return (
-    <div className={styles.mainContainer}>
-      <button className={styles.arrow} onClick={handleLeftArrowClick}>
-        &larr;
-      </button>
-      <div className={styles.window}>
-        <div
-          className={styles.allItemsContainer}
-          style={{ transform: `translateX(${offset}px)` }}
-        >
-          {children}
-        </div>
-      </div>
-      <button className={styles.arrow} onClick={handleRightArrowClick}>
-        &rarr;
-      </button>
-    </div>
-  );
-};
-
-const Page = ({ children }) => {
-  return <div className={styles.pageMainContainer}>{children}</div>;
-};
-
-Carousel.Page = Page;
 
 export default Sandbox;
