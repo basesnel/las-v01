@@ -19,13 +19,9 @@ const Carousel = ({ children, infinite }) => {
   useEffect(() => {
     if (infinite) {
       setPages([
-        cloneElement(children[Children.count(children) - 1], { key: 0 }),
-        ...Children.map(children, (child, index) =>
-          cloneElement(child, {
-            key: index + 1,
-          })
-        ),
-        cloneElement(children[0], { key: children.count + 1 }),
+        cloneElement(children[Children.count(children) - 1]),
+        ...children,
+        cloneElement(children[0]),
       ]);
       setClonesCount({ head: 1, tail: 1 });
       return;
