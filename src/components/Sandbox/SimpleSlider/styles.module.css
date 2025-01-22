@@ -1,0 +1,26 @@
+.carousel {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.imagesContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.imagesContainer:hover {
+  cursor: grab;
+}
+
+.imagesContainer:active {
+  cursor: grabbing;
+}
+
+.image {
+  display: block;
+  width: 270px;
+  height: 360px;
+  border-radius: 20px;
+  object-fit: cover;
+  pointer-events: none;
+}

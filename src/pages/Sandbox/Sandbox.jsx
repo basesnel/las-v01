@@ -1,12 +1,14 @@
 import Carousel from "../../components/Sandbox/CarouselBase/Carousel";
 import CarouselCompound from "../../components/Sandbox/CarouselCompound/Carousel";
 import EasySlider from "../../components/Sandbox/EasySlider/EasySlider";
+import SimpleSlider from "../../components/Sandbox/SimpleSlider/SimpleSlider";
 
 import styles from "./styles.module.css";
 
 const Sandbox = () => {
   return (
     <section className={styles.sandbox}>
+      <SimpleSlider />
       <EasySlider />
       <Carousel>
         <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
