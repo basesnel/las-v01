@@ -1,23 +1,19 @@
 .carousel {
   padding: 30px 0;
   overflow: hidden;
-  cursor: grab;
 }
 
-.imagesSliderContainer {
+.imagesContainer {
   display: flex;
+  gap: 30px;
 }
 
-.imagesSliderContainer:hover {
+.imagesContainer:hover {
   cursor: grab;
 }
 
-.imagesSliderContainer:active {
+.imagesContainer:active {
   cursor: grabbing;
-}
-
-.item {
-  padding: 15px;
 }
 
 .image {

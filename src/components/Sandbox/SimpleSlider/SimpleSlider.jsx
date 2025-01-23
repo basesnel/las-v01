@@ -5,25 +5,41 @@ import gallery from "../../../constants/gallery";
 import styles from "./styles.module.css";
 
 const SimpleSlider = () => {
-  const constrainRef = useRef(null);
+  // const [width, setWidth] = useState(0);
+  const constraintRef = useRef();
 
   const { images } = gallery;
 
+  // useEffect(() => {
+  //   console.log(
+  //     constraintRef.current.scrollWidth,
+  //     constraintRef.current.offsetWidth
+  //   );
+  //   setWidth(
+  //     constraintRef.current.scrollWidth - constraintRef.current.offsetWidth
+  //   );
+  // }, []);
+
   return (
-    <motion.div className={styles.carousel} ref={constrainRef}>
+    <motion.div
+      className={styles.carousel}
+      ref={constraintRef}
+      whileTap={{ cursor: "grabbing" }}
+    >
       <motion.div
-        className={styles.imagesContainer}
+        className={styles.imagesSliderContainer}
         drag="x"
-        dragConstraints={constrainRef}
+        dragConstraints={constraintRef}
       >
         {images.map((image, index) => {
           return (
-            <img
-              key={index}
-              src={image.dtp2xJPG}
-              alt={image.alt}
-              className={styles.image}
-            />
+            <div key={index} className={styles.item}>
+              <img
+                src={image.dtp2xJPG}
+                alt={image.alt}
+                className={styles.image}
+              />
+            </div>
           );
         })}
       </motion.div>
