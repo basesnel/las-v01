@@ -5,7 +5,7 @@ import gallery from "../../../constants/gallery";
 
 import styles from "./styles.module.css";
 
-const SimpleSlider = () => {
+const IndefiniteSlider = () => {
   const [left, setLeft] = useState(0);
   const carousel = useRef();
 
@@ -15,13 +15,27 @@ const SimpleSlider = () => {
     const itemsContainer = carousel.current.querySelector(
       "[data-items-container]"
     );
-    const { width } = itemsContainer.getBoundingClientRect();
+    const { x, left, width, right } = itemsContainer.getBoundingClientRect();
+    console.log(x, left, width, right);
+    console.log(itemsContainer.scrollWidth);
 
     setLeft(width - itemsContainer.scrollWidth);
+    // const item = carousel.current.querySelector('[data-item="0"]');
+    // const { width } = item.getBoundingClientRect();
+    // console.log(width);
+    // console.log(2 * width * images.length);
+
+    // return { left: 0, right: width - itemsContainer.scrollWidth };
   };
 
   useEffect(() => {
+    console.log(carousel.current.offsetWidth, carousel.current.scrollWidth);
+    console.log(carousel.current.firstChild.getBoundingClientRect());
     getConstraintsOfContainer();
+
+    // for (var key in carousel.current) {
+    //   console.log(key, carousel.current[key]);
+    // }
   }, []);
 
   return (
@@ -49,4 +63,4 @@ const SimpleSlider = () => {
   );
 };
 
-export default SimpleSlider;
+export default IndefiniteSlider;

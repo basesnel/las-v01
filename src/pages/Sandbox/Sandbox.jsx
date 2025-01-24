@@ -12,8 +12,11 @@ const Sandbox = () => {
         <h2 className={styles.header}>simple image gallery slider</h2>
         <SimpleSlider />
       </section>
-      <section className={styles.sandbox}>
+      <section className={styles.section}>
+        <h2 className={styles.header}>easy image gallery slider</h2>
         <EasySlider />
+      </section>
+      <section className={styles.sandbox}>
         <Carousel>
           <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
           <div className={`${styles.item} ${styles.item2}`}>Item 2</div>
