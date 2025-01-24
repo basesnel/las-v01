@@ -22,6 +22,14 @@ const SimpleSlider = () => {
 
   useEffect(() => {
     getConstraintsOfContainer();
+
+    window.addEventListener("resize", throttle(getConstraintsOfContainer, 250));
+    return () => {
+      window.removeEventListener(
+        "resize",
+        throttle(getConstraintsOfContainer, 250)
+      );
+    };
   }, []);
 
   return (
