@@ -6,19 +6,32 @@ import gallery from "../../../constants/gallery";
 import styles from "./styles.module.css";
 
 const SimpleSlider = () => {
+  const [left, setLeft] = useState(0);
   const carousel = useRef();
 
   const { images } = gallery;
 
-  const getPositionOfContainer = () => {
-    const { x, left, right } =
-      carousel.current.firstChild.getBoundingClientRect();
-    console.log(x, left, right);
+  const getConstraintsOfContainer = () => {
+    const itemsContainer = carousel.current.querySelector(
+      "[data-items-container]"
+    );
+    const { x, left, width, right } = itemsContainer.getBoundingClientRect();
+    console.log(x, left, width, right);
+    console.log(itemsContainer.scrollWidth);
+
+    setLeft(width - itemsContainer.scrollWidth);
+    // const item = carousel.current.querySelector('[data-item="0"]');
+    // const { width } = item.getBoundingClientRect();
+    // console.log(width);
+    // console.log(2 * width * images.length);
+
+    // return { left: 0, right: width - itemsContainer.scrollWidth };
   };
 
   useEffect(() => {
     console.log(carousel.current.offsetWidth, carousel.current.scrollWidth);
     console.log(carousel.current.firstChild.getBoundingClientRect());
+    getConstraintsOfContainer();
 
     // for (var key in carousel.current) {
     //   console.log(key, carousel.current[key]);
@@ -28,14 +41,15 @@ const SimpleSlider = () => {
   return (
     <motion.div className={styles.carousel} ref={carousel}>
       <motion.div
-        className={styles.imagesContainer}
+        className={styles.itemsContainer}
+        data-items-container
         drag="x"
-        onDrag={throttle(getPositionOfContainer, 1000)}
-        // dragConstraints={constraintRef}
+        onDrag={throttle(getConstraintsOfContainer, 1000)}
+        dragConstraints={{ right: 0, left: left }}
       >
         {[...images, ...images].map((image, index) => {
           return (
-            <div key={index} className={styles.item}>
+            <div key={index} className={styles.item} data-item={index}>
               <img
                 src={image.dtp2xJPG}
                 alt={image.alt}

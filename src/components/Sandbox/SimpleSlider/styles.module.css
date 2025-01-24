@@ -3,17 +3,17 @@
   overflow: hidden;
 }
 
-.imagesContainer {
+.itemsContainer {
   display: flex;
 }
 
 .carousel:hover,
-.imagesContainer:hover {
+.itemsContainer:hover {
   cursor: grab;
 }
 
 .carousel:active,
-.imagesContainer:active {
+.itemsContainer:active {
   cursor: grabbing;
 }
 

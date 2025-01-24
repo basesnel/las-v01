@@ -41,7 +41,7 @@ const Carousel = ({ children }) => {
         });
       })
     );
-    console.log(pages);
+    // console.log(pages);
   }, []);
 
   return (
