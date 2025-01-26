@@ -7,10 +7,7 @@ import styles from "./styles.module.css";
 
 const SimpleSlider = () => {
   const [left, setLeft] = useState(0);
-  const [offsetWidth, setOffsetWidth] = useState(0);
-
   const carousel = useRef();
-  const dragOffsetWidth = useRef();
 
   const { images } = gallery;
 
@@ -20,7 +17,6 @@ const SimpleSlider = () => {
     );
     const { width } = itemsContainer.getBoundingClientRect();
 
-    setOffsetWidth(itemsContainer.scrollWidth);
     setLeft(width - itemsContainer.scrollWidth);
   };
 
@@ -38,20 +34,12 @@ const SimpleSlider = () => {
 
   return (
     <motion.div className={styles.carousel} ref={carousel}>
-      <div
-        ref={dragOffsetWidth}
-        className={styles.dragOffsetWidth}
-        style={{
-          left: `${left}px`,
-          width: `${offsetWidth}px`,
-        }}
-      ></div>
       <motion.div
         className={styles.itemsContainer}
         data-items-container
         drag="x"
         onDrag={throttle(getConstraintsOfContainer, 1000)}
-        dragConstraints={dragOffsetWidth}
+        dragConstraints={{ right: 0, left: left }}
       >
         {[...images, ...images].map((image, index) => {
           return (
