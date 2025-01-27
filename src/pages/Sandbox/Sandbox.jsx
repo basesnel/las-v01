@@ -2,12 +2,17 @@ import Carousel from "../../components/Sandbox/CarouselBase/Carousel";
 import CarouselCompound from "../../components/Sandbox/CarouselCompound/Carousel";
 import EasySlider from "../../components/Sandbox/EasySlider/EasySlider";
 import SimpleSlider from "../../components/Sandbox/SimpleSlider/SimpleSlider";
+import ImageSlider from "../../components/Sandbox/ImageSlider/ImageSlider";
 
 import styles from "./styles.module.css";
 
 const Sandbox = () => {
   return (
     <>
+      <section className={styles.section}>
+        <h2 className={styles.header}>image slider</h2>
+        <ImageSlider />
+      </section>
       <section className={styles.section}>
         <h2 className={styles.header}>simple image gallery slider</h2>
         <SimpleSlider />
