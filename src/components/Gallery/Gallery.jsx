@@ -23,8 +23,8 @@ const Gallery = () => {
       <Container>
         <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
         <Heading level={2} mode="hidden" title={title.uk} />
-        <GalleryList images={images} />
       </Container>
+      <GalleryList images={images} />
     </Section>
   );
 };
