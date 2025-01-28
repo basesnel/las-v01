@@ -37,8 +37,8 @@ const List = ({ list }) => {
       >
         <li className={styles.item}>
           <motion.ul className={styles.innerList} variants={innerList}>
-            {list.map(({ id, service, price }) => {
-              if (id < 4)
+            {list.map(({ id, service }) => {
+              if (id < 6)
                 return (
                   <motion.li
                     key={id}
@@ -58,8 +58,8 @@ const List = ({ list }) => {
         </li>
         <li className={styles.item}>
           <motion.ul className={styles.innerList} variants={innerList}>
-            {list.map(({ id, service, price }) => {
-              if (id >= 4)
+            {list.map(({ id, service }) => {
+              if (id >= 6)
                 return (
                   <motion.li
                     key={id}

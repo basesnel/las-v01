@@ -83,15 +83,7 @@
   font-weight: 600;
   font-style: italic;
   line-height: 1.428;
-  word-break: break-all;
   color: var(--neutral);
-}
-
-.innerItem::after {
-  content: "";
-  height: 1px;
-  flex-grow: 1;
-  background-color: currentColor;
 }
 
 @media screen and (min-width: 768px) {
@@ -100,13 +92,20 @@
     font-size: 18px;
     line-height: 1.666;
   }
+
+  .innerItem::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: currentColor;
+  }
 }
 
 .service {
   display: flex;
   align-items: baseline;
   gap: 4px;
-  word-break: break-all;
+  text-align: left;
 }
 
 .service::before {

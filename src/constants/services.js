@@ -32,7 +32,7 @@ const services = {
     },
     {
       id: 1,
-      service: { en: "Auto parts", uk: "Авто-запчастини" },
+      service: { en: "Auto parts", uk: "Автозапчастини" },
       price: {
         count: 2000,
         en: enCountPrice,
@@ -42,8 +42,8 @@ const services = {
     {
       id: 2,
       service: {
-        en: "Sale of rubber for any type",
-        uk: "Продаж будь-якої гуми",
+        en: "Sale of rubber for any type of transport",
+        uk: "Продаж автогуми на будь-який вид транспорту",
       },
       price: {
         count: 3500,
@@ -55,7 +55,7 @@ const services = {
       id: 3,
       service: {
         en: "Repair of any complexity",
-        uk: "Будь-який ремонт",
+        uk: "Ремонт будь-якої складності",
       },
       price: {
         count: 2000,
@@ -65,7 +65,10 @@ const services = {
     },
     {
       id: 4,
-      service: { en: "Straightning, painting", uk: "Рихтовка, фарбування" },
+      service: {
+        en: "Straightning, painting of a high level",
+        uk: "Рихтування, малярні роботи високого рівня",
+      },
       price: {
         count: 1600,
         en: enCountPrice,
@@ -75,8 +78,8 @@ const services = {
     {
       id: 5,
       service: {
-        en: "Conditioner's maintain",
-        uk: "Сервіс кондиціонера",
+        en: "Refueling and maintenance of car air conditioners",
+        uk: "Заправка та обслуговування автокондиціонерів",
       },
       price: {
         count: 4200,
@@ -99,8 +102,56 @@ const services = {
     {
       id: 7,
       service: {
-        en: "Comprehinsive car inspection",
-        uk: "Комплекс перевірок авто",
+        en: "Comprehensive inspection of the car before purchase",
+        uk: "Комплексна перевірка авто перед купівлею",
+      },
+      price: {
+        count: 6000,
+        en: enCountPrice,
+        uk: ukCountPrice,
+      },
+    },
+    {
+      id: 8,
+      service: {
+        en: "Pasting with armored film and glass tinting",
+        uk: "Оклейка броньоплівкою та тонування скла",
+      },
+      price: {
+        count: 6000,
+        en: enCountPrice,
+        uk: ukCountPrice,
+      },
+    },
+    {
+      id: 9,
+      service: {
+        en: "Car certification",
+        uk: "Сертифікація авто",
+      },
+      price: {
+        count: 6000,
+        en: enCountPrice,
+        uk: ukCountPrice,
+      },
+    },
+    {
+      id: 10,
+      service: {
+        en: "Tow truck",
+        uk: "Евакуатор",
+      },
+      price: {
+        count: 6000,
+        en: enCountPrice,
+        uk: ukCountPrice,
+      },
+    },
+    {
+      id: 11,
+      service: {
+        en: "Other services",
+        uk: "Інші послуги",
       },
       price: {
         count: 6000,
