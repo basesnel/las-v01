@@ -1,7 +1,7 @@
 const brands = {
   title: {
-    en: "we work with brands",
-    uk: "працюємо з марками",
+    en: "we work with any car brands",
+    uk: "працюємо з будь-якими марками авто",
   },
   subTitle: {
     en: "repair of any complexity",
