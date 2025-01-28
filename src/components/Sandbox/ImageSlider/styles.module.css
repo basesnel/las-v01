@@ -12,6 +12,8 @@
 }
 
 .image {
+  position: absolute;
+  width: 330px;
   border-radius: 12px;
 }
 

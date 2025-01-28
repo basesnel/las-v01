@@ -54,15 +54,15 @@ const ImageSlider = () => {
   const imageVariants = {
     center: { x: "0%", scale: 1, zIndex: 8 },
     left4: { x: "-50%", scale: 0.8, zIndex: 5 },
-    left3: { x: "-90%", scale: 0.5, zIndex: 3 },
-    left2: { x: "-115%", scale: 0.3, zIndex: 1 },
+    left3: { x: "-75%", scale: 0.5, zIndex: 3 },
+    left2: { x: "-90%", scale: 0.3, zIndex: 1 },
     left1: { x: "-100%", scale: 0, zIndex: 0 },
     left: { x: "-100%", scale: 0, zIndex: 0 },
     behind: { x: "0%", scale: 0, zIndex: 0 },
     right: { x: "100%", scale: 0, zIndex: 0 },
     right1: { x: "100%", scale: 0, zIndex: 0 },
-    right2: { x: "115%", scale: 0.3, zIndex: 1 },
-    right3: { x: "90%", scale: 0.5, zIndex: 3 },
+    right2: { x: "90%", scale: 0.3, zIndex: 1 },
+    right3: { x: "75%", scale: 0.5, zIndex: 3 },
     right4: { x: "50%", scale: 0.8, zIndex: 5 },
   };
 
@@ -79,7 +79,7 @@ const ImageSlider = () => {
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            style={{ position: "absolute" }}
+            style={{ width: "40%", position: "absolute" }}
           />
         ))}
       </div>
