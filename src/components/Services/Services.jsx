@@ -51,7 +51,6 @@ const List = ({ list }) => {
                     }
                   >
                     <span className={styles.service}>{service.uk}</span>
-                    <span className={styles.price}>{price.uk()}</span>
                   </motion.li>
                 );
             })}
@@ -73,7 +72,6 @@ const List = ({ list }) => {
                     }
                   >
                     <span className={styles.service}>{service.uk}</span>
-                    <span className={styles.price}>{price.uk()}</span>
                   </motion.li>
                 );
             })}
