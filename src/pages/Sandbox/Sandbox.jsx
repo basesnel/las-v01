@@ -10,26 +10,27 @@ const Sandbox = () => {
   return (
     <>
       <section className={styles.section}>
-        <h2 className={styles.header}>image slider</h2>
+        <h2 className={styles.header}>5. image slider</h2>
         <ImageSlider />
       </section>
       <section className={styles.section}>
-        <h2 className={styles.header}>simple image gallery slider</h2>
+        <h2 className={styles.header}>4. simple image gallery slider</h2>
         <SimpleSlider />
       </section>
       <section className={styles.section}>
-        <h2 className={styles.header}>easy image gallery slider</h2>
+        <h2 className={styles.header}>3. easy image gallery slider</h2>
         <EasySlider />
       </section>
       <section className={styles.section}>
-        <h2 className={styles.header}>simple slider</h2>
+        <h2 className={styles.header}>2. simple slider</h2>
         <Carousel>
           <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
           <div className={`${styles.item} ${styles.item2}`}>Item 2</div>
           <div className={`${styles.item} ${styles.item3}`}>Item 3</div>
         </Carousel>
       </section>
-      <section className={styles.sandbox}>
+      <section className={styles.container}>
+        <h2 className={styles.header}>1. simple slider</h2>
         <CarouselCompound infinite>
           <CarouselCompound.Page>
             <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
