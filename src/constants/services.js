@@ -13,8 +13,8 @@ const services = {
     uk: "довірте свою машину найкращим майстрам",
   },
   title: {
-    en: "services and prices",
-    uk: "послуги та ціни",
+    en: "services",
+    uk: "послуги",
   },
   reference: {
     en: "online-bookung",
