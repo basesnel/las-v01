@@ -15,6 +15,15 @@ const ImageSlider = () => {
     });
   };
 
+  const handlePrev = () => {
+    setPositionIndexes((prevIndexes) => {
+      const updateIndexes = prevIndexes.map((prevIndex) =>
+        prevIndex === 0 ? (prevIndex + 4) % 5 : (prevIndex - 1) % 5
+      );
+      return updateIndexes;
+    });
+  };
+
   const galleryImages = [
     images[0].tab2xJPG,
     images[1].tab2xJPG,
@@ -34,24 +43,30 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className={styles.imageSlider}>
-      {galleryImages.map((image, index) => (
-        <motion.img
-          key={index}
-          src={image}
-          alt={index}
-          className={styles.image}
-          initial="center"
-          animate={positions[positionIndexes[index]]}
-          variants={imageVariants}
-          transition={{ duration: 0.5 }}
-          style={{ width: "40%", position: "absolute" }}
-        />
-      ))}
-
-      <button className={styles.next} onClick={handleNext}>
-        Next
-      </button>
+    <div className={styles.container}>
+      <div className={styles.imageSlider}>
+        {galleryImages.map((image, index) => (
+          <motion.img
+            key={index}
+            src={image}
+            alt={index}
+            className={styles.image}
+            initial="center"
+            animate={positions[positionIndexes[index]]}
+            variants={imageVariants}
+            transition={{ duration: 0.5 }}
+            style={{ width: "40%", position: "absolute" }}
+          />
+        ))}
+      </div>
+      <div className={styles.controls}>
+        <button className={styles.next} onClick={handlePrev}>
+          Prev
+        </button>
+        <button className={styles.next} onClick={handleNext}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };
