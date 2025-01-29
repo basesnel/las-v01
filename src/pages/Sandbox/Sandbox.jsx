@@ -3,12 +3,17 @@ import CarouselCompound from "../../components/Sandbox/CarouselCompound/Carousel
 import EasySlider from "../../components/Sandbox/EasySlider/EasySlider";
 import SimpleSlider from "../../components/Sandbox/SimpleSlider/SimpleSlider";
 import ImageSlider from "../../components/Sandbox/ImageSlider/ImageSlider";
+import ExampleSlider from "../../components/Sandbox/ExampleSlider/ExampleSlider";
 
 import styles from "./styles.module.css";
 
 const Sandbox = () => {
   return (
     <>
+      <section className={styles.section}>
+        <h2 className={styles.header}>6. Examplee slider</h2>
+        <ExampleSlider />
+      </section>
       <section className={styles.section}>
         <h2 className={styles.header}>5. image slider</h2>
         <ImageSlider />
