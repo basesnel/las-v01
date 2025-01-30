@@ -14,10 +14,10 @@ const Sandbox = () => {
         <h2 className={styles.header}>6. Examplee slider</h2>
         <ExampleSlider />
       </section>
-      {/* <section className={styles.section}>
+      <section className={styles.section}>
         <h2 className={styles.header}>5. image slider</h2>
         <ImageSlider />
-      </section> */}
+      </section>
       <section className={styles.section}>
         <h2 className={styles.header}>4. simple image gallery slider</h2>
         <SimpleSlider />

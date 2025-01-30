@@ -9,11 +9,12 @@ const ImageSlider = () => {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
   ]);
   const { images } = gallery;
+  const countImages = images.length;
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
       const updateIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 1) % 12
+        (prevIndex) => (prevIndex + 1) % countImages
       );
       return updateIndexes;
     });
@@ -22,7 +23,9 @@ const ImageSlider = () => {
   const handlePrev = () => {
     setPositionIndexes((prevIndexes) => {
       const updateIndexes = prevIndexes.map((prevIndex) =>
-        prevIndex === 0 ? (prevIndex + 11) % 12 : (prevIndex - 1) % 12
+        prevIndex === 0
+          ? (prevIndex + countImages - 1) % countImages
+          : (prevIndex - 1) % countImages
       );
       return updateIndexes;
     });
