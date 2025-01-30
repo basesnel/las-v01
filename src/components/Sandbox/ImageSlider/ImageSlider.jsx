@@ -1,8 +1,51 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import gallery from "../../../constants/gallery";
 
 import styles from "./styles.module.css";
+
+const useReactMatchMedia = (mediaQueries) => {
+  const queries = Object.values(mediaQueries).map((query) => matchMedia(query));
+
+  const [values, setValues] = useState(() => {
+    const valuesObject = Object.keys(mediaQueries).reduce((acc, key, index) => {
+      acc[key] = queries[index].matches;
+      return acc;
+    }, {});
+
+    if (Object.values(valuesObject).every((val) => val === false)) {
+      valuesObject.mobile = true;
+    }
+
+    return valuesObject;
+  });
+
+  useLayoutEffect(() => {
+    const updateValues = () => {
+      const valuesObject = Object.keys(mediaQueries).reduce(
+        (acc, key, index) => {
+          acc[key] = queries[index].matches;
+          return acc;
+        },
+        {}
+      );
+
+      if (Object.values(valuesObject).every((val) => val === false)) {
+        valuesObject.mobile = true;
+      }
+
+      setValues(valuesObject);
+    };
+
+    queries.forEach((query) => query.addEventListener("change", updateValues));
+    return () =>
+      queries.forEach((query) =>
+        query.removeEventListener("change", updateValues)
+      );
+  }, [queries]);
+
+  return values;
+};
 
 const ImageSlider = () => {
   const [positionIndexes, setPositionIndexes] = useState([
@@ -10,6 +53,23 @@ const ImageSlider = () => {
   ]);
   const { images } = gallery;
   const countImages = images.length;
+
+  // useMatchMedia
+
+  const myMediaQueries = {
+    mobile: "(max-width: 480px)",
+    mobTab: "(min-width: 481px) and (max-width: 767px)",
+    tabDesk: "(min-width: 768px) and (max-width: 1199px)",
+    desktop: "(min-width: 1200px)",
+  };
+
+  const { mobile, mobTab, tabDesk, desktop } =
+    useReactMatchMedia(myMediaQueries);
+
+  console.log("mobile:", mobile);
+  console.log("mobTab:", mobTab);
+  console.log("tabDesk:", tabDesk);
+  console.log("desktop:", desktop);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -30,14 +90,6 @@ const ImageSlider = () => {
       return updateIndexes;
     });
   };
-
-  // const galleryImages = [
-  //   images[0].tab2xJPG,
-  //   images[1].tab2xJPG,
-  //   images[2].tab2xJPG,
-  //   images[3].tab2xJPG,
-  //   images[4].tab2xJPG,
-  // ];
 
   const positions = [
     "center",
