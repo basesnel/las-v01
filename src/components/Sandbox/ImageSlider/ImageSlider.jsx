@@ -54,16 +54,61 @@ const ImageSlider = () => {
     "right4",
   ];
 
-  const imageVariants = {
+  // const imageVariants = {
+  //   center: { x: "0%", scale: 1, zIndex: 8 },
+  //   left4: { x: "-50%", scale: 0.8, zIndex: 5 },
+  //   left3: { x: "-90%", scale: 0.5, zIndex: 3 },
+  //   left2: { x: "-115%", scale: 0.3, zIndex: 1 },
+  //   left1: { x: "-100%", scale: 0, zIndex: 0 },
+  //   left: { x: "-100%", scale: 0, zIndex: 0 },
+  //   behind: { x: "0%", scale: 0, zIndex: 0 },
+  //   right: { x: "100%", scale: 0, zIndex: 0 },
+  //   right1: { x: "100%", scale: 0, zIndex: 0 },
+  //   right2: { x: "115%", scale: 0.3, zIndex: 1 },
+  //   right3: { x: "90%", scale: 0.5, zIndex: 3 },
+  //   right4: { x: "50%", scale: 0.8, zIndex: 5 },
+  // };
+
+  const imageVariantsMobile = {
     center: { x: "0%", scale: 1, zIndex: 8 },
-    left4: { x: "-50%", scale: 0.8, zIndex: 5 },
-    left3: { x: "-90%", scale: 0.5, zIndex: 3 },
-    left2: { x: "-115%", scale: 0.3, zIndex: 1 },
+    left4: { x: "-30%", scale: 0.8, zIndex: 5 },
+    left3: { x: "-90%", scale: 0, zIndex: 3 },
+    left2: { x: "-115%", scale: 0, zIndex: 1 },
     left1: { x: "-100%", scale: 0, zIndex: 0 },
     left: { x: "-100%", scale: 0, zIndex: 0 },
     behind: { x: "0%", scale: 0, zIndex: 0 },
     right: { x: "100%", scale: 0, zIndex: 0 },
     right1: { x: "100%", scale: 0, zIndex: 0 },
+    right2: { x: "115%", scale: 0, zIndex: 1 },
+    right3: { x: "90%", scale: 0, zIndex: 3 },
+    right4: { x: "30%", scale: 0.8, zIndex: 5 },
+  };
+
+  const imageVariantsTablet = {
+    center: { x: "0%", scale: 1, zIndex: 8 },
+    left4: { x: "-50%", scale: 0.8, zIndex: 5 },
+    left3: { x: "-80%", scale: 0.5, zIndex: 3 },
+    left2: { x: "-115%", scale: 0, zIndex: 1 },
+    left1: { x: "-100%", scale: 0, zIndex: 0 },
+    left: { x: "-100%", scale: 0, zIndex: 0 },
+    behind: { x: "0%", scale: 0, zIndex: 0 },
+    right: { x: "100%", scale: 0, zIndex: 0 },
+    right1: { x: "100%", scale: 0, zIndex: 0 },
+    right2: { x: "115%", scale: 0, zIndex: 1 },
+    right3: { x: "80%", scale: 0.5, zIndex: 3 },
+    right4: { x: "50%", scale: 0.8, zIndex: 5 },
+  };
+
+  const imageVariantsDesktop = {
+    center: { x: "0%", scale: 1, zIndex: 8 },
+    left4: { x: "-50%", scale: 0.8, zIndex: 5 },
+    left3: { x: "-90%", scale: 0.5, zIndex: 3 },
+    left2: { x: "-115%", scale: 0.3, zIndex: 1 },
+    left1: { x: "-128%", scale: 0.2, zIndex: 0 },
+    left: { x: "-145%", scale: 0, zIndex: 0 },
+    behind: { x: "0%", scale: 0, zIndex: 0 },
+    right: { x: "145%", scale: 0, zIndex: 0 },
+    right1: { x: "128%", scale: 0.2, zIndex: 0 },
     right2: { x: "115%", scale: 0.3, zIndex: 1 },
     right3: { x: "90%", scale: 0.5, zIndex: 3 },
     right4: { x: "50%", scale: 0.8, zIndex: 5 },
@@ -78,7 +123,7 @@ const ImageSlider = () => {
             className={styles.card}
             initial="center"
             animate={positions[positionIndexes[index]]}
-            variants={imageVariants}
+            variants={imageVariantsDesktop}
             transition={{ duration: 0.5 }}
           >
             <picture>
