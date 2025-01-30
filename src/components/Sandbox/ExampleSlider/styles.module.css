@@ -1,34 +1,51 @@
 .container {
-  height: 100vh;
+  height: 100%;
   background-color: var(--dark);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.imageSlider {
+.exampleContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev,
+.next {
+  top: calc(50% - 20px);
+  position: absolute;
+  background-color: var(--light);
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 80vh;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
 }
 
 .image {
   position: absolute;
-  width: 330px;
-  border-radius: 12px;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 20vh;
-}
-
-.next {
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  color: var(--light);
-  background-color: var(--accent);
+  max-width: 100%;
 }

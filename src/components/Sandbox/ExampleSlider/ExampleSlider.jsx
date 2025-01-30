@@ -4,7 +4,7 @@ import { wrap } from "popmotion";
 
 import slider from "../../../constants/slider";
 
-// import styles from "./styles.module.css";
+import styles from "./styles.module.css";
 
 const variants = {
   enter: (direction) => {
@@ -44,36 +44,43 @@ const ExampleSlider = () => {
   };
 
   return (
-    <div>
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          key={page}
-          src={slides[imageIndex].dtp2xJPG}
-          custom={direction}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
-          }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
+    <div className={styles.container}>
+      <div className={styles.exampleContainer}>
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.img
+            key={page}
+            className={styles.image}
+            src={slides[imageIndex].dtp2xJPG}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
 
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-        />
-      </AnimatePresence>
-      <button onClick={() => paginate(1)}>{"➤"}</button>
-      <button onClick={() => paginate(-1)}>{"➤"}</button>
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(-1);
+              }
+            }}
+          />
+        </AnimatePresence>
+        <button className={styles.prev} onClick={() => paginate(1)}>
+          {"➤"}
+        </button>
+        <button className={styles.next} onClick={() => paginate(-1)}>
+          {"➤"}
+        </button>
+      </div>
     </div>
   );
 };
