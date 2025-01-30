@@ -4,6 +4,8 @@ import { wrap } from "popmotion";
 
 import slider from "../../../constants/slider";
 
+// import styles from "./styles.module.css";
+
 const variants = {
   enter: (direction) => {
     return {
@@ -38,11 +40,11 @@ const ExampleSlider = () => {
   const imageIndex = wrap(0, slides.length, page);
 
   const paginate = (newDirection) => {
-    setPage([page + newDirection], newDirection);
+    setPage([page + newDirection, newDirection]);
   };
 
   return (
-    <>
+    <div>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={page}
@@ -64,13 +66,15 @@ const ExampleSlider = () => {
 
             if (swipe < -swipeConfidenceThreshold) {
               paginate(1);
-            } else {
+            } else if (swipe > swipeConfidenceThreshold) {
               paginate(-1);
             }
           }}
         />
       </AnimatePresence>
-    </>
+      <button onClick={() => paginate(1)}>{"➤"}</button>
+      <button onClick={() => paginate(-1)}>{"➤"}</button>
+    </div>
   );
 };
 

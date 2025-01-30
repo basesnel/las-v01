@@ -1,0 +1,34 @@
+.container {
+  height: 100vh;
+  background-color: var(--dark);
+}
+
+.imageSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.image {
+  position: absolute;
+  width: 330px;
+  border-radius: 12px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 20vh;
+}
+
+.next {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: var(--light);
+  background-color: var(--accent);
+}
