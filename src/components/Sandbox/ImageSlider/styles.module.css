@@ -1,15 +1,15 @@
-.container {
+/* .container {
   height: 100vh;
   background-color: var(--dark);
-}
+} */
 
-.imageSlider {
+/* .imageSlider {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 80vh;
-}
+} */
 
 /* .image {
   position: absolute;
@@ -35,14 +35,23 @@
 
 /* ------------------ */
 
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.container {
+  height: 100vh;
+  background-color: var(--dark);
+  overflow: hidden;
+}
+
+.imageSlider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
 }
 
 .card {
-  position: relative;
+  position: absolute;
   overflow: hidden;
   min-width: 270px;
   border-radius: 12px;
@@ -50,6 +59,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {

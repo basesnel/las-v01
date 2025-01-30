@@ -91,7 +91,7 @@ const ImageSlider = () => {
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            style={{ position: "absolute" }}
+            // style={{ position: "absolute" }}
           >
             <picture>
               <source
