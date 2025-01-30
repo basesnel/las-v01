@@ -26,14 +26,14 @@ const Sandbox = () => {
         <h2 className={styles.header}>3. easy image gallery slider</h2>
         <EasySlider />
       </section>
-      <section className={styles.section}>
+      {/* <section className={styles.section}>
         <h2 className={styles.header}>2. simple slider</h2>
         <Carousel>
           <div className={`${styles.item} ${styles.item1}`}>Item 1</div>
           <div className={`${styles.item} ${styles.item2}`}>Item 2</div>
           <div className={`${styles.item} ${styles.item3}`}>Item 3</div>
         </Carousel>
-      </section>
+      </section> */}
       <section className={styles.container}>
         <h2 className={styles.header}>1. simple slider</h2>
         <CarouselCompound infinite>

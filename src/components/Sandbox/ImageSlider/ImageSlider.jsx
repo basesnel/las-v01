@@ -73,17 +73,6 @@ const ImageSlider = () => {
     <div className={styles.container}>
       <div className={styles.imageSlider}>
         {images.map((image, index) => (
-          // <motion.img
-          //   key={index}
-          //   src={image.tab2xJPG}
-          //   alt={index}
-          //   className={styles.image}
-          //   initial="center"
-          //   animate={positions[positionIndexes[index]]}
-          //   variants={imageVariants}
-          //   transition={{ duration: 0.5 }}
-          //   style={{ position: "absolute" }}
-          // />
           <motion.figure
             key={index}
             className={styles.card}
@@ -91,7 +80,6 @@ const ImageSlider = () => {
             animate={positions[positionIndexes[index]]}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
-            // style={{ position: "absolute" }}
           >
             <picture>
               <source
