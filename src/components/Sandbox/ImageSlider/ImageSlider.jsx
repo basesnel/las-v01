@@ -13,18 +13,14 @@ const ImageSlider = () => {
   const countImages = images.length;
 
   const myMediaQueries = {
-    mobile: "(max-width: 480px)",
-    mobTab: "(min-width: 481px) and (max-width: 767px)",
-    tabDesk: "(min-width: 768px) and (max-width: 1199px)",
+    mobile: "(max-width: 420px)",
+    smartphone: "(min-width: 421px) and (max-width: 480px)",
+    tablet: "(min-width: 481px) and (max-width: 767px)",
+    laptop: "(min-width: 768px) and (max-width: 1199px)",
     desktop: "(min-width: 1200px)",
   };
 
   const myMedia = useReactMatchMedia(myMediaQueries);
-
-  console.log("mobile:", myMedia.mobile);
-  console.log("mobTab:", myMedia.mobTab);
-  console.log("tabDesk:", myMedia.tabDesk);
-  console.log("desktop:", myMedia.desktop);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -77,18 +73,33 @@ const ImageSlider = () => {
   // };
 
   const variantToMediaQwery = (media) => {
-    const imageVariantsMobile = {
+    const variantsMobile = {
+      center: { x: "0%", scale: 1, zIndex: 8 },
+      left4: { x: "-60%", scale: 0, zIndex: 5 },
+      left3: { x: "0%", scale: 0, zIndex: 3 },
+      left2: { x: "0%", scale: 0, zIndex: 1 },
+      left1: { x: "0%", scale: 0, zIndex: 0 },
+      left: { x: "0%", scale: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, zIndex: 0 },
+      right: { x: "0%", scale: 0, zIndex: 0 },
+      right1: { x: "0%", scale: 0, zIndex: 0 },
+      right2: { x: "0%", scale: 0, zIndex: 1 },
+      right3: { x: "0%", scale: 0, zIndex: 3 },
+      right4: { x: "60%", scale: 0, zIndex: 5 },
+    };
+
+    const variantsSmartphone = {
       center: { x: "0%", scale: 1, zIndex: 8 },
       left4: { x: "-30%", scale: 0.8, zIndex: 5 },
-      left3: { x: "-90%", scale: 0, zIndex: 3 },
-      left2: { x: "-115%", scale: 0, zIndex: 1 },
-      left1: { x: "-100%", scale: 0, zIndex: 0 },
-      left: { x: "-100%", scale: 0, zIndex: 0 },
+      left3: { x: "-75%", scale: 0, zIndex: 3 },
+      left2: { x: "0%", scale: 0, zIndex: 1 },
+      left1: { x: "0%", scale: 0, zIndex: 0 },
+      left: { x: "0%", scale: 0, zIndex: 0 },
       behind: { x: "0%", scale: 0, zIndex: 0 },
-      right: { x: "100%", scale: 0, zIndex: 0 },
-      right1: { x: "100%", scale: 0, zIndex: 0 },
-      right2: { x: "115%", scale: 0, zIndex: 1 },
-      right3: { x: "90%", scale: 0, zIndex: 3 },
+      right: { x: "0%", scale: 0, zIndex: 0 },
+      right1: { x: "0%", scale: 0, zIndex: 0 },
+      right2: { x: "0%", scale: 0, zIndex: 1 },
+      right3: { x: "75%", scale: 0, zIndex: 3 },
       right4: { x: "30%", scale: 0.8, zIndex: 5 },
     };
 
@@ -122,11 +133,13 @@ const ImageSlider = () => {
       right4: { x: "50%", scale: 0.8, zIndex: 5 },
     };
 
-    if (media.mobile) return imageVariantsMobile;
+    if (media.mobile) return variantsMobile;
 
-    if (media.mobTab) return imageVariantsMobile;
+    if (media.smartphone) return variantsSmartphone;
 
-    if (media.tabDesk) return imageVariantsTablet;
+    if (media.tablet) return imageVariantsTablet;
+
+    if (media.laptop) return imageVariantsDesktop;
 
     if (media.desktop) return imageVariantsDesktop;
   };
