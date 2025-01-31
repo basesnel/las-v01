@@ -48,6 +48,11 @@
   flex-direction: column;
   height: 80vh;
   overflow: hidden;
+  cursor: grab;
+}
+
+.imageSlider:active {
+  cursor: grabbing;
 }
 
 .card {
@@ -59,6 +64,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .image {
