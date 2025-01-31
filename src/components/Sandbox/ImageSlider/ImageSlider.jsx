@@ -6,6 +6,11 @@ import getVariants from "./getVariants";
 
 import styles from "./styles.module.css";
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset, velocity) => {
+  return Math.abs(offset) * velocity;
+};
+
 const ImageSlider = () => {
   const [positionIndexes, setPositionIndexes] = useState([
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
@@ -67,7 +72,21 @@ const ImageSlider = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.imageSlider}>
+      <motion.div
+        className={styles.imageSlider}
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0}
+        onDragEnd={(e, { offset, velocity }) => {
+          const swipe = swipePower(offset.x, velocity.x);
+
+          if (swipe < -swipeConfidenceThreshold) {
+            handleNext();
+          } else if (swipe > swipeConfidenceThreshold) {
+            handlePrev();
+          }
+        }}
+      >
         {images.map((image, index) => (
           <motion.figure
             key={index}
@@ -135,7 +154,7 @@ const ImageSlider = () => {
             </picture>
           </motion.figure>
         ))}
-      </div>
+      </motion.div>
       <div className={styles.controls}>
         <button className={styles.next} onClick={handlePrev}>
           Prev
