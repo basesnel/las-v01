@@ -15,8 +15,10 @@ const ImageSlider = () => {
   const myMediaQueries = {
     mobile: "(max-width: 420px)",
     smartphone: "(min-width: 421px) and (max-width: 480px)",
-    tablet: "(min-width: 481px) and (max-width: 767px)",
-    laptop: "(min-width: 768px) and (max-width: 1199px)",
+    tabletFirst: "(min-width: 481px) and (max-width: 590px)",
+    tabletSecond: "(min-width: 591px) and (max-width: 700px)",
+    tabletThird: "(min-width: 701px) and (max-width: 768px)",
+    laptop: "(min-width: 769px) and (max-width: 1199px)",
     desktop: "(min-width: 1200px)",
   };
 
@@ -74,48 +76,93 @@ const ImageSlider = () => {
 
   const variantToMediaQwery = (media) => {
     const variantsMobile = {
-      center: { x: "0%", scale: 1, zIndex: 8 },
-      left4: { x: "-60%", scale: 0, zIndex: 5 },
-      left3: { x: "0%", scale: 0, zIndex: 3 },
-      left2: { x: "0%", scale: 0, zIndex: 1 },
-      left1: { x: "0%", scale: 0, zIndex: 0 },
-      left: { x: "0%", scale: 0, zIndex: 0 },
-      behind: { x: "0%", scale: 0, zIndex: 0 },
-      right: { x: "0%", scale: 0, zIndex: 0 },
-      right1: { x: "0%", scale: 0, zIndex: 0 },
-      right2: { x: "0%", scale: 0, zIndex: 1 },
-      right3: { x: "0%", scale: 0, zIndex: 3 },
-      right4: { x: "60%", scale: 0, zIndex: 5 },
+      center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
+      left4: { x: "-60%", scale: 0, opacity: 0, zIndex: 5 },
+      left3: { x: "0%", scale: 0, opacity: 0, zIndex: 3 },
+      left2: { x: "0%", scale: 0, opacity: 0, zIndex: 1 },
+      left1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      left: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right2: { x: "0%", scale: 0, opacity: 0, zIndex: 1 },
+      right3: { x: "0%", scale: 0, opacity: 0, zIndex: 3 },
+      right4: { x: "60%", scale: 0, opacity: 0, zIndex: 5 },
     };
 
     const variantsSmartphone = {
-      center: { x: "0%", scale: 1, zIndex: 8 },
-      left4: { x: "-30%", scale: 0.8, zIndex: 5 },
-      left3: { x: "-75%", scale: 0, zIndex: 3 },
-      left2: { x: "0%", scale: 0, zIndex: 1 },
-      left1: { x: "0%", scale: 0, zIndex: 0 },
-      left: { x: "0%", scale: 0, zIndex: 0 },
-      behind: { x: "0%", scale: 0, zIndex: 0 },
-      right: { x: "0%", scale: 0, zIndex: 0 },
-      right1: { x: "0%", scale: 0, zIndex: 0 },
-      right2: { x: "0%", scale: 0, zIndex: 1 },
-      right3: { x: "75%", scale: 0, zIndex: 3 },
-      right4: { x: "30%", scale: 0.8, zIndex: 5 },
+      center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
+      left4: { x: "-30%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+      left3: { x: "-80%", scale: 0, opacity: 0, zIndex: 3 },
+      left2: { x: "0%", scale: 0, opacity: 0, zIndex: 1 },
+      left1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      left: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right2: { x: "0%", scale: 0, opacity: 0, zIndex: 1 },
+      right3: { x: "80%", scale: 0, opacity: 0, zIndex: 3 },
+      right4: { x: "30%", scale: 0.8, opacity: 0.8, zIndex: 5 },
     };
 
-    const imageVariantsTablet = {
-      center: { x: "0%", scale: 1, zIndex: 8 },
-      left4: { x: "-50%", scale: 0.8, zIndex: 5 },
-      left3: { x: "-80%", scale: 0.5, zIndex: 3 },
-      left2: { x: "-115%", scale: 0, zIndex: 1 },
-      left1: { x: "-100%", scale: 0, zIndex: 0 },
-      left: { x: "-100%", scale: 0, zIndex: 0 },
-      behind: { x: "0%", scale: 0, zIndex: 0 },
-      right: { x: "100%", scale: 0, zIndex: 0 },
-      right1: { x: "100%", scale: 0, zIndex: 0 },
-      right2: { x: "115%", scale: 0, zIndex: 1 },
-      right3: { x: "80%", scale: 0.5, zIndex: 3 },
-      right4: { x: "50%", scale: 0.8, zIndex: 5 },
+    const variantsTabletFirstStep = {
+      center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
+      left4: { x: "-40%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+      left3: { x: "-90%", scale: 0, opacity: 0.5, zIndex: 3 },
+      left2: { x: "0%", scale: 0, opacity: 0, zIndex: 1 },
+      left1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      left: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right2: { x: "0%", scale: 0, opacity: 0, zIndex: 1 },
+      right3: { x: "90%", scale: 0, opacity: 0.5, zIndex: 3 },
+      right4: { x: "40%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+    };
+
+    const variantsTabletSecondStep = {
+      center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
+      left4: { x: "-40%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+      left3: { x: "-80%", scale: 0.5, opacity: 0.5, zIndex: 3 },
+      left2: { x: "-115%", scale: 0, opacity: 0, zIndex: 1 },
+      left1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      left: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right1: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right2: { x: "115%", scale: 0, opacity: 0, zIndex: 1 },
+      right3: { x: "80%", scale: 0.5, opacity: 0.5, zIndex: 3 },
+      right4: { x: "40%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+    };
+
+    const variantsTabletThirdStep = {
+      center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
+      left4: { x: "-60%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+      left3: { x: "-100%", scale: 0.5, opacity: 0.5, zIndex: 3 },
+      left2: { x: "-135%", scale: 0, opacity: 0, zIndex: 1 },
+      left1: { x: "-100%", scale: 0, opacity: 0, zIndex: 0 },
+      left: { x: "-100%", scale: 0, opacity: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right: { x: "100%", scale: 0, opacity: 0, zIndex: 0 },
+      right1: { x: "100%", scale: 0, opacity: 0, zIndex: 0 },
+      right2: { x: "135%", scale: 0, opacity: 0, zIndex: 1 },
+      right3: { x: "100%", scale: 0.5, opacity: 0.5, zIndex: 3 },
+      right4: { x: "60%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+    };
+
+    const variantsLaptop = {
+      center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
+      left4: { x: "-60%", scale: 0.8, opacity: 0.8, zIndex: 5 },
+      left3: { x: "-100%", scale: 0.5, opacity: 0.5, zIndex: 3 },
+      left2: { x: "-135%", scale: 0, opacity: 0, zIndex: 1 },
+      left1: { x: "-100%", scale: 0, opacity: 0, zIndex: 0 },
+      left: { x: "-100%", scale: 0, opacity: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, opacity: 0, zIndex: 0 },
+      right: { x: "100%", scale: 0, opacity: 0, zIndex: 0 },
+      right1: { x: "100%", scale: 0, opacity: 0, zIndex: 0 },
+      right2: { x: "135%", scale: 0, opacity: 0, zIndex: 1 },
+      right3: { x: "100%", scale: 0.5, opacity: 0.5, zIndex: 3 },
+      right4: { x: "60%", scale: 0.8, opacity: 0.8, zIndex: 5 },
     };
 
     const imageVariantsDesktop = {
@@ -137,9 +184,13 @@ const ImageSlider = () => {
 
     if (media.smartphone) return variantsSmartphone;
 
-    if (media.tablet) return imageVariantsTablet;
+    if (media.tabletFirst) return variantsTabletFirstStep;
 
-    if (media.laptop) return imageVariantsDesktop;
+    if (media.tabletSecond) return variantsTabletSecondStep;
+
+    if (media.tabletThird) return variantsTabletThirdStep;
+
+    if (media.laptop) return variantsLaptop;
 
     if (media.desktop) return imageVariantsDesktop;
   };
