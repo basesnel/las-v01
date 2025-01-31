@@ -19,13 +19,12 @@ const ImageSlider = () => {
     desktop: "(min-width: 1200px)",
   };
 
-  const { mobile, mobTab, tabDesk, desktop } =
-    useReactMatchMedia(myMediaQueries);
+  const myMedia = useReactMatchMedia(myMediaQueries);
 
-  console.log("mobile:", mobile);
-  console.log("mobTab:", mobTab);
-  console.log("tabDesk:", tabDesk);
-  console.log("desktop:", desktop);
+  console.log("mobile:", myMedia.mobile);
+  console.log("mobTab:", myMedia.mobTab);
+  console.log("tabDesk:", myMedia.tabDesk);
+  console.log("desktop:", myMedia.desktop);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -77,49 +76,59 @@ const ImageSlider = () => {
   //   right4: { x: "50%", scale: 0.8, zIndex: 5 },
   // };
 
-  const imageVariantsMobile = {
-    center: { x: "0%", scale: 1, zIndex: 8 },
-    left4: { x: "-30%", scale: 0.8, zIndex: 5 },
-    left3: { x: "-90%", scale: 0, zIndex: 3 },
-    left2: { x: "-115%", scale: 0, zIndex: 1 },
-    left1: { x: "-100%", scale: 0, zIndex: 0 },
-    left: { x: "-100%", scale: 0, zIndex: 0 },
-    behind: { x: "0%", scale: 0, zIndex: 0 },
-    right: { x: "100%", scale: 0, zIndex: 0 },
-    right1: { x: "100%", scale: 0, zIndex: 0 },
-    right2: { x: "115%", scale: 0, zIndex: 1 },
-    right3: { x: "90%", scale: 0, zIndex: 3 },
-    right4: { x: "30%", scale: 0.8, zIndex: 5 },
-  };
+  const variantToMediaQwery = (media) => {
+    const imageVariantsMobile = {
+      center: { x: "0%", scale: 1, zIndex: 8 },
+      left4: { x: "-30%", scale: 0.8, zIndex: 5 },
+      left3: { x: "-90%", scale: 0, zIndex: 3 },
+      left2: { x: "-115%", scale: 0, zIndex: 1 },
+      left1: { x: "-100%", scale: 0, zIndex: 0 },
+      left: { x: "-100%", scale: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, zIndex: 0 },
+      right: { x: "100%", scale: 0, zIndex: 0 },
+      right1: { x: "100%", scale: 0, zIndex: 0 },
+      right2: { x: "115%", scale: 0, zIndex: 1 },
+      right3: { x: "90%", scale: 0, zIndex: 3 },
+      right4: { x: "30%", scale: 0.8, zIndex: 5 },
+    };
 
-  const imageVariantsTablet = {
-    center: { x: "0%", scale: 1, zIndex: 8 },
-    left4: { x: "-50%", scale: 0.8, zIndex: 5 },
-    left3: { x: "-80%", scale: 0.5, zIndex: 3 },
-    left2: { x: "-115%", scale: 0, zIndex: 1 },
-    left1: { x: "-100%", scale: 0, zIndex: 0 },
-    left: { x: "-100%", scale: 0, zIndex: 0 },
-    behind: { x: "0%", scale: 0, zIndex: 0 },
-    right: { x: "100%", scale: 0, zIndex: 0 },
-    right1: { x: "100%", scale: 0, zIndex: 0 },
-    right2: { x: "115%", scale: 0, zIndex: 1 },
-    right3: { x: "80%", scale: 0.5, zIndex: 3 },
-    right4: { x: "50%", scale: 0.8, zIndex: 5 },
-  };
+    const imageVariantsTablet = {
+      center: { x: "0%", scale: 1, zIndex: 8 },
+      left4: { x: "-50%", scale: 0.8, zIndex: 5 },
+      left3: { x: "-80%", scale: 0.5, zIndex: 3 },
+      left2: { x: "-115%", scale: 0, zIndex: 1 },
+      left1: { x: "-100%", scale: 0, zIndex: 0 },
+      left: { x: "-100%", scale: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, zIndex: 0 },
+      right: { x: "100%", scale: 0, zIndex: 0 },
+      right1: { x: "100%", scale: 0, zIndex: 0 },
+      right2: { x: "115%", scale: 0, zIndex: 1 },
+      right3: { x: "80%", scale: 0.5, zIndex: 3 },
+      right4: { x: "50%", scale: 0.8, zIndex: 5 },
+    };
 
-  const imageVariantsDesktop = {
-    center: { x: "0%", scale: 1, zIndex: 8 },
-    left4: { x: "-50%", scale: 0.8, zIndex: 5 },
-    left3: { x: "-90%", scale: 0.5, zIndex: 3 },
-    left2: { x: "-115%", scale: 0.3, zIndex: 1 },
-    left1: { x: "-128%", scale: 0.2, zIndex: 0 },
-    left: { x: "-145%", scale: 0, zIndex: 0 },
-    behind: { x: "0%", scale: 0, zIndex: 0 },
-    right: { x: "145%", scale: 0, zIndex: 0 },
-    right1: { x: "128%", scale: 0.2, zIndex: 0 },
-    right2: { x: "115%", scale: 0.3, zIndex: 1 },
-    right3: { x: "90%", scale: 0.5, zIndex: 3 },
-    right4: { x: "50%", scale: 0.8, zIndex: 5 },
+    const imageVariantsDesktop = {
+      center: { x: "0%", scale: 1, zIndex: 8 },
+      left4: { x: "-50%", scale: 0.8, zIndex: 5 },
+      left3: { x: "-90%", scale: 0.5, zIndex: 3 },
+      left2: { x: "-115%", scale: 0.3, zIndex: 1 },
+      left1: { x: "-128%", scale: 0.2, zIndex: 0 },
+      left: { x: "-145%", scale: 0, zIndex: 0 },
+      behind: { x: "0%", scale: 0, zIndex: 0 },
+      right: { x: "145%", scale: 0, zIndex: 0 },
+      right1: { x: "128%", scale: 0.2, zIndex: 0 },
+      right2: { x: "115%", scale: 0.3, zIndex: 1 },
+      right3: { x: "90%", scale: 0.5, zIndex: 3 },
+      right4: { x: "50%", scale: 0.8, zIndex: 5 },
+    };
+
+    if (media.mobile) return imageVariantsMobile;
+
+    if (media.mobTab) return imageVariantsMobile;
+
+    if (media.tabDesk) return imageVariantsTablet;
+
+    if (media.desktop) return imageVariantsDesktop;
   };
 
   return (
@@ -131,7 +140,7 @@ const ImageSlider = () => {
             className={styles.card}
             initial="center"
             animate={positions[positionIndexes[index]]}
-            variants={imageVariantsDesktop}
+            variants={variantToMediaQwery(myMedia)}
             transition={{ duration: 0.5 }}
           >
             <picture>
