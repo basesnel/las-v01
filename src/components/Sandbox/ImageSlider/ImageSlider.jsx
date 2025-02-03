@@ -7,7 +7,7 @@ import getVariants from "./getVariants";
 
 import styles from "./styles.module.css";
 
-const swipeConfidenceThreshold = 50000;
+const swipeConfidenceThreshold = 70000;
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
@@ -113,8 +113,16 @@ const ImageSlider = () => {
 
           if (swipe < -swipeConfidenceThreshold) {
             handleNext();
+            console.log({
+              offset: offset.x * velocity.x,
+              swipeConfidenceThreshold,
+            });
           } else if (swipe > swipeConfidenceThreshold) {
             handlePrev();
+            console.log({
+              offset: offset.x * velocity.x,
+              swipeConfidenceThreshold,
+            });
           }
         }, 200)}
       >
