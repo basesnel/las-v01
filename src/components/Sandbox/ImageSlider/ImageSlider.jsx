@@ -7,7 +7,7 @@ import getVariants from "./getVariants";
 
 import styles from "./styles.module.css";
 
-const swipeConfidenceThreshold = 10000;
+const swipeConfidenceThreshold = 50000;
 const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
@@ -61,7 +61,7 @@ const ImageSlider = () => {
 
   const swipGallery = (i) => {
     const interval = (i) => {
-      if (i < 5) return 500 - 20 * i;
+      if (i < 5) return 400 - 20 * i;
       if (i >= 5) return 300 - 20 * (i - 5);
     };
 
