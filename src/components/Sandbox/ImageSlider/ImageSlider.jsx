@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { throttle } from "lodash";
 import gallery from "../../../constants/gallery";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
 import getVariants from "./getVariants";
@@ -60,13 +61,12 @@ const ImageSlider = () => {
 
   const swipGallery = (i) => {
     const interval = (i) => {
-      if (i < 8) return 400 - 20 * i;
-      if (i >= 8 && i < 12) return 300 - 20 * (i - 8);
-      if (i >= 12) return 200 - 20 * (i - 12);
+      if (i < 5) return 400 - 20 * i;
+      if (i >= 5) return 300 - 20 * (i - 5);
     };
 
     setTimeout(() => {
-      if (i < 8 || i > 12) {
+      if (i < 5) {
         handleNext();
       } else {
         handlePrev();
@@ -74,7 +74,7 @@ const ImageSlider = () => {
 
       i++;
 
-      if (i < 16) {
+      if (i < 8) {
         swipGallery(i);
       }
     }, interval(i));
@@ -108,7 +108,16 @@ const ImageSlider = () => {
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0}
-        onDragEnd={(e, { offset, velocity }) => {
+        // onDragEnd={(e, { offset, velocity }) => {
+        //   const swipe = swipePower(offset.x, velocity.x);
+
+        //   if (swipe < -swipeConfidenceThreshold) {
+        //     handleNext();
+        //   } else if (swipe > swipeConfidenceThreshold) {
+        //     handlePrev();
+        //   }
+        // }}
+        onDrag={throttle((e, { offset, velocity }) => {
           const swipe = swipePower(offset.x, velocity.x);
 
           if (swipe < -swipeConfidenceThreshold) {
@@ -116,7 +125,7 @@ const ImageSlider = () => {
           } else if (swipe > swipeConfidenceThreshold) {
             handlePrev();
           }
-        }}
+        }, 200)}
       >
         {images.map((image, index) => (
           <motion.figure
