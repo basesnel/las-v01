@@ -59,9 +59,11 @@ const ImageSlider = () => {
   let i = 0;
 
   const swipGallery = (i) => {
-    // for (let i = 0; i < 3; i++) {
-    //   setTimeout(handleNext, 300);
-    // }
+    const interval = (i) => {
+      if (i < 8) return 400 - 20 * i;
+      if (i >= 8 && i < 12) return 300 - 20 * (i - 8);
+      if (i >= 12) return 200 - 20 * (i - 12);
+    };
 
     setTimeout(() => {
       if (i < 8 || i > 12) {
@@ -70,13 +72,12 @@ const ImageSlider = () => {
         handlePrev();
       }
 
-      console.log({ i });
       i++;
 
       if (i < 16) {
         swipGallery(i);
       }
-    }, 500 - 20 * i);
+    }, interval(i));
   };
 
   useEffect(() => {
