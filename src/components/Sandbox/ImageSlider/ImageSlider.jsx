@@ -61,8 +61,8 @@ const ImageSlider = () => {
 
   const swipGallery = (i) => {
     const interval = (i) => {
-      if (i < 5) return 400 - 20 * i;
-      if (i >= 5) return 300 - 20 * (i - 5);
+      if (i < 5) return 800 - 20 * i;
+      if (i >= 5) return 700 - 20 * (i - 5);
     };
 
     setTimeout(() => {
@@ -134,7 +134,7 @@ const ImageSlider = () => {
             initial="center"
             animate={positions[positionIndexes[index]]}
             variants={getVariants(myMedia)}
-            transition={{ duration: 0.3 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <picture>
               <source
