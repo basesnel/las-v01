@@ -83,7 +83,7 @@ const ImageSlider = () => {
   useEffect(() => {
     setInterval(() => {
       swipGallery(i);
-    }, 30000);
+    }, 20000);
   }, []);
 
   const positions = [
@@ -108,15 +108,6 @@ const ImageSlider = () => {
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0}
-        // onDragEnd={(e, { offset, velocity }) => {
-        //   const swipe = swipePower(offset.x, velocity.x);
-
-        //   if (swipe < -swipeConfidenceThreshold) {
-        //     handleNext();
-        //   } else if (swipe > swipeConfidenceThreshold) {
-        //     handlePrev();
-        //   }
-        // }}
         onDrag={throttle((e, { offset, velocity }) => {
           const swipe = swipePower(offset.x, velocity.x);
 
@@ -134,7 +125,7 @@ const ImageSlider = () => {
             initial="center"
             animate={positions[positionIndexes[index]]}
             variants={getVariants(myMedia)}
-            transition={{ type: "spring", stiffness: 100 }}
+            transition={{ type: "spring", stiffness: 90 }}
           >
             <picture>
               <source

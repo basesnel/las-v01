@@ -1,22 +1,3 @@
-/* .container {
-  height: 100vh;
-  background-color: var(--dark);
-} */
-
-/* .imageSlider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 80vh;
-} */
-
-/* .image {
-  position: absolute;
-  width: 330px;
-  border-radius: 12px;
-} */
-
 .controls {
   display: flex;
   align-items: center;
