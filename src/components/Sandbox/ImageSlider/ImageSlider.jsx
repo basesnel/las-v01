@@ -56,10 +56,28 @@ const ImageSlider = () => {
     });
   };
 
+  let i = 0;
+
+  const swipGallery = (i) => {
+    // for (let i = 0; i < 3; i++) {
+    //   setTimeout(handleNext, 300);
+    // }
+
+    setTimeout(() => {
+      handleNext();
+      console.log({ i });
+      i++;
+
+      if (i < 5) {
+        swipGallery(i);
+      }
+    }, 500);
+  };
+
   useEffect(() => {
     setInterval(() => {
-      handleNext();
-    }, 5000);
+      swipGallery(i);
+    }, 10000);
   }, []);
 
   const positions = [
@@ -101,7 +119,7 @@ const ImageSlider = () => {
             initial="center"
             animate={positions[positionIndexes[index]]}
             variants={getVariants(myMedia)}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             <picture>
               <source
