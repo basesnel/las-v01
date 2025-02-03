@@ -1,5 +1,5 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import gallery from "../../../constants/gallery";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
 import getVariants from "./getVariants";
@@ -15,6 +15,7 @@ const ImageSlider = () => {
   const [positionIndexes, setPositionIndexes] = useState([
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
   ]);
+
   const { images } = gallery;
   const countImages = images.length;
 
@@ -54,6 +55,12 @@ const ImageSlider = () => {
       return updateIndexes;
     });
   };
+
+  useEffect(() => {
+    setInterval(() => {
+      handleNext();
+    }, 5000);
+  }, []);
 
   const positions = [
     "center",
