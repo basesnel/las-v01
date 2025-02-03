@@ -135,7 +135,7 @@ const ImageSlider = () => {
 
               <source
                 srcSet={`${image.mob1xWBP} 270w, ${image.mob2xWBP} 540w, ${image.mob3xWBP} 810w, ${image.mob4xWBP} 1080w`}
-                sizes="(max-width: 480px) calc(100vw - 110px), 270px"
+                sizes="(max-width: 332px) calc(100vw - 62px), 270px"
                 width={270}
                 height={360}
                 type="image/webp"
@@ -144,7 +144,7 @@ const ImageSlider = () => {
               <img
                 loading="lazy"
                 srcSet={`${image.mob1xJPG} 270w, ${image.mob2xJPG} 540w, ${image.mob3xJPG} 810w, ${image.mob4xJPG} 1080w`}
-                sizes="(max-width: 480px) calc(100vw - 110px), 270px"
+                sizes="(max-width: 332px) calc(100vw - 62px), 270px"
                 src={image.mob2xJPG}
                 alt={image.alt.uk}
                 width={270}

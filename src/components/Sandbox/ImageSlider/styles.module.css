@@ -59,7 +59,7 @@
 .card {
   position: absolute;
   overflow: hidden;
-  min-width: 270px;
+  max-width: calc(100vw - 62px);
   border-radius: 12px;
   background-color: rgb(148 163 184);
   display: flex;
@@ -74,14 +74,20 @@
   height: auto;
 }
 
+@media screen and (min-width: 332px) {
+  .card {
+    max-width: 270px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .card {
-    min-width: 330px;
+    max-width: 330px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .card {
-    min-width: 418px;
+    max-width: 418px;
   }
 }
