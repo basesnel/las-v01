@@ -64,20 +64,25 @@ const ImageSlider = () => {
     // }
 
     setTimeout(() => {
-      handleNext();
+      if (i < 8 || i > 12) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+
       console.log({ i });
       i++;
 
-      if (i < 5) {
+      if (i < 16) {
         swipGallery(i);
       }
-    }, 500);
+    }, 500 - 20 * i);
   };
 
   useEffect(() => {
     setInterval(() => {
       swipGallery(i);
-    }, 10000);
+    }, 30000);
   }, []);
 
   const positions = [
