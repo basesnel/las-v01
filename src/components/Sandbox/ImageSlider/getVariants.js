@@ -1,3 +1,33 @@
+const positions = [
+  "center",
+  "left4",
+  "left3",
+  "left2",
+  "left1",
+  "left",
+  "behind",
+  "right",
+  "right1",
+  "right2",
+  "right3",
+  "right4",
+];
+
+const galleryMediaQueries = {
+  mobile: "(max-width: 420px)",
+  smartphone: "(min-width: 421px) and (max-width: 479px)",
+  tabletFirst: "(min-width: 480px) and (max-width: 590px)",
+  tabletSecond: "(min-width: 591px) and (max-width: 700px)",
+  tabletThird: "(min-width: 701px) and (max-width: 767px)",
+  laptopFirst: "(min-width: 768px) and (max-width: 860px)",
+  laptopSecond: "(min-width: 861px) and (max-width: 960px)",
+  laptopThird: "(min-width: 961px) and (max-width: 1100px)",
+  laptopFourth: "(min-width: 1101px) and (max-width: 1199px)",
+  desktopFirst: "(min-width: 1200px) and (max-width: 1299px)",
+  desktopSecond: "(min-width: 1300px) and (max-width: 1399px)",
+  desktopThird: "(min-width: 1400px)",
+};
+
 const getVariants = (media) => {
   const variantsMobile = {
     center: { x: "0%", scale: 1, opacity: 1, zIndex: 8 },
@@ -204,4 +234,4 @@ const getVariants = (media) => {
   if (media.desktopThird) return variantsDesktopThird;
 };
 
-export default getVariants;
+export { positions, galleryMediaQueries, getVariants };

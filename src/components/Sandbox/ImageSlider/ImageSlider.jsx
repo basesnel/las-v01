@@ -3,14 +3,11 @@ import { motion } from "framer-motion";
 import { throttle } from "lodash";
 import gallery from "../../../constants/gallery";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
-import getVariants from "./getVariants";
+import useSwipeGallery from "../../../hooks/useSwipeGallery";
+import { positions, galleryMediaQueries, getVariants } from "./getVariants";
+import { swipeConfidenceThreshold, swipePower } from "./swipePower";
 
 import styles from "./styles.module.css";
-
-const swipeConfidenceThreshold = 65000;
-const swipePower = (offset, velocity) => {
-  return Math.abs(offset) * velocity;
-};
 
 const ImageSlider = () => {
   const [positionIndexes, setPositionIndexes] = useState([
@@ -20,22 +17,7 @@ const ImageSlider = () => {
   const { images } = gallery;
   const countImages = images.length;
 
-  const myMediaQueries = {
-    mobile: "(max-width: 420px)",
-    smartphone: "(min-width: 421px) and (max-width: 479px)",
-    tabletFirst: "(min-width: 480px) and (max-width: 590px)",
-    tabletSecond: "(min-width: 591px) and (max-width: 700px)",
-    tabletThird: "(min-width: 701px) and (max-width: 767px)",
-    laptopFirst: "(min-width: 768px) and (max-width: 860px)",
-    laptopSecond: "(min-width: 861px) and (max-width: 960px)",
-    laptopThird: "(min-width: 961px) and (max-width: 1100px)",
-    laptopFourth: "(min-width: 1101px) and (max-width: 1199px)",
-    desktopFirst: "(min-width: 1200px) and (max-width: 1299px)",
-    desktopSecond: "(min-width: 1300px) and (max-width: 1399px)",
-    desktopThird: "(min-width: 1400px)",
-  };
-
-  const myMedia = useReactMatchMedia(myMediaQueries);
+  const myMedia = useReactMatchMedia(galleryMediaQueries);
 
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
@@ -57,49 +39,7 @@ const ImageSlider = () => {
     });
   };
 
-  let i = 0;
-
-  const swipGallery = (i) => {
-    const interval = (i) => {
-      if (i < 5) return 400 - 20 * i;
-      if (i >= 5) return 300 - 20 * (i - 5);
-    };
-
-    setTimeout(() => {
-      if (i < 5) {
-        handleNext();
-      } else {
-        handlePrev();
-      }
-
-      i++;
-
-      if (i < 8) {
-        swipGallery(i);
-      }
-    }, interval(i));
-  };
-
-  useEffect(() => {
-    setInterval(() => {
-      swipGallery(i);
-    }, 20000);
-  }, []);
-
-  const positions = [
-    "center",
-    "left4",
-    "left3",
-    "left2",
-    "left1",
-    "left",
-    "behind",
-    "right",
-    "right1",
-    "right2",
-    "right3",
-    "right4",
-  ];
+  useSwipeGallery(handleNext, handlePrev);
 
   return (
     <div className={styles.container}>
@@ -113,16 +53,8 @@ const ImageSlider = () => {
 
           if (swipe < -swipeConfidenceThreshold) {
             handleNext();
-            console.log({
-              offset: offset.x * velocity.x,
-              swipeConfidenceThreshold,
-            });
           } else if (swipe > swipeConfidenceThreshold) {
             handlePrev();
-            console.log({
-              offset: offset.x * velocity.x,
-              swipeConfidenceThreshold,
-            });
           }
         }, 310)}
       >
