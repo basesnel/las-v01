@@ -11,6 +11,21 @@ const useHandlePositions = (countImages) => {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
   ]);
 
+  const positions = [
+    "center",
+    "left4",
+    "left3",
+    "left2",
+    "left1",
+    "left",
+    "behind",
+    "right",
+    "right1",
+    "right2",
+    "right3",
+    "right4",
+  ];
+
   const handleNext = () => {
     setPositionIndexes((prevIndexes) => {
       const updateIndexes = prevIndexes.map(
@@ -41,7 +56,7 @@ const useHandlePositions = (countImages) => {
     }
   };
 
-  return { positionIndexes, handleNext, handlePrev, handleDrag };
+  return { positionIndexes, positions, handleNext, handlePrev, handleDrag };
 };
 
 export default useHandlePositions;

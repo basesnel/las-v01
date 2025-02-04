@@ -1,18 +1,3 @@
-const positions = [
-  "center",
-  "left4",
-  "left3",
-  "left2",
-  "left1",
-  "left",
-  "behind",
-  "right",
-  "right1",
-  "right2",
-  "right3",
-  "right4",
-];
-
 const galleryMediaQueries = {
   smallMobile: "(max-width: 321px)",
   mobile: "(min-width: 332px) and (max-width: 420px)",
@@ -576,4 +561,4 @@ const getVariants = (media) => {
   if (media.desktopThird) return variantsDesktopThird;
 };
 
-export { positions, galleryMediaQueries, getVariants };
+export { galleryMediaQueries, getVariants };

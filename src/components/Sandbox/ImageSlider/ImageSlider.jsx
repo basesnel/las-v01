@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { throttle } from "lodash";
 import gallery from "../../../constants/gallery";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
 import useSwipeGallery from "../../../hooks/useSwipeGallery";
-import { positions, galleryMediaQueries, getVariants } from "./getVariants";
-// import { swipeConfidenceThreshold, swipePower } from "./swipePower";
+import { galleryMediaQueries, getVariants } from "./getVariants";
 
 import styles from "./styles.module.css";
 import useHandlePositions from "../../../hooks/useHandlePositions";
@@ -13,7 +11,7 @@ import useHandlePositions from "../../../hooks/useHandlePositions";
 const ImageSlider = () => {
   const { images } = gallery;
 
-  const { positionIndexes, handleNext, handlePrev, handleDrag } =
+  const { positionIndexes, positions, handleNext, handlePrev, handleDrag } =
     useHandlePositions(images.length);
 
   const myMedia = useReactMatchMedia(galleryMediaQueries);
