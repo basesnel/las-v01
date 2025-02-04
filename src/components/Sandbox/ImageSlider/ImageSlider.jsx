@@ -5,51 +5,20 @@ import gallery from "../../../constants/gallery";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
 import useSwipeGallery from "../../../hooks/useSwipeGallery";
 import { positions, galleryMediaQueries, getVariants } from "./getVariants";
-import { swipeConfidenceThreshold, swipePower } from "./swipePower";
+// import { swipeConfidenceThreshold, swipePower } from "./swipePower";
 
 import styles from "./styles.module.css";
+import useHandlePositions from "../../../hooks/useHandlePositions";
 
 const ImageSlider = () => {
-  const [positionIndexes, setPositionIndexes] = useState([
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-  ]);
-
   const { images } = gallery;
-  const countImages = images.length;
+
+  const { positionIndexes, handleNext, handlePrev, handleDrag } =
+    useHandlePositions(images.length);
 
   const myMedia = useReactMatchMedia(galleryMediaQueries);
 
-  const handleNext = () => {
-    setPositionIndexes((prevIndexes) => {
-      const updateIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 1) % countImages
-      );
-      return updateIndexes;
-    });
-  };
-
-  const handlePrev = () => {
-    setPositionIndexes((prevIndexes) => {
-      const updateIndexes = prevIndexes.map((prevIndex) =>
-        prevIndex === 0
-          ? (prevIndex + countImages - 1) % countImages
-          : (prevIndex - 1) % countImages
-      );
-      return updateIndexes;
-    });
-  };
-
   useSwipeGallery(handleNext, handlePrev);
-
-  const handleDrag = (e, { offset, velocity }) => {
-    const swipe = swipePower(offset.x, velocity.x);
-
-    if (swipe < -swipeConfidenceThreshold) {
-      handleNext();
-    } else if (swipe > swipeConfidenceThreshold) {
-      handlePrev();
-    }
-  };
 
   return (
     <div className={styles.container}>
