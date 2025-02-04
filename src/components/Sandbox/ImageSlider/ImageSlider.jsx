@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { throttle } from "lodash";
 import gallery from "../../../constants/gallery";
@@ -41,6 +41,16 @@ const ImageSlider = () => {
 
   useSwipeGallery(handleNext, handlePrev);
 
+  const handleDrag = (e, { offset, velocity }) => {
+    const swipe = swipePower(offset.x, velocity.x);
+
+    if (swipe < -swipeConfidenceThreshold) {
+      handleNext();
+    } else if (swipe > swipeConfidenceThreshold) {
+      handlePrev();
+    }
+  };
+
   return (
     <div className={styles.container}>
       <motion.div
@@ -48,15 +58,7 @@ const ImageSlider = () => {
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0}
-        onDrag={throttle((e, { offset, velocity }) => {
-          const swipe = swipePower(offset.x, velocity.x);
-
-          if (swipe < -swipeConfidenceThreshold) {
-            handleNext();
-          } else if (swipe > swipeConfidenceThreshold) {
-            handlePrev();
-          }
-        }, 310)}
+        onDrag={throttle(handleDrag, 310)}
       >
         {images.map((image, index) => (
           <motion.figure
