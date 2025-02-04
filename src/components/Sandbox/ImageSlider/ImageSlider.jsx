@@ -124,7 +124,7 @@ const ImageSlider = () => {
               swipeConfidenceThreshold,
             });
           }
-        }, 200)}
+        }, 360)}
       >
         {images.map((image, index) => (
           <motion.figure
