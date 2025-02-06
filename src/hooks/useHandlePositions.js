@@ -56,7 +56,51 @@ const useHandlePositions = (countImages) => {
     }
   };
 
-  return { positionIndexes, positions, handleNext, handlePrev, handleDrag };
+  const handleSwipeNext = (i, count) => {
+    const interval = (i) => {
+      return 300 - i * 50;
+    };
+
+    setTimeout(() => {
+      if (i < count) {
+        handleNext();
+      }
+
+      i++;
+
+      if (i < count) {
+        handleSwipeNext(i, count);
+      }
+    }, interval(i));
+  };
+
+  const handleSwipePrev = (i, count) => {
+    const interval = (i) => {
+      return 300 - i * 50;
+    };
+
+    setTimeout(() => {
+      if (i < count) {
+        handlePrev();
+      }
+
+      i++;
+
+      if (i < count) {
+        handleSwipePrev(i, count);
+      }
+    }, interval(i));
+  };
+
+  return {
+    positionIndexes,
+    positions,
+    handleNext,
+    handlePrev,
+    handleDrag,
+    handleSwipeNext,
+    handleSwipePrev,
+  };
 };
 
 export default useHandlePositions;

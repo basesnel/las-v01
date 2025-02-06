@@ -12,12 +12,21 @@ import styles from "./styles.module.css";
 const ImageSlider = () => {
   const { images } = gallery;
 
-  const { positionIndexes, positions, handleNext, handlePrev, handleDrag } =
-    useHandlePositions(images.length);
+  const {
+    positionIndexes,
+    positions,
+    handleNext,
+    handlePrev,
+    handleDrag,
+    handleSwipeNext,
+    handleSwipePrev,
+  } = useHandlePositions(images.length);
 
   const galleryMedia = useReactMatchMedia(galleryMediaQueries);
 
   useSwipeGallery(handleNext, handlePrev);
+
+  let i = 0;
 
   return (
     <div className={styles.container}>
@@ -40,11 +49,23 @@ const ImageSlider = () => {
         ))}
       </motion.div>
       <div className={styles.controls}>
+        <button className={styles.next} onClick={() => handleSwipePrev(i, 3)}>
+          Prev | Prev | Prev
+        </button>
+        <button className={styles.next} onClick={() => handleSwipePrev(i, 2)}>
+          Prev | Prev
+        </button>
         <button className={styles.next} onClick={handlePrev}>
           Prev
         </button>
         <button className={styles.next} onClick={handleNext}>
           Next
+        </button>
+        <button className={styles.next} onClick={() => handleSwipeNext(i, 2)}>
+          Next | Next
+        </button>
+        <button className={styles.next} onClick={() => handleSwipeNext(i, 3)}>
+          Next | Next | Next
         </button>
       </div>
     </div>
