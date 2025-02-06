@@ -49,12 +49,15 @@ const ImageSlider = () => {
       </motion.div>
       <div className={styles.controls}>
         <button
-          className={styles.next}
+          className={`${styles.next} ${styles.tripleNext}`}
           onClick={() => handleSwiping(i, false, 3)}
         >
           Prev | Prev | Prev
         </button>
-        <button className={styles.next} onClick={() => handleSwiping(i, false)}>
+        <button
+          className={`${styles.next} ${styles.doubleNext}`}
+          onClick={() => handleSwiping(i, false)}
+        >
           Prev | Prev
         </button>
         <button className={styles.next} onClick={handlePrev}>
@@ -63,10 +66,16 @@ const ImageSlider = () => {
         <button className={styles.next} onClick={handleNext}>
           Next
         </button>
-        <button className={styles.next} onClick={() => handleSwiping(i)}>
+        <button
+          className={`${styles.next} ${styles.doubleNext}`}
+          onClick={() => handleSwiping(i)}
+        >
           Next | Next
         </button>
-        <button className={styles.next} onClick={() => handleSwiping(i)}>
+        <button
+          className={`${styles.next} ${styles.tripleNext}`}
+          onClick={() => handleSwiping(i, true, 3)}
+        >
           Next | Next | Next
         </button>
       </div>

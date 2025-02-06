@@ -6,15 +6,6 @@
   height: 20vh;
 }
 
-.next {
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  color: var(--light);
-  background-color: var(--accent);
-  user-select: none;
-}
-
 /* ------------------ */
 
 .container {
@@ -92,9 +83,29 @@
   opacity: 0.5;
 }
 
+.next {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: var(--light);
+  background-color: var(--accent);
+  user-select: none;
+}
+
+.doubleNext,
+.tripleNext {
+  display: none;
+}
+
 @media screen and (min-width: 332px) {
   .card {
     max-width: 270px;
+  }
+}
+
+@media screen and (min-width: 591px) {
+  .doubleNext {
+    display: initial;
   }
 }
 
@@ -107,5 +118,9 @@
 @media screen and (min-width: 1200px) {
   .card {
     max-width: 418px;
+  }
+
+  .tripleNext {
+    display: initial;
   }
 }
