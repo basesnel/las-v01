@@ -83,7 +83,6 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  /* background-color: rgb(255, 255, 255); */
   background-color: var(--dark);
   color: var(--light);
   opacity: 0.75;
