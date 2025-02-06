@@ -56,38 +56,20 @@ const useHandlePositions = (countImages) => {
     }
   };
 
-  const handleSwipeNext = (i, count) => {
+  const handleSwiping = (i, direction = true, count = 2) => {
     const interval = (i) => {
       return 300 - i * 50;
     };
 
     setTimeout(() => {
       if (i < count) {
-        handleNext();
+        direction ? handleNext() : handlePrev();
       }
 
       i++;
 
       if (i < count) {
-        handleSwipeNext(i, count);
-      }
-    }, interval(i));
-  };
-
-  const handleSwipePrev = (i, count) => {
-    const interval = (i) => {
-      return 300 - i * 50;
-    };
-
-    setTimeout(() => {
-      if (i < count) {
-        handlePrev();
-      }
-
-      i++;
-
-      if (i < count) {
-        handleSwipePrev(i, count);
+        handleSwiping(i, (direction = direction), count);
       }
     }, interval(i));
   };
@@ -98,8 +80,7 @@ const useHandlePositions = (countImages) => {
     handleNext,
     handlePrev,
     handleDrag,
-    handleSwipeNext,
-    handleSwipePrev,
+    handleSwiping,
   };
 };
 

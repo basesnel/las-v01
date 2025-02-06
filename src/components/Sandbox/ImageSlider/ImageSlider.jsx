@@ -18,8 +18,7 @@ const ImageSlider = () => {
     handleNext,
     handlePrev,
     handleDrag,
-    handleSwipeNext,
-    handleSwipePrev,
+    handleSwiping,
   } = useHandlePositions(images.length);
 
   const galleryMedia = useReactMatchMedia(galleryMediaQueries);
@@ -49,10 +48,13 @@ const ImageSlider = () => {
         ))}
       </motion.div>
       <div className={styles.controls}>
-        <button className={styles.next} onClick={() => handleSwipePrev(i, 3)}>
+        <button
+          className={styles.next}
+          onClick={() => handleSwiping(i, false, 3)}
+        >
           Prev | Prev | Prev
         </button>
-        <button className={styles.next} onClick={() => handleSwipePrev(i, 2)}>
+        <button className={styles.next} onClick={() => handleSwiping(i, false)}>
           Prev | Prev
         </button>
         <button className={styles.next} onClick={handlePrev}>
@@ -61,10 +63,10 @@ const ImageSlider = () => {
         <button className={styles.next} onClick={handleNext}>
           Next
         </button>
-        <button className={styles.next} onClick={() => handleSwipeNext(i, 2)}>
+        <button className={styles.next} onClick={() => handleSwiping(i)}>
           Next | Next
         </button>
-        <button className={styles.next} onClick={() => handleSwipeNext(i, 3)}>
+        <button className={styles.next} onClick={() => handleSwiping(i)}>
           Next | Next | Next
         </button>
       </div>
