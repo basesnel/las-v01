@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { motion, useAnimation } from "framer-motion";
 import { motion } from "framer-motion";
 
 import icons from "../../assets/icons.svg";
@@ -10,8 +9,6 @@ const IconButton = (props) => {
   const { icon, caption, label, inverted, ...delegated } = props;
 
   const [isHover, setIsHover] = useState(false);
-
-  // const control = useAnimation();
 
   const handleMouseEnter = () => setIsHover(true);
 
@@ -26,7 +23,7 @@ const IconButton = (props) => {
       transition: { delay: isHover ? 0 : 0.5, type: "spring", stiffness: 300 },
     },
     hover: {
-      scale: 1.2,
+      scale: [1.2, 1],
       transition: {
         type: "spring",
         stiffness: 300,
@@ -36,23 +33,6 @@ const IconButton = (props) => {
       scale: 0.8,
     },
   };
-
-  // const iconVariants = {
-  //   initial: {
-  //     rotate: 0,
-  //     scale: 1,
-  //     fill: "#fff",
-  //   },
-  //   hover: {
-  //     rotate: 90,
-  //     scale: [1.2, 1],
-  //     fill: "#171717",
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 300,
-  //     },
-  //   },
-  // };
 
   return (
     <motion.button
@@ -73,9 +53,7 @@ const IconButton = (props) => {
       }
       {...delegated}
     >
-      <motion.svg
-        // variants={iconVariants}
-        // animate={control}
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width={32}
         height={32}
@@ -85,7 +63,7 @@ const IconButton = (props) => {
         className={styles.icon}
       >
         <use href={`${icons}#${icon}`}></use>
-      </motion.svg>
+      </svg>
       <span className={styles.visuallyHidden}>{caption}</span>
     </motion.button>
   );
