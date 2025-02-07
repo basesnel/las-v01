@@ -6,6 +6,7 @@ import useSwipeGallery from "../../../hooks/useSwipeGallery";
 import useHandlePositions from "../../../hooks/useHandlePositions";
 import Card from "./Card";
 import { galleryMediaQueries } from "./getVariants";
+import IconButton from "../../IconButton/IconButton";
 
 import styles from "./styles.module.css";
 
@@ -48,36 +49,35 @@ const ImageSlider = () => {
         ))}
       </motion.div>
       <div className={styles.controls}>
-        <button
-          className={`${styles.next} ${styles.tripleNext}`}
+        <IconButton
+          icon="last"
+          caption="three steps backward"
           onClick={() => handleSwiping(i, false, 3)}
-        >
-          Prev | Prev | Prev
-        </button>
-        <button
-          className={`${styles.next} ${styles.doubleNext}`}
+          inverted="true"
+        />
+        <IconButton
+          icon="forward"
+          caption="two steps backward"
           onClick={() => handleSwiping(i, false)}
-        >
-          Prev | Prev
-        </button>
-        <button className={styles.next} onClick={handlePrev}>
-          Prev
-        </button>
-        <button className={styles.next} onClick={handleNext}>
-          Next
-        </button>
-        <button
-          className={`${styles.next} ${styles.doubleNext}`}
+          inverted="true"
+        />
+        <IconButton
+          icon="play"
+          caption="backward"
+          onClick={handlePrev}
+          inverted="true"
+        />
+        <IconButton icon="play" caption="forward" onClick={handleNext} />
+        <IconButton
+          icon="forward"
+          caption="two steps forward"
           onClick={() => handleSwiping(i)}
-        >
-          Next | Next
-        </button>
-        <button
-          className={`${styles.next} ${styles.tripleNext}`}
+        />
+        <IconButton
+          icon="last"
+          caption="three steps forward"
           onClick={() => handleSwiping(i, true, 3)}
-        >
-          Next | Next | Next
-        </button>
+        />
       </div>
     </div>
   );
