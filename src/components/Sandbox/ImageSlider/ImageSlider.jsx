@@ -28,6 +28,15 @@ const ImageSlider = () => {
 
   let i = 0;
 
+  const controlsVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 300 },
+    },
+  };
+
   return (
     <div className={styles.container}>
       <motion.div
@@ -48,7 +57,14 @@ const ImageSlider = () => {
           />
         ))}
       </motion.div>
-      <ul className={styles.controls}>
+      <motion.ul
+        variants={controlsVariants}
+        initial="hidden"
+        whileInView="visible"
+        style={{ originX: 0.5, originY: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className={styles.controls}
+      >
         <li className={styles.control}>
           <IconButton
             icon="last"
@@ -100,7 +116,7 @@ const ImageSlider = () => {
             type="button"
           />
         </li>
-      </ul>
+      </motion.ul>
     </div>
   );
 };
