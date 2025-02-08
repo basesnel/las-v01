@@ -48,47 +48,59 @@ const ImageSlider = () => {
           />
         ))}
       </motion.div>
-      <div className={styles.controls}>
-        <IconButton
-          icon="last"
-          caption="three steps backward"
-          onClick={() => handleSwiping(i, false, 3)}
-          type="button"
-          inverted="true"
-        />
-        <IconButton
-          icon="forward"
-          caption="two steps backward"
-          onClick={() => handleSwiping(i, false)}
-          type="button"
-          inverted="true"
-        />
-        <IconButton
-          icon="play"
-          caption="backward"
-          onClick={handlePrev}
-          type="button"
-          inverted="true"
-        />
-        <IconButton
-          icon="play"
-          caption="forward"
-          onClick={handleNext}
-          type="button"
-        />
-        <IconButton
-          icon="forward"
-          caption="two steps forward"
-          onClick={() => handleSwiping(i)}
-          type="button"
-        />
-        <IconButton
-          icon="last"
-          caption="three steps forward"
-          onClick={() => handleSwiping(i, true, 3)}
-          type="button"
-        />
-      </div>
+      <ul className={styles.controls}>
+        <li className={styles.control}>
+          <IconButton
+            icon="last"
+            caption="three steps backward"
+            onClick={() => handleSwiping(i, false, 3)}
+            type="button"
+            inverted="true"
+          />
+        </li>
+        <li className={styles.control}>
+          <IconButton
+            icon="forward"
+            caption="two steps backward"
+            onClick={() => handleSwiping(i, false)}
+            type="button"
+            inverted="true"
+          />
+        </li>
+        <li className={styles.control}>
+          <IconButton
+            icon="play"
+            caption="backward"
+            onClick={handlePrev}
+            type="button"
+            inverted="true"
+          />
+        </li>
+        <li className={styles.control}>
+          <IconButton
+            icon="play"
+            caption="forward"
+            onClick={handleNext}
+            type="button"
+          />
+        </li>
+        <li className={styles.control}>
+          <IconButton
+            icon="forward"
+            caption="two steps forward"
+            onClick={() => handleSwiping(i)}
+            type="button"
+          />
+        </li>
+        <li className={styles.control}>
+          <IconButton
+            icon="last"
+            caption="three steps forward"
+            onClick={() => handleSwiping(i, true, 3)}
+            type="button"
+          />
+        </li>
+      </ul>
     </div>
   );
 };

@@ -27,7 +27,7 @@ const useSwipeGallery = (handleNext, handlePrev) => {
   useEffect(() => {
     setInterval(() => {
       swipeGallery(i);
-    }, 20000);
+    }, 30000);
   }, []);
 };
 

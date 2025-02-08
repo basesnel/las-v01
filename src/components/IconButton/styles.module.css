@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  width: 90%;
+  min-width: 120px;
   border: 1px solid var(--light);
   border-radius: 40px;
   padding: 11px;
