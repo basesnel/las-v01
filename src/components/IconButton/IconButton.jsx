@@ -15,13 +15,13 @@ const IconButton = (props) => {
   const handleMouseLeave = () => setIsHover(false);
 
   const buttonVariants = {
-    hidden: { y: 100, scale: 0, opacity: 0 },
-    visible: {
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      transition: { delay: isHover ? 0 : 0.5, type: "spring", stiffness: 300 },
-    },
+    // hidden: { y: 100, scale: 0, opacity: 0 },
+    // visible: {
+    //   y: 0,
+    //   scale: 1,
+    //   opacity: 1,
+    //   transition: { delay: isHover ? 0 : 0.5, type: "spring", stiffness: 300 },
+    // },
     hover: {
       scale: [1.2, 1],
       transition: {
@@ -37,8 +37,9 @@ const IconButton = (props) => {
   return (
     <motion.button
       variants={buttonVariants}
-      initial="hidden"
-      whileInView="visible"
+      // initial="hidden"
+      // whileInView="visible"
+      style={{ originX: inverted ? 1 : 0, originY: 0.5 }}
       whileHover="hover"
       whileFocus="hover"
       whileTap="tap"
