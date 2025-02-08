@@ -82,17 +82,13 @@
   user-select: none;
 }
 
-/* .doubleNext,
-.tripleNext {
-  display: none;
-} */
-
 .controls {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
   height: 20vh;
+  /* background-color: #f0f0f010; */
 }
 
 .control:nth-child(1),
