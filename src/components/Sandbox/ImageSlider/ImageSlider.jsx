@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { throttle } from "lodash";
-import gallery from "../../../constants/gallery";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
 import useSwipeGallery from "../../../hooks/useSwipeGallery";
 import useHandlePositions from "../../../hooks/useHandlePositions";
@@ -10,9 +9,7 @@ import { galleryMediaQueries } from "./getVariants";
 
 import styles from "./styles.module.css";
 
-const ImageSlider = () => {
-  const { images } = gallery;
-
+const ImageSlider = ({ images }) => {
   const {
     positionIndexes,
     positions,
