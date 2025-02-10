@@ -40,6 +40,16 @@ const TowTruck = () => {
       </div>
       <aside className={styles.aside}>
         {/* <IntroList abouts={abouts} /> */}
+        <div className={styles.bigImage} />
+        <div className={styles.wrapFrames}>
+          <ul className={styles.frames}>
+            <li className={styles.frame}>item 1</li>
+            <li className={styles.frame}>item 2</li>
+            <li className={styles.frame}>item 3</li>
+            <li className={styles.frame}>item 4</li>
+            <li className={styles.frame}>item 5</li>
+          </ul>
+        </div>
       </aside>
     </Section>
   );

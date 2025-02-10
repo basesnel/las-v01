@@ -36,13 +36,41 @@
   padding-bottom: 0;
 }
 
+.bigImage {
+  background-color: var(--highlight);
+}
+
+.wrapFrames {
+  overflow: hidden;
+}
+
+.frames {
+  display: flex;
+  gap: 20px;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  flex-basis: 200px;
+  height: 150px;
+  background-color: var(--highlight);
+}
+
 @media screen and (min-width: 768px) {
   .content {
     flex-basis: 330px;
   }
 
   .aside {
-    display: initial;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .bigImage {
     width: 330px;
     height: 500px;
   }
@@ -55,6 +83,10 @@
   }
 
   .aside {
+    width: 570px;
+  }
+
+  .bigImage {
     width: 570px;
     height: 480px;
   }
