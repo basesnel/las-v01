@@ -7,6 +7,7 @@ import Features from "../../components/Features/Features";
 import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Brands from "../../components/Brands/Brands";
+import TowTruck from "../../components/TowTruck/TowTruck";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -19,6 +20,7 @@ const Main = () => {
         <Banner />
         <Intro />
         <Services />
+        <TowTruck />
         <Gallery />
         <Features />
         {/* <Shop /> */}

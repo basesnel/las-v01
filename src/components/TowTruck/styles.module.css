@@ -1,0 +1,57 @@
+.aside {
+  display: none;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.thumb {
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    flex-basis: 330px;
+  }
+
+  .aside {
+    display: initial;
+    width: 330px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    flex-basis: 570px;
+    padding-right: 100px;
+  }
+
+  .aside {
+    width: 570px;
+    height: 480px;
+  }
+
+  .list {
+    flex-direction: row;
+  }
+
+  .item {
+    flex-shrink: 0;
+  }
+}
