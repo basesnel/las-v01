@@ -55,3 +55,7 @@ button,
 label {
   cursor: pointer;
 }
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
