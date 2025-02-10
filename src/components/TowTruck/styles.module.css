@@ -4,33 +4,10 @@
 }
 
 .list {
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
-}
-
-.item {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.thumb {
-  overflow: hidden;
-}
-
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/*  */
-
-.transportsList {
   padding: 20px;
 }
 
-.transportsItem {
+.item {
   display: flex;
   align-items: baseline;
   gap: 4px;
@@ -42,7 +19,7 @@
   color: var(--neutral);
 }
 
-.transportsItem::before {
+.item::before {
   content: "";
   display: block;
   width: 8px;
@@ -51,11 +28,11 @@
   transform: skewX(-15deg);
 }
 
-.transportsItem:first-child {
+.item:first-child {
   padding-top: 0;
 }
 
-.transportsItem:last-child {
+.item:last-child {
   padding-bottom: 0;
 }
 
@@ -80,13 +57,5 @@
   .aside {
     width: 570px;
     height: 480px;
-  }
-
-  .list {
-    flex-direction: row;
-  }
-
-  .item {
-    flex-shrink: 0;
   }
 }

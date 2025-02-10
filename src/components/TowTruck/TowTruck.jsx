@@ -33,9 +33,9 @@ const TowTruck = () => {
         <Subtitle>{subTitle.uk}</Subtitle>
         <Heading level={2} mode="intro" title={title.uk} />
         <Text mode="introWelcome">{preText.uk}</Text>
-        <Text mode="intro">{firstText.uk}</Text>
+        <Text mode="towtruck">{firstText.uk}</Text>
         <List list={transports} />
-        <Text mode="intro">{secondText.uk}</Text>
+        <Text mode="towtruck">{secondText.uk}</Text>
         <List list={suggests} />
       </div>
       <aside className={styles.aside}>
@@ -58,12 +58,12 @@ const List = ({ list }) => {
   };
 
   return (
-    <ul ref={ref} className={styles.transportsList}>
+    <ul ref={ref} className={styles.list}>
       {list.map(({ uk }, i) => {
         return (
           <motion.li
             key={i}
-            className={styles.transportsItem}
+            className={styles.item}
             variants={transportItem}
             style={
               i % 2
