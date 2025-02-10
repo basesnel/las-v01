@@ -15,7 +15,7 @@ const towtruck = {
     en: "We transport:",
     uk: "Перевозимо:",
   },
-  firstList: [
+  transports: [
     { en: "passenger cars", uk: "легкові автомобілі" },
     {
       en: "passenger cars with an open body",
@@ -32,7 +32,7 @@ const towtruck = {
     en: "We suggest:",
     uk: "Пропонуємо",
   },
-  secondList: [
+  suggests: [
     { en: "fast delivery", uk: "швидка подача" },
     {
       en: "24/7 operation mode",
