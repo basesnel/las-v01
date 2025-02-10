@@ -1,7 +1,7 @@
 const galleryMediaQueries = {
-  smallMobile: "(max-width: 321px)",
-  mobile: "(min-width: 332px) and (max-width: 420px)",
-  smartphone: "(min-width: 421px) and (max-width: 479px)",
+  smallMobile: "(max-width: 331px)",
+  mobile: "(min-width: 332px) and (max-width: 393px)",
+  smartphone: "(min-width: 394px) and (max-width: 479px)",
   tabletFirst: "(min-width: 480px) and (max-width: 590px)",
   tabletSecond: "(min-width: 591px) and (max-width: 700px)",
   tabletThird: "(min-width: 701px) and (max-width: 767px)",
@@ -120,7 +120,7 @@ const getVariants = (media) => {
   const variantsSmartphone = {
     center: { x: "0%", maxWidth: "270px", scale: 1, opacity: 1, zIndex: 8 },
     left4: {
-      x: "-30%",
+      x: "-25%",
       maxWidth: "270px",
       scale: 0.8,
       opacity: 0.8,
@@ -136,7 +136,7 @@ const getVariants = (media) => {
     right2: { x: "0%", maxWidth: "270px", scale: 0, opacity: 0, zIndex: 1 },
     right3: { x: "80%", maxWidth: "270px", scale: 0, opacity: 0, zIndex: 3 },
     right4: {
-      x: "30%",
+      x: "25%",
       maxWidth: "270px",
       scale: 0.8,
       opacity: 0.8,

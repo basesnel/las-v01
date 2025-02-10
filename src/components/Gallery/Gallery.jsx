@@ -22,7 +22,7 @@ const Gallery = () => {
   return (
     <Section indexSection={6} colorMode="dark">
       <Container>
-        <Subtitle mode="gallery">{subTitle.uk}</Subtitle>
+        <Subtitle>{subTitle.uk}</Subtitle>
         <Heading level={2} mode="hidden" title={title.uk} />
       </Container>
       {/* <GalleryList images={images} /> */}
