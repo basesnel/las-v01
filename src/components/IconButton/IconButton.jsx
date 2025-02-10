@@ -8,22 +8,32 @@ import styles from "./styles.module.css";
 const IconButton = (props) => {
   const { icon, caption, label, inverted, ...delegated } = props;
 
-  const [isHover, setIsHover] = useState(false);
+  // const [isHover, setIsHover] = useState(false);
 
-  const handleMouseEnter = () => setIsHover(true);
+  // const handleMouseEnter = () => setIsHover(true);
 
-  const handleMouseLeave = () => setIsHover(false);
+  // const handleMouseLeave = () => setIsHover(false);
 
   const buttonVariants = {
+    initial: {
+      scale: 1,
+      opacity: 0.5,
+    },
     hover: {
       scale: [1.1, 1],
+      opacity: 1,
       transition: {
         type: "spring",
         stiffness: 300,
       },
     },
     tap: {
-      scale: 0.8,
+      scale: 0.9,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+      },
     },
   };
 
@@ -31,14 +41,15 @@ const IconButton = (props) => {
     <motion.button
       variants={buttonVariants}
       style={{ originX: inverted ? 1 : 0, originY: 0.5 }}
+      initial="initial"
       whileHover="hover"
       whileFocus="hover"
       whileTap="tap"
       viewport={{ once: true }}
-      onMouseEnter={handleMouseEnter}
-      onFocus={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onBlur={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onFocus={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
+      // onBlur={handleMouseLeave}
       aria-label={label}
       className={
         label ? `${styles.button}} ${styles.iconOnly}` : `${styles.button}`
