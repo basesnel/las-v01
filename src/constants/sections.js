@@ -21,6 +21,13 @@ const sections = [
     },
   },
   {
+    id: "towtruck",
+    section: {
+      en: "towtruck",
+      uk: "евакуатор",
+    },
+  },
+  {
     id: "features",
     section: {
       en: "our benefits",

@@ -28,7 +28,7 @@ const TowTruck = () => {
   } = towtruck;
 
   return (
-    <Section indexSection={1} containerVariant="intro">
+    <Section indexSection={3} containerVariant="towtruck">
       <div className={styles.content}>
         <Subtitle>{subTitle.uk}</Subtitle>
         <Heading level={2} mode="intro" title={title.uk} />
