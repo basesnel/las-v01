@@ -1,5 +1,7 @@
 .aside {
-  display: none;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -37,6 +39,11 @@
 }
 
 .bigImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 360px;
+  border-radius: 30px;
   background-color: var(--highlight);
 }
 
@@ -46,16 +53,20 @@
 
 .frames {
   display: flex;
-  gap: 20px;
 }
 
 .frame {
+  padding: 30px 15px;
+}
+
+.thumb {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200px;
   flex-basis: 200px;
   height: 150px;
+  border-radius: 10px;
   background-color: var(--highlight);
 }
 
@@ -64,11 +75,11 @@
     flex-basis: 330px;
   }
 
-  .aside {
+  /* .aside {
     display: flex;
     gap: 30px;
     flex-direction: column;
-  }
+  } */
 
   .bigImage {
     width: 330px;
