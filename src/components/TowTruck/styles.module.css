@@ -49,6 +49,8 @@
   height: 360px;
   border-radius: 30px;
   background-color: var(--highlight);
+  pointer-events: none;
+  user-select: none;
 }
 
 .wrapFrames {
@@ -72,6 +74,8 @@
   height: 150px;
   border-radius: 10px;
   background-color: var(--highlight);
+  pointer-events: none;
+  user-select: none;
 }
 
 @media screen and (min-width: 768px) {
