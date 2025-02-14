@@ -20,7 +20,7 @@ const Main = () => {
         <Banner />
         <Intro />
         <Services />
-        <TowTruck />
+        {/* <TowTruck /> */}
         <Gallery />
         <Features />
         {/* <Shop /> */}
