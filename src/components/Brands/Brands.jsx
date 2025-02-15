@@ -16,7 +16,7 @@ const Brands = () => {
   const { title, subTitle, brandList } = brands;
 
   return (
-    <Section indexSection={8}>
+    <Section indexSection={9}>
       <Subtitle>{subTitle.uk}</Subtitle>
       <Heading level={2} title={title.uk} />
       <BrandList brandList={brandList} />

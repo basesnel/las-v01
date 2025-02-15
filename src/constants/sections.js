@@ -1,5 +1,6 @@
 const sections = [
   {
+    // index === 0
     id: "banner",
     section: {
       en: "banner with news",
@@ -7,6 +8,7 @@ const sections = [
     },
   },
   {
+    // index === 1
     id: "introduction",
     section: {
       en: "invitation",
@@ -14,13 +16,15 @@ const sections = [
     },
   },
   {
+    // index === 2
     id: "services",
     section: {
-      en: "services and prices",
-      uk: "послуги та ціни",
+      en: "services",
+      uk: "послуги",
     },
   },
   {
+    // index === 3
     id: "towtruck",
     section: {
       en: "towtruck",
@@ -28,6 +32,7 @@ const sections = [
     },
   },
   {
+    // index === 4
     id: "features",
     section: {
       en: "our benefits",
@@ -35,6 +40,7 @@ const sections = [
     },
   },
   {
+    // index === 5
     id: "shop",
     section: {
       en: "let's go buy a car",
@@ -42,6 +48,7 @@ const sections = [
     },
   },
   {
+    // index === 6
     id: "automechanics",
     section: {
       en: "our mechanics",
@@ -49,6 +56,7 @@ const sections = [
     },
   },
   {
+    // index === 7
     id: "gallery",
     section: {
       en: "our work",
@@ -56,6 +64,7 @@ const sections = [
     },
   },
   {
+    // index === 8
     id: "contact-us",
     section: {
       en: "contact us",
@@ -63,6 +72,7 @@ const sections = [
     },
   },
   {
+    // index === 9
     id: "brands",
     section: {
       en: "we work with brands",

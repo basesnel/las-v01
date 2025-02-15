@@ -7,7 +7,7 @@ import Heading from "../Heading/Heading";
 
 const ContactUs = () => {
   return (
-    <Section indexSection={7} colorMode="dark" sectionVariant="contactUs">
+    <Section indexSection={8} colorMode="dark" sectionVariant="contactUs">
       <Heading level={2} mode="hidden" title="contact us" />
       <Feedback />
       <Contacts />

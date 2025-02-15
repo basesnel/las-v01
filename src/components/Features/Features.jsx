@@ -25,7 +25,7 @@ const Features = () => {
   } = features;
 
   return (
-    <Section indexSection={3} containerVariant="features">
+    <Section indexSection={4} containerVariant="features">
       <div className={styles.content}>
         <Subtitle>{subTitle.uk}</Subtitle>
         <Heading level={2} mode="features" title={title.uk} />
