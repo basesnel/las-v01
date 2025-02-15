@@ -5,6 +5,7 @@
 .aside {
   display: flex;
   gap: 30px;
+  justify-content: center;
   flex-direction: column;
   overflow: hidden;
 }
@@ -84,8 +85,8 @@
 }
 
 .frame {
-  padding: 10px 15px;
-  background-color: #aaa;
+  padding: 10px;
+  background-color: #aeaeae;
   opacity: 0.8;
 }
 
@@ -108,15 +109,12 @@
     margin-bottom: 0;
   }
 
-  /* .aside {
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-  } */
+  .aside {
+    max-width: 330px;
+  }
 
   .bigImage {
     width: 330px;
-    height: 500px;
   }
 }
 
@@ -127,11 +125,10 @@
   }
 
   .aside {
-    width: 570px;
+    max-width: 570px;
   }
 
   .bigImage {
     width: 570px;
-    height: 480px;
   }
 }
