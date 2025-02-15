@@ -38,8 +38,8 @@ const TowTruck = () => {
         <Text mode="towtruck">{secondText.uk}</Text>
         <List list={suggests} />
       </div>
-      {/* <aside className={styles.aside}>
-        <IntroList abouts={abouts} />
+      <aside className={styles.aside}>
+        {/* <IntroList abouts={abouts} /> */}
         <div className={styles.bigImage}>big image</div>
         <div className={styles.wrapFrames}>
           <ul className={styles.frames}>
@@ -60,7 +60,7 @@ const TowTruck = () => {
             </li>
           </ul>
         </div>
-      </aside> */}
+      </aside>
     </Section>
   );
 };
