@@ -10,15 +10,6 @@ const Reference = (props) => {
 
   const [isHover, setIsHover] = useState(false);
 
-  const isLinkExternal = (par) => par.toLowerCase().match(/^http/);
-
-  const secureAttributes = {
-    ...(isLinkExternal(src) && {
-      target: "_blank",
-      rel: "noopener noreferrer nofollow",
-    }),
-  };
-
   const modify = `${styles.reference} ${styles[part]} ${styles[mode]}`;
 
   const control = useAnimation();
@@ -62,7 +53,7 @@ const Reference = (props) => {
       fill: "#fff",
     },
     hover: {
-      rotate: isLinkExternal(src) ? -45 : 90,
+      rotate: 90,
       scale: [1.2, 1],
       backgroundColor: "#FFF",
       fill: "#f67307",
@@ -83,7 +74,6 @@ const Reference = (props) => {
       whileTap="tap"
       viewport={{ once: true }}
       href={src}
-      {...secureAttributes}
       aria-label={label}
       className={label ? `${modify} ${styles.iconOnly}` : modify}
       onMouseEnter={handleMouseEnter}

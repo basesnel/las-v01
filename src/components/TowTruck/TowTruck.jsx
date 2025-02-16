@@ -4,8 +4,8 @@ import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
-
 import Reference from "../Reference/Reference";
+
 import towtruck from "../../constants/towtruck";
 
 import styles from "./styles.module.css";
@@ -25,6 +25,7 @@ const TowTruck = () => {
     transports,
     secondText,
     suggests,
+    link,
   } = towtruck;
 
   return (
@@ -37,6 +38,7 @@ const TowTruck = () => {
         <List list={transports} />
         <Text mode="towtruck">{secondText.uk}</Text>
         <List list={suggests} />
+        <Reference src={link.src} caption={link.text.uk} />
       </div>
       <aside className={styles.aside}>
         {/* <IntroList abouts={abouts} /> */}
