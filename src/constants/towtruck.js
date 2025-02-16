@@ -1,3 +1,5 @@
+import towtruckjpg from "../assets/images/towtruck/towtruck.jpg";
+
 const towtruck = {
   subTitle: {
     en: "round the clock",
@@ -45,7 +47,43 @@ const towtruck = {
     text: { en: "towtruck", uk: "евакуатор" },
     src: "https://evakuator-las.poltava.ua/",
   },
-  images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  images: [
+    {
+      towtruck1: towtruckjpg,
+      alt: {
+        en: "towtruck",
+        uk: "евакуатор",
+      },
+    },
+    {
+      towtruck2: towtruckjpg,
+      alt: {
+        en: "towtruck",
+        uk: "евакуатор",
+      },
+    },
+    {
+      towtruck3: towtruckjpg,
+      alt: {
+        en: "towtruck",
+        uk: "евакуатор",
+      },
+    },
+    {
+      towtruck4: towtruckjpg,
+      alt: {
+        en: "towtruck",
+        uk: "евакуатор",
+      },
+    },
+    {
+      towtruck5: towtruckjpg,
+      alt: {
+        en: "towtruck",
+        uk: "евакуатор",
+      },
+    },
+  ],
 };
 
 export default towtruck;

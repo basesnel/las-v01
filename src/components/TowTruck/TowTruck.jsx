@@ -43,7 +43,14 @@ const TowTruck = () => {
         <Reference src={link.src} caption={link.text.uk} />
       </div>
       <aside className={styles.aside}>
-        <div className={styles.bigImage}>big image</div>
+        <div className={styles.bigCard}>
+          <img
+            loading="lazy"
+            src={images[0].towtruck1}
+            alt={images[0].alt.uk}
+            className={styles.bigImage}
+          />
+        </div>
         {/* <GalleryList images={images} /> */}
         <div className={styles.wrapFrames}>
           <ul className={styles.frames}>
