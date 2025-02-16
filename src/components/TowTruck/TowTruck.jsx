@@ -124,20 +124,43 @@ const List = ({ list }) => {
 };
 
 const GalleryList = ({ images }) => {
-  // const FAST_DURATION = 60;
-  // const SLOW_DURATION = 600;
+  const FAST_DURATION = 25;
+  const SLOW_DURATION = 75;
 
-  // // const FAST_DURATION = 3;
-  // // const SLOW_DURATION = 30;
+  const [duration, setDuration] = useState(FAST_DURATION);
 
-  // const [duration, setDuration] = useState(FAST_DURATION);
+  let [ref, { width }] = useMeasure();
 
-  // let [ref, { width }] = useMeasure();
+  const xTransition = useMotionValue(0);
 
-  // const xTransition = useMotionValue(0);
+  const [mustFinish, setMustFinish] = useState(false);
+  const [rerender, setRerender] = useState(false);
 
-  // const [mustFinish, setMustFinish] = useState(false);
-  // const [rerender, setRerender] = useState(false);
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 - 8;
+
+    if (mustFinish) {
+      controls = animate(xTransition, [xTransition.get(), finalPosition], {
+        ease: "linear",
+        duration: duration * (1 - xTransition.get() / finalPosition),
+        onComplete: () => {
+          setMustFinish(false);
+          setRerender(!rerender);
+        },
+      });
+    } else {
+      controls = animate(xTransition, [0, finalPosition], {
+        ease: "linear",
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "loop",
+        repeatDelay: 0,
+      });
+    }
+
+    return controls?.stop;
+  }, [xTransition, width, duration, rerender]);
 
   // useEffect(() => {
   //   let controls;
@@ -170,23 +193,23 @@ const GalleryList = ({ images }) => {
     <div className={styles.wrapFrames}>
       <motion.ul
         className={styles.frames}
-        // ref={ref}
-        // style={{ x: xTransition }}
-        // onHoverStart={() => {
-        //   setMustFinish(true);
-        //   setDuration(SLOW_DURATION);
-        // }}
-        // onHoverEnd={() => {
-        //   setMustFinish(true);
-        //   setDuration(FAST_DURATION);
-        // }}
+        ref={ref}
+        style={{ x: xTransition }}
+        onHoverStart={() => {
+          setMustFinish(true);
+          setDuration(SLOW_DURATION);
+        }}
+        onHoverEnd={() => {
+          setMustFinish(true);
+          setDuration(FAST_DURATION);
+        }}
       >
         {[...images, ...images].map((image, i) => (
           // <li className={styles.frame} key={i}>
           //   <div className={styles.thumb}>image {image}</div>
           // </li>
           <li key={i}>
-            <Card image={image} />
+            <Card image={image} idx={i} />
           </li>
         ))}
       </motion.ul>
@@ -194,7 +217,7 @@ const GalleryList = ({ images }) => {
   );
 };
 
-const Card = ({ image }) => {
+const Card = ({ image, idx }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -226,7 +249,7 @@ const Card = ({ image }) => {
               animate={{ y: 0, transition: { duration: 0.5 } }}
               exit={{ y: 20, transition: { duration: 0.5 } }}
             >
-              {image.alt.uk}
+              {`${image.alt.uk} ${idx + 1}`}
             </motion.span>
           </motion.figcaption>
         )}
