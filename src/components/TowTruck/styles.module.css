@@ -1,5 +1,6 @@
 .content {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .aside {
@@ -14,11 +15,15 @@
   padding: 20px;
 }
 
+.list:nth-child(7) {
+  margin-bottom: 31px;
+}
+
 .item {
   display: flex;
   align-items: baseline;
   gap: 4px;
-  padding: 10px 0;
+  padding: 8px 0;
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
@@ -107,6 +112,7 @@
   .content {
     flex-basis: 330px;
     margin-bottom: 0;
+    text-align: initial;
   }
 
   .aside {
