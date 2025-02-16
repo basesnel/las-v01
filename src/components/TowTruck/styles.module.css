@@ -73,6 +73,24 @@
   height: 226px;
 }
 
+.wrapFrames::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(240, 240, 240, 1) 0%,
+    rgba(240, 240, 240, 0) 3%,
+    rgba(240, 240, 240, 0) 97%,
+    rgba(240, 240, 240, 1) 100%
+  );
+}
+
 .frames {
   position: absolute;
   left: 0;
