@@ -138,7 +138,7 @@ const GalleryList = ({ images }) => {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 8;
+    let finalPosition = -width / 2;
 
     if (mustFinish) {
       controls = animate(xTransition, [xTransition.get(), finalPosition], {
@@ -162,33 +162,6 @@ const GalleryList = ({ images }) => {
     return controls?.stop;
   }, [xTransition, width, duration, rerender]);
 
-  // useEffect(() => {
-  //   let controls;
-  //   let finalPosition = -width / 2 - 5;
-  //   console.log(width);
-
-  //   if (mustFinish) {
-  //     controls = animate(xTransition, [xTransition.get(), finalPosition], {
-  //       ease: "linear",
-  //       duration: duration * (1 - xTransition.get() / finalPosition),
-  //       onComplete: () => {
-  //         setMustFinish(false);
-  //         setRerender(!rerender);
-  //       },
-  //     });
-  //   } else {
-  //     controls = animate(xTransition, [0, finalPosition], {
-  //       ease: "linear",
-  //       duration: duration,
-  //       repeat: Infinity,
-  //       repeatType: "loop",
-  //       repeatDelay: 0,
-  //     });
-  //   }
-
-  //   return controls.stop;
-  // }, [xTransition, width, duration, rerender]);
-
   return (
     <div className={styles.wrapFrames}>
       <motion.ul
@@ -205,10 +178,7 @@ const GalleryList = ({ images }) => {
         }}
       >
         {[...images, ...images].map((image, i) => (
-          // <li className={styles.frame} key={i}>
-          //   <div className={styles.thumb}>image {image}</div>
-          // </li>
-          <li key={i}>
+          <li key={i} className={styles.frame}>
             <Card image={image} idx={i} />
           </li>
         ))}
@@ -222,7 +192,7 @@ const Card = ({ image, idx }) => {
 
   return (
     <motion.figure
-      className={styles.frame}
+      className={styles.card}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >

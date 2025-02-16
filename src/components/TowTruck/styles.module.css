@@ -69,17 +69,17 @@
 .wrapFrames {
   padding: 30px 0;
   position: relative;
-  height: 210px;
+  height: 226px;
 }
 
 .frames {
   position: absolute;
   left: 0;
   display: flex;
-  gap: 16px;
+  /* gap: 16px; */
 }
 
-/* .frames::before,
+.frames::before,
 .frames::after {
   content: "";
   position: absolute;
@@ -97,9 +97,15 @@
 .frames::after {
   top: initial;
   bottom: -30px;
-}*/
+}
 
 .frame {
+  padding: 8px;
+  background-color: var(--neutral);
+  opacity: 0.8;
+}
+
+.card {
   position: relative;
   display: flex;
   justify-content: center;
