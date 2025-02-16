@@ -10,6 +10,17 @@
   text-align: left;
 }
 
+.towtruck {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.towtruckWelcome {
+  font-size: 18px;
+  line-height: 1.666;
+  text-align: left;
+}
+
 @media screen and (min-width: 768px) {
   .banner {
     font-size: 18px;
@@ -49,8 +60,4 @@
   .intro:nth-child(6) {
     margin-bottom: 46px;
   }
-}
-
-.towtruck {
-  margin-bottom: 0;
 }
