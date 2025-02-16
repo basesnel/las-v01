@@ -49,35 +49,35 @@ const towtruck = {
   },
   images: [
     {
-      towtruck1: towtruckjpg,
+      towtruck: towtruckjpg,
       alt: {
         en: "towtruck",
         uk: "евакуатор",
       },
     },
     {
-      towtruck2: towtruckjpg,
+      towtruck: towtruckjpg,
       alt: {
         en: "towtruck",
         uk: "евакуатор",
       },
     },
     {
-      towtruck3: towtruckjpg,
+      towtruck: towtruckjpg,
       alt: {
         en: "towtruck",
         uk: "евакуатор",
       },
     },
     {
-      towtruck4: towtruckjpg,
+      towtruck: towtruckjpg,
       alt: {
         en: "towtruck",
         uk: "евакуатор",
       },
     },
     {
-      towtruck5: towtruckjpg,
+      towtruck: towtruckjpg,
       alt: {
         en: "towtruck",
         uk: "евакуатор",

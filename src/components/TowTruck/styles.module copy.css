@@ -53,6 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* height: 360px; */
   border-radius: 30px;
   background-color: var(--highlight);
   pointer-events: none;
@@ -68,18 +69,15 @@
 
 .wrapFrames {
   padding: 30px 0;
-  position: relative;
-  height: 210px;
+  overflow: hidden;
 }
 
 .frames {
-  position: absolute;
-  left: 0;
+  position: relative;
   display: flex;
-  gap: 20px;
 }
 
-/* .frames::before,
+.frames::before,
 .frames::after {
   content: "";
   position: absolute;
@@ -97,23 +95,52 @@
 .frames::after {
   top: initial;
   bottom: -30px;
-}*/
+}
 
 .frame {
-  position: relative;
+  padding: 10px;
+  background-color: #aeaeae;
+  opacity: 0.8;
+}
+
+.thumb {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200px;
+  flex-basis: 200px;
   height: 150px;
   border-radius: 10px;
-  overflow: hidden;
+  background-color: var(--highlight);
+  pointer-events: none;
+  user-select: none;
 }
 
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
+/* Gallery styles */
+
+.galleryList {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  min-width: 150px;
+  padding: 2rem 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--light);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  flex-basis: 200px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: var(--highlight);
+  pointer-events: none;
+  user-select: none;
 }
 
 .cardOverlay {
@@ -146,6 +173,16 @@
   line-height: 20px;
   background-color: rgb(255, 255, 255);
   opacity: 0.75;
+}
+
+.label:hover {
+  opacity: 0.5;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
