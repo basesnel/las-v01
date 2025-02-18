@@ -49,38 +49,85 @@ const towtruck = {
   },
   images: [
     {
-      towtruck: towtruckjpg,
+      id: 1,
+      image: towtruckjpg,
       alt: {
-        en: "towtruck",
-        uk: "евакуатор",
+        en: "towtruck: photo 1",
+        uk: "евакуатор: фото 1",
       },
     },
     {
-      towtruck: towtruckjpg,
+      id: 2,
+      image: towtruckjpg,
       alt: {
-        en: "towtruck",
-        uk: "евакуатор",
+        en: "towtruck: photo 2",
+        uk: "евакуатор: фото 2",
       },
     },
     {
-      towtruck: towtruckjpg,
+      id: 3,
+      image: towtruckjpg,
       alt: {
-        en: "towtruck",
-        uk: "евакуатор",
+        en: "towtruck: photo 3",
+        uk: "евакуатор: фото 3",
       },
     },
     {
-      towtruck: towtruckjpg,
+      id: 4,
+      image: towtruckjpg,
       alt: {
-        en: "towtruck",
-        uk: "евакуатор",
+        en: "towtruck: photo 4",
+        uk: "евакуатор: фото 4",
       },
     },
     {
-      towtruck: towtruckjpg,
+      id: 5,
+      image: towtruckjpg,
       alt: {
-        en: "towtruck",
-        uk: "евакуатор",
+        en: "towtruck: photo 5",
+        uk: "евакуатор: фото 5",
+      },
+    },
+  ],
+  frames: [
+    {
+      id: 1,
+      image: towtruckjpg,
+      alt: {
+        en: "phrame 1",
+        uk: "кадр 1",
+      },
+    },
+    {
+      id: 2,
+      image: towtruckjpg,
+      alt: {
+        en: "phrame 2",
+        uk: "кадр 2",
+      },
+    },
+    {
+      id: 3,
+      image: towtruckjpg,
+      alt: {
+        en: "phrame 3",
+        uk: "кадр 3",
+      },
+    },
+    {
+      id: 4,
+      image: towtruckjpg,
+      alt: {
+        en: "phrame 4",
+        uk: "кадр 4",
+      },
+    },
+    {
+      id: 5,
+      image: towtruckjpg,
+      alt: {
+        en: "phrame 5",
+        uk: "кадр 5",
       },
     },
   ],

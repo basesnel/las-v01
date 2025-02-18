@@ -34,6 +34,7 @@ const TowTruck = () => {
     suggests,
     link,
     images,
+    frames,
   } = towtruck;
 
   return (
@@ -52,31 +53,12 @@ const TowTruck = () => {
         <div className={styles.bigCard}>
           <img
             loading="lazy"
-            src={images[0].towtruck}
+            src={images[0].image}
             alt={images[0].alt.uk}
             className={styles.bigImage}
           />
         </div>
-        <GalleryList images={images} />
-        {/* <div className={styles.wrapFrames}>
-          <ul className={styles.frames}>
-            <li className={styles.frame}>
-              <div className={styles.thumb}>image 1</div>
-            </li>
-            <li className={styles.frame}>
-              <div className={styles.thumb}>image 2</div>
-            </li>
-            <li className={styles.frame}>
-              <div className={styles.thumb}>image 3</div>
-            </li>
-            <li className={styles.frame}>
-              <div className={styles.thumb}>image 4</div>
-            </li>
-            <li className={styles.frame}>
-              <div className={styles.thumb}>image 5</div>
-            </li>
-          </ul>
-        </div> */}
+        <GalleryList frames={frames} />
       </aside>
     </Section>
   );
@@ -123,7 +105,7 @@ const List = ({ list }) => {
   );
 };
 
-const GalleryList = ({ images }) => {
+const GalleryList = ({ frames }) => {
   const FAST_DURATION = 25;
   const SLOW_DURATION = 75;
 
@@ -177,9 +159,9 @@ const GalleryList = ({ images }) => {
           setDuration(FAST_DURATION);
         }}
       >
-        {[...images, ...images].map((image, i) => (
+        {[...frames, ...frames].map((frame, i) => (
           <li key={i} className={styles.frame}>
-            <Card image={image} idx={i} />
+            <Card frame={frame} />
           </li>
         ))}
       </motion.ul>
@@ -187,7 +169,7 @@ const GalleryList = ({ images }) => {
   );
 };
 
-const Card = ({ image, idx }) => {
+const Card = ({ frame }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -198,8 +180,8 @@ const Card = ({ image, idx }) => {
     >
       <img
         loading="lazy"
-        src={image.towtruck}
-        alt={image.alt.uk}
+        src={frame.image}
+        alt={frame.alt.uk}
         width={200}
         height={150}
         className={styles.image}
@@ -219,7 +201,7 @@ const Card = ({ image, idx }) => {
               animate={{ y: 0, transition: { duration: 0.5 } }}
               exit={{ y: 20, transition: { duration: 0.5 } }}
             >
-              {`${image.alt.uk} ${idx + 1}`}
+              {`${frame.alt.uk}`}
             </motion.span>
           </motion.figcaption>
         )}
