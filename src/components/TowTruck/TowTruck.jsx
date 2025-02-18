@@ -37,6 +37,8 @@ const TowTruck = () => {
     frames,
   } = towtruck;
 
+  const [index, setIndex] = useState(1);
+
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -54,13 +56,14 @@ const TowTruck = () => {
       <aside className={styles.aside}>
         <motion.figure
           className={styles.bigCard}
+          key={index}
           onHoverStart={() => setShowOverlay(true)}
           onHoverEnd={() => setShowOverlay(false)}
         >
           <img
             loading="lazy"
-            src={images[0].image}
-            alt={images[0].alt.uk}
+            src={images[index - 1].image}
+            alt={images[index - 1].alt.uk}
             className={styles.bigImage}
           />
           <AnimatePresence>
@@ -78,13 +81,13 @@ const TowTruck = () => {
                   animate={{ y: 0, transition: { duration: 0.5 } }}
                   exit={{ y: 20, transition: { duration: 0.5 } }}
                 >
-                  {`${images[0].alt.uk}`}
+                  {`${images[index - 1].alt.uk}`}
                 </motion.span>
               </motion.figcaption>
             )}
           </AnimatePresence>
         </motion.figure>
-        <GalleryList frames={frames} />
+        <GalleryList frames={frames} getIndex={setIndex} />
       </aside>
     </Section>
   );
@@ -131,7 +134,7 @@ const List = ({ list }) => {
   );
 };
 
-const GalleryList = ({ frames }) => {
+const GalleryList = ({ frames, getIndex }) => {
   const FAST_DURATION = 25;
   const SLOW_DURATION = 75;
 
@@ -176,6 +179,8 @@ const GalleryList = ({ frames }) => {
     const onClick = (e) => {
       if (e.target.tagName !== "FIGCAPTION") return;
       console.log(e.target.dataset.id);
+      console.log(Number(e.target.dataset.id));
+      getIndex(Number(e.target.dataset.id));
     };
 
     cinema.addEventListener("click", onClick);
