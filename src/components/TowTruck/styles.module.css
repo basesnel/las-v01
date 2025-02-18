@@ -123,7 +123,7 @@
 }
 
 .frame {
-  padding: 0 4px;
+  padding: 0 5px;
   background-color: var(--cinema-line);
 }
 
@@ -132,8 +132,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 221px;
-  height: 166px;
+  width: 210px;
+  height: 158px;
   border-radius: 10px;
   overflow: hidden;
 }
