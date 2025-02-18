@@ -144,11 +144,25 @@ const GalleryList = ({ frames }) => {
     return controls?.stop;
   }, [xTransition, width, duration, rerender]);
 
+  useEffect(() => {
+    const cinema = document.querySelector("[data-cinema]");
+
+    const onClick = (e) => {
+      if (e.target.tagName !== "FIGCAPTION") return;
+      console.log(e.target.dataset.id);
+    };
+
+    cinema.addEventListener("click", onClick);
+
+    return () => cinema.removeEventListener("click", onClick);
+  }, []);
+
   return (
     <div className={styles.wrapFrames}>
       <motion.ul
         className={styles.frames}
         ref={ref}
+        data-cinema
         style={{ x: xTransition }}
         onHoverStart={() => {
           setMustFinish(true);
@@ -190,6 +204,7 @@ const Card = ({ frame }) => {
         {showOverlay && (
           <motion.figcaption
             className={styles.cardOverlay}
+            data-id={frame.id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
             exit={{ opacity: 0, transition: { duration: 0.5 } }}
