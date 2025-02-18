@@ -37,6 +37,8 @@ const TowTruck = () => {
     frames,
   } = towtruck;
 
+  const [showOverlay, setShowOverlay] = useState(false);
+
   return (
     <Section indexSection={3} containerVariant="towtruck">
       <div className={styles.content}>
@@ -50,14 +52,38 @@ const TowTruck = () => {
         <Reference src={link.src} caption={link.text.uk} />
       </div>
       <aside className={styles.aside}>
-        <div className={styles.bigCard}>
+        <motion.figure
+          className={styles.bigCard}
+          onHoverStart={() => setShowOverlay(true)}
+          onHoverEnd={() => setShowOverlay(false)}
+        >
           <img
             loading="lazy"
             src={images[0].image}
             alt={images[0].alt.uk}
             className={styles.bigImage}
           />
-        </div>
+          <AnimatePresence>
+            {showOverlay && (
+              <motion.figcaption
+                className={styles.bigCardOverlay}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { duration: 0.5 } }}
+                exit={{ opacity: 0, transition: { duration: 0.5 } }}
+              >
+                <div className={styles.bgBlack} aria-hidden="true" />
+                <motion.span
+                  className={styles.bigLabel}
+                  initial={{ y: 20 }}
+                  animate={{ y: 0, transition: { duration: 0.5 } }}
+                  exit={{ y: 20, transition: { duration: 0.5 } }}
+                >
+                  {`${images[0].alt.uk}`}
+                </motion.span>
+              </motion.figcaption>
+            )}
+          </AnimatePresence>
+        </motion.figure>
         <GalleryList frames={frames} />
       </aside>
     </Section>

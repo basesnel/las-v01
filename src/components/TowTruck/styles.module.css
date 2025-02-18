@@ -50,14 +50,13 @@
 }
 
 .bigCard {
+  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
   background-color: var(--highlight);
-  pointer-events: none;
-  user-select: none;
 }
 
 .bigImage {
@@ -65,6 +64,31 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.bigCardOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bigLabel {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  padding: 16px 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  background-color: var(--dark);
+  color: var(--light);
+  opacity: 0.75;
 }
 
 .wrapFrames {
