@@ -12,6 +12,7 @@ import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Reference from "../Reference/Reference";
+import BigImage from "./BigImage";
 
 import towtruck from "../../constants/towtruck";
 
@@ -39,8 +40,6 @@ const TowTruck = () => {
 
   const [index, setIndex] = useState(1);
 
-  const [showOverlay, setShowOverlay] = useState(false);
-
   return (
     <Section indexSection={3} containerVariant="towtruck">
       <div className={styles.content}>
@@ -54,39 +53,7 @@ const TowTruck = () => {
         <Reference src={link.src} caption={link.text.uk} />
       </div>
       <aside className={styles.aside}>
-        <motion.figure
-          className={styles.bigCard}
-          key={index}
-          onHoverStart={() => setShowOverlay(true)}
-          onHoverEnd={() => setShowOverlay(false)}
-        >
-          <img
-            loading="lazy"
-            src={images[index - 1].image}
-            alt={images[index - 1].alt.uk}
-            className={styles.bigImage}
-          />
-          <AnimatePresence>
-            {showOverlay && (
-              <motion.figcaption
-                className={styles.bigCardOverlay}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                exit={{ opacity: 0, transition: { duration: 0.5 } }}
-              >
-                <div className={styles.bgBlack} aria-hidden="true" />
-                <motion.span
-                  className={styles.bigLabel}
-                  initial={{ y: 20 }}
-                  animate={{ y: 0, transition: { duration: 0.5 } }}
-                  exit={{ y: 20, transition: { duration: 0.5 } }}
-                >
-                  {`${images[index - 1].alt.uk}`}
-                </motion.span>
-              </motion.figcaption>
-            )}
-          </AnimatePresence>
-        </motion.figure>
+        <BigImage images={images} index={index} />
         <GalleryList frames={frames} getIndex={setIndex} />
       </aside>
     </Section>
