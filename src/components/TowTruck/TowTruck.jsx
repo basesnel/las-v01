@@ -182,8 +182,8 @@ const Card = ({ frame }) => {
         loading="lazy"
         src={frame.image}
         alt={frame.alt.uk}
-        width={200}
-        height={150}
+        width={221}
+        height={166}
         className={styles.image}
       />
       <AnimatePresence>
