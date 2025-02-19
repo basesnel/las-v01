@@ -216,6 +216,7 @@
   .bigImage {
     height: 360px;
     width: 330px;
+    object-position: left;
   }
 }
 
@@ -231,5 +232,6 @@
 
   .bigImage {
     width: 570px;
+    object-position: initial;
   }
 }
