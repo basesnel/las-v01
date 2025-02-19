@@ -1,18 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import useMeasure from "react-use-measure";
-import {
-  animate,
-  useInView,
-  motion,
-  useMotionValue,
-  AnimatePresence,
-} from "framer-motion";
+import { animate, useInView, motion, useMotionValue } from "framer-motion";
 import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Reference from "../Reference/Reference";
 import BigImage from "./BigImage";
+import Frame from "./Frame";
 
 import towtruck from "../../constants/towtruck";
 
@@ -170,7 +165,7 @@ const GalleryList = ({ frames, getIndex }) => {
       >
         {[...frames, ...frames].map((frame, i) => (
           <li key={i} className={styles.frame}>
-            <Card frame={frame} />
+            <Frame frame={frame} />
           </li>
         ))}
       </motion.ul>
@@ -178,46 +173,46 @@ const GalleryList = ({ frames, getIndex }) => {
   );
 };
 
-const Card = ({ frame }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
+// const Card = ({ frame }) => {
+//   const [showOverlay, setShowOverlay] = useState(false);
 
-  return (
-    <motion.figure
-      className={styles.card}
-      data-id={frame.id}
-      onHoverStart={() => setShowOverlay(true)}
-      onHoverEnd={() => setShowOverlay(false)}
-    >
-      <img
-        loading="lazy"
-        src={frame.image}
-        alt={frame.alt.uk}
-        width={210}
-        height={158}
-        className={styles.image}
-      />
-      <AnimatePresence>
-        {showOverlay && (
-          <motion.figcaption
-            className={styles.cardOverlay}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.5 } }}
-            exit={{ opacity: 0, transition: { duration: 0.5 } }}
-          >
-            <div className={styles.bgBlack} aria-hidden="true" />
-            <motion.span
-              className={styles.label}
-              initial={{ y: 20 }}
-              animate={{ y: 0, transition: { duration: 0.5 } }}
-              exit={{ y: 20, transition: { duration: 0.5 } }}
-            >
-              {`${frame.alt.uk}`}
-            </motion.span>
-          </motion.figcaption>
-        )}
-      </AnimatePresence>
-    </motion.figure>
-  );
-};
+//   return (
+//     <motion.figure
+//       className={styles.card}
+//       data-id={frame.id}
+//       onHoverStart={() => setShowOverlay(true)}
+//       onHoverEnd={() => setShowOverlay(false)}
+//     >
+//       <img
+//         loading="lazy"
+//         src={frame.image}
+//         alt={frame.alt.uk}
+//         width={210}
+//         height={158}
+//         className={styles.image}
+//       />
+//       <AnimatePresence>
+//         {showOverlay && (
+//           <motion.figcaption
+//             className={styles.cardOverlay}
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1, transition: { duration: 0.5 } }}
+//             exit={{ opacity: 0, transition: { duration: 0.5 } }}
+//           >
+//             <div className={styles.bgBlack} aria-hidden="true" />
+//             <motion.span
+//               className={styles.label}
+//               initial={{ y: 20 }}
+//               animate={{ y: 0, transition: { duration: 0.5 } }}
+//               exit={{ y: 20, transition: { duration: 0.5 } }}
+//             >
+//               {`${frame.alt.uk}`}
+//             </motion.span>
+//           </motion.figcaption>
+//         )}
+//       </AnimatePresence>
+//     </motion.figure>
+//   );
+// };
 
 export default TowTruck;
