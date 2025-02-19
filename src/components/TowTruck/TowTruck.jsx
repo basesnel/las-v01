@@ -5,7 +5,7 @@ import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Reference from "../Reference/Reference";
-import BigImage from "./BigImage";
+import Screen from "./Screen";
 import Filmstrip from "./Filmstrip";
 
 import towtruck from "../../constants/towtruck";
@@ -47,7 +47,7 @@ const TowTruck = () => {
         <Reference src={link.src} caption={link.text.uk} />
       </div>
       <aside className={styles.aside}>
-        <BigImage images={images} index={index} />
+        <Screen images={images} index={index} />
         <Filmstrip frames={frames} getIndex={setIndex} />
       </aside>
     </Section>

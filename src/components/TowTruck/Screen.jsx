@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "./styles.module.css";
 
-const BigImage = ({ images, index }) => {
+const Screen = ({ images, index }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
@@ -43,4 +43,4 @@ const BigImage = ({ images, index }) => {
   );
 };
 
-export default BigImage;
+export default Screen;
