@@ -213,6 +213,10 @@
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease 0s;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--screen);
+  background-color: var(--dark);
 }
 
 .oldFilm::after {
@@ -269,18 +273,6 @@
   top: -5%;
   left: -5%;
   opacity: 0.25;
-  /* background-image: repeating-conic-gradient(
-      var(--screen) 0%,
-      transparent 0.03%,
-      transparent 0.5%,
-      transparent 0.95%
-    ),
-    repeating-conic-gradient(
-      var(--screen) 0%,
-      transparent 0.05%,
-      transparent 0.15%,
-      transparent 0.9%
-    ); */
   background-image: repeating-conic-gradient(
       var(--screen) 0%,
       transparent 0.00003%,

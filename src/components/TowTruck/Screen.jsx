@@ -19,13 +19,23 @@ const Screen = ({ images, index }) => {
         alt={images[index - 1].alt.uk}
         className={styles.bigImage}
       />
-      <div className={styles.oldFilm} aria-hidden="true">
+      <motion.div
+        className={styles.oldFilm}
+        aria-hidden="true"
+        // initial={{ opacity: 1 }}
+        // animate={{ opacity: [1, 1, 0], transition: { times: [0, 2, 3] } }}
+        animate={{
+          opacity: [1, 0.8, 0],
+          transition: { duration: 1.5, times: [0, 0.5, 1] },
+        }}
+      >
+        {images[index - 1].alt.uk}
         <div className={styles.film}>
           <div className={styles.effect}>
             <div className={styles.grain} />
           </div>
         </div>
-      </div>
+      </motion.div>
       <AnimatePresence>
         {showOverlay && (
           <motion.figcaption
