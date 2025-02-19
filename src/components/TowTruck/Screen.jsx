@@ -19,6 +19,13 @@ const Screen = ({ images, index }) => {
         alt={images[index - 1].alt.uk}
         className={styles.bigImage}
       />
+      <div className={styles.oldFilm} aria-hidden="true">
+        <div className={styles.film}>
+          <div className={styles.effect}>
+            <div className={styles.grain} />
+          </div>
+        </div>
+      </div>
       <AnimatePresence>
         {showOverlay && (
           <motion.figcaption
