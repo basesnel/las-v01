@@ -144,10 +144,7 @@ const GalleryList = ({ frames, getIndex }) => {
     const cinema = document.querySelector("[data-cinema]");
 
     const onClick = (e) => {
-      if (e.target.tagName !== "FIGCAPTION") return;
-      console.log(e.target.dataset.id);
-      console.log(Number(e.target.dataset.id));
-      getIndex(Number(e.target.dataset.id));
+      getIndex(Number(e.target.closest("figure").dataset.id));
     };
 
     cinema.addEventListener("click", onClick);
@@ -187,6 +184,7 @@ const Card = ({ frame }) => {
   return (
     <motion.figure
       className={styles.card}
+      data-id={frame.id}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
     >
@@ -202,7 +200,6 @@ const Card = ({ frame }) => {
         {showOverlay && (
           <motion.figcaption
             className={styles.cardOverlay}
-            data-id={frame.id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
             exit={{ opacity: 0, transition: { duration: 0.5 } }}
