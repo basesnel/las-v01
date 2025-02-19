@@ -1,10 +1,10 @@
-import { useState, useRef } from "react";
-import { useInView, motion } from "framer-motion";
+import { useState } from "react";
 import Section from "../Section/Section";
 import Subtitle from "../Subtitle/Subtitle";
 import Heading from "../Heading/Heading";
 import Text from "../Text/Text";
 import Reference from "../Reference/Reference";
+import List from "./List";
 import Screen from "./Screen";
 import Filmstrip from "./Filmstrip";
 
@@ -54,45 +54,45 @@ const TowTruck = () => {
   );
 };
 
-const List = ({ list }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.8, once: true });
+// const List = ({ list }) => {
+//   const ref = useRef(null);
+//   const isInView = useInView(ref, { amount: 0.8, once: true });
 
-  const transportItem = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-    },
-  };
+//   const transportItem = {
+//     hidden: { scale: 0, opacity: 0 },
+//     visible: {
+//       scale: 1,
+//       opacity: 1,
+//     },
+//   };
 
-  return (
-    <ul ref={ref} className={styles.list}>
-      {list.map(({ uk }, i) => {
-        return (
-          <motion.li
-            key={i}
-            className={styles.item}
-            variants={transportItem}
-            style={
-              i % 2
-                ? { originX: 1, originY: 0.5 }
-                : { originX: 0, originY: 0.5 }
-            }
-            initial="hidden"
-            animate={isInView && "visible"}
-            transition={{
-              type: "tween",
-              duration: 0.5,
-              delay: 0.4,
-            }}
-          >
-            {uk}
-          </motion.li>
-        );
-      })}
-    </ul>
-  );
-};
+//   return (
+//     <ul ref={ref} className={styles.list}>
+//       {list.map(({ uk }, i) => {
+//         return (
+//           <motion.li
+//             key={i}
+//             className={styles.item}
+//             variants={transportItem}
+//             style={
+//               i % 2
+//                 ? { originX: 1, originY: 0.5 }
+//                 : { originX: 0, originY: 0.5 }
+//             }
+//             initial="hidden"
+//             animate={isInView && "visible"}
+//             transition={{
+//               type: "tween",
+//               duration: 0.5,
+//               delay: 0.4,
+//             }}
+//           >
+//             {uk}
+//           </motion.li>
+//         );
+//       })}
+//     </ul>
+//   );
+// };
 
 export default TowTruck;
