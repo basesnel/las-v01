@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import useMeasure from "react-use-measure";
 import { animate, motion, useMotionValue } from "framer-motion";
+import Frame from "./Frame";
 
 import styles from "./styles.module.css";
 
@@ -73,7 +74,7 @@ const Filmstrip = ({ frames, getIndex }) => {
       >
         {[...frames, ...frames].map((frame, i) => (
           <li key={i} className={styles.frame}>
-            <Card frame={frame} />
+            <Frame frame={frame} />
           </li>
         ))}
       </motion.ul>
