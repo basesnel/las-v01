@@ -49,6 +49,13 @@ const Filmstrip = ({ frames, getIndex }) => {
 
     const onClick = (e) => {
       getIndex(Number(e.target.closest("figure").dataset.id));
+
+      setMustFinish(true);
+      setDuration(SLOW_DURATION);
+      setTimeout(() => {
+        setMustFinish(true);
+        setDuration(FAST_DURATION);
+      }, 2000);
     };
 
     cinema.addEventListener("click", onClick);

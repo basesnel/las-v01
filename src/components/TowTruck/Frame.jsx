@@ -14,7 +14,7 @@ const Frame = ({ frame }) => {
       onHoverEnd={() => setShowOverlay(false)}
       onClick={() => {
         setShowOverlay(true);
-        setTimeout(() => setShowOverlay(false), 1500);
+        setTimeout(() => setShowOverlay(false), 2000);
       }}
       initial={{ scale: 1 }}
       whileTap={{
