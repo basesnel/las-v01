@@ -13,6 +13,12 @@ const Screen = ({ images, index }) => {
         key={index}
         onHoverStart={() => setShowOverlay(true)}
         onHoverEnd={() => setShowOverlay(false)}
+        onClick={() => {
+          setShowOverlay(true);
+          setTimeout(() => {
+            setShowOverlay(false);
+          }, 2000);
+        }}
         initial={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.5 } }}
       >

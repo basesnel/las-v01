@@ -64,8 +64,6 @@
   display: block;
   width: calc(100vw - 62px);
   height: calc((100vw - 62px) / 1.331);
-  max-width: 100%;
-  /* height: auto; */
   object-fit: cover;
 }
 
