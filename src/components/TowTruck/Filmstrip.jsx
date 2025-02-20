@@ -18,6 +18,11 @@ const Filmstrip = ({ frames, getIndex }) => {
   const [mustFinish, setMustFinish] = useState(false);
   const [rerender, setRerender] = useState(false);
 
+  const changeSpeedOfFilmStrip = (speed) => {
+    setMustFinish(true);
+    setDuration(speed);
+  };
+
   useEffect(() => {
     let controls;
     let finalPosition = -width / 2;
@@ -50,11 +55,9 @@ const Filmstrip = ({ frames, getIndex }) => {
     const onClick = (e) => {
       getIndex(Number(e.target.closest("figure").dataset.id));
 
-      setMustFinish(true);
-      setDuration(SLOW_DURATION);
+      changeSpeedOfFilmStrip(SLOW_DURATION);
       setTimeout(() => {
-        setMustFinish(true);
-        setDuration(FAST_DURATION);
+        changeSpeedOfFilmStrip(FAST_DURATION);
       }, 2000);
     };
 
@@ -71,12 +74,14 @@ const Filmstrip = ({ frames, getIndex }) => {
         data-cinema
         style={{ x: xTransition }}
         onHoverStart={() => {
-          setMustFinish(true);
-          setDuration(SLOW_DURATION);
+          changeSpeedOfFilmStrip(SLOW_DURATION);
+          // setMustFinish(true);
+          // setDuration(SLOW_DURATION);
         }}
         onHoverEnd={() => {
-          setMustFinish(true);
-          setDuration(FAST_DURATION);
+          changeSpeedOfFilmStrip(FAST_DURATION);
+          // setMustFinish(true);
+          // setDuration(FAST_DURATION);
         }}
       >
         {[...frames, ...frames].map((frame, i) => (
