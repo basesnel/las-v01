@@ -12,6 +12,18 @@ const Frame = ({ frame }) => {
       data-id={frame.id}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
+      onClick={() => {
+        setShowOverlay(true);
+        setTimeout(() => setShowOverlay(false), 1500);
+      }}
+      initial={{ scale: 1 }}
+      whileTap={{
+        scale: [0.9, 1],
+        transition: {
+          type: "spring",
+          stiffness: 300,
+        },
+      }}
     >
       <img
         loading="lazy"

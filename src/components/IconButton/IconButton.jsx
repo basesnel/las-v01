@@ -8,12 +8,6 @@ import styles from "./styles.module.css";
 const IconButton = (props) => {
   const { icon, caption, label, inverted, ...delegated } = props;
 
-  // const [isHover, setIsHover] = useState(false);
-
-  // const handleMouseEnter = () => setIsHover(true);
-
-  // const handleMouseLeave = () => setIsHover(false);
-
   const buttonVariants = {
     initial: {
       scale: 1,
