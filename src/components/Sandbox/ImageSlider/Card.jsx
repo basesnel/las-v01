@@ -18,6 +18,12 @@ const Card = (props) => {
       transition={{ type: "spring", stiffness: 90 }}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
+      onClick={() => {
+        setShowOverlay(true);
+        setTimeout(() => {
+          setShowOverlay(false);
+        }, 2000);
+      }}
       {...delegated}
     >
       <picture>
