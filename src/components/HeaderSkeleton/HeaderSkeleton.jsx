@@ -11,7 +11,7 @@ const HeaderSkeleton = () => {
   return (
     // <motion.div className={styles.header} style={{ opacity: pulseOpacity }}>
     <div className={styles.header}>
-      <div className={styles.container} variant="header">
+      <div className={styles.container}>
         <div className={styles.logo}></div>
         <div className={styles.menu}></div>
       </div>

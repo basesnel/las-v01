@@ -2,7 +2,6 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .container {
@@ -20,14 +19,14 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgba(115, 116, 117, 0.8);
+  background-color: rgba(240, 240, 240, 0.97);
 }
 
 .menu {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background-color: rgba(115, 116, 117, 0.8);
+  background-color: rgba(240, 240, 240, 0.97);
 }
 
 @media screen and (min-width: 200px) {
@@ -47,6 +46,11 @@
   .container {
     max-width: 768px;
     padding: 10px 80px 10px 34px;
+  }
+
+  .logo {
+    background-color: rgba(115, 116, 117, 0.8);
+    opacity: 0.5;
   }
 
   .menu {

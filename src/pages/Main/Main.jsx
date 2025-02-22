@@ -30,67 +30,40 @@ const Main = () => {
   }, []);
 
   return (
-    <>
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <motion.div
-            key="loadingHeader"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            exit={{ opacity: 0 }}
-          >
-            <HeaderSkeleton />
-          </motion.div>
-        ) : (
+    <AnimatePresence mode="wait">
+      {isLoading ? (
+        <motion.div
+          key="mainLoading"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.5 }}
+          exit={{ opacity: 0 }}
+        >
+          <HeaderSkeleton />
+          <BannerSkeleton />
+          <IntroSkeleton />
+          <ServicesSkeleton />
+          <GalletySkeleton />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="mainLoaded"
+          initial={{ opacity: 0, scale: 0.3 }}
+          animate={{ opacity: 1, scale: 1 }}
+        >
           <Header />
-        )}
-      </AnimatePresence>
-
-      {/* {isLoading ? null : <Header />} */}
-      {/* <Header /> */}
-
-      <main>
-        <AnimatePresence mode="wait">
-          {isLoading ? (
-            <motion.div
-              key="bannerLoading"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-            >
-              <BannerSkeleton />
-              <IntroSkeleton />
-              <ServicesSkeleton />
-              <GalletySkeleton />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="bannerLoaded"
-              initial={{ opacity: 0, scale: 0.3 }}
-              animate={{ opacity: 1, scale: 1 }}
-            >
-              <Banner />
-              <Intro />
-              <Services />
-              <TowTruck />
-              <Gallery />
-            </motion.div>
-          )}
-        </AnimatePresence>
-        {/* <BannerSkeleton /> */}
-        {/* <Banner />
-        <Intro />
-        <Services />
-        <TowTruck />
-        <Gallery /> */}
-        <Features />
-        {/* <FeaturesSkeleton /> */}
-        {/* <Shop /> */}
-        <ContactUs />
-        <Brands />
-      </main>
-      <Footer />
-    </>
+          <main>
+            <Banner />
+            <Intro />
+            <Services />
+            <TowTruck />
+            <Gallery />
+            <Features />
+            <Brands />
+          </main>
+          <Footer />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
