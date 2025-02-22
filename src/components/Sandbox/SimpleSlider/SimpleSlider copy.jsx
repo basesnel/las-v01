@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { throttle } from "lodash";
+import throttle from "lodash/throttle";
 import gallery from "../../../constants/gallery";
 
 import styles from "./styles.module.css";

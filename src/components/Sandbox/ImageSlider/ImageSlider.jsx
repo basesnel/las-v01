@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { throttle } from "lodash";
+import throttle from "lodash/throttle";
 import useReactMatchMedia from "../../../hooks/useReactMatchMedia";
 import useSwipeGallery from "../../../hooks/useSwipeGallery";
 import useHandlePositions from "../../../hooks/useHandlePositions";
