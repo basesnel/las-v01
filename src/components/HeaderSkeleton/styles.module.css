@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: rgba(51, 65, 85, 0.5);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .container {
@@ -20,14 +20,14 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgba(229, 231, 235, 0.5);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .menu {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background-color: rgba(229, 231, 235, 0.5);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 @media screen and (min-width: 200px) {
