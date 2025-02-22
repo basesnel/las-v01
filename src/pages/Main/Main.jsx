@@ -54,8 +54,8 @@ const Main = () => {
           {isLoading ? (
             <motion.div
               key="bannerLoading"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              // initial={{ opacity: 0.5 }}
+              // animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
             >
               <BannerSkeleton />
@@ -77,6 +77,7 @@ const Main = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        {/* <BannerSkeleton /> */}
         {/* <Banner />
         <Intro />
         <Services />
