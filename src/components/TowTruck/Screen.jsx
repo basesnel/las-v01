@@ -13,8 +13,15 @@ const Screen = ({ images, index }) => {
 
     setTimeout(() => {
       setShowOldEffect(false);
-    }, 1500);
+    }, 1000);
   }, [index]);
+
+  const handleShowOverlay = () => {
+    setShowOverlay(true);
+    setTimeout(() => {
+      setShowOverlay(false);
+    }, 2000);
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -23,12 +30,7 @@ const Screen = ({ images, index }) => {
         key={index}
         onHoverStart={() => setShowOverlay(true)}
         onHoverEnd={() => setShowOverlay(false)}
-        onClick={() => {
-          setShowOverlay(true);
-          setTimeout(() => {
-            setShowOverlay(false);
-          }, 2000);
-        }}
+        onClick={handleShowOverlay}
         initial={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.5 } }}
       >
@@ -45,11 +47,11 @@ const Screen = ({ images, index }) => {
               aria-hidden="true"
               animate={{
                 opacity: [1, 0.8],
-                transition: { duration: 0.75, times: [0, 1] },
+                transition: { duration: 1, times: [0, 1] },
               }}
               exit={{
                 opacity: 0,
-                transition: { duration: 0.75 },
+                transition: { duration: 0.5 },
               }}
             >
               {images[index - 1].alt.uk}
