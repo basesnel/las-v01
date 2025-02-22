@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "./styles.module.css";
-import { useEffect } from "react";
 
 const Screen = ({ images, index }) => {
   const [showOverlay, setShowOverlay] = useState(false);

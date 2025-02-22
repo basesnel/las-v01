@@ -1,5 +1,4 @@
 .container {
-  height: 100vh;
   background-color: var(--dark);
 }
 
@@ -9,7 +8,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 75vh;
+  height: 440px;
   overflow: hidden;
   cursor: grab;
 }
@@ -84,11 +83,10 @@
 
 .controls {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 12px;
-  height: 25vh;
-  padding-top: 2rem;
+  height: 86px;
 }
 
 .control:nth-child(1),
@@ -112,16 +110,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .imageSlider {
-    height: 80vh;
-  }
-
-  .controls {
-    align-items: center;
-    height: 20vh;
-    padding-top: 0;
-  }
-
   .card {
     max-width: 330px;
   }
