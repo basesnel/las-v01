@@ -1,11 +1,11 @@
 .section {
-  /* position: absolute;
+  position: absolute;
   top: 680px;
   left: 0;
   right: 0;
-  opacity: 0.5; */
+  opacity: 0.5;
   padding: 84px 0;
-  background-color: rgba(20, 20, 20, 0.8);
+  /* background-color: rgba(20, 20, 20, 0.8); */
 }
 
 .container {
@@ -19,7 +19,7 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .title {
@@ -27,14 +27,14 @@
   height: 33px;
   border-radius: 10px;
   margin: 0 auto 25px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .welcome {
   height: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .paragraph {
@@ -49,14 +49,14 @@
   height: 14px;
   border-radius: 10px;
   margin-bottom: 12px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .reference {
   max-width: 210px;
   height: 40px;
   border-radius: 20px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .aside {
@@ -85,11 +85,10 @@
     height: 33px;
     border-radius: 10px;
     margin: 0 auto 25px 0;
-    background-color: rgba(229, 231, 235, 0.8);
   }
 
   .paragraph.last {
-    margin-bottom: 65px;
+    margin-bottom: 39px;
   }
 
   .aside {
@@ -104,7 +103,7 @@
     width: 330px;
     height: 235px;
     border-radius: 10px;
-    background-color: rgba(229, 231, 235, 0.8);
+    background-color: rgba(115, 116, 117, 0.8);
   }
 }
 

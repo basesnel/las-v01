@@ -54,7 +54,9 @@ const Main = () => {
           <Header />
           <main>
             <Banner />
+            <BannerSkeleton />
             <Intro />
+            <IntroSkeleton />
             <Services />
             <TowTruck />
             <Gallery />
