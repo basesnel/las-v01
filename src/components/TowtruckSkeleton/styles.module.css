@@ -1,0 +1,156 @@
+.section {
+  position: absolute;
+  top: 2158px;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  padding: 84px 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 31px;
+}
+
+.subtitle {
+  max-width: 200px;
+  height: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(115, 116, 117, 0.8);
+}
+
+.title {
+  max-width: 230px;
+  height: 33px;
+  border-radius: 10px;
+  margin: 0 auto 25px;
+  background-color: rgba(115, 116, 117, 0.8);
+}
+
+.welcome {
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: rgba(115, 116, 117, 0.8);
+}
+
+.paragraph {
+  margin-bottom: 25px;
+}
+
+.paragraph.last {
+  margin-bottom: 40px;
+}
+
+.text {
+  height: 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background-color: rgba(115, 116, 117, 0.8);
+}
+
+.lastText {
+  display: none;
+}
+
+.reference {
+  max-width: 210px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(115, 116, 117, 0.8);
+}
+
+.aside {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    /* top: 680px; */
+    padding: 100px 0;
+  }
+
+  .container {
+    max-width: 768px;
+    padding: 0 39px;
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+  }
+
+  .content {
+    flex-basis: 330px;
+  }
+
+  .title {
+    max-width: 230px;
+    height: 33px;
+    border-radius: 10px;
+    margin: 0 auto 25px 0;
+  }
+
+  .paragraph.last {
+    margin-bottom: 39px;
+  }
+
+  .lastText {
+    display: block;
+  }
+
+  .aside {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 330px;
+    height: 500px;
+  }
+
+  .img {
+    width: 330px;
+    height: 235px;
+    border-radius: 10px;
+    background-color: rgba(115, 116, 117, 0.8);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  .content {
+    flex-basis: 570px;
+    padding-right: 100px;
+  }
+
+  .title {
+    max-width: 320px;
+    height: 49px;
+  }
+
+  .paragraph.last {
+    margin-bottom: 29px;
+  }
+
+  .lastText {
+    display: none;
+  }
+
+  .aside {
+    width: 570px;
+    height: 480px;
+    flex-direction: row;
+  }
+
+  .img {
+    width: 270px;
+    height: 480px;
+  }
+}

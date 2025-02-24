@@ -16,6 +16,7 @@ import ServicesSkeleton from "../../components/ServicesSkeleton/ServicesSkeleton
 import GalletySkeleton from "../../components/GallerySkeleton/GallerySkeleton";
 import FeaturesSkeleton from "../../components/FeaturesSkeleton/FeaturesSkeleton";
 import TowTruck from "../../components/TowTruck/TowTruck";
+import TowtruckSkeleton from "../../components/TowtruckSkeleton/TowtruckSkeleton";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -42,7 +43,8 @@ const Main = () => {
           <BannerSkeleton />
           <IntroSkeleton />
           <ServicesSkeleton />
-          <GalletySkeleton />
+          <TowtruckSkeleton />
+          {/* <GalletySkeleton /> */}
         </motion.div>
       ) : (
         // <motion.div
@@ -60,6 +62,7 @@ const Main = () => {
             <Services />
             {/* <ServicesSkeleton /> */}
             <TowTruck />
+            <TowtruckSkeleton />
             <Gallery />
             <Features />
             <ContactUs />
