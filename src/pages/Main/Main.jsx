@@ -45,11 +45,12 @@ const Main = () => {
           <GalletySkeleton />
         </motion.div>
       ) : (
-        <motion.div
-          key="mainLoaded"
-          initial={{ opacity: 0, scale: 0.3 }}
-          animate={{ opacity: 1, scale: 1 }}
-        >
+        // <motion.div
+        //   key="mainLoaded"
+        //   initial={{ opacity: 0, scale: 0.3 }}
+        //   animate={{ opacity: 1, scale: 1 }}
+        // >
+        <>
           <Header />
           <main>
             <Banner />
@@ -58,10 +59,12 @@ const Main = () => {
             <TowTruck />
             <Gallery />
             <Features />
+            <ContactUs />
             <Brands />
           </main>
           <Footer />
-        </motion.div>
+        </>
+        // </motion.div>
       )}
     </AnimatePresence>
   );
