@@ -1,11 +1,11 @@
 .section {
-  /* position: absolute;
-  top: 1400px;
+  position: absolute;
+  top: 1220px;
   left: 0;
   right: 0;
-  opacity: 0.5; */
+  opacity: 0.5;
   padding: 84px 0;
-  background-color: rgba(20, 20, 20, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .container {
@@ -19,7 +19,7 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .title {
@@ -27,7 +27,7 @@
   height: 46px;
   border-radius: 10px;
   margin: 0 auto 44px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .outerList {
@@ -47,7 +47,7 @@
   height: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .item:last-child {
@@ -59,11 +59,12 @@
   height: 40px;
   border-radius: 20px;
   margin: 0 auto;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 @media screen and (min-width: 768px) {
   .section {
+    top: 1380px;
     padding: 100px 0;
   }
 
@@ -84,22 +85,27 @@
 
   .outerList {
     padding: 32px 27px 32px 40px;
+    margin-bottom: 24px;
   }
 
   .item {
     height: 30px;
     border-radius: 10px;
     margin-bottom: 20px;
-    background-color: rgba(229, 231, 235, 0.8);
   }
 
   .item:last-child {
     margin-bottom: 0;
   }
+
+  .lastItem {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .section {
+    top: 1400px;
     padding: 120px 0;
   }
 

@@ -1,16 +1,16 @@
-import { motion, easeOut, useTime, useTransform } from "framer-motion";
+// import { motion, easeOut, useTime, useTransform } from "framer-motion";
 
 import styles from "./styles.module.css";
 
 const ServicesSkeleton = () => {
-  const time = useTime();
-  const pulseOpacity = useTransform(time, [0, 1000, 2000, 3000], [1, 0, 1, 0], {
-    ease: easeOut,
-  });
+  // const time = useTime();
+  // const pulseOpacity = useTransform(time, [0, 1000, 2000, 3000], [1, 0, 1, 0], {
+  //   ease: easeOut,
+  // });
 
   return (
-    <motion.div className={styles.section} style={{ opacity: pulseOpacity }}>
-      {/* <div className={styles.section}> */}
+    // <motion.div className={styles.section} style={{ opacity: pulseOpacity }}>
+    <div className={styles.section}>
       <div className={styles.container}>
         <div className={styles.subtitle} />
         <div className={styles.title} />
@@ -20,18 +20,23 @@ const ServicesSkeleton = () => {
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
+            <div className={styles.item} />
+            <div className={styles.item} />
           </div>
           <div className={styles.innerList}>
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
+            <div className={styles.item} />
+            <div className={styles.item} />
+            <div className={`${styles.item} ${styles.lastItem}`} />
           </div>
         </div>
         <div className={styles.button} />
       </div>
-      {/* </div> */}
-    </motion.div>
+    </div>
+    // </div></motion.div>
   );
 };
 
