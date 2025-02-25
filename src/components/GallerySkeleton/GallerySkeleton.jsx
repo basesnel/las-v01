@@ -19,8 +19,12 @@ const GalletySkeleton = () => {
         <div className={styles.item} />
         <div className={styles.item} />
         <div className={styles.item} />
+        <div className={styles.item} />
+        <div className={styles.item} />
       </div>
       <div className={styles.controls}>
+        <div className={styles.button} />
+        <div className={styles.button} />
         <div className={styles.button} />
         <div className={styles.button} />
         <div className={styles.button} />
