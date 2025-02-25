@@ -5,7 +5,17 @@
   right: 0;
   opacity: 0.5;
   padding: 84px 0;
-  background-color: rgba(20, 20, 20, 0.8);
+  /* background-color: rgba(115, 116, 117, 0.8); */
+}
+
+.innerSection {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 5px;
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .container {
@@ -18,27 +28,48 @@
   max-width: 330px;
   height: 15px;
   border-radius: 10px;
-  margin-bottom: 71px;
-  background-color: rgba(229, 231, 235, 0.8);
+  margin-bottom: 20px;
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
-.outerList {
+.list {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 440px;
   overflow: hidden;
 }
 
-.innerList {
-  display: flex;
-  gap: 30px;
-  height: 424px;
-  padding: 2rem 0 2rem 1rem;
-}
-
 .item {
-  min-width: 418px;
+  min-width: 270px;
   height: 360px;
   border-radius: 10px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.item:nth-child(1),
+.item:nth-child(3) {
+  display: none;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 86px;
+  overflow: hidden;
+}
+
+.button {
+  min-width: 100px;
+  max-width: 60px;
+  height: 46px;
+  border-radius: 40px;
+  background-color: rgba(240, 240, 240, 0.8);
 }
 
 @media screen and (min-width: 768px) {
