@@ -28,6 +28,7 @@ const TowtruckSkeleton = () => {
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
+            <div className={styles.item} />
           </div>
           <div className={styles.paragraph}>
             <div className={styles.text} />
