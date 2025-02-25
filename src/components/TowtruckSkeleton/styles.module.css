@@ -138,7 +138,6 @@
   }
 
   .img {
-    width: 330px;
     height: 360px;
     margin-bottom: 0;
   }
@@ -146,6 +145,7 @@
 
 @media screen and (min-width: 1200px) {
   .section {
+    top: 2192px;
     padding: 120px 0;
   }
 
@@ -164,22 +164,19 @@
     height: 49px;
   }
 
-  .paragraph.last {
-    margin-bottom: 29px;
+  .welcome:nth-child(4) {
+    display: none;
   }
 
-  .lastText {
+  .list {
+    margin-bottom: 0;
+  }
+
+  .item:nth-child(6) {
     display: none;
   }
 
   .aside {
     width: 570px;
-    height: 480px;
-    flex-direction: row;
-  }
-
-  .img {
-    width: 270px;
-    height: 480px;
   }
 }
