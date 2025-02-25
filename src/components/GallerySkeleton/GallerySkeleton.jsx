@@ -23,6 +23,8 @@ const GalletySkeleton = () => {
       <div className={styles.controls}>
         <div className={styles.button} />
         <div className={styles.button} />
+        <div className={styles.button} />
+        <div className={styles.button} />
       </div>
     </div>
     // </div></motion.div>

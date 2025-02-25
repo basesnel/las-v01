@@ -82,8 +82,14 @@
   background-color: rgba(240, 240, 240, 0.8);
 }
 
+.button:nth-child(1),
+.button:nth-child(4) {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .section {
+    top: 3427px;
     padding: 100px 0;
   }
 
@@ -98,6 +104,21 @@
 
   .item {
     min-width: 330px;
+  }
+
+  .item:nth-child(1),
+  .item:nth-child(3) {
+    z-index: 2;
+    transform: scale(0.8) translateX(-124%) translateY(-62%);
+  }
+
+  .item:nth-child(3) {
+    transform: scale(0.8) translateX(0) translateY(-62%);
+  }
+
+  .button:nth-child(1),
+  .button:nth-child(4) {
+    display: initial;
   }
 }
 
