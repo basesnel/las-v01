@@ -44,7 +44,7 @@ const Main = () => {
           <IntroSkeleton />
           <ServicesSkeleton />
           <TowtruckSkeleton />
-          {/* <GalletySkeleton /> */}
+          <GalletySkeleton />
         </motion.div>
       ) : (
         // <motion.div
@@ -64,6 +64,7 @@ const Main = () => {
             <TowTruck />
             {/* <TowtruckSkeleton /> */}
             <Gallery />
+            <GalletySkeleton />
             <Features />
             <ContactUs />
             <Brands />
