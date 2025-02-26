@@ -129,11 +129,11 @@
   .item:nth-child(6) {
     display: initial;
     z-index: 1;
-    transform: scale(0.5) translateX(-279%) translateY(-100%);
+    transform: scale(0.5) translateX(-269%) translateY(-100%);
   }
 
   .item:nth-child(6) {
-    transform: scale(0.5) translateX(79%) translateY(-100%);
+    transform: scale(0.5) translateX(69%) translateY(-100%);
   }
 
   .button:nth-child(1),
