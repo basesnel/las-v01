@@ -54,18 +54,20 @@
   background-color: rgba(240, 240, 240, 0.8);
 }
 
-.item:nth-child(2),
-.item:nth-child(4) {
+.item:nth-child(3),
+.item:nth-child(5) {
   z-index: 2;
   transform: scale(0.8) translateX(-112%) translateY(-62%);
 }
 
-.item:nth-child(4) {
+.item:nth-child(5) {
   transform: scale(0.8) translateX(-13%) translateY(-62%);
 }
 
 .item:nth-child(1),
-.item:nth-child(5) {
+.item:nth-child(1),
+.item:nth-child(6),
+.item:nth-child(7) {
   display: none;
 }
 
@@ -113,24 +115,24 @@
     min-width: 330px;
   }
 
-  .item:nth-child(2),
-  .item:nth-child(4) {
+  .item:nth-child(3),
+  .item:nth-child(5) {
     z-index: 2;
     transform: scale(0.8) translateX(-124%) translateY(-62%);
   }
 
-  .item:nth-child(4) {
+  .item:nth-child(5) {
     transform: scale(0.8) translateX(0) translateY(-62%);
   }
 
-  .item:nth-child(1),
-  .item:nth-child(5) {
+  .item:nth-child(2),
+  .item:nth-child(6) {
     display: initial;
     z-index: 1;
     transform: scale(0.5) translateX(-279%) translateY(-100%);
   }
 
-  .item:nth-child(5) {
+  .item:nth-child(6) {
     transform: scale(0.5) translateX(79%) translateY(-100%);
   }
 
@@ -157,24 +159,48 @@
     min-width: 418px;
   }
 
-  .item:nth-child(2),
-  .item:nth-child(4) {
+  .item:nth-child(3),
+  .item:nth-child(5) {
     z-index: 2;
     transform: scale(0.8) translateX(-156%) translateY(-62%);
   }
 
-  .item:nth-child(4) {
+  .item:nth-child(5) {
     transform: scale(0.8) translateX(31%) translateY(-62%);
   }
 
-  .item:nth-child(1),
-  .item:nth-child(5) {
+  .item:nth-child(2),
+  .item:nth-child(6) {
     display: initial;
     z-index: 1;
     transform: scale(0.5) translateX(-330%) translateY(-100%);
   }
 
-  .item:nth-child(5) {
+  .item:nth-child(6) {
     transform: scale(0.5) translateX(130%) translateY(-100%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .item:nth-child(2),
+  .item:nth-child(6) {
+    display: initial;
+    z-index: 1;
+    transform: scale(0.5) translateX(-350%) translateY(-100%);
+  }
+
+  .item:nth-child(6) {
+    transform: scale(0.5) translateX(150%) translateY(-100%);
+  }
+
+  .item:nth-child(1),
+  .item:nth-child(7) {
+    display: initial;
+    z-index: 1;
+    transform: scale(0.3) translateX(-667%) translateY(-167%);
+  }
+
+  .item:nth-child(7) {
+    transform: scale(0.3) translateX(333%) translateY(-167%);
   }
 }
