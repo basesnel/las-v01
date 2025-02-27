@@ -40,8 +40,8 @@
   margin-bottom: 14px;
 }
 
-.intro:nth-child(6) {
-  margin-bottom: 31px;
+.intro:last-child {
+  margin-bottom: 0;
 }
 
 .introWelcome {
