@@ -67,7 +67,7 @@ const Main = () => {
             <Gallery />
             {/* <GalletySkeleton /> */}
             <Features />
-            <FeaturesSkeleton />
+            {/* <FeaturesSkeleton /> */}
             <ContactUs />
             <Brands />
           </main>
