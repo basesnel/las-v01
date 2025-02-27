@@ -1,11 +1,11 @@
 .section {
-  position: absolute;
+  position: relative;
+  /* position: absolute;
   top: 3689px;
   left: 0;
-  right: 0;
+  right: 0; */
   opacity: 0.5;
   padding: 84px 0;
-  /* background-color: rgba(115, 116, 117, 0.8); */
 }
 
 .innerSection {
@@ -19,6 +19,8 @@
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   max-width: 480px;
   margin: 0 auto;
   padding: 0 31px;
@@ -64,6 +66,8 @@
 }
 
 .controls {
+  position: relative;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -129,7 +133,7 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    top: 3427px;
+    /* top: 3427px; */
     padding: 100px 0;
   }
 
@@ -175,7 +179,7 @@
 
 @media screen and (min-width: 1200px) {
   .section {
-    top: 3164px;
+    /* top: 3164px; */
     padding: 120px 0;
   }
 
