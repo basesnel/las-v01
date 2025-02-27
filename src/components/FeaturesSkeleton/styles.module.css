@@ -1,11 +1,10 @@
 .section {
   position: absolute;
-  top: 2634px;
+  top: 4419px;
   left: 0;
   right: 0;
   opacity: 0.5;
   padding: 84px 0;
-  background-color: rgba(20, 20, 20, 0.8);
 }
 
 .container {
@@ -19,7 +18,7 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 25px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .titleFirst,
@@ -29,7 +28,7 @@
   height: 40px;
   border-radius: 10px;
   margin: 0 auto 10px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .titleFirst {
@@ -46,7 +45,7 @@
   height: 20px;
   border-radius: 10px;
   margin-bottom: 33px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .paragraph {
@@ -61,7 +60,7 @@
   height: 14px;
   border-radius: 10px;
   margin-bottom: 12px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .text:last-child {
@@ -76,7 +75,7 @@
   height: 14px;
   border-radius: 10px;
   margin-bottom: 29px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 /* .aside {
@@ -94,7 +93,7 @@
   max-width: 158px;
   height: 133px;
   margin: 0 auto 30px;
-  background-color: rgba(229, 231, 235, 0.8);
+  background-color: rgba(115, 116, 117, 0.8);
 }
 
 .feature:last-child {
@@ -141,7 +140,7 @@
     height: 33px;
     border-radius: 10px;
     margin: 0 auto 25px 0;
-    background-color: rgba(229, 231, 235, 0.8);
+    background-color: rgba(115, 116, 117, 0.8);
   }
 
   .paragraph.last {
@@ -160,7 +159,7 @@
     width: 330px;
     height: 235px;
     border-radius: 10px;
-    background-color: rgba(229, 231, 235, 0.8);
+    background-color: rgba(115, 116, 117, 0.8);
   }
 }
 

@@ -1,4 +1,4 @@
-import { motion, easeOut, useTime, useTransform } from "framer-motion";
+// import { motion, easeOut, useTime, useTransform } from "framer-motion";
 
 import styles from "./styles.module.css";
 
