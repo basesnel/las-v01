@@ -200,8 +200,8 @@
     margin-bottom: 58px;
   }
 
-  .paragraph:nth-child(9) {
-    margin-bottom: 20px;
+  .paragraph:last-child {
+    margin-bottom: 6px;
   }
 
   .features {
