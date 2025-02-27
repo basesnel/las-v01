@@ -38,14 +38,12 @@ const FeaturesSkeleton = () => {
             <div className={styles.text} />
           </div>
         </div>
-        {/* <div className={styles.aside}> */}
         <div className={styles.features}>
           <div className={styles.feature} />
           <div className={styles.feature} />
           <div className={styles.feature} />
           <div className={styles.feature} />
         </div>
-        {/* </div> */}
       </div>
     </div>
     // </motion.div>
