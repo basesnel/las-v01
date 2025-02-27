@@ -14,9 +14,9 @@ const FeaturesSkeleton = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.subtitle} />
-          <div className={styles.titleFirst} />
-          <div className={styles.titleSecond} />
-          <div className={styles.titleThird} />
+          <div className={styles.title} />
+          <div className={styles.title} />
+          <div className={styles.title} />
           <div className={styles.welcome} />
           <div className={styles.paragraph}>
             <div className={styles.text} />
@@ -38,14 +38,14 @@ const FeaturesSkeleton = () => {
             <div className={styles.text} />
           </div>
         </div>
-        <div className={styles.aside}>
-          <div className={styles.features}>
-            <div className={styles.feature} />
-            <div className={styles.feature} />
-            <div className={styles.feature} />
-            <div className={styles.feature} />
-          </div>
+        {/* <div className={styles.aside}> */}
+        <div className={styles.features}>
+          <div className={styles.feature} />
+          <div className={styles.feature} />
+          <div className={styles.feature} />
+          <div className={styles.feature} />
         </div>
+        {/* </div> */}
       </div>
     </div>
     // </motion.div>

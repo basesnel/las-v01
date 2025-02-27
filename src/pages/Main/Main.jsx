@@ -45,6 +45,7 @@ const Main = () => {
           <ServicesSkeleton />
           <TowtruckSkeleton />
           <GalletySkeleton />
+          <FeaturesSkeleton />
         </motion.div>
       ) : (
         // <motion.div
