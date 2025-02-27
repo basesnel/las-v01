@@ -8,6 +8,7 @@ import Services from "../../components/Services/Services";
 import Features from "../../components/Features/Features";
 import Gallery from "../../components/Gallery/Gallery";
 import ContactUs from "../../components/ContactUs/ContactUs";
+import ContactUsSkeleton from "../../components/ContactUsSkeleton/ContactUsSkeleton";
 import Brands from "../../components/Brands/Brands";
 import HeaderSkeleton from "../../components/HeaderSkeleton/HeaderSkeleton";
 import BannerSkeleton from "../../components/BannerSkeleton/BannerSkeleton";
@@ -69,6 +70,7 @@ const Main = () => {
             <Features />
             {/* <FeaturesSkeleton /> */}
             <ContactUs />
+            <ContactUsSkeleton />
             <Brands />
           </main>
           <Footer />
