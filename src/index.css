@@ -18,6 +18,8 @@
   --accent: #f67307;
   --accent-light: #ebd3f8;
   --cinema-line: #b5b3b2;
+  --skeleton-light: rgba(240, 240, 240, 0.8);
+  --skeleton-highlight: rgba(115, 116, 117, 0.8);
 }
 
 html {
