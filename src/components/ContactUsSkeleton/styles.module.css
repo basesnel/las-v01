@@ -54,6 +54,8 @@
 
 .input,
 .textArea {
+  position: relative;
+  z-index: 1;
   flex-basis: 100%;
   border-radius: 10px;
   background-color: rgba(240, 240, 240, 0.8);
@@ -68,6 +70,8 @@
 }
 
 .button {
+  position: relative;
+  z-index: 1;
   flex-basis: 90%;
   max-width: 160px;
   height: 40px;
@@ -76,6 +80,8 @@
 }
 
 .item {
+  position: relative;
+  z-index: 1;
   height: 34px;
   margin-bottom: 18px;
   border-radius: 10px;
@@ -91,6 +97,8 @@
 }
 
 .subTitle {
+  position: relative;
+  z-index: 1;
   max-width: 190px;
   height: 18px;
   margin-bottom: 20px;
@@ -99,6 +107,8 @@
 }
 
 .text {
+  position: relative;
+  z-index: 1;
   max-width: 340px;
   height: 28px;
   border-radius: 20px;
