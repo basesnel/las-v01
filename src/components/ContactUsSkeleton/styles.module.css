@@ -39,7 +39,38 @@
   z-index: 1;
   max-width: 250px;
   height: 46px;
-  margin: 0 auto;
+  margin: 0 auto 46px;
   border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.form {
+  display: flex;
+  row-gap: 44px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input,
+.textArea {
+  flex-basis: 100%;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.input {
+  height: 31px;
+}
+
+.textArea {
+  height: 83px;
+}
+
+.button {
+  flex-basis: 90%;
+  max-width: 160px;
+  height: 40px;
+  border-radius: 40px;
   background-color: rgba(240, 240, 240, 0.8);
 }

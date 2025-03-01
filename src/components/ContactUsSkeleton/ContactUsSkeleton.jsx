@@ -16,6 +16,13 @@ const ContactUsSkeleton = () => {
           <div className={styles.back} />
           <div className={styles.innerContainer}>
             <div className={styles.title} />
+            <div className={styles.form}>
+              <div className={styles.input} />
+              <div className={styles.input} />
+              <div className={styles.textArea} />
+              <div className={styles.button} />
+              <div className={styles.button} />
+            </div>
           </div>
         </div>
         <div className={styles.innerSection}>
