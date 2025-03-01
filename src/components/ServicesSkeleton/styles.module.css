@@ -5,7 +5,7 @@
   right: 0; */
   opacity: 0.5;
   padding: 84px 0;
-  background-color: rgba(115, 116, 117, 0.8);
+  background-color: var(--skeleton-highlight);
 }
 
 .container {
@@ -19,7 +19,7 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .title {
@@ -27,7 +27,7 @@
   height: 46px;
   border-radius: 10px;
   margin: 0 auto 44px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .outerList {
@@ -47,7 +47,7 @@
   height: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .item:last-child {
@@ -59,7 +59,7 @@
   height: 40px;
   border-radius: 20px;
   margin: 0 auto;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 @media screen and (min-width: 768px) {
