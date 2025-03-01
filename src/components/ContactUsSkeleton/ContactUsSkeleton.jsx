@@ -29,6 +29,14 @@ const ContactUsSkeleton = () => {
           <div className={styles.back} />
           <div className={styles.innerContainer}>
             <div className={styles.title} />
+            <div className={styles.list}>
+              <div className={styles.item} />
+              <div className={styles.item} />
+              <div className={styles.item} />
+              <div className={styles.item} />
+            </div>
+            <div className={styles.subTitle} />
+            <div className={styles.text} />
           </div>
         </div>
       </div>
