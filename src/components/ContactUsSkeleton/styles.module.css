@@ -1,5 +1,4 @@
 .section {
-  position: relative;
   position: absolute;
   top: 5548px;
   left: 0;
@@ -8,10 +7,10 @@
   padding: 84px 0;
 }
 
-.container {
+/* .container {
   position: relative;
   z-index: 1;
-}
+} */
 
 .innerSection {
   position: relative;
@@ -30,13 +29,12 @@
   left: 5px;
   right: 5px;
   bottom: 5px;
+  z-index: -1;
   border-radius: 5px;
   background-color: var(--skeleton-highlight);
 }
 
 .title {
-  position: relative;
-  z-index: 1;
   max-width: 250px;
   height: 46px;
   margin: 0 auto 46px;
@@ -54,8 +52,6 @@
 
 .input,
 .textArea {
-  position: relative;
-  z-index: 1;
   flex-basis: 100%;
   border-radius: 10px;
   background-color: var(--skeleton-light);
@@ -70,8 +66,6 @@
 }
 
 .button {
-  position: relative;
-  z-index: 1;
   flex-basis: 90%;
   max-width: 160px;
   height: 40px;
@@ -80,8 +74,6 @@
 }
 
 .item {
-  position: relative;
-  z-index: 1;
   height: 34px;
   margin-bottom: 18px;
   border-radius: 10px;
@@ -97,8 +89,6 @@
 }
 
 .subTitle {
-  position: relative;
-  z-index: 1;
   max-width: 190px;
   height: 18px;
   margin-bottom: 20px;
@@ -107,8 +97,6 @@
 }
 
 .text {
-  position: relative;
-  z-index: 1;
   max-width: 340px;
   height: 28px;
   border-radius: 20px;
