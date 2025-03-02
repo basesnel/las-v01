@@ -25,7 +25,7 @@
   height: 100%;
   border-radius: 5px;
   padding: 126px 67px 0 19px;
-  background-color: rgba(115, 116, 117, 0.8);
+  background-color: var(--skeleton-highlight);
 }
 
 .subtitle {
@@ -33,7 +33,7 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 30px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .titleFirst,
@@ -42,7 +42,7 @@
   height: 44px;
   border-radius: 10px;
   margin-bottom: 22px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .titleSecond {
@@ -58,7 +58,7 @@
   height: 14px;
   border-radius: 10px;
   margin-bottom: 12px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .reference {
@@ -66,7 +66,7 @@
   height: 40px;
   border-radius: 20px;
   margin: 0 auto 30px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .footer {
@@ -76,7 +76,7 @@
   bottom: 10px;
   height: 80px;
   border-radius: 10px;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: var(--skeleton-light);
 }
 
 .aside {
@@ -138,7 +138,7 @@
     width: 16px;
     height: 300px;
     border-radius: 10px;
-    background-color: rgba(115, 116, 117, 0.8);
+    background-color: var(--skeleton-highlight);
   }
 }
 
