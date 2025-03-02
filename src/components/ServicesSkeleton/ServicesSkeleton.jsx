@@ -11,6 +11,7 @@ const ServicesSkeleton = () => {
   return (
     // <motion.div className={styles.section} style={{ opacity: pulseOpacity }}>
     <div className={styles.section}>
+      <div className={styles.back} />
       <div className={styles.container}>
         <div className={styles.subtitle} />
         <div className={styles.title} />

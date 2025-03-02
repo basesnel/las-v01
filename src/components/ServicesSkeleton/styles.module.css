@@ -1,10 +1,22 @@
 .section {
+  position: relative;
   /* position: absolute;
   top: 1220px;
   left: 0;
   right: 0; */
   opacity: 0.5;
   padding: 84px 0;
+  /* background-color: var(--skeleton-highlight); */
+}
+
+.back {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: -1;
+  border-radius: 5px;
   background-color: var(--skeleton-highlight);
 }
 
