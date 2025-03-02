@@ -1,10 +1,9 @@
 .section {
   position: absolute;
-  top: 5548px;
+  top: 5632px;
   left: 0;
   right: 0;
   opacity: 0.5;
-  padding: 84px 0;
 }
 
 /* .container {
@@ -101,4 +100,10 @@
   height: 28px;
   border-radius: 20px;
   background-color: var(--skeleton-light);
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    top: 5548px;
+  }
 }
