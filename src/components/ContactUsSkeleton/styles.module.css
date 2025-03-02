@@ -127,4 +127,22 @@
   .input {
     flex-basis: 330px;
   }
+
+  .innerSection:nth-child(2) .innerContainer {
+    display: flex;
+    gap: 30px;
+  }
+
+  .content,
+  .aside {
+    flex-basis: 330px;
+  }
+
+  .aside {
+    padding-top: 100px;
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
 }
