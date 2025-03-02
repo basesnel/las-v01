@@ -104,6 +104,27 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    top: 5548px;
+    top: 5349px;
+  }
+
+  .innerSection {
+    padding: 100px 0;
+  }
+
+  .innerContainer {
+    max-width: 768px;
+    padding: 0 39px;
+  }
+
+  .title {
+    margin: 0 auto 46px 0;
+  }
+
+  .form {
+    justify-content: initial;
+  }
+
+  .input {
+    flex-basis: 330px;
   }
 }
