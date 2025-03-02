@@ -6,11 +6,6 @@
   opacity: 0.5;
 }
 
-/* .container {
-  position: relative;
-  z-index: 1;
-} */
-
 .innerSection {
   position: relative;
   padding: 84px 0;
@@ -144,5 +139,20 @@
 
   .item:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    top: 4822px;
+    display: flex;
+  }
+
+  .innerSection {
+    flex-basis: calc(50% + 15px);
+  }
+
+  .innerSection:nth-child(2) {
+    flex-basis: calc(50% - 15px);
   }
 }
