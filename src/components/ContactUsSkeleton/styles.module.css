@@ -25,7 +25,14 @@
   bottom: 5px;
   z-index: -1;
   border-radius: 5px;
-  background-color: var(--skeleton-highlight);
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-highlight) 0%,
+    var(--skeleton-light) 50%,
+    var(--skeleton-highlight) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
 }
 
 .title {
@@ -175,5 +182,14 @@
 
   .content {
     flex-basis: 270px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
   }
 }

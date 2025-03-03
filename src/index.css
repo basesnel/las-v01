@@ -20,6 +20,8 @@
   --cinema-line: #b5b3b2;
   --skeleton-light: rgba(240, 240, 240, 0.8);
   --skeleton-highlight: rgba(115, 116, 117, 0.8);
+  /* --skeleton-light: #f8f8f8;
+  --skeleton-highlight: #f0f0f0; */
 }
 
 html {
