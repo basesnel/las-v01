@@ -14,35 +14,33 @@ const FeaturesSkeleton = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.subtitle} />
-          <div className={styles.title} />
-          <div className={styles.title} />
-          <div className={styles.title} />
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className={styles.title} />
+          ))}
           <div className={styles.welcome} />
           <div className={styles.paragraph}>
-            <div className={styles.text} />
-            <div className={styles.text} />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className={styles.text} />
+            ))}
           </div>
           <div className={styles.list}>
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className={styles.item} />
+            ))}
           </div>
           <div className={styles.paragraph}>
-            <div className={styles.text} />
-            <div className={styles.text} />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className={styles.text} />
+            ))}
           </div>
           <div className={`${styles.paragraph} ${styles.last}`}>
             <div className={styles.text} />
           </div>
         </div>
         <div className={styles.features}>
-          <div className={styles.feature} />
-          <div className={styles.feature} />
-          <div className={styles.feature} />
-          <div className={styles.feature} />
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className={styles.feature} />
+          ))}
         </div>
       </div>
     </div>
