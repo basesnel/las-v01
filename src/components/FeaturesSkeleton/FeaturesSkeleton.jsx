@@ -13,7 +13,7 @@ const FeaturesSkeleton = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.subtitle} />
+          <div className={styles.subTitle} />
           {[...Array(3)].map((_, i) => (
             <div key={i} className={styles.title} />
           ))}
