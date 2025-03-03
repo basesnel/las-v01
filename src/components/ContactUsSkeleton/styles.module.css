@@ -166,4 +166,14 @@
   .input {
     flex-basis: 270px;
   }
+
+  .innerSection:nth-child(2) .innerContainer {
+    max-width: 585px;
+    padding: 0 15px 0 30px;
+    margin-left: 0;
+  }
+
+  .content {
+    flex-basis: 270px;
+  }
 }
