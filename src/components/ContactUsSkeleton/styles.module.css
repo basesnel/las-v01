@@ -1,8 +1,8 @@
 .section {
-  position: absolute;
+  /* position: absolute;
   top: 5632px;
   left: 0;
-  right: 0;
+  right: 0; */
   opacity: 0.5;
 }
 
@@ -25,14 +25,7 @@
   bottom: 5px;
   z-index: -1;
   border-radius: 5px;
-  background: linear-gradient(
-    -90deg,
-    var(--skeleton-highlight) 0%,
-    var(--skeleton-light) 50%,
-    var(--skeleton-highlight) 100%
-  );
-  background-size: 400% 400%;
-  animation: pulse 1.2s ease-in-out infinite;
+  background-color: var(--skeleton-highlight);
 }
 
 .title {
@@ -104,10 +97,27 @@
   background-color: var(--skeleton-light);
 }
 
+.title,
+.input,
+.textArea,
+.button,
+.item,
+.subTitle,
+.text {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-light) 0%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-light) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
 @media screen and (min-width: 768px) {
-  .section {
+  /* .section {
     top: 5349px;
-  }
+  } */
 
   .innerSection {
     padding: 100px 0;
@@ -151,7 +161,7 @@
 
 @media screen and (min-width: 1200px) {
   .section {
-    top: 4822px;
+    /* top: 4822px; */
     display: flex;
   }
 

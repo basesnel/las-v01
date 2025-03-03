@@ -16,11 +16,13 @@ const ContactUsSkeleton = () => {
         <div className={styles.innerContainer}>
           <div className={styles.title} />
           <div className={styles.form}>
-            <div className={styles.input} />
-            <div className={styles.input} />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className={styles.input} />
+            ))}
             <div className={styles.textArea} />
-            <div className={styles.button} />
-            <div className={styles.button} />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className={styles.button} />
+            ))}
           </div>
         </div>
       </div>
@@ -33,10 +35,6 @@ const ContactUsSkeleton = () => {
               {[...Array(4)].map((_, i) => (
                 <div key={i} className={styles.item} />
               ))}
-              {/* <div className={styles.item} />
-              <div className={styles.item} />
-              <div className={styles.item} />
-              <div className={styles.item} /> */}
             </div>
           </div>
           <div className={styles.aside}>
