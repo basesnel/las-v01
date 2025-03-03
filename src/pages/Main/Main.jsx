@@ -47,6 +47,7 @@ const Main = () => {
           <TowtruckSkeleton />
           <GalletySkeleton />
           <FeaturesSkeleton />
+          <ContactUsSkeleton />
         </motion.div>
       ) : (
         // <motion.div
@@ -70,7 +71,7 @@ const Main = () => {
             <Features />
             {/* <FeaturesSkeleton /> */}
             <ContactUs />
-            <ContactUsSkeleton />
+            {/* <ContactUsSkeleton /> */}
             <Brands />
           </main>
           <Footer />
