@@ -131,7 +131,7 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    /* top: 4188px; */
+    top: 4188px;
     padding: 100px 0;
   }
 
@@ -144,6 +144,7 @@
 
   .content {
     max-width: 500px;
+    margin-bottom: 53px;
   }
 
   .title {
@@ -165,10 +166,6 @@
 
   .welcome {
     margin-bottom: 30px;
-  }
-
-  .paragraph.last {
-    margin-bottom: 65px;
   }
 
   .text:nth-child(2) {
