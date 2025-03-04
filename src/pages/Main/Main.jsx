@@ -13,11 +13,12 @@ import Brands from "../../components/Brands/Brands";
 import HeaderSkeleton from "../../components/HeaderSkeleton/HeaderSkeleton";
 import BannerSkeleton from "../../components/BannerSkeleton/BannerSkeleton";
 import IntroSkeleton from "../../components/IntroSkeleton/IntroSkeleton";
-import ServicesSkeleton from "../../components/ServicesSkeleton/ServicesSkeleton";
-import GalletySkeleton from "../../components/GallerySkeleton/GallerySkeleton";
 import FeaturesSkeleton from "../../components/FeaturesSkeleton/FeaturesSkeleton";
-import TowTruck from "../../components/TowTruck/TowTruck";
+import GalletySkeleton from "../../components/GallerySkeleton/GallerySkeleton";
 import TowtruckSkeleton from "../../components/TowtruckSkeleton/TowtruckSkeleton";
+import ServicesSkeleton from "../../components/ServicesSkeleton/ServicesSkeleton";
+import BrandsSkeleton from "../../components/BrandsSkeleton/BrandsSkeleton";
+import TowTruck from "../../components/TowTruck/TowTruck";
 // import Shop from "../../components/Shop/Shop";
 
 // import styles from "./styles.module.css";
@@ -69,10 +70,11 @@ const Main = () => {
             <Gallery />
             {/* <GalletySkeleton /> */}
             <Features />
-            {/* <FeaturesSkeleton /> */}
+            <FeaturesSkeleton />
             <ContactUs />
             {/* <ContactUsSkeleton /> */}
             <Brands />
+            <BrandsSkeleton />
           </main>
           <Footer />
         </>
