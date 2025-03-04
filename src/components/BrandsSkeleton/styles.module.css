@@ -1,6 +1,6 @@
 .section {
   position: absolute;
-  top: 8007px;
+  top: 6785px;
   left: 0;
   right: 0;
   opacity: 0.5;
@@ -35,7 +35,23 @@
 
 .title:nth-child(4) {
   max-width: 380px;
-  margin-bottom: 25px;
+  margin-bottom: 46px;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.brand {
+  flex-basis: 100%;
+  height: 92px;
+  border-radius: 10px;
+}
+
+.brand:nth-child(n + 9) {
+  display: none;
 }
 
 .title,
@@ -43,7 +59,7 @@
 .subTitle,
 .welcome,
 .text,
-.feature {
+.brand {
   background: linear-gradient(
     -90deg,
     var(--skeleton-highlight) 0%,
@@ -52,6 +68,12 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 336px) {
+  .brand {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 
 @media screen and (min-width: 408px) {

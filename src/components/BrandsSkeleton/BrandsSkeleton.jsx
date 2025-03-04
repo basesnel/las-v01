@@ -19,7 +19,7 @@ const BrandsSkeleton = () => {
           ))}
         </div>
         <div className={styles.brands}>
-          {[...Array(4)].map((_, i) => (
+          {[...Array(18)].map((_, i) => (
             <div key={i} className={styles.brand} />
           ))}
         </div>
