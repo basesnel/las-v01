@@ -70,7 +70,7 @@ const Main = () => {
             <Gallery />
             {/* <GalletySkeleton /> */}
             <Features />
-            <FeaturesSkeleton />
+            {/* <FeaturesSkeleton /> */}
             <ContactUs />
             {/* <ContactUsSkeleton /> */}
             <Brands />
