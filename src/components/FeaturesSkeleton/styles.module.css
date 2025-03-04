@@ -188,7 +188,7 @@
 
 @media screen and (min-width: 1200px) {
   .section {
-    /* top: 3964px; */
+    top: 3964px;
     padding: 120px 0;
   }
 
@@ -204,7 +204,7 @@
     flex-basis: 500px;
   }
 
-  .subtitle {
+  .subTitle {
     margin-bottom: 20px;
   }
 
@@ -229,11 +229,7 @@
     max-width: 370px;
     padding-top: 0px;
     align-self: initial;
-  }
-
-  .img {
-    width: 270px;
-    height: 480px;
+    transform: translateY(-28px);
   }
 }
 
