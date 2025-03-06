@@ -92,6 +92,19 @@
   display: none;
 }
 
+.subtitle,
+.item,
+.button {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-light) 0%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-light) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
 @media screen and (min-width: 332px) {
   .item {
     min-width: 270px;
@@ -235,5 +248,14 @@
 
   .item:nth-child(7) {
     transform: scale(0.3) translateX(333%) translateY(-167%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
   }
 }
