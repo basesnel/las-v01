@@ -18,7 +18,6 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  background-color: var(--skeleton-highlight);
 }
 
 .title {
@@ -26,14 +25,12 @@
   height: 33px;
   border-radius: 10px;
   margin: 0 auto 23px;
-  background-color: var(--skeleton-highlight);
 }
 
 .welcome {
   height: 20px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background-color: var(--skeleton-highlight);
 }
 
 .welcome:nth-child(6) {
@@ -48,7 +45,6 @@
   height: 14px;
   border-radius: 10px;
   margin-bottom: 12px;
-  background-color: var(--skeleton-highlight);
 }
 
 .list {
@@ -63,7 +59,6 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 23px;
-  background-color: var(--skeleton-highlight);
 }
 
 .item:nth-child(6) {
@@ -75,21 +70,18 @@
   height: 40px;
   border-radius: 20px;
   margin: 0 auto 50px;
-  background-color: var(--skeleton-highlight);
 }
 
 .img {
   height: 314px;
   border-radius: 30px;
   margin-bottom: 30px;
-  background-color: var(--skeleton-highlight);
 }
 
 .img:last-child {
   height: 226px;
   border-radius: 10px;
   margin-bottom: 0;
-  background-color: var(--skeleton-highlight);
 }
 
 .subtitle,
