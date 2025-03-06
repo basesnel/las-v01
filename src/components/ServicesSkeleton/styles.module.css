@@ -74,6 +74,20 @@
   background-color: var(--skeleton-light);
 }
 
+.subtitle,
+.title,
+.item,
+.button {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-light) 0%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-light) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
 @media screen and (min-width: 768px) {
   .section {
     /* top: 1380px; */
@@ -147,5 +161,14 @@
 
   .innerList:last-child {
     padding: 30px 22px 30px 20px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
   }
 }
