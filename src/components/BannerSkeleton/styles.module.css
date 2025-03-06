@@ -13,9 +13,6 @@
 
 .content {
   position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   height: 580px;
   padding: 10px;
 }
@@ -37,7 +34,6 @@
   height: 100%;
   border-radius: 5px;
   padding: 126px 67px 0 19px;
-  /* background-color: var(--skeleton-highlight); */
 }
 
 .subtitle {
@@ -45,19 +41,16 @@
   height: 15px;
   border-radius: 10px;
   margin-bottom: 30px;
-  background-color: var(--skeleton-light);
 }
 
-.titleFirst,
-.titleSecond {
+.title {
   max-width: 300px;
   height: 44px;
   border-radius: 10px;
   margin-bottom: 22px;
-  background-color: var(--skeleton-light);
 }
 
-.titleSecond {
+.title:nth-child(3) {
   max-width: 380px;
   margin-bottom: 32px;
 }
@@ -70,7 +63,6 @@
   height: 14px;
   border-radius: 10px;
   margin-bottom: 12px;
-  background-color: var(--skeleton-light);
 }
 
 .reference {
@@ -78,7 +70,6 @@
   height: 40px;
   border-radius: 20px;
   margin: 0 auto 30px;
-  background-color: var(--skeleton-light);
 }
 
 .footer {
@@ -88,11 +79,36 @@
   bottom: 5px;
   height: 80px;
   border-radius: 10px;
-  background-color: var(--skeleton-light);
 }
 
 .aside {
   display: none;
+}
+
+.subtitle,
+.title,
+.text,
+.reference,
+.footer {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-light) 0%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-light) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.innerAside {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-highlight) 0%,
+    var(--skeleton-light) 50%,
+    var(--skeleton-highlight) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
 }
 
 @media screen and (min-width: 768px) {
@@ -114,11 +130,11 @@
     padding: 149px 57px 180px 64px;
   }
 
-  .titleFirst {
+  .title {
     margin-bottom: 24px;
   }
 
-  .titleSecond {
+  .title:nth-child(3) {
     margin-bottom: 40px;
   }
 
@@ -150,7 +166,6 @@
     width: 16px;
     height: 300px;
     border-radius: 10px;
-    background-color: var(--skeleton-highlight);
   }
 }
 
@@ -164,14 +179,13 @@
     padding: 147px 57px 148px 95px;
   }
 
-  .titleFirst,
-  .titleSecond {
+  .title {
     max-width: 780px;
     height: 55px;
     margin-bottom: 32px;
   }
 
-  .titleSecond {
+  .title:nth-child(3) {
     max-width: 380px;
     margin-bottom: 45px;
   }
@@ -186,5 +200,14 @@
 
   .aside {
     width: 100px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
   }
 }

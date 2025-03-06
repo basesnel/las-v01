@@ -16,8 +16,8 @@ const BannerSkeleton = () => {
           <div className={styles.back} />
           <div className={styles.innerContent}>
             <div className={styles.subtitle} />
-            <div className={styles.titleFirst} />
-            <div className={styles.titleSecond} />
+            <div className={styles.title} />
+            <div className={styles.title} />
             <div className={styles.paragraph}>
               <div className={styles.text} />
               <div className={styles.text} />
