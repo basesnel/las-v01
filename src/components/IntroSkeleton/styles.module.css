@@ -66,6 +66,22 @@
   display: none;
 }
 
+.subtitle,
+.title,
+.welcome,
+.text,
+.reference,
+.img {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-highlight) 0%,
+    var(--skeleton-light) 50%,
+    var(--skeleton-highlight) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
 @media screen and (min-width: 768px) {
   .section {
     /* top: 680px; */
@@ -152,5 +168,14 @@
   .img {
     width: 270px;
     height: 480px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
   }
 }
