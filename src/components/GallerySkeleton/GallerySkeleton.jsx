@@ -16,21 +16,14 @@ const GalletySkeleton = () => {
         <div className={styles.subtitle} />
       </div>
       <div className={styles.list}>
-        <div className={styles.item} />
-        <div className={styles.item} />
-        <div className={styles.item} />
-        <div className={styles.item} />
-        <div className={styles.item} />
-        <div className={styles.item} />
-        <div className={styles.item} />
+        {[...Array(7)].map((_, i) => (
+          <div key={i} className={styles.item} />
+        ))}
       </div>
       <div className={styles.controls}>
-        <div className={styles.button} />
-        <div className={styles.button} />
-        <div className={styles.button} />
-        <div className={styles.button} />
-        <div className={styles.button} />
-        <div className={styles.button} />
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className={styles.button} />
+        ))}
       </div>
     </div>
     // </div></motion.div>
