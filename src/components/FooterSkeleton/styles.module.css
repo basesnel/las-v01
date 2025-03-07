@@ -1,0 +1,146 @@
+.footer {
+  /* position: relative; */
+  position: absolute;
+  top: 7638px;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  padding: 44px 0;
+}
+
+.back {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: var(--skeleton-highlight);
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 31px;
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 132px 0;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  /* border: 5px solid var(--skeleton-highlight); */
+  border-radius: 50%;
+}
+
+.line {
+  position: absolute;
+  top: 220px;
+  left: 10px;
+  right: 10px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.logo,
+.line {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-light) 0%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-light) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    /* top: 1380px; */
+    padding: 100px 0;
+  }
+
+  .container {
+    max-width: 768px;
+    padding: 0 39px;
+  }
+
+  .subtitle {
+    max-width: 400px;
+  }
+
+  .title {
+    max-width: 420px;
+    height: 49px;
+    margin: 0 auto 44px 0;
+  }
+
+  .outerList {
+    padding: 32px 27px 32px 40px;
+    margin-bottom: 24px;
+  }
+
+  .item {
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .lastItem {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    /* top: 1400px; */
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  .title {
+    max-width: 420px;
+    height: 49px;
+  }
+
+  .outerList {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .innerList {
+    flex-basis: 570px;
+  }
+
+  .innerList:first-child {
+    padding: 30px 22px 30px 20px;
+  }
+
+  .innerList:last-child {
+    padding: 30px 22px 30px 20px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
+  }
+}
