@@ -71,7 +71,7 @@ const Main = () => {
             <TowTruck />
             {/* <TowtruckSkeleton /> */}
             <Gallery />
-            <GalletySkeleton />
+            {/* <GalletySkeleton /> */}
             <Features />
             {/* <FeaturesSkeleton /> */}
             <ContactUs />
