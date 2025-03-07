@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 0 132px 0;
+  padding: 5px 0 133px 0;
 }
 
 .logo {
@@ -61,24 +61,23 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
-    /* top: 1380px; */
-    padding: 100px 0;
+  .footer {
+    top: 7218px;
   }
 
   .container {
+    display: flex;
+    justify-content: end;
     max-width: 768px;
     padding: 0 39px;
   }
 
-  .subtitle {
-    max-width: 400px;
+  .thumb {
+    padding: 5px 5px 5px 0;
   }
 
-  .title {
-    max-width: 420px;
-    height: 49px;
-    margin: 0 auto 44px 0;
+  .line {
+    top: 70px;
   }
 
   .outerList {
