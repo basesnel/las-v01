@@ -1,9 +1,9 @@
 .footer {
-  /* position: relative; */
-  position: absolute;
+  position: relative;
+  /* position: absolute;
   top: 7638px;
   left: 0;
-  right: 0;
+  right: 0; */
   opacity: 0.5;
   padding: 44px 0;
 }
@@ -61,9 +61,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
+  /* .footer {
     top: 7218px;
-  }
+  } */
 
   .container {
     display: flex;
@@ -82,9 +82,9 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .footer {
+  /* .footer {
     top: 6102px;
-  }
+  } */
 
   .container {
     max-width: 1200px;

@@ -51,6 +51,7 @@ const Main = () => {
           <FeaturesSkeleton />
           <ContactUsSkeleton />
           <BrandsSkeleton />
+          <FooterSkeleton />
         </motion.div>
       ) : (
         // <motion.div
@@ -79,7 +80,7 @@ const Main = () => {
             {/* <BrandsSkeleton /> */}
           </main>
           <Footer />
-          <FooterSkeleton />
+          {/* <FooterSkeleton /> */}
         </>
         // </motion.div>
       )}
