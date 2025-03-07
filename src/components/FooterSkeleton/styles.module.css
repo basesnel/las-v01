@@ -79,59 +79,16 @@
   .line {
     top: 70px;
   }
-
-  .outerList {
-    padding: 32px 27px 32px 40px;
-    margin-bottom: 24px;
-  }
-
-  .item {
-    height: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-
-  .item:last-child {
-    margin-bottom: 0;
-  }
-
-  .lastItem {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  .section {
-    /* top: 1400px; */
-    padding: 120px 0;
+  .footer {
+    top: 6102px;
   }
 
   .container {
     max-width: 1200px;
     padding: 0 15px;
-  }
-
-  .title {
-    max-width: 420px;
-    height: 49px;
-  }
-
-  .outerList {
-    display: flex;
-    gap: 30px;
-    padding: 0;
-  }
-
-  .innerList {
-    flex-basis: 570px;
-  }
-
-  .innerList:first-child {
-    padding: 30px 22px 30px 20px;
-  }
-
-  .innerList:last-child {
-    padding: 30px 22px 30px 20px;
   }
 }
 
