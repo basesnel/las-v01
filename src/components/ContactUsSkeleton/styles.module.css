@@ -64,6 +64,10 @@
   border-radius: 40px;
 }
 
+.list {
+  margin-bottom: 41px;
+}
+
 .item {
   height: 34px;
   margin-bottom: 18px;
@@ -75,7 +79,7 @@
 }
 
 .item:last-child {
-  margin-bottom: 41px;
+  margin-bottom: 0;
 }
 
 .subTitle {
@@ -148,7 +152,7 @@
     padding-top: 100px;
   }
 
-  .item:last-child {
+  .list {
     margin-bottom: 0;
   }
 }
