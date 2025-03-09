@@ -70,7 +70,7 @@
   margin-bottom: 0;
 }
 
-.list:nth-child(5) .item:nth-child(6) {
+.list:nth-child(5) .item:last-child {
   display: none;
 }
 
@@ -136,11 +136,16 @@
   }
 
   .list {
-    margin-bottom: 7px;
+    margin-bottom: 22px;
   }
 
-  .item:nth-child(6) {
+  .list:nth-child(5) .item:nth-child(5) {
+    margin-bottom: 24px;
+  }
+
+  .list:nth-child(5) .item:last-child {
     display: block;
+    margin-bottom: 0;
   }
 
   .reference {
