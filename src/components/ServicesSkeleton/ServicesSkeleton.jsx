@@ -17,21 +17,27 @@ const ServicesSkeleton = () => {
         <div className={styles.title} />
         <div className={styles.outerList}>
           <div className={styles.innerList}>
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className={styles.item} />
+            ))}
+            {/* <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
+            <div className={styles.item} /> */}
           </div>
           <div className={styles.innerList}>
+            {[...Array(7)].map((_, i) => (
+              <div key={i} className={styles.item} />
+            ))}
+            {/* <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
             <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={`${styles.item} ${styles.lastItem}`} />
+            <div className={`${styles.item} ${styles.lastItem}`} /> */}
           </div>
         </div>
         <div className={styles.button} />
