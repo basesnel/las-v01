@@ -1,6 +1,6 @@
 .section {
   position: absolute;
-  top: 2158px;
+  top: 2139px;
   left: 0;
   right: 0;
   opacity: 0.5;
@@ -21,10 +21,14 @@
 }
 
 .title {
-  max-width: 230px;
+  max-width: 250px;
   height: 33px;
   border-radius: 10px;
   margin: 0 auto 23px;
+}
+
+.welcomes {
+  margin-bottom: 32px;
 }
 
 .welcome {
@@ -33,8 +37,8 @@
   margin-bottom: 10px;
 }
 
-.welcome:nth-child(6) {
-  margin-bottom: 32px;
+.welcome:last-child {
+  margin-bottom: 0;
 }
 
 .paragraph {
@@ -49,19 +53,24 @@
 
 .list {
   padding: 10px;
+  margin-bottom: 18px;
 }
 
-.list:nth-child(10) {
+.list:nth-child(7) {
   margin-bottom: 21px;
 }
 
 .item {
   height: 15px;
   border-radius: 10px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
-.item:nth-child(6) {
+.list:nth-child(5) .item:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.list:nth-child(5) .item:nth-child(6) {
   display: none;
 }
 
