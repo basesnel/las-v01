@@ -15,35 +15,33 @@ const TowtruckSkeleton = () => {
         <div className={styles.content}>
           <div className={styles.subtitle} />
           <div className={styles.title} />
-          <div className={styles.welcome} />
-          <div className={styles.welcome} />
-          <div className={styles.welcome} />
-          <div className={styles.welcome} />
-          <div className={styles.paragraph}>
-            <div className={styles.text} />
-          </div>
-          <div className={styles.list}>
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
+          <div className={styles.welcomes}>
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className={styles.welcome} />
+            ))}
           </div>
           <div className={styles.paragraph}>
             <div className={styles.text} />
           </div>
           <div className={styles.list}>
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
-            <div className={styles.item} />
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className={styles.item} />
+            ))}
+          </div>
+          <div className={styles.paragraph}>
+            <div className={styles.text} />
+          </div>
+          <div className={styles.list}>
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className={styles.item} />
+            ))}
           </div>
           <div className={styles.reference} />
         </div>
         <div className={styles.aside}>
-          <div className={styles.img} />
-          <div className={styles.img} />
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className={styles.img} />
+          ))}
         </div>
       </div>
     </div>
