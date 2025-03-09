@@ -33,7 +33,7 @@
 }
 
 .title {
-  max-width: 400px;
+  max-width: 220px;
   height: 46px;
   border-radius: 10px;
   margin: 0 auto 44px;
@@ -94,12 +94,7 @@
     padding: 0 39px;
   }
 
-  .subtitle {
-    max-width: 400px;
-  }
-
   .title {
-    max-width: 420px;
     height: 49px;
     margin: 0 auto 44px 0;
   }
@@ -134,11 +129,6 @@
   .container {
     max-width: 1200px;
     padding: 0 15px;
-  }
-
-  .title {
-    max-width: 420px;
-    height: 49px;
   }
 
   .outerList {
