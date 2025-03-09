@@ -106,7 +106,7 @@
 
   .outerList {
     padding: 32px 27px 32px 40px;
-    margin-bottom: 24px;
+    margin-bottom: 44px;
   }
 
   .item {
@@ -115,11 +115,12 @@
     margin-bottom: 20px;
   }
 
-  .item:last-child {
+  .item:last-child,
+  .innerList:last-child .item:nth-child(6) {
     margin-bottom: 0;
   }
 
-  .lastItem {
+  .innerList:last-child .item:last-child {
     display: none;
   }
 }
