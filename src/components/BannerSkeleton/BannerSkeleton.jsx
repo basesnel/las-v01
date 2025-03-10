@@ -15,9 +15,11 @@ const BannerSkeleton = () => {
         <div className={styles.content}>
           <div className={styles.back} />
           <div className={styles.subtitle} />
-          {[...Array(2)].map((_, i) => (
-            <div key={i} className={styles.title} />
-          ))}
+          <div className={styles.titles}>
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className={styles.title} />
+            ))}
+          </div>
           <div className={styles.paragraph}>
             {[...Array(3)].map((_, i) => (
               <div key={i} className={styles.text} />
