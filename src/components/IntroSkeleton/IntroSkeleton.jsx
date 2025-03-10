@@ -34,8 +34,9 @@ const IntroSkeleton = () => {
           <div className={styles.reference} />
         </div>
         <div className={styles.aside}>
-          <div className={styles.img} />
-          <div className={styles.img} />
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className={styles.img} />
+          ))}
         </div>
       </div>
     </div>

@@ -14,18 +14,17 @@ const BannerSkeleton = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.back} />
-          <div className={styles.innerContent}>
-            <div className={styles.subtitle} />
-            <div className={styles.title} />
-            <div className={styles.title} />
-            <div className={styles.paragraph}>
-              <div className={styles.text} />
-              <div className={styles.text} />
-              <div className={styles.text} />
-            </div>
-            <div className={styles.reference} />
-            <div className={styles.footer} />
+          <div className={styles.subtitle} />
+          {[...Array(2)].map((_, i) => (
+            <div key={i} className={styles.title} />
+          ))}
+          <div className={styles.paragraph}>
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className={styles.text} />
+            ))}
           </div>
+          <div className={styles.reference} />
+          <div className={styles.footer} />
         </div>
         <div className={styles.aside}>
           <div className={styles.socnet}>
