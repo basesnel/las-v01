@@ -160,19 +160,23 @@
     padding: 0 15px;
   }
 
-  .innerContent {
-    padding: 147px 57px 148px 95px;
+  .content {
+    padding: 152px 79px 10px 100px;
+  }
+
+  .subtitle {
+    margin-bottom: 26px;
   }
 
   .title {
-    max-width: 780px;
-    height: 55px;
+    max-width: 380px;
+    height: 64px;
     margin-bottom: 32px;
   }
 
   .title:nth-child(3) {
-    max-width: 380px;
-    margin-bottom: 45px;
+    max-width: 780px;
+    margin-bottom: 22px;
   }
 
   .text {
