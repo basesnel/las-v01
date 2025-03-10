@@ -92,17 +92,6 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
-.innerAside {
-  background: linear-gradient(
-    -90deg,
-    var(--skeleton-highlight) 0%,
-    var(--skeleton-light) 50%,
-    var(--skeleton-highlight) 100%
-  );
-  background-size: 400% 400%;
-  animation: pulse 1.2s ease-in-out infinite;
-}
-
 @media screen and (min-width: 768px) {
   .container {
     display: flex;
@@ -115,18 +104,14 @@
   .content {
     flex-grow: 1;
     height: 680px;
-  }
-
-  .innerContent {
-    border-radius: 10px;
-    padding: 149px 57px 180px 64px;
+    padding: 154px 79px 10px 68px;
   }
 
   .title {
     margin-bottom: 24px;
   }
 
-  .title:nth-child(3) {
+  .title:nth-child(4) {
     margin-bottom: 40px;
   }
 
@@ -154,10 +139,18 @@
     height: 680px;
   }
 
-  .innerAside {
+  .socnet {
     width: 16px;
     height: 300px;
     border-radius: 10px;
+    background: linear-gradient(
+      -90deg,
+      var(--skeleton-highlight) 0%,
+      var(--skeleton-light) 50%,
+      var(--skeleton-highlight) 100%
+    );
+    background-size: 400% 400%;
+    animation: pulse 1.2s ease-in-out infinite;
   }
 }
 

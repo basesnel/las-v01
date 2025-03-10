@@ -27,9 +27,7 @@ const BannerSkeleton = () => {
           <div className={styles.footer} />
         </div>
         <div className={styles.aside}>
-          <div className={styles.socnet}>
-            <div className={styles.innerAside} />
-          </div>
+          <div className={styles.socnet} />
         </div>
       </div>
     </div>
