@@ -63,7 +63,7 @@ const Main = () => {
           <Header />
           <main>
             <Banner />
-            <BannerSkeleton />
+            {/* <BannerSkeleton /> */}
             <Intro />
             {/* <IntroSkeleton /> */}
             <Services />
