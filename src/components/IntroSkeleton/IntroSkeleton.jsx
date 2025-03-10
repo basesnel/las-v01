@@ -17,20 +17,29 @@ const IntroSkeleton = () => {
           <div className={styles.title} />
           <div className={styles.welcome} />
           <div className={styles.paragraph}>
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className={styles.text} />
+            ))}
+            {/* <div className={styles.text} />
             <div className={styles.text} />
-            <div className={styles.text} />
-            <div className={styles.text} />
+            <div className={styles.text} /> */}
           </div>
           <div className={styles.paragraph}>
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className={styles.text} />
+            ))}
+            {/* <div className={styles.text} />
             <div className={styles.text} />
             <div className={styles.text} />
-            <div className={styles.text} />
-            <div className={`${styles.text} ${styles.lastText}`} />
+            <div className={`${styles.text} ${styles.lastText}`} /> */}
           </div>
           <div className={`${styles.paragraph} ${styles.last}`}>
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className={styles.text} />
+            ))}
+            {/* <div className={styles.text} />
             <div className={styles.text} />
-            <div className={styles.text} />
-            <div className={styles.text} />
+            <div className={styles.text} /> */}
           </div>
           <div className={styles.reference} />
         </div>
