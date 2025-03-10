@@ -55,6 +55,10 @@
   display: none;
 }
 
+.paragraph:nth-child(5) .text:nth-child(3) {
+  margin-bottom: 0;
+}
+
 .reference {
   max-width: 210px;
   height: 40px;
@@ -106,12 +110,12 @@
     margin: 0 auto 25px 0;
   }
 
-  .paragraph.last {
-    margin-bottom: 39px;
+  .paragraph:nth-child(5) .text:last-child {
+    display: block;
   }
 
-  .lastText {
-    display: block;
+  .paragraph:nth-child(5) .text:nth-child(3) {
+    margin-bottom: 12px;
   }
 
   .aside {
