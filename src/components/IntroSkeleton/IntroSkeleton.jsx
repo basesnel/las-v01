@@ -33,7 +33,7 @@ const IntroSkeleton = () => {
             <div className={styles.text} />
             <div className={`${styles.text} ${styles.lastText}`} /> */}
           </div>
-          <div className={`${styles.paragraph} ${styles.last}`}>
+          <div className={styles.paragraph}>
             {[...Array(3)].map((_, i) => (
               <div key={i} className={styles.text} />
             ))}

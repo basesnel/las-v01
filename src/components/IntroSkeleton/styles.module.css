@@ -37,7 +37,7 @@
   margin-bottom: 25px;
 }
 
-.paragraph.last {
+.paragraph:nth-child(6) {
   margin-bottom: 40px;
 }
 
@@ -47,7 +47,11 @@
   margin-bottom: 12px;
 }
 
-.lastText {
+.text:last-child {
+  margin-bottom: 0;
+}
+
+.paragraph:nth-child(5) .text:last-child {
   display: none;
 }
 
