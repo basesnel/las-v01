@@ -13,7 +13,7 @@
 
 .content {
   position: relative;
-  height: 580px;
+  height: 587px;
   padding: 130px 69px 10px 20px;
 }
 
@@ -29,21 +29,21 @@
 }
 
 .subtitle {
-  max-width: 310px;
+  max-width: 250px;
   height: 15px;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .titles {
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 }
 
 .title {
-  max-width: 300px;
-  height: 44px;
+  max-width: 210px;
+  height: 28px;
   border-radius: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 17px;
 }
 
 .title:last-child {
@@ -94,6 +94,36 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 480px) {
+  .content {
+    height: 580px;
+  }
+
+  .subtitle {
+    max-width: 310px;
+    margin-bottom: 31px;
+  }
+
+  .titles {
+    margin-bottom: 31px;
+  }
+
+  .title {
+    max-width: 300px;
+    height: 44px;
+    margin-bottom: 24px;
+  }
+
+  .title:last-child {
+    max-width: 390px;
+    margin-bottom: 0;
+  }
+
+  .text:nth-child(-n + 2) {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
