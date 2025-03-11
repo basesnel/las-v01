@@ -61,6 +61,7 @@ const Main = () => {
         // >
         <>
           <Header />
+          {/* <HeaderSkeleton /> */}
           <main>
             <Banner />
             {/* <BannerSkeleton /> */}

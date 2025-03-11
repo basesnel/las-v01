@@ -1,5 +1,8 @@
 .header {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   width: 100%;
 }
@@ -27,6 +30,28 @@
   height: 40px;
   border-radius: 10px;
   background-color: rgba(240, 240, 240, 0.97);
+}
+
+.logo {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-highlight) 0%,
+    var(--skeleton-light) 50%,
+    var(--skeleton-highlight) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.menu {
+  background: linear-gradient(
+    -90deg,
+    var(--skeleton-light) 0%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-light) 100%
+  );
+  background-size: 400% 400%;
+  animation: pulse 1.2s ease-in-out infinite;
 }
 
 @media screen and (min-width: 200px) {
@@ -69,5 +94,14 @@
   .menu {
     width: 910px;
     height: 1em;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -135% 0%;
   }
 }
