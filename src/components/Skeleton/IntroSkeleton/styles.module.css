@@ -51,13 +51,13 @@
   margin-bottom: 0;
 }
 
-.paragraph:nth-child(5) .text:last-child {
+/* .paragraph:nth-child(5) .text:last-child {
   display: none;
 }
 
 .paragraph:nth-child(5) .text:nth-child(3) {
   margin-bottom: 0;
-}
+} */
 
 .reference {
   max-width: 210px;
