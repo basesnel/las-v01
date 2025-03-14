@@ -125,6 +125,25 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 412px) {
+  .welcome:nth-child(-n + 2) {
+    display: none;
+  }
+
+  .list {
+    margin-bottom: 40px;
+  }
+
+  .list:nth-child(5) .item:last-child {
+    display: none;
+    /* margin-bottom: 0; */
+  }
+
+  .list:nth-child(5) .item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section {
     /* top: 2436px; */
