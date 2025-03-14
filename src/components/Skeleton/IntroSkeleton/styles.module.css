@@ -85,6 +85,12 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 412px) {
+  .text:last-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section {
     /* top: 680px; */
