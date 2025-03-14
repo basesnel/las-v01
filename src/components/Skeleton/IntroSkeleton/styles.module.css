@@ -193,6 +193,10 @@
     margin-bottom: 0;
   }
 
+  .paragraph:nth-child(6) .text:nth-child(3) {
+    display: none;
+  }
+
   .aside {
     width: 570px;
     height: 480px;
