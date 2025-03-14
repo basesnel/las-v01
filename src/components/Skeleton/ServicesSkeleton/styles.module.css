@@ -29,7 +29,8 @@
   max-width: 400px;
   height: 15px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
+  /* margin-bottom: 20px; */
 }
 
 .title {
@@ -40,8 +41,10 @@
 }
 
 .outerList {
-  padding: 30px 20px 30px 40px;
-  margin-bottom: 44px;
+  padding: 20px 20px 30px 20px;
+  /* padding: 30px 20px 30px 40px; */
+  margin-bottom: 54px;
+  /* margin-bottom: 44px; */
 }
 
 .innerList:first-child {
