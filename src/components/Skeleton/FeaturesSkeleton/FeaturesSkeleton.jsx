@@ -26,7 +26,7 @@ const FeaturesSkeleton = () => {
             ))}
           </div>
           <div className={styles.list}>
-            {[...Array(6)].map((_, i) => (
+            {[...Array(9)].map((_, i) => (
               <div key={i} className={styles.item} />
             ))}
           </div>
