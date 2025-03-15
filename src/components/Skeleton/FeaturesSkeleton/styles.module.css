@@ -143,11 +143,11 @@
 
 @media screen and (min-width: 412px) {
   .title {
+    max-width: 330px;
     margin: 0 auto 4px;
   }
 
   .title:nth-last-child(2) {
-    max-width: 330px;
     margin-bottom: 0;
   }
 
@@ -179,17 +179,38 @@
   }
 
   .title {
-    max-width: 350px;
+    max-width: 370px;
     height: 40px;
     margin: 0 auto 10px;
   }
 
   .title:first-child {
-    max-width: 280px;
+    max-width: 300px;
+  }
+
+  .title:nth-last-child(2) {
+    margin-bottom: 10px;
   }
 
   .title:last-child {
+    display: block;
     max-width: 120px;
+  }
+
+  .list {
+    margin-bottom: 29px;
+  }
+
+  .item {
+    margin-bottom: 29px;
+  }
+
+  .item:nth-last-child(4) {
+    margin-bottom: 0;
+  }
+
+  .item:nth-last-child(-n + 3) {
+    display: none;
   }
 }
 
