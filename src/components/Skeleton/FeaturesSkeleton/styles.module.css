@@ -141,6 +141,33 @@
   }
 }
 
+@media screen and (min-width: 412px) {
+  .title {
+    margin: 0 auto 4px;
+  }
+
+  .title:nth-last-child(2) {
+    max-width: 330px;
+    margin-bottom: 0;
+  }
+
+  .title:last-child {
+    display: none;
+  }
+
+  .list {
+    margin-bottom: 42px;
+  }
+
+  .item:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+
+  .item:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .subTitle {
     max-width: 200px;
