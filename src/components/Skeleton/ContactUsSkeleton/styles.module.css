@@ -65,17 +65,21 @@
 }
 
 .list {
-  margin-bottom: 41px;
+  padding-top: 2px;
+  margin-bottom: 44px;
 }
 
 .item {
-  height: 34px;
-  margin-bottom: 18px;
+  height: 28px;
+  /* height: 34px; */
+  margin-bottom: 23px;
+  /* margin-bottom: 18px; */
   border-radius: 10px;
 }
 
 .item:nth-child(even) {
-  margin-bottom: 36px;
+  margin-bottom: 44px;
+  /* margin-bottom: 36px; */
 }
 
 .item:last-child {
@@ -124,6 +128,10 @@
     max-width: 250px;
     height: 52px;
     margin: 0 auto 42px;
+  }
+
+  .list {
+    padding-top: 0;
   }
 }
 
