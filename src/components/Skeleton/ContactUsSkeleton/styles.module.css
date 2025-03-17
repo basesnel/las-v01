@@ -29,9 +29,12 @@
 }
 
 .title {
-  max-width: 250px;
-  height: 46px;
-  margin: 0 auto 46px;
+  max-width: 150px;
+  /* max-width: 250px; */
+  height: 36px;
+  /* height: 46px; */
+  margin: 0 auto 40px;
+  /* margin: 0 auto 46px; */
   border-radius: 10px;
 }
 
@@ -110,6 +113,14 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 480px) {
+  .title {
+    max-width: 250px;
+    height: 46px;
+    margin: 0 auto 46px;
+  }
 }
 
 @media screen and (min-width: 768px) {
