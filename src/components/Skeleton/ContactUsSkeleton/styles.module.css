@@ -123,11 +123,7 @@
   .title {
     max-width: 250px;
     height: 52px;
-    margin: 0 auto 40px;
-  }
-
-  .innerSection:first-child .title {
-    height: 54px;
+    margin: 0 auto 42px;
   }
 }
 
