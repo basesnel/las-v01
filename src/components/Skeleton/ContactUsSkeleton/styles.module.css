@@ -29,12 +29,9 @@
 }
 
 .title {
-  max-width: 150px;
-  /* max-width: 250px; */
+  max-width: 170px;
   height: 36px;
-  /* height: 46px; */
   margin: 0 auto 40px;
-  /* margin: 0 auto 46px; */
   border-radius: 10px;
 }
 
@@ -96,6 +93,7 @@
   max-width: 340px;
   height: 28px;
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 .title,
@@ -120,6 +118,10 @@
     max-width: 250px;
     height: 46px;
     margin: 0 auto 46px;
+  }
+
+  .text {
+    margin-bottom: 0;
   }
 }
 
