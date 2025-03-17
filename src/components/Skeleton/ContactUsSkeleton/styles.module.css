@@ -113,15 +113,17 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 412px) {
+  .text {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .title {
     max-width: 250px;
     height: 46px;
     margin: 0 auto 46px;
-  }
-
-  .text {
-    margin-bottom: 0;
   }
 }
 
