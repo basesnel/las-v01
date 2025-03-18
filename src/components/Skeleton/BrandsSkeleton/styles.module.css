@@ -171,15 +171,16 @@
   }
 
   .titles {
-    margin-bottom: 34px;
+    margin-bottom: 46px;
   }
 
   .title {
     max-width: 1000px;
     height: 49px;
+    margin-bottom: 0;
   }
 
-  .title:nth-child(2) {
+  .title:nth-last-child(2) {
     display: none;
   }
 
