@@ -130,10 +130,6 @@
     flex-direction: column;
   }
 
-  .titles {
-    margin-bottom: 18px;
-  }
-
   .title {
     max-width: 640px;
     height: 43px;
@@ -141,12 +137,12 @@
     margin: 0 auto 5px 0;
   }
 
-  .title:nth-child(2) {
-    max-width: 500px;
-    margin-bottom: 28px;
+  .title:nth-last-child(2) {
+    max-width: 370px;
+    margin-bottom: 0;
   }
 
-  .title:nth-child(3) {
+  .title:last-child {
     display: none;
   }
 
