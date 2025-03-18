@@ -25,10 +25,13 @@
 }
 
 .title {
-  max-width: 320px;
-  height: 40px;
+  max-width: 220px;
+  /* max-width: 320px; */
+  height: 28px;
+  /* height: 40px; */
   border-radius: 10px;
-  margin: 0 auto 10px;
+  margin: 0 auto 4px;
+  /* margin: 0 auto 10px; */
 }
 
 .title:nth-child(2) {
@@ -75,6 +78,14 @@
 @media screen and (min-width: 336px) {
   .brand {
     flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .title {
+    max-width: 320px;
+    height: 40px;
+    margin: 0 auto 10px;
   }
 }
 

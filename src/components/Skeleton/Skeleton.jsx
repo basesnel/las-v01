@@ -6,6 +6,7 @@ import TowtruckSkeleton from "./TowtruckSkeleton/TowtruckSkeleton";
 import GallerySkeleton from "./GallerySkeleton/GallerySkeleton";
 import FeaturesSkeleton from "./FeaturesSkeleton/FeaturesSkeleton";
 import ContactUsSkeleton from "./ContactUsSkeleton/ContactUsSkeleton";
+import BrandsSkeleton from "./BrandsSkeleton/BrandsSkeleton";
 
 import styles from "./styles.module.css";
 
@@ -20,6 +21,7 @@ const Skeleton = () => {
       <GallerySkeleton />
       <FeaturesSkeleton />
       <ContactUsSkeleton />
+      <BrandsSkeleton />
     </div>
   );
 };
