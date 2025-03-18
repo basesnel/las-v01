@@ -7,6 +7,7 @@ import GallerySkeleton from "./GallerySkeleton/GallerySkeleton";
 import FeaturesSkeleton from "./FeaturesSkeleton/FeaturesSkeleton";
 import ContactUsSkeleton from "./ContactUsSkeleton/ContactUsSkeleton";
 import BrandsSkeleton from "./BrandsSkeleton/BrandsSkeleton";
+import FooterSkeleton from "./FooterSkeleton/FooterSkeleton";
 
 import styles from "./styles.module.css";
 
@@ -22,6 +23,7 @@ const Skeleton = () => {
       <FeaturesSkeleton />
       <ContactUsSkeleton />
       <BrandsSkeleton />
+      <FooterSkeleton />
     </div>
   );
 };
