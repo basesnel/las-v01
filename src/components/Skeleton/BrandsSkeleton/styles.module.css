@@ -98,6 +98,10 @@
 }
 
 @media screen and (min-width: 480px) {
+  .titles {
+    margin-bottom: 47px;
+  }
+
   .title {
     max-width: 320px;
     height: 40px;
