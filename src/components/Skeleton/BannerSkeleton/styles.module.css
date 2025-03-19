@@ -46,7 +46,7 @@
 }
 
 .title:last-child {
-  max-width: 390px;
+  max-width: 260px;
   margin-bottom: 0;
 }
 
@@ -109,14 +109,24 @@
   }
 }
 
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 396px) {
   .title {
-    max-width: 390px;
+    max-width: 320px;
   }
 
   .title:last-child {
     max-width: 160px;
   }
+}
+
+@media screen and (min-width: 412px) {
+  /* .title {
+    max-width: 390px;
+  }
+
+  .title:last-child {
+    max-width: 160px;
+  } */
 }
 
 @media screen and (min-width: 480px) {
