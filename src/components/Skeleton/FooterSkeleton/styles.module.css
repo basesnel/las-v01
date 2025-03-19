@@ -176,6 +176,10 @@
     max-width: 1200px;
     padding: 0 15px;
   }
+
+  .line {
+    --os-x: calc((100% - 1180px) / 2 + 1110px);
+  }
 }
 
 @keyframes pulse {
