@@ -13,8 +13,7 @@
 
 .content {
   position: relative;
-  height: 587px;
-  padding: 130px 69px 10px 20px;
+  padding: 130px 69px 100px 20px;
 }
 
 .back {
@@ -100,25 +99,23 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
-@media screen and (min-width: 412px) {
-  .content {
-    height: 561px;
-  }
-
-  .title {
-    max-width: 390px;
-  }
-
-  .title:last-child {
-    max-width: 160px;
-  }
-
+@media screen and (min-width: 361px) {
   .text:nth-last-child(2) {
     margin-bottom: 0;
   }
 
   .text:last-child {
     display: none;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  .title {
+    max-width: 390px;
+  }
+
+  .title:last-child {
+    max-width: 160px;
   }
 }
 
