@@ -123,6 +123,40 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 366px) {
+  .list {
+    margin-bottom: 47px;
+  }
+
+  .item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .item:last-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 367px) {
+  .list {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 382px) {
+  .list {
+    margin-bottom: 33px;
+  }
+
+  .item:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+
+  .item:nth-last-child(2) {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 408px) {
   .features {
     display: flex;
