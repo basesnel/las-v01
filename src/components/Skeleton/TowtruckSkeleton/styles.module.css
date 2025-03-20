@@ -234,7 +234,11 @@
     height: 49px;
   }
 
-  .welcome:last-child {
+  .welcome:nth-last-child(4) {
+    margin-bottom: 0;
+  }
+
+  .welcome:nth-last-child(3) {
     display: none;
   }
 
