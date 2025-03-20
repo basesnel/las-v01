@@ -107,6 +107,39 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 363px) {
+  .welcome:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .welcome:last-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 392px) {
+  .welcome:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+
+  .welcome:nth-last-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 409px) {
+  .list {
+    margin-bottom: 40px;
+  }
+  .list:nth-child(5) .item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .list:nth-child(5) .item:last-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 412px) {
   .welcome:nth-child(-n + 2) {
     display: none;
