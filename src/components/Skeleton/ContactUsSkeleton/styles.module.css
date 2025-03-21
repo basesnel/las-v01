@@ -71,15 +71,12 @@
 
 .item {
   height: 28px;
-  /* height: 34px; */
   margin-bottom: 23px;
-  /* margin-bottom: 18px; */
   border-radius: 10px;
 }
 
 .item:nth-child(even) {
   margin-bottom: 44px;
-  /* margin-bottom: 36px; */
 }
 
 .item:last-child {
@@ -115,6 +112,30 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 362px) {
+  .text {
+    margin-bottom: 31px;
+  }
+}
+
+@media screen and (min-width: 377px) {
+  .text {
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (min-width: 386px) {
+  .text {
+    margin-bottom: 2px;
+  }
+}
+
+@media screen and (min-width: 392px) {
+  .text {
+    margin-bottom: 1px;
+  }
 }
 
 @media screen and (min-width: 412px) {
