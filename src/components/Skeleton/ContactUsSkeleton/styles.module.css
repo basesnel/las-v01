@@ -138,9 +138,45 @@
   }
 }
 
+@media screen and (min-width: 410px) {
+  .text {
+    margin-bottom: 2px;
+  }
+}
+
+@media screen and (min-width: 411px) {
+  .text {
+    margin-bottom: 1px;
+  }
+}
+
 @media screen and (min-width: 412px) {
   .text {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  .text {
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (min-width: 417px) {
+  .text {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 421px) {
+  .text {
+    margin-bottom: 1px;
+  }
+}
+
+@media screen and (min-width: 418px) {
+  .text {
+    margin-bottom: 2px;
   }
 }
 
