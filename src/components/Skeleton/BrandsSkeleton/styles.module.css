@@ -97,18 +97,32 @@
   .titles {
     margin-bottom: 45px;
   }
+}
 
+@media screen and (min-width: 418px) {
   .title {
     max-width: 320px;
     margin: 0 auto 5px;
   }
 
   .title:nth-child(2) {
-    max-width: 280px;
+    max-width: 380px;
+    margin: 0 auto 0;
   }
 
   .title:last-child {
-    max-width: 90px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 472px) {
+  .title {
+    max-width: 410px;
+    margin: 0 auto 5px;
+  }
+
+  .title:nth-child(2) {
+    max-width: 250px;
   }
 }
 
