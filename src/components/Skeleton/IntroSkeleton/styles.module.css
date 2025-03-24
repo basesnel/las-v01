@@ -107,6 +107,12 @@
   }
 }
 
+@media screen and (min-width: 411px) {
+  .paragraph:nth-child(6) {
+    margin-bottom: 39px;
+  }
+}
+
 @media screen and (min-width: 412px) {
   .text:nth-last-child(2) {
     margin-bottom: 0;
