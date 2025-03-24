@@ -31,7 +31,7 @@
   margin: 0 auto 4px;
 }
 
-.title:nth-child(2) {
+.title:nth-last-child(2) {
   max-width: 210px;
 }
 
@@ -75,6 +75,21 @@
 @media screen and (min-width: 336px) {
   .brand {
     flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 364px) {
+  .title {
+    max-width: 310px;
+  }
+
+  .title:nth-last-child(2) {
+    max-width: 280px;
+  }
+
+  .title:last-child {
+    max-width: 100px;
+    margin-bottom: 0;
   }
 }
 
