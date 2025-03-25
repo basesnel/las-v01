@@ -136,22 +136,22 @@
 
   .subtitle {
     max-width: 310px;
-    margin-bottom: 31px;
+    /* margin-bottom: 31px; */
   }
 
   .titles {
-    margin-bottom: 31px;
+    margin-bottom: 12px;
   }
 
   .title {
     max-width: 300px;
-    height: 44px;
-    margin-bottom: 24px;
+    height: 65.956px;
+    /* margin-bottom: 24px; */
   }
 
   .title:last-child {
     max-width: 390px;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
   }
 }
 
