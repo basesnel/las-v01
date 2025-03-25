@@ -221,17 +221,17 @@
   }
 
   .subtitle {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
-  .titles {
+  /* .titles {
     margin-bottom: 38px;
-  }
+  } */
 
   .title {
     max-width: 780px;
-    height: 68px;
-    margin-bottom: 18px;
+    height: 82.96px;
+    /* margin-bottom: 18px; */
   }
 
   .title:last-child {
