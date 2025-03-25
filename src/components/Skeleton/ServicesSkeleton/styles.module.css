@@ -27,15 +27,15 @@
 
 .subtitle {
   max-width: 400px;
-  height: 15px;
-  border-radius: 10px;
-  margin-bottom: 36px;
+  height: 14.993px;
+  border-radius: 14px;
+  margin-bottom: 34.993px;
 }
 
 .title {
   max-width: 220px;
-  height: 46px;
-  border-radius: 10px;
+  height: 46.64px;
+  border-radius: 46px;
   margin: 0 auto 44px;
 }
 
@@ -120,14 +120,6 @@
     padding: 30px 20px 30px 40px;
     margin-bottom: 44px;
   }
-
-  /* .innerList:first-child .item:nth-last-child(2) {
-    margin-bottom: 0;
-  }
-
-  .innerList:first-child .item:last-child {
-    display: none;
-  } */
 }
 
 @media screen and (min-width: 768px) {
