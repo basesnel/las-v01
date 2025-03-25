@@ -191,11 +191,11 @@
 
   .title {
     max-width: 320px;
-    height: 49px;
+    height: 48.972px;
   }
 
   .paragraph {
-    margin-bottom: 26px;
+    margin-bottom: 16px;
   }
 
   .paragraph:nth-child(5) .text:nth-last-child(3) {
@@ -207,7 +207,7 @@
   }
 
   .paragraph:nth-child(6) {
-    margin-bottom: 53px;
+    margin-bottom: 48px;
   }
 
   .paragraph:nth-child(6) .text:nth-last-child(3) {
