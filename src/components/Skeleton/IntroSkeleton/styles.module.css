@@ -147,13 +147,12 @@
 
   .title {
     max-width: 230px;
-    height: 33px;
-    border-radius: 10px;
-    margin: 0 auto 25px 0;
+    height: 32.648px;
+    margin: 0 auto 20px 0;
   }
 
   .paragraph:nth-child(5) .text:nth-last-child(3) {
-    margin-bottom: 12px;
+    margin-bottom: 2px;
   }
 
   .paragraph:nth-child(5) .text:nth-last-child(2) {
