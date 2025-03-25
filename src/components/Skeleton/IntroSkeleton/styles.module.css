@@ -15,20 +15,20 @@
 
 .subtitle {
   max-width: 200px;
-  height: 15px;
+  height: 14.993px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
 .title {
   max-width: 230px;
-  height: 33px;
+  height: 32.648px;
   border-radius: 10px;
   margin: 0 auto 20px;
 }
 
 .welcome {
-  height: 30px;
+  height: 29.988px;
   border-radius: 30px;
   margin-bottom: 20px;
 }
@@ -38,11 +38,11 @@
 }
 
 .paragraph:nth-child(6) {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .text {
-  height: 24px;
+  height: 23.998px;
   border-radius: 24px;
   margin-bottom: 2px;
 }
