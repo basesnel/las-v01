@@ -139,13 +139,12 @@
 
   .outerList {
     padding: 32px 27px 32px 40px;
-    margin-bottom: 44px;
+    margin-bottom: 43.96px;
   }
 
   .item {
-    height: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    height: 29.998px;
+    border-radius: 29px;
   }
 
   .innerList:last-child .item:last-child {
