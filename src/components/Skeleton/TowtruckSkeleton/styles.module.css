@@ -172,13 +172,11 @@
 
   .title {
     max-width: 250px;
-    /* height: 33px; */
-    /* border-radius: 10px; */
     margin: 0 auto 20px 0;
   }
 
   .list {
-    margin-bottom: 22px;
+    margin-bottom: 6.65px;
   }
 
   .list:nth-child(5) .item:last-child {
@@ -187,7 +185,7 @@
   }
 
   .list:nth-child(5) .item:nth-last-child(2) {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   .reference {
