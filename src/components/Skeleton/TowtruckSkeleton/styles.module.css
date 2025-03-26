@@ -48,17 +48,17 @@
 
 .list {
   padding: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 6.64px;
 }
 
 .list:nth-child(7) {
-  margin-bottom: 44px;
+  margin-bottom: 31px;
 }
 
 .item {
-  height: 15px;
-  border-radius: 10px;
-  margin-bottom: 24px;
+  height: 22.652px;
+  border-radius: 22px;
+  margin-bottom: 16px;
 }
 
 .item:last-child {
