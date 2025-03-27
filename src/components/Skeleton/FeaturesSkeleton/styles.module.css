@@ -294,25 +294,12 @@
     flex-basis: 500px;
   }
 
-  .subTitle {
-    margin-bottom: 20px;
-  }
-
-  .titles {
-    margin-bottom: 20px;
-  }
-
   .title {
     max-width: 290px;
-    height: 49px;
   }
 
   .paragraph:nth-child(6) {
-    margin-bottom: 58px;
-  }
-
-  .paragraph:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 48px;
   }
 
   .features {
