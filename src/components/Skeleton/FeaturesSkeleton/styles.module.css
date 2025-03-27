@@ -245,27 +245,18 @@
     max-width: 500px;
   }
 
-  .titles {
-    margin-bottom: 28px;
-  }
-
   .title {
     max-width: 290px;
-    height: 43px;
-    margin: 0 auto 5px 0;
+    margin: 0 auto 2px 0;
   }
 
   .title:nth-last-child(2) {
     max-width: 490px;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0;
   }
 
   .title:last-child {
     display: none;
-  }
-
-  .welcome {
-    margin-bottom: 30px;
   }
 
   .text:nth-child(2) {
