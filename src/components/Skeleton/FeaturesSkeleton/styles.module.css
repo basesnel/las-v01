@@ -52,7 +52,7 @@
 }
 
 .paragraph:nth-child(6) {
-  margin-bottom: 44px;
+  margin-bottom: 34px;
 }
 
 .paragraph:last-child {
@@ -70,14 +70,14 @@
 }
 
 .list {
-  padding: 0 20px;
-  margin-bottom: 29px;
+  padding: 20px;
+  margin-bottom: 27.92px;
 }
 
 .item {
-  height: 14px;
-  border-radius: 10px;
-  margin-bottom: 27px;
+  height: 22.652px;
+  border-radius: 22px;
+  margin-bottom: 20px;
 }
 
 .item:last-child {
