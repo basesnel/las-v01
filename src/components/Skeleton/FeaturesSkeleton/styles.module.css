@@ -203,25 +203,18 @@
 @media screen and (min-width: 480px) {
   .subTitle {
     max-width: 200px;
-    margin-bottom: 25px;
-  }
-
-  .titles {
-    margin-bottom: 25px;
   }
 
   .title {
-    height: 40px;
-    margin: 0 auto 10px;
-  }
-
-  .title {
+    height: 46.972px;
     max-width: 300px;
+    border-radius: 46px;
+    margin: 0 auto 2px;
   }
 
   .title:nth-last-child(2) {
     max-width: 370px;
-    margin-bottom: 10px;
+    margin: 0 auto 2px;
   }
 
   .title:last-child {
@@ -229,24 +222,9 @@
     max-width: 140px;
   }
 
-  .list {
-    margin-bottom: 29px;
-  }
-
-  .item {
-    margin-bottom: 29px;
-  }
-
-  .item:nth-last-child(4) {
-    margin-bottom: 0;
-  }
-
-  .item:nth-last-child(-n + 3) {
-    display: none;
-  }
-
   .feature {
     max-width: initial;
+    height: 133px;
   }
 }
 
