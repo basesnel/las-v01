@@ -15,20 +15,20 @@
 
 .subTitle {
   max-width: 120px;
-  height: 15px;
-  border-radius: 10px;
-  margin-bottom: 22px;
+  height: 14.993px;
+  border-radius: 14px;
+  margin-bottom: 20px;
 }
 
 .titles {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .title {
   max-width: 200px;
-  height: 30px;
-  border-radius: 10px;
-  margin: 0 auto 3px;
+  height: 30.648px;
+  border-radius: 30px;
+  margin: 0 auto 2px;
 }
 
 .title:nth-last-child(2) {
@@ -42,13 +42,13 @@
 
 .welcome {
   max-width: 140px;
-  height: 20px;
-  border-radius: 10px;
-  margin-bottom: 33px;
+  height: 29.988px;
+  border-radius: 29px;
+  margin-bottom: 20px;
 }
 
 .paragraph {
-  margin-bottom: 44px;
+  margin-bottom: 16px;
 }
 
 .paragraph:nth-child(6) {
@@ -60,9 +60,9 @@
 }
 
 .text {
-  height: 14px;
-  border-radius: 10px;
-  margin-bottom: 12px;
+  height: 23.998px;
+  border-radius: 29px;
+  margin-bottom: 2px;
 }
 
 .text:last-child {
