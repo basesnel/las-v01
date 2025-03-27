@@ -223,8 +223,8 @@
   }
 
   .title {
-    max-width: 320px;
-    height: 49px;
+    max-width: 380px;
+    height: 48.972px;
   }
 
   .welcome:nth-last-child(4) {
@@ -236,7 +236,7 @@
   }
 
   .list {
-    margin-bottom: 18px;
+    margin-bottom: 0;
   }
 
   .list:nth-child(5) .item:last-child {
@@ -248,11 +248,11 @@
   }
 
   .list:nth-child(7) {
-    margin-bottom: 42px;
+    margin-bottom: 31px;
   }
 
   .item {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   .aside {
