@@ -1,6 +1,7 @@
 .button {
   display: inline-block;
   width: 90%;
+  height: 40px;
   border: 1px solid var(--light);
   border-radius: 19px;
   padding: 11px;

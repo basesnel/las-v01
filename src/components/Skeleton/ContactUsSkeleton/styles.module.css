@@ -30,9 +30,9 @@
 
 .title {
   max-width: 170px;
-  height: 36px;
-  margin: 0 auto 40px;
-  border-radius: 10px;
+  height: 32.648px;
+  margin: 0 auto 44px;
+  border-radius: 32px;
 }
 
 .form {
@@ -46,7 +46,7 @@
 .input,
 .textArea {
   flex-basis: 100%;
-  border-radius: 10px;
+  border-radius: 31px;
 }
 
 .input {
