@@ -113,69 +113,9 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
-@media screen and (min-width: 362px) {
-  .text {
-    margin-bottom: 31px;
-  }
-}
-
 @media screen and (min-width: 377px) {
   .text {
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 386px) {
-  .text {
-    margin-bottom: 2px;
-  }
-}
-
-@media screen and (min-width: 392px) {
-  .text {
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 410px) {
-  .text {
-    margin-bottom: 2px;
-  }
-}
-
-@media screen and (min-width: 411px) {
-  .text {
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 412px) {
-  .text {
     margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 412px) {
-  .text {
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 417px) {
-  .text {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 421px) {
-  .text {
-    margin-bottom: 1px;
-  }
-}
-
-@media screen and (min-width: 418px) {
-  .text {
-    margin-bottom: 2px;
   }
 }
 
