@@ -122,8 +122,9 @@
 @media screen and (min-width: 480px) {
   .title {
     max-width: 250px;
-    height: 52px;
-    margin: 0 auto 42px;
+    height: 48.972px;
+    border-radius: 48px;
+    margin: 0 auto 44px;
   }
 
   .list {
