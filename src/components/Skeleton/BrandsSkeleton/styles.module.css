@@ -93,16 +93,9 @@
   }
 }
 
-@media screen and (min-width: 412px) {
-  .titles {
-    margin-bottom: 45px;
-  }
-}
-
 @media screen and (min-width: 418px) {
   .title {
     max-width: 320px;
-    margin: 0 auto 5px;
   }
 
   .title:nth-child(2) {
@@ -118,7 +111,6 @@
 @media screen and (min-width: 472px) {
   .title {
     max-width: 410px;
-    margin: 0 auto 5px;
   }
 
   .title:nth-child(2) {
