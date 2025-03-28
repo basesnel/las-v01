@@ -119,19 +119,19 @@
 }
 
 @media screen and (min-width: 480px) {
-  .titles {
-    margin-bottom: 47px;
-  }
+  /* .titles {
+    margin-bottom: 46px;
+  } */
 
   .title {
     max-width: 320px;
-    height: 40px;
-    margin: 0 auto 10px;
+    height: 46.972px;
+    margin: 0 auto 2px;
   }
 
   .title:nth-last-child(2) {
     max-width: 320px;
-    margin: 0 auto 10px;
+    margin: 0 auto 2px;
   }
 
   .title:last-child {
