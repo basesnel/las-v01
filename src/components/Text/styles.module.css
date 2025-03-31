@@ -2,6 +2,7 @@
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.625;
+  word-break: break-all;
 }
 
 .banner {
@@ -19,6 +20,12 @@
   font-size: 18px;
   line-height: 1.666;
   text-align: left;
+}
+
+@media screen and (min-width: 300px) {
+  .heading {
+    word-break: initial;
+  }
 }
 
 @media screen and (min-width: 768px) {
