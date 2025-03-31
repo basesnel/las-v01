@@ -119,9 +119,9 @@
 }
 
 @media screen and (min-width: 480px) {
-  /* .titles {
-    margin-bottom: 46px;
-  } */
+  .subtitle {
+    max-width: 290px;
+  }
 
   .title {
     max-width: 320px;
@@ -155,9 +155,9 @@
 
   .title {
     max-width: 640px;
-    height: 43px;
-    border-radius: 10px;
-    margin: 0 auto 5px 0;
+    height: 46.972px;
+    border-radius: 46px;
+    margin: 0 auto 2px 0;
   }
 
   .title:nth-last-child(2) {
