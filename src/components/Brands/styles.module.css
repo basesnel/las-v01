@@ -20,6 +20,8 @@
 .link {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 92px;
   border: 1px solid currentColor;
   border-radius: 2px;
   color: var(--light);
