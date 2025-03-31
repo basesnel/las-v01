@@ -84,6 +84,13 @@
   font-style: italic;
   line-height: 1.428;
   color: var(--neutral);
+  word-break: break-all;
+}
+
+@media screen and (min-width: 300px) {
+  .innerItem {
+    word-break: initial;
+  }
 }
 
 @media screen and (min-width: 768px) {
