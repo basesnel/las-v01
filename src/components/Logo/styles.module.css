@@ -9,6 +9,8 @@
 }
 
 .logo.footer {
+  width: 130px;
+  height: 130px;
   padding: 10px;
   background-color: var(--light);
   border: 5px solid var(--dark);
