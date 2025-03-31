@@ -23,7 +23,7 @@
 }
 
 @media screen and (min-width: 300px) {
-  .heading {
+  .text {
     word-break: initial;
   }
 }
