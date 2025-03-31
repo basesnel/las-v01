@@ -6,6 +6,7 @@
   letter-spacing: 0.05em;
   text-align: left;
   text-transform: capitalize;
+  word-break: break-all;
 }
 
 .heading01 {
@@ -33,6 +34,12 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+@media screen and (min-width: 300px) {
+  .heading {
+    word-break: initial;
+  }
 }
 
 @media screen and (min-width: 480px) {
