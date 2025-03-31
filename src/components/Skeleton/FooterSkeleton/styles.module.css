@@ -61,9 +61,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .footer {
-    top: 7218px;
-  } */
+  .footer {
+    height: 219px;
+  }
 
   .container {
     display: flex;
