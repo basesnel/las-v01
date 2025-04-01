@@ -13,7 +13,7 @@
 .link {
   display: flex;
   gap: 15px;
-  align-items: center;
+  /* align-items: center; */
   text-decoration: none;
   word-break: break-all;
   color: var(--neutral);
@@ -26,9 +26,10 @@
 }
 
 .icon {
-  width: 24px;
+  min-width: 24px;
   height: 24px;
   fill: currentColor;
+  /* transform: translateY(3px); */
 }
 
 .text {
