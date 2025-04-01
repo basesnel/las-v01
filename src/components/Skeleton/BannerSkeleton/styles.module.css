@@ -31,7 +31,7 @@
   max-width: 250px;
   height: 14.993px;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 34.99px;
 }
 
 .titles {
@@ -96,6 +96,12 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 333px) {
+  .subtitle {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 342px) {
