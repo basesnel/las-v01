@@ -13,6 +13,7 @@
 .link {
   display: flex;
   gap: 15px;
+  align-items: flex-start;
   text-decoration: none;
   word-break: break-all;
   color: var(--neutral);
@@ -29,6 +30,7 @@
 }
 
 .icon {
+  display: block;
   min-width: 24px;
   height: 24px;
   fill: currentColor;

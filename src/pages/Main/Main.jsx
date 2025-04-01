@@ -76,7 +76,7 @@ const Main = () => {
             <Brands />
           </main>
           <Footer />
-          {/* <Skeleton /> */}
+          <Skeleton />
         </>
         // </motion.div>
       )}
