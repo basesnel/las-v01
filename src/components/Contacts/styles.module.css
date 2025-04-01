@@ -13,7 +13,6 @@
 .link {
   display: flex;
   gap: 15px;
-  /* align-items: center; */
   text-decoration: none;
   word-break: break-all;
   color: var(--neutral);
@@ -25,11 +24,14 @@
   color: var(--light);
 }
 
+.iconSpan {
+  padding-top: 3px;
+}
+
 .icon {
   min-width: 24px;
   height: 24px;
   fill: currentColor;
-  /* transform: translateY(3px); */
 }
 
 .text {

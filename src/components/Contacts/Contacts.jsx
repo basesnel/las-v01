@@ -93,18 +93,20 @@ const Contact = ({ src, text, icon }) => {
       onMouseLeave={handleMouseLeave}
       onBlur={handleMouseLeave}
     >
-      <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        focusable="false"
-        aria-hidden={true}
-        className={styles.icon}
-        variants={contactIcon}
-        animate={control}
-      >
-        <use href={`${icons}#${icon}`}></use>
-      </motion.svg>
+      <span className={styles.iconSpan}>
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={24}
+          height={24}
+          focusable="false"
+          aria-hidden={true}
+          className={styles.icon}
+          variants={contactIcon}
+          animate={control}
+        >
+          <use href={`${icons}#${icon}`}></use>
+        </motion.svg>
+      </span>
       <span className={styles.text}>{text.uk}</span>
     </motion.a>
   );
