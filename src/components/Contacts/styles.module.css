@@ -40,6 +40,12 @@
   color: currentColor;
 }
 
+@media screen and (min-width: 300px) {
+  .link {
+    word-break: initial;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .content {
     flex-basis: 330px;

@@ -30,6 +30,7 @@
   font-style: italic;
   line-height: 1.618;
   color: var(--neutral);
+  word-break: break-all;
 }
 
 .item::before {
@@ -286,6 +287,12 @@
       transparent 0.0009%
     );
   animation: grain 0.5s steps(1) infinite;
+}
+
+@media screen and (min-width: 300px) {
+  .item {
+    word-break: initial;
+  }
 }
 
 @media screen and (min-width: 480px) {
