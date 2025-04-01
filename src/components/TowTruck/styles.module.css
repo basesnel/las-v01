@@ -36,7 +36,7 @@
 .item::before {
   content: "";
   display: block;
-  width: 8px;
+  min-width: 8px;
   height: 8px;
   background-color: currentColor;
   transform: skewX(-15deg);
