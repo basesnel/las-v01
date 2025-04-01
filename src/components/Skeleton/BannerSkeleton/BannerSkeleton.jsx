@@ -16,7 +16,7 @@ const BannerSkeleton = () => {
           <div className={styles.back} />
           <div className={styles.subtitle} />
           <div className={styles.titles}>
-            {[...Array(2)].map((_, i) => (
+            {[...Array(3)].map((_, i) => (
               <div key={i} className={styles.title} />
             ))}
           </div>
