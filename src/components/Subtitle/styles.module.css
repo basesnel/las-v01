@@ -7,6 +7,7 @@
   font-weight: 600;
   text-transform: uppercase;
   color: var(--neutral);
+  word-break: break-all;
 }
 
 .banner {
@@ -26,6 +27,12 @@
 
 .gallery {
   margin-bottom: 71px;
+}
+
+@media screen and (min-width: 300px) {
+  .subtitle {
+    word-break: initial;
+  }
 }
 
 @media screen and (min-width: 480px) {
