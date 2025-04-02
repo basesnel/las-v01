@@ -20,11 +20,19 @@
   margin-bottom: 20px;
 }
 
+.titles {
+  margin: 0 auto 22px;
+}
+
 .title {
   max-width: 230px;
-  height: 32.648px;
-  border-radius: 32px;
-  margin: 0 auto 20px;
+  height: 30.648px;
+  border-radius: 30px;
+  margin: 0 auto 2px;
+}
+
+.title:last-child {
+  margin: 0 auto;
 }
 
 .welcomes {
@@ -85,6 +93,18 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 248px) {
+  .paragraph:nth-child(5) .text:first-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 256px) {
+  .title:first-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 273px) {
   .paragraph:nth-child(6) .text:first-child {
     display: none;
@@ -98,7 +118,7 @@
 }
 
 @media screen and (min-width: 283px) {
-  .paragraph:nth-child(5) .text:first-child {
+  .paragraph:nth-child(5) .text:nth-child(2) {
     display: none;
   }
 }
