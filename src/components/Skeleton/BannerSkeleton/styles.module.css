@@ -98,6 +98,26 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 314px) {
+  .text:last-child {
+    display: none;
+  }
+
+  .text:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 326px) {
+  .text:nth-last-child(2) {
+    display: none;
+  }
+
+  .text:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 333px) {
   .subtitle {
     margin-bottom: 20px;
@@ -116,11 +136,11 @@
 }
 
 @media screen and (min-width: 361px) {
-  .text:nth-last-child(2) {
+  .text:nth-last-child(4) {
     margin-bottom: 0;
   }
 
-  .text:last-child {
+  .text:nth-last-child(3) {
     display: none;
   }
 }
@@ -136,11 +156,11 @@
 }
 
 @media screen and (min-width: 449px) {
-  .text:nth-last-child(3) {
+  .text:nth-last-child(5) {
     margin-bottom: 0;
   }
 
-  .text:nth-last-child(2) {
+  .text:nth-last-child(4) {
     display: none;
   }
 }

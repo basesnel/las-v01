@@ -21,7 +21,7 @@ const BannerSkeleton = () => {
             ))}
           </div>
           <div className={styles.paragraph}>
-            {[...Array(5)].map((_, i) => (
+            {[...Array(7)].map((_, i) => (
               <div key={i} className={styles.text} />
             ))}
           </div>
