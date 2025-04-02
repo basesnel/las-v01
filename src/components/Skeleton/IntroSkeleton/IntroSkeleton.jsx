@@ -31,7 +31,7 @@ const IntroSkeleton = () => {
             ))}
           </div>
           <div className={styles.paragraph}>
-            {[...Array(4)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <div key={i} className={styles.text} />
             ))}
           </div>
