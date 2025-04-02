@@ -59,6 +59,10 @@
   margin-bottom: 2px;
 }
 
+.text:nth-child(-n + 2) {
+  display: none;
+}
+
 .text:last-child {
   margin-bottom: 0;
 }
@@ -96,6 +100,12 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 300px) {
+  .text:nth-child(-n + 2) {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 314px) {
