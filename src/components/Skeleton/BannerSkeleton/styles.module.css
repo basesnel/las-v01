@@ -135,13 +135,12 @@
 }
 
 @media screen and (min-width: 342px) {
-  .title:nth-last-child(2) {
-    max-width: 260px;
-    margin-bottom: 0;
+  .title:first-child {
+    display: none;
   }
 
   .title:last-child {
-    display: none;
+    max-width: 260px;
   }
 }
 
@@ -156,7 +155,7 @@
     max-width: 320px;
   }
 
-  .title:nth-last-child(2) {
+  .title:last-child {
     max-width: 160px;
   }
 }
@@ -181,11 +180,11 @@
   }
 
   .title {
-    max-width: 300px;
+    max-width: 310px;
     height: 65.956px;
   }
 
-  .title:nth-last-child(2) {
+  .title:last-child {
     max-width: 390px;
   }
 }
