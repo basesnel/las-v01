@@ -99,6 +99,22 @@
   }
 }
 
+@media screen and (min-width: 277px) {
+  .outerList {
+    margin-bottom: 23.95px;
+  }
+}
+
+@media screen and (min-width: 290px) {
+  .outerList {
+    margin-bottom: 43.94px;
+  }
+
+  .innerList:last-child .item:first-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .container {
     padding: 0 31px;
