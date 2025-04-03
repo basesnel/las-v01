@@ -17,12 +17,12 @@ const ServicesSkeleton = () => {
         <div className={styles.title} />
         <div className={styles.outerList}>
           <div className={styles.innerList}>
-            {[...Array(7)].map((_, i) => (
+            {[...Array(9)].map((_, i) => (
               <div key={i} className={styles.item} />
             ))}
           </div>
           <div className={styles.innerList}>
-            {[...Array(7)].map((_, i) => (
+            {[...Array(9)].map((_, i) => (
               <div key={i} className={styles.item} />
             ))}
           </div>
