@@ -115,6 +115,26 @@
   }
 }
 
+@media screen and (min-width: 291px) {
+  .outerList {
+    margin-bottom: 43.96px;
+  }
+
+  .innerList:first-child .item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .outerList {
+    margin-bottom: 43.94px;
+  }
+
+  .innerList:first-child .item:nth-child(2) {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .container {
     padding: 0 31px;
