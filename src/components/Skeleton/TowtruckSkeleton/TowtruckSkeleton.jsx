@@ -14,7 +14,11 @@ const TowtruckSkeleton = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.subtitle} />
-          <div className={styles.title} />
+          <div className={styles.titles}>
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className={styles.title} />
+            ))}
+          </div>
           <div className={styles.welcomes}>
             {[...Array(6)].map((_, i) => (
               <div key={i} className={styles.welcome} />

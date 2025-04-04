@@ -241,15 +241,6 @@
     border-radius: 29px;
   }
 
-  /* .innerList:last-child .item:last-child {
-    display: none;
-  }
-
-  .item:last-child,
-  .innerList:last-child .item:nth-last-child(2) {
-    margin-bottom: 0;
-  } */
-
   .innerList:last-child .item:nth-child(3) {
     display: none;
   }

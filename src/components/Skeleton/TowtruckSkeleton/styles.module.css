@@ -10,7 +10,7 @@
 .container {
   max-width: 480px;
   margin: 0 auto;
-  padding: 0 31px;
+  padding: 0 24px;
 }
 
 .subtitle {
@@ -20,11 +20,27 @@
   margin: 0 auto 20px;
 }
 
-.title {
+/* .title {
   max-width: 250px;
   height: 32.648px;
   border-radius: 32px;
   margin: 0 auto 20px;
+} */
+
+.titles {
+  margin: 0 auto 22px;
+}
+
+.title {
+  max-width: 230px;
+  height: 30.648px;
+  border-radius: 30px;
+  margin: 0 auto 2px;
+}
+
+.title:last-child {
+  max-width: 60px;
+  margin: 0 auto;
 }
 
 .welcomes {
@@ -100,6 +116,12 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    padding: 0 31px;
+  }
 }
 
 @media screen and (min-width: 363px) {
