@@ -121,8 +121,6 @@
   .img {
     width: calc(100vw - 2 * 31px);
     height: calc((100vw - 2 * 31px) / 1.331);
-    border-radius: 30px;
-    margin-bottom: 30px;
   }
 }
 

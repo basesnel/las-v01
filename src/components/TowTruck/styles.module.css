@@ -63,8 +63,10 @@
 
 .bigImage {
   display: block;
-  width: calc(100vw - 62px);
-  height: calc((100vw - 62px) / 1.331);
+  width: calc(100vw - 2 * 24px);
+  height: calc((100vw - 2 * 24px) / 1.331);
+  /* width: calc(100vw - 2 * 31px);
+  height: calc((100vw - 2 * 31px) / 1.331); */
   object-fit: cover;
 }
 
@@ -292,6 +294,13 @@
 @media screen and (min-width: 300px) {
   .item {
     word-break: initial;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .bigImage {
+    width: calc(100vw - 2 * 31px);
+    height: calc((100vw - 2 * 31px) / 1.331);
   }
 }
 
