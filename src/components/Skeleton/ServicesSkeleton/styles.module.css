@@ -195,20 +195,16 @@
 
 @media screen and (min-width: 459px) {
   .outerList {
-    margin-bottom: 23.97px;
+    margin-bottom: 23.99px;
   }
 }
 
 @media screen and (min-width: 460px) {
   .outerList {
-    margin-bottom: 43.98px;
+    margin-bottom: 43.99px;
   }
 
-  .innerList:first-child .item:nth-last-child(2) {
-    margin-bottom: 0;
-  }
-
-  .innerList:first-child .item:last-child {
+  .innerList:first-child .item:nth-child(3) {
     display: none;
   }
 }
