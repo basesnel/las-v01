@@ -20,19 +20,19 @@ const TowtruckSkeleton = () => {
             ))}
           </div>
           <div className={styles.welcomes}>
-            {[...Array(6)].map((_, i) => (
+            {[...Array(7)].map((_, i) => (
               <div key={i} className={styles.welcome} />
             ))}
           </div>
           <div className={styles.text} />
           <div className={styles.list}>
-            {[...Array(6)].map((_, i) => (
+            {[...Array(7)].map((_, i) => (
               <div key={i} className={styles.item} />
             ))}
           </div>
           <div className={styles.text} />
           <div className={styles.list}>
-            {[...Array(4)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <div key={i} className={styles.item} />
             ))}
           </div>
