@@ -184,8 +184,12 @@
 }
 
 @media screen and (min-width: 453px) {
+  .innerList:last-child .item:nth-child(2) {
+    display: none;
+  }
+
   .outerList {
-    margin-bottom: 43.96px;
+    margin-bottom: 43.98px;
   }
 }
 
