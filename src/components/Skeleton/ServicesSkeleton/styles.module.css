@@ -157,7 +157,7 @@
   }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 338px) {
   .outerList {
     margin-bottom: 43.96px;
   }
@@ -167,9 +167,19 @@
   }
 }
 
+@media screen and (min-width: 339px) {
+  .outerList {
+    margin-bottom: 23.98px;
+  }
+}
+
 @media screen and (min-width: 414px) {
   .subtitle {
     margin-bottom: 20px;
+  }
+
+  .outerList {
+    margin-bottom: 23.97px;
   }
 }
 
