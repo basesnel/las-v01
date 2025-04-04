@@ -57,7 +57,7 @@
 
 .list {
   padding: 20px;
-  margin-bottom: 13.29px;
+  margin-bottom: 13.31px;
 }
 
 .list:nth-child(7) {
@@ -82,8 +82,6 @@
 }
 
 .img {
-  /* width: calc(100vw - 62px);
-  height: calc((100vw - 62px) / 1.331); */
   width: calc(100vw - 2 * 24px);
   height: calc((100vw - 2 * 24px) / 1.331);
   border-radius: 30px;
