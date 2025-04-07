@@ -192,14 +192,14 @@
 }
 
 @media screen and (min-width: 426px) {
-  .list {
+  .list:nth-child(5) {
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 480px) {
   .subtitle {
-    max-width: 200px;
+    max-width: 180px;
     margin: 0 auto 20px 0;
   }
 
@@ -226,22 +226,18 @@
     flex-basis: 330px;
   }
 
-  .title {
+  .title,
+  .title:last-child {
     max-width: 250px;
     margin: 0 auto 20px 0;
   }
 
-  .list {
+  .list:nth-child(5) {
     margin-bottom: 6.65px;
   }
 
-  .list:nth-child(5) .item:last-child {
+  .list:nth-child(5) .item:nth-child(2) {
     display: block;
-    margin-bottom: 0;
-  }
-
-  .list:nth-child(5) .item:nth-last-child(2) {
-    margin-bottom: 16px;
   }
 
   .reference {
