@@ -274,20 +274,17 @@
     padding-right: 100px;
   }
 
-  .title {
+  .title,
+  .title:last-child {
     max-width: 380px;
-    height: 48.972px;
+    height: 46.972px;
   }
 
-  .welcome:nth-last-child(4) {
-    margin-bottom: 0;
-  }
-
-  .welcome:nth-last-child(3) {
+  .welcome:nth-child(4) {
     display: none;
   }
 
-  .list {
+  .list:nth-child(5) {
     margin-bottom: 0;
   }
 
