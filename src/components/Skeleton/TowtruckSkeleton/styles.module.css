@@ -142,6 +142,16 @@
   }
 }
 
+@media screen and (min-width: 287px) {
+  .title:first-child {
+    display: none;
+  }
+
+  .title:last-child {
+    max-width: 250px;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .container {
     padding: 0 31px;
