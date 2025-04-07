@@ -182,14 +182,11 @@
 }
 
 @media screen and (min-width: 409px) {
-  .list {
+  .list:nth-child(5) {
     margin-bottom: 22.65px;
   }
-  .list:nth-child(5) .item:nth-last-child(2) {
-    margin-bottom: 0;
-  }
 
-  .list:nth-child(5) .item:last-child {
+  .list:nth-child(5) .item:nth-child(2) {
     display: none;
   }
 }
