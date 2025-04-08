@@ -111,6 +111,22 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 251px) {
+  .list {
+    margin-bottom: 30.57px;
+  }
+
+  .item:first-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 251px) {
+  .list {
+    margin-bottom: 7.93px;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .container {
     padding: 0 31px;
