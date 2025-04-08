@@ -187,16 +187,18 @@
   }
 }
 
+@media screen and (min-width: 346px) {
+  .paragraph:nth-child(7) .text:first-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 366px) {
   .list {
     margin-bottom: 47.93px;
   }
 
-  .item:nth-last-child(2) {
-    margin-bottom: 0;
-  }
-
-  .item:last-child {
+  .item:nth-child(3) {
     display: none;
   }
 }
@@ -208,7 +210,7 @@
 }
 
 @media screen and (min-width: 382px) {
-  .title:nth-last-child(2) {
+  .title:nth-child(2) {
     max-width: 350px;
     margin: 0 auto 0;
   }
