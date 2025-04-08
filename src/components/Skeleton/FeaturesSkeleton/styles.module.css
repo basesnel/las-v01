@@ -10,7 +10,7 @@
 .container {
   max-width: 480px;
   margin: 0 auto;
-  padding: 0 31px;
+  padding: 0 24px;
 }
 
 .subTitle {
@@ -36,7 +36,7 @@
 }
 
 .title:last-child {
-  max-width: 100px;
+  max-width: 150px;
   margin-bottom: 0;
 }
 
@@ -55,10 +55,6 @@
   margin-bottom: 34px;
 }
 
-/* .paragraph:last-child {
-  margin-bottom: 0;
-} */
-
 .text {
   height: 23.998px;
   border-radius: 29px;
@@ -71,7 +67,7 @@
 
 .list {
   padding: 20px;
-  margin-bottom: 27.93px;
+  margin-bottom: 10.57px;
 }
 
 .item {
@@ -113,6 +109,12 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    padding: 0 31px;
+  }
 }
 
 @media screen and (min-width: 366px) {

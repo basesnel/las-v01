@@ -21,22 +21,24 @@ const FeaturesSkeleton = () => {
           </div>
           <div className={styles.welcome} />
           <div className={styles.paragraph}>
-            {[...Array(2)].map((_, i) => (
+            {[...Array(3)].map((_, i) => (
               <div key={i} className={styles.text} />
             ))}
           </div>
           <div className={styles.list}>
-            {[...Array(8)].map((_, i) => (
+            {[...Array(10)].map((_, i) => (
               <div key={i} className={styles.item} />
+            ))}
+          </div>
+          <div className={styles.paragraph}>
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className={styles.text} />
             ))}
           </div>
           <div className={styles.paragraph}>
             {[...Array(2)].map((_, i) => (
               <div key={i} className={styles.text} />
             ))}
-          </div>
-          <div className={styles.paragraph}>
-            <div className={styles.text} />
           </div>
         </div>
         <div className={styles.features}>
