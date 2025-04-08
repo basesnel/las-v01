@@ -138,8 +138,8 @@
 }
 
 @media screen and (min-width: 286px) {
-  .list {
-    margin-bottom: 1.94px;
+  .paragraph:nth-child(4) .text:first-child {
+    display: none;
   }
 }
 
