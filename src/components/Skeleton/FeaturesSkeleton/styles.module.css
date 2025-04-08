@@ -127,6 +127,22 @@
   }
 }
 
+@media screen and (min-width: 277px) {
+  .list {
+    margin-bottom: 27.93px;
+  }
+
+  .item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 286px) {
+  .list {
+    margin-bottom: 1.94px;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .container {
     padding: 0 31px;
