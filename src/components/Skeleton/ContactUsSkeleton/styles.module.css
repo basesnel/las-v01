@@ -14,7 +14,7 @@
 .innerContainer {
   max-width: 480px;
   margin: 0 auto;
-  padding: 0 31px;
+  padding: 0 24px;
 }
 
 .back {
@@ -111,6 +111,12 @@
   );
   background-size: 400% 400%;
   animation: pulse 1.2s ease-in-out infinite;
+}
+
+@media screen and (min-width: 320px) {
+  .innerContainer {
+    padding: 0 31px;
+  }
 }
 
 @media screen and (min-width: 377px) {
