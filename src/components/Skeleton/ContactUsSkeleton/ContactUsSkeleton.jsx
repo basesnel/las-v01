@@ -33,7 +33,11 @@ const ContactUsSkeleton = () => {
             <div className={styles.title} />
             <div className={styles.list}>
               {[...Array(4)].map((_, i) => (
-                <div key={i} className={styles.item} />
+                <div key={i} className={styles.item}>
+                  {[...Array(2)].map((_, j) => (
+                    <div key={j} className={styles.subItem} />
+                  ))}
+                </div>
               ))}
             </div>
           </div>

@@ -65,17 +65,30 @@
 }
 
 .list {
-  margin-bottom: 44px;
+  /* margin-bottom: 44px; */
+  margin-bottom: 46px;
 }
 
 .item {
-  height: 30.006px;
-  margin-bottom: 20px;
+  /* height: 30.006px; */
+  /* margin-bottom: 20px; */
+  margin-bottom: 22px;
   border-radius: 30px;
 }
 
 .item:nth-child(even) {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+  margin-bottom: 42px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.subItem {
+  height: 28.006px;
+  margin-bottom: 2px;
+  border-radius: 30px;
 }
 
 .item:last-child {
@@ -100,7 +113,7 @@
 .input,
 .textArea,
 .button,
-.item,
+.subItem,
 .subTitle,
 .text {
   background: linear-gradient(
