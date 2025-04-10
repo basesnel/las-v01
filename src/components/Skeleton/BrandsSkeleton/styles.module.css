@@ -114,6 +114,14 @@
   .brand {
     flex-basis: calc((100% - 30px) / 2);
   }
+
+  /* .brand:nth-child(-n + 13) {
+    display: none;
+  } */
+
+  .brand:nth-child(n + 11):nth-child(-n + 13) {
+    display: initial;
+  }
 }
 
 @media screen and (min-width: 364px) {
