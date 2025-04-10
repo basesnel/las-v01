@@ -48,7 +48,7 @@
   border-radius: 10px;
 }
 
-.brand:nth-child(n + 9) {
+.brand:nth-child(-n + 13) {
   display: none;
 }
 
