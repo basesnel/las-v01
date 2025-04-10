@@ -126,6 +126,18 @@
   animation: pulse 1.2s ease-in-out infinite;
 }
 
+@media screen and (min-width: 263px) {
+  .item:nth-child(2) .subItem:first-child {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 266px) {
+  .item:nth-last-child(-n + 2) .subItem:first-child {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .innerContainer {
     padding: 0 31px;
