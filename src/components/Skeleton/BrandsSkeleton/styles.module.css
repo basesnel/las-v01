@@ -94,6 +94,16 @@
   }
 }
 
+@media screen and (min-width: 300px) {
+  .title {
+    max-width: 220px;
+  }
+
+  .title:last-child {
+    max-width: 260px;
+  }
+}
+
 @media screen and (min-width: 320px) {
   .container {
     padding: 0 31px;
