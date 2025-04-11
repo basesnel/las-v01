@@ -115,10 +115,6 @@
     flex-basis: calc((100% - 30px) / 2);
   }
 
-  /* .brand:nth-child(n + 11):nth-child(-n + 13) {
-    display: initial;
-  } */
-
   .brand:nth-child(n + 6):nth-child(-n + 8) {
     display: initial;
   }
@@ -248,10 +244,6 @@
   .brand {
     flex-basis: calc((100% - 5 * 30px) / 6);
   }
-
-  /* .brand:nth-child(-n + 13) {
-    display: initial;
-  } */
 
   .brand:nth-child(n + 13):nth-child(-n + 18) {
     display: initial;
