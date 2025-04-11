@@ -82,10 +82,7 @@
     flex-basis: calc((100% - 2 * 30px) / 3);
   }
 
-  .item:nth-child(9),
-  .item:nth-child(10),
-  .item:nth-child(11),
-  .item:nth-child(12) {
+  .item:nth-child(n + 9):nth-child(-n + 12) {
     display: initial;
   }
 }
