@@ -170,13 +170,15 @@
     margin: 0 auto 2px;
   }
 
-  .title:nth-last-child(2) {
+  .title:nth-child(2) {
+    display: block;
+  }
+
+  .title:nth-child(3) {
     max-width: 320px;
-    margin: 0 auto 2px;
   }
 
   .title:last-child {
-    display: block;
     max-width: 380px;
   }
 }
