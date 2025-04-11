@@ -249,6 +249,10 @@
     flex-basis: calc((100% - 5 * 30px) / 6);
   }
 
+  .brand:nth-child(-n + 13) {
+    display: initial;
+  }
+
   .brand:nth-child(n + 13):nth-child(-n + 18) {
     display: initial;
   }
