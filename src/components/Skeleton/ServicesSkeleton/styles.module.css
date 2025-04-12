@@ -25,7 +25,7 @@
   max-width: 400px;
   height: 14.993px;
   border-radius: 14px;
-  margin-bottom: 34.993px;
+  margin: 0 auto 34.993px;
 }
 
 .title {
@@ -142,6 +142,10 @@
     padding: 0 31px;
   }
 
+  .subtitle {
+    max-width: 200px;
+  }
+
   .outerList {
     margin-bottom: 43.94px;
   }
@@ -150,6 +154,12 @@
 @media screen and (min-width: 321px) {
   .outerList {
     margin-bottom: 23.96px;
+  }
+}
+
+@media screen and (min-width: 332px) {
+  .subtitle {
+    max-width: 400px;
   }
 }
 
