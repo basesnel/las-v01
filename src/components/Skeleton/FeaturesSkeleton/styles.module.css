@@ -1,8 +1,4 @@
 .section {
-  /* position: absolute;
-  top: 4402px;
-  left: 0;
-  right: 0; */
   opacity: 0.5;
   padding: 84px 0;
 }
@@ -300,7 +296,6 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    /* top: 4188px; */
     padding: 100px 0;
   }
 
@@ -349,7 +344,6 @@
 
 @media screen and (min-width: 1200px) {
   .section {
-    /* top: 3964px; */
     padding: 120px 0;
   }
 

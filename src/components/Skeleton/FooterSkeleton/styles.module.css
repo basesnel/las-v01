@@ -1,10 +1,6 @@
 .footer {
   position: relative;
   height: 346.97px;
-  /* position: absolute;
-  top: 7638px;
-  left: 0;
-  right: 0; */
   opacity: 0.5;
   padding: 44px 0;
 }
@@ -227,10 +223,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-  /* .footer {
-    top: 6102px;
-  } */
-
   .container {
     max-width: 1200px;
     padding: 0 15px;

@@ -1,8 +1,4 @@
 .section {
-  /* position: absolute;
-  top: 5632px;
-  left: 0;
-  right: 0; */
   opacity: 0.5;
 }
 
@@ -191,10 +187,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .section {
-    top: 5349px;
-  } */
-
   .innerSection {
     padding: 100px 0;
   }
@@ -231,14 +223,12 @@
   }
 
   .list {
-    /* padding-top: 2px; */
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .section {
-    /* top: 4822px; */
     display: flex;
   }
 
