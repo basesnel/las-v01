@@ -11,21 +11,54 @@ import FooterSkeleton from "./FooterSkeleton/FooterSkeleton";
 
 import styles from "./styles.module.css";
 
-const Skeleton = () => {
-  return (
-    <div className={styles.skeleton}>
-      <HeaderSkeleton />
-      <BannerSkeleton />
-      <IntroSkeleton />
-      <ServicesSkeleton />
-      <TowtruckSkeleton />
-      <GallerySkeleton />
-      <FeaturesSkeleton />
-      <ContactUsSkeleton />
-      <BrandsSkeleton />
-      <FooterSkeleton />
-    </div>
-  );
+const Skeleton = ({ type = null }) => {
+  switch (type) {
+    case "header":
+      return <HeaderSkeleton />;
+
+    case "banner":
+      return <BannerSkeleton />;
+
+    case "intro":
+      return <IntroSkeleton />;
+
+    case "services":
+      return <ServicesSkeleton />;
+
+    case "towtruck":
+      return <TowtruckSkeleton />;
+
+    case "gallery":
+      return <GallerySkeleton />;
+
+    case "features":
+      return <FeaturesSkeleton />;
+
+    case "contactus":
+      return <ContactUsSkeleton />;
+
+    case "brands":
+      return <BrandsSkeleton />;
+
+    case "footer":
+      return <FooterSkeleton />;
+
+    default:
+      return (
+        <div className={styles.skeleton}>
+          <HeaderSkeleton />
+          <BannerSkeleton />
+          <IntroSkeleton />
+          <ServicesSkeleton />
+          <TowtruckSkeleton />
+          <GallerySkeleton />
+          <FeaturesSkeleton />
+          <ContactUsSkeleton />
+          <BrandsSkeleton />
+          <FooterSkeleton />
+        </div>
+      );
+  }
 };
 
 export default Skeleton;

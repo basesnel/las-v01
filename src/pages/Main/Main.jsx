@@ -39,30 +39,6 @@ const Main = () => {
       {isLoading ? (
         <Skeleton />
       ) : (
-        // (
-        // <motion.div
-        //   key="mainLoading"
-        //   initial={{ opacity: 0 }}
-        //   animate={{ opacity: 0.5 }}
-        //   exit={{ opacity: 0 }}
-        // >
-        // <HeaderSkeleton />
-        // <BannerSkeleton />
-        // <IntroSkeleton />
-        // <ServicesSkeleton />
-        // <TowtruckSkeleton />
-        // <GalletySkeleton />
-        // <FeaturesSkeleton />
-        // <ContactUsSkeleton />
-        // <BrandsSkeleton />
-        // <FooterSkeleton />
-        // </motion.div>
-        // )
-        // <motion.div
-        //   key="mainLoaded"
-        //   initial={{ opacity: 0, scale: 0.3 }}
-        //   animate={{ opacity: 1, scale: 1 }}
-        // >
         <>
           <Header />
           <main>
@@ -78,7 +54,6 @@ const Main = () => {
           <Footer />
           {/* <Skeleton /> */}
         </>
-        // </motion.div>
       )}
     </AnimatePresence>
   );
